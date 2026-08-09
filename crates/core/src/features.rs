@@ -4,9 +4,9 @@
 //! ("key:value", 1.0) including empty strings; nested context dicts join with
 //! ':' ("previous:word:main"). Parity is enforced by the differential suite.
 
-use crate::vocab::{DIRECTIONS, STREET_NAMES};
+use crfs::Attribute;
 
-pub type Attr = (String, f64);
+use crate::vocab::{DIRECTIONS, STREET_NAMES};
 
 // Python \w for our ASCII-dominant scope: Unicode alphanumeric or underscore.
 fn is_word(c: char) -> bool {
@@ -15,7 +15,7 @@ fn is_word(c: char) -> bool {
 
 // Python str.isdigit() approximation for the parity scope (ASCII decimal digits).
 fn is_digit_str(s: &str) -> bool {
-    !s.is_empty() && s.chars().all(|c| c.is_ascii_digit())
+    !s.is_empty() && s.bytes().all(|b| b.is_ascii_digit())
 }
 
 /// re.sub(r"(^[\W]*)|([^.\w]*$)", "", token): strip leading non-word chars and
@@ -46,8 +46,20 @@ fn ends_in_punc(token: &str) -> bool {
     }
 }
 
+fn attr(name: &str, value: f64) -> Attribute {
+    Attribute::new(name, value)
+}
+
+fn attr_kv(key: &str, value: &str) -> Attribute {
+    let mut name = String::with_capacity(key.len() + 1 + value.len());
+    name.push_str(key);
+    name.push(':');
+    name.push_str(value);
+    Attribute::new(name, 1.0)
+}
+
 /// Base (non-context) attributes for one token, in usaddress field order.
-pub fn token_attrs(token: &str) -> Vec<Attr> {
+pub fn token_attrs(token: &str) -> Vec<Attribute> {
     let token_clean = if matches!(token, "&" | "#" | "\u{00BD}") {
         token
     } else {
@@ -56,107 +68,112 @@ pub fn token_attrs(token: &str) -> Vec<Attr> {
     let token_abbrev: String = token_clean.to_lowercase().replace('.', "");
     let abbrev_is_digit = is_digit_str(&token_abbrev);
 
-    let mut attrs: Vec<Attr> = Vec::with_capacity(9);
+    let mut attrs: Vec<Attribute> = Vec::with_capacity(9);
 
-    // abbrev
-    attrs.push((
-        "abbrev".into(),
-        (token_clean.chars().last() == Some('.')) as u8 as f64,
+    attrs.push(attr(
+        "abbrev",
+        (token_clean.ends_with('.')) as u8 as f64,
     ));
 
-    // digits (on token_clean): all via isdigit, some via ASCII digit presence
     let digits = if is_digit_str(token_clean) {
         "all_digits"
-    } else if token_clean.chars().any(|c| c.is_ascii_digit()) {
+    } else if token_clean.bytes().any(|b| b.is_ascii_digit()) {
         "some_digits"
     } else {
         "no_digits"
     };
-    attrs.push((format!("digits:{digits}"), 1.0));
+    attrs.push(attr_kv("digits", digits));
 
-    // word
     if abbrev_is_digit {
-        attrs.push(("word".into(), 0.0));
+        attrs.push(attr("word", 0.0));
     } else {
-        attrs.push((format!("word:{token_abbrev}"), 1.0));
+        attrs.push(attr_kv("word", &token_abbrev));
     }
 
-    // trailing.zeros
     if abbrev_is_digit {
-        let zeros: String = token_abbrev
-            .chars()
-            .rev()
-            .take_while(|c| *c == '0')
-            .collect();
-        attrs.push((format!("trailing.zeros:{zeros}"), 1.0));
+        let zeros_start = token_abbrev.len() - token_abbrev.bytes().rev().take_while(|b| *b == b'0').count();
+        attrs.push(attr_kv("trailing.zeros", &token_abbrev[zeros_start..]));
     } else {
-        attrs.push(("trailing.zeros".into(), 0.0));
+        attrs.push(attr("trailing.zeros", 0.0));
     }
 
-    // length (codepoint count, like Python len)
-    let prefix = if abbrev_is_digit { "d" } else { "w" };
-    attrs.push((format!("length:{prefix}:{}", token_abbrev.chars().count()), 1.0));
+    let mut length = String::with_capacity(12);
+    length.push_str("length:");
+    length.push(if abbrev_is_digit { 'd' } else { 'w' });
+    length.push(':');
+    length.push_str(itoa(token_abbrev.chars().count()).as_str());
+    attrs.push(Attribute::new(length, 1.0));
 
-    // endsinpunc: value is the LAST char of the original token
     if ends_in_punc(token) {
         let last = token.chars().last().unwrap();
-        attrs.push((format!("endsinpunc:{last}"), 1.0));
+        let mut name = String::with_capacity(12);
+        name.push_str("endsinpunc:");
+        name.push(last);
+        attrs.push(Attribute::new(name, 1.0));
     } else {
-        attrs.push(("endsinpunc".into(), 0.0));
+        attrs.push(attr("endsinpunc", 0.0));
     }
 
-    // directional / street_name (binary-searchable sorted arrays from gen_vocab)
-    attrs.push((
-        "directional".into(),
+    attrs.push(attr(
+        "directional",
         DIRECTIONS.binary_search(&token_abbrev.as_str()).is_ok() as u8 as f64,
     ));
-    attrs.push((
-        "street_name".into(),
+    attrs.push(attr(
+        "street_name",
         STREET_NAMES.binary_search(&token_abbrev.as_str()).is_ok() as u8 as f64,
     ));
 
-    // has.vowels: vowels among abbrev chars after the first
     let has_vowels = token_abbrev
         .chars()
         .skip(1)
         .any(|c| matches!(c, 'a' | 'e' | 'i' | 'o' | 'u'));
-    attrs.push(("has.vowels".into(), has_vowels as u8 as f64));
+    attrs.push(attr("has.vowels", has_vowels as u8 as f64));
 
     attrs
 }
 
+fn itoa(n: usize) -> String {
+    n.to_string()
+}
+
+fn push_prefixed(out: &mut Vec<Attribute>, prefix: &str, base: &[Attribute]) {
+    for a in base {
+        let mut name = String::with_capacity(prefix.len() + a.name.len());
+        name.push_str(prefix);
+        name.push_str(&a.name);
+        out.push(Attribute::new(name, a.value));
+    }
+}
+
 /// Full per-token attribute sequences including previous/next context and
 /// address.start / address.end flags, mirroring usaddress.tokens2features.
-pub fn tokens_to_attrs(tokens: &[String]) -> Vec<Vec<Attr>> {
+pub fn tokens_to_attrs(tokens: &[String]) -> Vec<Vec<Attribute>> {
     let n = tokens.len();
     if n == 0 {
         return Vec::new();
     }
-    let base: Vec<Vec<Attr>> = tokens.iter().map(|t| token_attrs(t)).collect();
+    let base: Vec<Vec<Attribute>> = tokens.iter().map(|t| token_attrs(t)).collect();
 
-    let mut out: Vec<Vec<Attr>> = Vec::with_capacity(n);
+    let mut out: Vec<Vec<Attribute>> = Vec::with_capacity(n);
     for i in 0..n {
-        let mut attrs = base[i].clone();
+        let mut attrs: Vec<Attribute> = Vec::with_capacity(base[i].len() * 3 + 4);
+        attrs.extend_from_slice(&base[i]);
         if i == 0 {
-            attrs.push(("address.start".into(), 1.0));
+            attrs.push(attr("address.start", 1.0));
         }
         if i == n - 1 {
-            attrs.push(("address.end".into(), 1.0));
+            attrs.push(attr("address.end", 1.0));
         }
         if i > 0 {
-            for (name, w) in &base[i - 1] {
-                attrs.push((format!("previous:{name}"), *w));
-            }
+            push_prefixed(&mut attrs, "previous:", &base[i - 1]);
             if i - 1 == 0 && n > 1 {
-                attrs.push(("previous:address.start".into(), 1.0));
+                attrs.push(attr("previous:address.start", 1.0));
             }
         }
         if i < n - 1 {
-            for (name, w) in &base[i + 1] {
-                attrs.push((format!("next:{name}"), *w));
-            }
+            push_prefixed(&mut attrs, "next:", &base[i + 1]);
             if i + 1 == n - 1 && n > 1 {
-                attrs.push(("next:address.end".into(), 1.0));
+                attrs.push(attr("next:address.end", 1.0));
             }
         }
         out.push(attrs);
@@ -168,8 +185,8 @@ pub fn tokens_to_attrs(tokens: &[String]) -> Vec<Vec<Attr>> {
 mod tests {
     use super::*;
 
-    fn attr_map(attrs: &[Attr]) -> std::collections::BTreeMap<String, f64> {
-        attrs.iter().cloned().collect()
+    fn attr_map(attrs: &[Attribute]) -> std::collections::BTreeMap<String, f64> {
+        attrs.iter().map(|a| (a.name.clone(), a.value)).collect()
     }
 
     #[test]

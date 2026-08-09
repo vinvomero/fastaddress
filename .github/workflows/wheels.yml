@@ -1,0 +1,45 @@
+name: wheels
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test --workspace
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r benchmark/requirements.txt maturin
+      - run: maturin build --release -m crates/python/Cargo.toml
+      - run: pip install --no-deps target/wheels/*.whl
+      - run: python benchmark/dump_oracle.py && python benchmark/run_parity.py --dump-bin target/release/dump
+        name: four-layer parity gate
+      - run: python crates/python/tests/test_dropin.py
+
+  build-wheels:
+    needs: test
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: PyO3/maturin-action@v1
+        with:
+          command: build
+          args: --release -m crates/python/Cargo.toml -o dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels-${{ matrix.os }}
+          path: dist

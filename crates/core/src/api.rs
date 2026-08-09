@@ -4,8 +4,6 @@
 
 use std::fmt;
 
-use crfs::Attribute;
-
 use crate::features::tokens_to_attrs;
 use crate::model::tag_attrs;
 use crate::tokenize::tokenize;
@@ -38,22 +36,14 @@ pub fn parse(address: &str) -> Vec<(String, String)> {
         return Vec::new();
     }
     let attr_seq = tokens_to_attrs(&tokens);
-    let xseq: Vec<Vec<Attribute>> = attr_seq
-        .iter()
-        .map(|attrs| {
-            attrs
-                .iter()
-                .map(|(name, w)| Attribute::new(name.clone(), *w))
-                .collect()
-        })
-        .collect();
-    let labels = tag_attrs(&xseq).expect("model tagging must not fail on valid attributes");
+    let labels = tag_attrs(&attr_seq).expect("model tagging must not fail on valid attributes");
     tokens.into_iter().zip(labels).collect()
 }
 
 fn tag_impl(
     address: &str,
     merge_repeats: bool,
+    tag_mapping: Option<&std::collections::HashMap<String, String>>,
 ) -> Result<(Vec<(String, String)>, String), RepeatedLabelError> {
     // Ordered label -> tokens grouping, mirroring Python's OrderedDict semantics.
     let mut components: Vec<(String, Vec<String>)> = Vec::new();
@@ -70,6 +60,15 @@ fn tag_impl(
             label = format!("Second{label}");
         }
         og_labels.push(label.clone());
+        // Python: `if tag_mapping and tag_mapping.get(label)` — falsy mapped
+        // values (empty string) leave the label unchanged.
+        if let Some(mapping) = tag_mapping {
+            if let Some(mapped) = mapping.get(&label) {
+                if !mapped.is_empty() {
+                    label = mapped.clone();
+                }
+            }
+        }
 
         if last_label.as_deref() == Some(label.as_str()) {
             components.last_mut().unwrap().1.push(token);
@@ -114,13 +113,21 @@ fn tag_impl(
 
 /// usaddress.tag() compat mode: identical output, including RepeatedLabelError.
 pub fn tag(address: &str) -> Result<(Vec<(String, String)>, String), RepeatedLabelError> {
-    tag_impl(address, false)
+    tag_impl(address, false, None)
+}
+
+/// usaddress.tag(address, tag_mapping): compat mode with label remapping.
+pub fn tag_with_mapping(
+    address: &str,
+    tag_mapping: Option<&std::collections::HashMap<String, String>>,
+) -> Result<(Vec<(String, String)>, String), RepeatedLabelError> {
+    tag_impl(address, false, tag_mapping)
 }
 
 /// Native mode: same grouping, but a non-adjacent repeated label merges into
 /// its existing component instead of erroring. Never fails on valid input.
 pub fn tag_native(address: &str) -> (Vec<(String, String)>, String) {
-    tag_impl(address, true).expect("merge_repeats mode cannot error")
+    tag_impl(address, true, None).expect("merge_repeats mode cannot error")
 }
 
 #[cfg(test)]

@@ -6,7 +6,6 @@
 use std::env;
 use std::io::{BufWriter, Write};
 
-use crfs::Attribute;
 use serde_json::json;
 
 fn main() {
@@ -35,25 +34,17 @@ fn main() {
         let attrs_sorted: Vec<Vec<(String, f64)>> = attr_seq
             .iter()
             .map(|attrs| {
-                let mut v = attrs.clone();
+                let mut v: Vec<(String, f64)> =
+                    attrs.iter().map(|a| (a.name.clone(), a.value)).collect();
                 v.sort_by(|a, b| a.0.cmp(&b.0));
                 v
             })
             .collect();
 
-        let xseq: Vec<Vec<Attribute>> = attr_seq
-            .iter()
-            .map(|attrs| {
-                attrs
-                    .iter()
-                    .map(|(name, w)| Attribute::new(name.clone(), *w))
-                    .collect()
-            })
-            .collect();
-        let labels = if xseq.is_empty() {
+        let labels = if attr_seq.is_empty() {
             Vec::new()
         } else {
-            usaddr_core::model::tag_attrs(&xseq).expect("tagging must not error")
+            usaddr_core::model::tag_attrs(&attr_seq).expect("tagging must not error")
         };
 
         let (tag, tag_error) = match usaddr_core::api::tag(raw) {
