@@ -6,7 +6,7 @@ license.workspace = true
 description = "Rust engine for US address parsing, running the usaddress CRF model with output parity"
 
 [dependencies]
-crfs = "0.4"
+crfs = { path = "../crf" }
 regex = "1"
 csv = "1"
 serde_json = "1"
