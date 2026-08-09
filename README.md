@@ -3,8 +3,9 @@
 A drop-in replacement for [usaddress](https://github.com/datamade/usaddress) — the standard
 US address parser — running the **same trained CRF model** in a Rust engine.
 
-- **5x faster** single-core, like-for-like (50,000+ addresses/sec vs ~9,500; measured, reproducible),
-  and **190,000+ addresses/sec** multi-threaded — a million-row tax roll in ~5 seconds
+- **10x faster** single-core, like-for-like (110,000+ addresses/sec vs ~10,500; measured,
+  reproducible), and **210,000+ addresses/sec** multi-threaded — a million-row tax roll in
+  under 5 seconds
 - **Exact output parity**: same model, same features, same predictions — verified at four layers
   (tokens, features, serialized attributes, tagged output) across 20,738 real county tax-roll
   addresses with **zero divergences**
