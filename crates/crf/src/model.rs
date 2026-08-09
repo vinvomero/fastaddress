@@ -63,6 +63,11 @@ pub struct Model<'a> {
     header: Header,
     labels: CQDB<'a>,
     attrs: CQDB<'a>,
+    // Vendored addition: tables pre-decoded at load so the scoring loop reads
+    // flat arrays instead of parsing feature records from the buffer per access.
+    attr_offsets: Vec<u32>,
+    attr_feats: Vec<(u32, f64)>,
+    label_names: Vec<String>,
 }
 
 impl<'a> fmt::Debug for Model<'a> {
@@ -127,13 +132,63 @@ impl<'a> Model<'a> {
         let labels = CQDB::new(&buf[labels_start..size])?;
         let attrs_start = off_attrs as usize;
         let attrs = CQDB::new(&buf[attrs_start..size])?;
-        Ok(Self {
+        let mut model = Self {
             buffer: buf,
             size: size as u32,
             header,
             labels,
             attrs,
-        })
+            attr_offsets: Vec::new(),
+            attr_feats: Vec::new(),
+            label_names: Vec::new(),
+        };
+        model.decode_tables()?;
+        Ok(model)
+    }
+
+    /// Vendored addition: materialize per-attribute feature lists and label
+    /// strings once, preserving the stored iteration order exactly so score
+    /// accumulation order (and therefore output) is unchanged.
+    fn decode_tables(&mut self) -> io::Result<()> {
+        let num_attrs = self.header.num_attrs;
+        let mut offsets: Vec<u32> = Vec::with_capacity(num_attrs as usize + 1);
+        let mut feats: Vec<(u32, f64)> = Vec::new();
+        offsets.push(0);
+        for aid in 0..num_attrs {
+            let attr_ref = self.attr_ref(aid)?;
+            for r in 0..attr_ref.num_features as usize {
+                let fid = attr_ref.get(r)?;
+                let feature = self.feature(fid)?;
+                feats.push((feature.target, feature.weight));
+            }
+            offsets.push(feats.len() as u32);
+        }
+        let mut label_names = Vec::with_capacity(self.header.num_labels as usize);
+        for lid in 0..self.header.num_labels {
+            let name = self.to_label(lid).ok_or_else(|| {
+                io::Error::new(io::ErrorKind::InvalidData, "label id missing from model")
+            })?;
+            label_names.push(name.to_string());
+        }
+        self.attr_offsets = offsets;
+        self.attr_feats = feats;
+        self.label_names = label_names;
+        Ok(())
+    }
+
+    /// Vendored addition: pre-decoded (target, weight) state features for an
+    /// attribute id, in the model's stored order.
+    #[inline]
+    pub fn attr_features(&self, aid: u32) -> &[(u32, f64)] {
+        let start = self.attr_offsets[aid as usize] as usize;
+        let end = self.attr_offsets[aid as usize + 1] as usize;
+        &self.attr_feats[start..end]
+    }
+
+    /// Vendored addition: pre-decoded label string for a label id.
+    #[inline]
+    pub fn label_name(&self, lid: u32) -> &str {
+        &self.label_names[lid as usize]
     }
 
     /// Number of attributes

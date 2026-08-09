@@ -2,7 +2,6 @@ use std::io;
 
 use crate::attribute::Attribute;
 use crate::context::{Context, Flag, Reset, ViterbiState};
-use crate::dataset::{self, Instance, Item};
 use crate::model::Model;
 
 /// The tagger provides the functionality for predicting label sequences for input sequences using a model
@@ -14,6 +13,8 @@ pub struct Tagger<'a> {
     context: Context,
     /// Number of distinct output labels
     num_labels: u32,
+    /// Vendored addition: reusable Viterbi scratch for the id-based fast path
+    scratch: ViterbiState,
 }
 
 impl<'a> Tagger<'a> {
@@ -25,6 +26,7 @@ impl<'a> Tagger<'a> {
             model,
             context,
             num_labels,
+            scratch: ViterbiState::default(),
         };
         tagger.transition_score()?;
         tagger.context.exp_transition();
@@ -37,34 +39,40 @@ impl<'a> Tagger<'a> {
             return Ok(Vec::new());
         }
 
-        // Build instance from input sequence
-        let mut instance = Instance::with_capacity(xseq.len());
-        for item in xseq {
-            let item: Item = item
-                .as_ref()
-                .iter()
-                .filter_map(|x| {
-                    self.model
-                        .to_attr_id(&x.name)
-                        .map(|id| dataset::Attribute::new(id, x.value))
-                })
-                .collect();
-            instance.push(item, 0);
-        }
+        // Resolve attribute names to ids (unknown attributes are dropped, as before).
+        let seq: Vec<Vec<(u32, f64)>> = xseq
+            .iter()
+            .map(|item| {
+                item.as_ref()
+                    .iter()
+                    .filter_map(|x| self.model.to_attr_id(&x.name).map(|id| (id, x.value)))
+                    .collect()
+            })
+            .collect();
 
-        // Create ViterbiState and compute state scores into it
-        let mut vstate = ViterbiState::new(self.num_labels, instance.num_items);
-        self.state_score(&instance, &mut vstate)?;
-
-        // Run Viterbi
+        let mut vstate = ViterbiState::new(self.num_labels, seq.len() as u32);
+        self.state_score_ids(&seq, &mut vstate);
         let (label_ids, _score) = self.context.viterbi(&mut vstate);
 
-        let mut labels = Vec::with_capacity(label_ids.len());
-        for id in label_ids {
-            let label = self.model.to_label(id).unwrap();
-            labels.push(label);
+        Ok(label_ids
+            .into_iter()
+            .map(|id| self.model.label_name(id))
+            .collect())
+    }
+
+    /// Vendored addition: id-based fast path with reusable scratch. Attribute
+    /// ids must come from `Model::to_attr_id` (or equal caching). Returns label
+    /// ids resolvable via `Model::label_name`.
+    pub fn tag_ids(&mut self, seq: &[Vec<(u32, f64)>]) -> Vec<u32> {
+        if seq.is_empty() {
+            return Vec::new();
         }
-        Ok(labels)
+        let mut scratch = std::mem::take(&mut self.scratch);
+        scratch.reset(self.num_labels, seq.len() as u32);
+        self.state_score_ids(seq, &mut scratch);
+        let (label_ids, _score) = self.context.viterbi(&mut scratch);
+        self.scratch = scratch;
+        label_ids
     }
 
     fn transition_score(&mut self) -> io::Result<()> {
@@ -86,28 +94,18 @@ impl<'a> Tagger<'a> {
         Ok(())
     }
 
-    /// Compute state scores into ViterbiState.state
-    fn state_score(&self, instance: &Instance, vstate: &mut ViterbiState) -> io::Result<()> {
+    /// Compute state scores from pre-decoded model tables. Attribute and
+    /// feature iteration order matches the original buffer-parsing path, so
+    /// f64 accumulation order — and therefore output — is identical.
+    fn state_score_ids(&self, seq: &[Vec<(u32, f64)>], vstate: &mut ViterbiState) {
         let l = self.num_labels as usize;
-        // Loop over the items in the sequence
-        for t in 0..instance.num_items as usize {
-            let item = &instance.items[t];
+        for (t, item) in seq.iter().enumerate() {
             let state_slice = &mut vstate.state[l * t..];
-            // Loop over the attributes attached to the item
-            for attr in item {
-                // Access the list of state features associated with the attribute
-                let id = attr.id;
-                let attr_ref = self.model.attr_ref(id)?;
-                // A scale usually represents the attribute frequency in the item
-                let value = attr.value;
-                // Loop over the state features associated with the attribute
-                for r in 0..attr_ref.num_features as usize {
-                    let fid = attr_ref.get(r)?;
-                    let feature = self.model.feature(fid)?;
-                    state_slice[feature.target as usize] += feature.weight * value;
+            for &(aid, value) in item {
+                for &(target, weight) in self.model.attr_features(aid) {
+                    state_slice[target as usize] += weight * value;
                 }
             }
         }
-        Ok(())
     }
 }

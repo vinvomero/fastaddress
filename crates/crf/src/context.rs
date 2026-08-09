@@ -53,6 +53,22 @@ impl ViterbiState {
             backward_edge: vec![0; t * l],
         }
     }
+
+    /// Reuse this state for a new sequence length: resize buffers as needed and
+    /// zero the portion the pass will read/write. (Vendored addition.)
+    pub fn reset(&mut self, num_labels: u32, num_items: u32) {
+        let l = num_labels as usize;
+        let t = num_items as usize;
+        let n = t * l;
+        self.num_labels = num_labels;
+        self.num_items = num_items;
+        self.state.clear();
+        self.state.resize(n, 0.0);
+        self.alpha_score.clear();
+        self.alpha_score.resize(n, 0.0);
+        self.backward_edge.clear();
+        self.backward_edge.resize(n, 0);
+    }
 }
 
 bitflags! {
@@ -370,6 +386,9 @@ impl Context {
             10 => return self.viterbi_unrolled::<10>(num_items, vstate),
             12 => return self.viterbi_unrolled::<12>(num_items, vstate),
             16 => return self.viterbi_unrolled::<16>(num_items, vstate),
+            // Vendored addition: the usaddress model has 26 labels, which
+            // previously fell through to the generic scalar loop.
+            26 => return self.viterbi_unrolled::<26>(num_items, vstate),
             _ => {} // Fall through to generic version
         }
 
