@@ -1,7 +1,7 @@
 ---
 title: "perf: CRF inference optimization to clear the 10x single-core bar"
 type: perf
-status: active
+status: completed
 date: 2026-08-09
 origin: C:/Users/vvome/docs/brainstorms/2026-08-09-us-address-parser-requirements.md
 ---
