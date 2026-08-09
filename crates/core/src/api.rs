@@ -47,6 +47,10 @@ fn tag_impl(
 ) -> Result<(Vec<(String, String)>, String), RepeatedLabelError> {
     // Ordered label -> tokens grouping, mirroring Python's OrderedDict semantics.
     let mut components: Vec<(String, Vec<String>)> = Vec::new();
+    // Index of the component last pushed into — after a native-mode merge into an
+    // earlier component, an adjacent repeat must follow that component, not the
+    // positionally last one.
+    let mut last_idx: Option<usize> = None;
     let mut last_label: Option<String> = None;
     let mut is_intersection = false;
     let mut og_labels: Vec<String> = Vec::new();
@@ -71,10 +75,13 @@ fn tag_impl(
         }
 
         if last_label.as_deref() == Some(label.as_str()) {
-            components.last_mut().unwrap().1.push(token);
-        } else if let Some(entry) = components.iter_mut().find(|(l, _)| *l == label) {
+            components[last_idx.expect("adjacent repeat implies a prior push")]
+                .1
+                .push(token);
+        } else if let Some(pos) = components.iter().position(|(l, _)| *l == label) {
             if merge_repeats {
-                entry.1.push(token);
+                components[pos].1.push(token);
+                last_idx = Some(pos);
             } else {
                 return Err(RepeatedLabelError {
                     original_string: address.to_string(),
@@ -84,6 +91,7 @@ fn tag_impl(
             }
         } else {
             components.push((label.clone(), vec![token]));
+            last_idx = Some(components.len() - 1);
         }
         last_label = Some(label);
     }

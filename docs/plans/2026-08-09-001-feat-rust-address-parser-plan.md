@@ -1,7 +1,7 @@
 ---
 title: "feat: Rust-core US address parser with exact usaddress parity"
 type: feat
-status: active
+status: completed
 date: 2026-08-09
 origin: C:/Users/vvome/docs/brainstorms/2026-08-09-us-address-parser-requirements.md
 ---

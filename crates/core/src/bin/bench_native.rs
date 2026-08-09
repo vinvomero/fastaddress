@@ -11,7 +11,11 @@ fn main() {
         eprintln!("usage: bench_native <csv-path> [threads]");
         std::process::exit(2);
     }
-    let threads: usize = args.get(2).map(|s| s.parse().unwrap()).unwrap_or(1);
+    let threads: usize = args
+        .get(2)
+        .map(|s| s.parse().expect("threads must be a number"))
+        .unwrap_or(1)
+        .max(1);
 
     let mut reader = csv::Reader::from_path(&args[1]).expect("csv must open");
     let headers = reader.headers().expect("headers").clone();
@@ -44,7 +48,7 @@ fn main() {
             }
         }
     } else {
-        let chunk = rows.len().div_ceil(threads);
+        let chunk = rows.len().div_ceil(threads).max(1);
         errors = std::thread::scope(|scope| {
             let handles: Vec<_> = rows
                 .chunks(chunk)

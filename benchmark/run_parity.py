@@ -78,8 +78,10 @@ def main():
     all_stats = {}
     all_examples = {}
     total_div = 0
-    for oracle_path in sorted(ORACLE_DIR.glob("*.jsonl")):
-        name = oracle_path.stem
+    for csv_path in sorted(DATA_DIR.glob("*.csv")):
+        name = csv_path.stem
+        if not (ORACLE_DIR / f"{name}.jsonl").exists():
+            sys.exit(f"missing oracle for {name} — run benchmark/dump_oracle.py first")
         stats, examples = run_dataset(name, args.dump_bin)
         all_stats[name] = stats
         all_examples[name] = examples

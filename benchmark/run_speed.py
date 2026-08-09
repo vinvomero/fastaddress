@@ -76,37 +76,43 @@ def main():
     usaddress.tag("123 Main St Springfield IL 62704")
     usaddr.tag("123 Main St Springfield IL 62704")
 
-    # Interleave three rounds per side and keep each side's best, so transient
-    # machine load penalizes neither parser systematically.
-    py_secs = min(
-        time_python_loop(usaddress.tag, usaddress.RepeatedLabelError, rows) for _ in range(3)
-    )
+    # Alternate sides across three rounds and keep each side's best, so
+    # monotonic machine-load drift penalizes neither parser systematically.
+    py_secs, rs_secs = float("inf"), float("inf")
+    for _ in range(3):
+        py_secs = min(py_secs, time_python_loop(usaddress.tag, usaddress.RepeatedLabelError, rows))
+        rs_secs = min(rs_secs, time_python_loop(usaddr.tag, usaddr.RepeatedLabelError, rows))
     py_rate = n / py_secs
-    print(f"usaddress single-core (best of 3):    {py_rate:,.0f}/sec ({py_secs:.1f}s)")
-
-    rs_secs = min(
-        time_python_loop(usaddr.tag, usaddr.RepeatedLabelError, rows) for _ in range(3)
-    )
     rs_rate = n / rs_secs
+    print(f"usaddress single-core (best of 3):    {py_rate:,.0f}/sec ({py_secs:.1f}s)")
     print(f"usaddr wheel single-core (best of 3): {rs_rate:,.0f}/sec ({rs_secs:.1f}s)")
 
+    # Native side runs over the SAME full corpus (every dataset CSV), aggregated.
+    env = {**os.environ, "BENCH_STAGE": "full"}
     native = {}
     for threads in (1, cores):
-        out = subprocess.run(
-            [args.bench_bin, str(DATA_DIR / "cook.csv"), str(threads)],
-            capture_output=True, text=True, check=True,
-        )
-        native[threads] = json.loads(out.stdout)
-    # Scale native to full corpus by running once over each dataset at 1 thread
-    native_rate_1 = native[1]["per_sec"]
-    native_rate_n = native[cores]["per_sec"]
+        total_rows, total_secs = 0, 0.0
+        for csv_path in sorted(DATA_DIR.glob("*.csv")):
+            out = subprocess.run(
+                [args.bench_bin, str(csv_path), str(threads)],
+                capture_output=True, text=True, check=True, env=env,
+            )
+            r = json.loads(out.stdout)
+            total_rows += r["rows"]
+            total_secs += r["secs"]
+        native[threads] = total_rows / total_secs
+    native_rate_1 = native[1]
+    native_rate_n = native[cores]
     print(f"native Rust single-core:  {native_rate_1:,.0f}/sec")
     print(f"native Rust {cores} threads:   {native_rate_n:,.0f}/sec")
 
-    start = time.perf_counter()
     with multiprocessing.Pool(cores) as pool:
+        # Warm up: worker spawn + per-worker usaddress model load stay outside
+        # the timed window, matching the native side's pre-warmed model.
+        pool.map(usaddress_worker, rows[:400], chunksize=50)
+        start = time.perf_counter()
         pool.map(usaddress_worker, rows, chunksize=200)
-    mp_secs = time.perf_counter() - start
+        mp_secs = time.perf_counter() - start
     mp_rate = n / mp_secs
     print(f"usaddress {cores} processes:   {mp_rate:,.0f}/sec ({mp_secs:.1f}s)")
 

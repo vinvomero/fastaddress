@@ -3,7 +3,8 @@
 A drop-in replacement for [usaddress](https://github.com/datamade/usaddress) — the standard
 US address parser — running the **same trained CRF model** in a Rust engine.
 
-- **10x faster** single-core, like-for-like (36,000+ addresses/sec vs ~3,500; measured, reproducible)
+- **5x faster** single-core, like-for-like (50,000+ addresses/sec vs ~9,500; measured, reproducible),
+  and **190,000+ addresses/sec** multi-threaded — a million-row tax roll in ~5 seconds
 - **Exact output parity**: same model, same features, same predictions — verified at four layers
   (tokens, features, serialized attributes, tagged output) across 20,738 real county tax-roll
   addresses with **zero divergences**
@@ -21,7 +22,8 @@ usaddr.tag("123 N Main St Apt 4B Springfield IL 62704")
 ```
 
 `parse()`, `tag()` (including `tag_mapping`), and `RepeatedLabelError` behave identically to
-usaddress 0.5.16. Multi-thread batch processing reaches 140k+ addresses/sec on 8 cores.
+usaddress 0.5.16 on the ASCII-dominant inputs real property data consists of; known Python/Rust
+Unicode-casing differences are documented as out of parity scope.
 
 ## Why this exists
 

@@ -101,7 +101,7 @@ pub fn token_attrs(token: &str) -> Vec<Attribute> {
     length.push_str("length:");
     length.push(if abbrev_is_digit { 'd' } else { 'w' });
     length.push(':');
-    length.push_str(itoa(token_abbrev.chars().count()).as_str());
+    length.push_str(&token_abbrev.chars().count().to_string());
     attrs.push(Attribute::new(length, 1.0));
 
     if ends_in_punc(token) {
@@ -130,10 +130,6 @@ pub fn token_attrs(token: &str) -> Vec<Attribute> {
     attrs.push(attr("has.vowels", has_vowels as u8 as f64));
 
     attrs
-}
-
-fn itoa(n: usize) -> String {
-    n.to_string()
 }
 
 fn push_prefixed(out: &mut Vec<Attribute>, prefix: &str, base: &[Attribute]) {
