@@ -1,0 +1,421 @@
+{
+  "library": "usaddress",
+  "version": "0.5.16",
+  "allegheny": {
+    "stats": {
+      "n": 5000,
+      "tag_fail": 0,
+      "zip_miss": 0,
+      "no_addrnum": 1,
+      "no_street": 1,
+      "seconds": 0.539,
+      "per_sec": 9284.8,
+      "tag_fail_pct": 0.0,
+      "zip_miss_pct": 0.0,
+      "no_addrnum_pct": 0.02,
+      "no_street_pct": 0.02
+    },
+    "examples": {
+      "tag_fail": [],
+      "zip_miss": [],
+      "no_addrnum": [
+        {
+          "raw": "0 COR LIBERTY & GRANT PITTSBURGH PA 15219",
+          "tags": {
+            "BuildingName": "0 COR LIBERTY & GRANT",
+            "PlaceName": "PITTSBURGH",
+            "StateName": "PA",
+            "ZipCode": "15219"
+          }
+        }
+      ],
+      "no_street": [
+        {
+          "raw": "0 COR LIBERTY & GRANT PITTSBURGH PA 15219",
+          "tags": {
+            "BuildingName": "0 COR LIBERTY & GRANT",
+            "PlaceName": "PITTSBURGH",
+            "StateName": "PA",
+            "ZipCode": "15219"
+          }
+        }
+      ]
+    }
+  },
+  "cook": {
+    "stats": {
+      "n": 5000,
+      "tag_fail": 0,
+      "zip_miss": 0,
+      "no_addrnum": 0,
+      "no_street": 12,
+      "seconds": 1.269,
+      "per_sec": 3941.5,
+      "tag_fail_pct": 0.0,
+      "zip_miss_pct": 0.0,
+      "no_addrnum_pct": 0.0,
+      "no_street_pct": 0.24
+    },
+    "examples": {
+      "tag_fail": [],
+      "zip_miss": [],
+      "no_addrnum": [],
+      "no_street": [
+        {
+          "raw": "720 SOUTH ST BARRINGTON IL 60010",
+          "tags": {
+            "AddressNumber": "720",
+            "StreetNamePostDirectional": "SOUTH",
+            "PlaceName": "ST BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "720 SOUTH ST BARRINGTON IL 60010",
+          "tags": {
+            "AddressNumber": "720",
+            "StreetNamePostDirectional": "SOUTH",
+            "PlaceName": "ST BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        },
+        {
+          "raw": "OUTLOT SOUTH BARRINGTON IL 60010",
+          "tags": {
+            "Recipient": "OUTLOT SOUTH",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60010"
+          }
+        }
+      ]
+    }
+  },
+  "cook_mail": {
+    "stats": {
+      "n": 5000,
+      "tag_fail": 3,
+      "zip_miss": 0,
+      "no_addrnum": 0,
+      "no_street": 73,
+      "seconds": 1.099,
+      "per_sec": 4551.6,
+      "tag_fail_pct": 0.06,
+      "zip_miss_pct": 0.0,
+      "no_addrnum_pct": 0.0,
+      "no_street_pct": 1.46
+    },
+    "examples": {
+      "tag_fail": [
+        "380 WOODVIEW RD APT A LK BARRNGTN IL 60010",
+        "340 E NORTH WATER 2500 CHICAGO IL 60611",
+        "516 HORIZON DRIVE WEST ST CHARLES IL 60175"
+      ],
+      "zip_miss": [],
+      "no_addrnum": [],
+      "no_street": [
+        {
+          "raw": "PO BOX 782 BARRINGTON IL 60011",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "782",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60011"
+          }
+        },
+        {
+          "raw": "POB 608 HIGHLAND PK IL 60035",
+          "tags": {
+            "USPSBoxType": "POB",
+            "USPSBoxID": "608",
+            "PlaceName": "HIGHLAND PK",
+            "StateName": "IL",
+            "ZipCode": "60035"
+          }
+        },
+        {
+          "raw": "PO BOX 9 BARRINGTON IL 60011",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "9",
+            "PlaceName": "BARRINGTON",
+            "StateName": "IL",
+            "ZipCode": "60011"
+          }
+        },
+        {
+          "raw": "PO BOX 755 CHICAGO IL 60690",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "755",
+            "PlaceName": "CHICAGO",
+            "StateName": "IL",
+            "ZipCode": "60690"
+          }
+        },
+        {
+          "raw": "PO BOX 755 CHICAGO IL 60690",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "755",
+            "PlaceName": "CHICAGO",
+            "StateName": "IL",
+            "ZipCode": "60690"
+          }
+        },
+        {
+          "raw": "PO BOX 755 CHICAGO IL 60690",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "755",
+            "PlaceName": "CHICAGO",
+            "StateName": "IL",
+            "ZipCode": "60690"
+          }
+        },
+        {
+          "raw": "PO BOX 755 CHICAGO IL 60690",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "755",
+            "PlaceName": "CHICAGO",
+            "StateName": "IL",
+            "ZipCode": "60690"
+          }
+        },
+        {
+          "raw": "PO BOX 755 CHICAGO IL 60690",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "755",
+            "PlaceName": "CHICAGO",
+            "StateName": "IL",
+            "ZipCode": "60690"
+          }
+        },
+        {
+          "raw": "PO BOX 755 CHICAGO IL 60690",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "755",
+            "PlaceName": "CHICAGO",
+            "StateName": "IL",
+            "ZipCode": "60690"
+          }
+        },
+        {
+          "raw": "PO BOX 755 CHICAGO IL 60690",
+          "tags": {
+            "USPSBoxType": "PO BOX",
+            "USPSBoxID": "755",
+            "PlaceName": "CHICAGO",
+            "StateName": "IL",
+            "ZipCode": "60690"
+          }
+        }
+      ]
+    }
+  },
+  "nyc": {
+    "stats": {
+      "n": 5000,
+      "tag_fail": 33,
+      "zip_miss": 0,
+      "no_addrnum": 2,
+      "no_street": 9,
+      "seconds": 0.809,
+      "per_sec": 6178.5,
+      "tag_fail_pct": 0.66,
+      "zip_miss_pct": 0.0,
+      "no_addrnum_pct": 0.04,
+      "no_street_pct": 0.18
+    },
+    "examples": {
+      "tag_fail": [
+        "BROADWAY NEW YORK NY 10013",
+        "430 FDR DRIVE WEST LANE NEW YORK NY 10002",
+        "59 ST JAMES PLACE NEW YORK NY 10038",
+        "55 ST JAMES PLACE NEW YORK NY 10038",
+        "51 ST JAMES PLACE NEW YORK NY 10038",
+        "47 ST JAMES PLACE NEW YORK NY 10038",
+        "45 ST JAMES PLACE NEW YORK NY 10038",
+        "92 ST MARKS PLACE NEW YORK NY 10009",
+        "94 ST MARKS PLACE NEW YORK NY 10009",
+        "96 ST MARKS PLACE NEW YORK NY 10009"
+      ],
+      "zip_miss": [],
+      "no_addrnum": [
+        {
+          "raw": "7 WORLD TRADE CENTER NEW YORK NY 10007",
+          "tags": {
+            "BuildingName": "7 WORLD TRADE CENTER",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10007"
+          }
+        },
+        {
+          "raw": "1 AVENUE NEW YORK NY 10009",
+          "tags": {
+            "StreetName": "1",
+            "StreetNamePostType": "AVENUE",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10009"
+          }
+        }
+      ],
+      "no_street": [
+        {
+          "raw": "PETER MINUIT PLAZA NEW YORK NY 10004",
+          "tags": {
+            "BuildingName": "PETER MINUIT PLAZA",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10004"
+          }
+        },
+        {
+          "raw": "PETER MINUIT PLAZA NEW YORK NY 10004",
+          "tags": {
+            "BuildingName": "PETER MINUIT PLAZA",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10004"
+          }
+        },
+        {
+          "raw": "7 WORLD TRADE CENTER NEW YORK NY 10007",
+          "tags": {
+            "BuildingName": "7 WORLD TRADE CENTER",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10007"
+          }
+        },
+        {
+          "raw": "PECK SLIP NEW YORK NY 10038",
+          "tags": {
+            "Recipient": "PECK SLIP NEW",
+            "PlaceName": "YORK",
+            "StateName": "NY",
+            "ZipCode": "10038"
+          }
+        },
+        {
+          "raw": "CHATHAM SQUARE NEW YORK NY 10038",
+          "tags": {
+            "LandmarkName": "CHATHAM SQUARE",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10038"
+          }
+        },
+        {
+          "raw": "PARK ROW NEW YORK NY 10038",
+          "tags": {
+            "LandmarkName": "PARK ROW",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10038"
+          }
+        },
+        {
+          "raw": "PARK ROW NEW YORK NY 10007",
+          "tags": {
+            "LandmarkName": "PARK ROW",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10007"
+          }
+        },
+        {
+          "raw": "AVENUE B NEW YORK NY 10009",
+          "tags": {
+            "StreetNamePostType": "AVENUE",
+            "OccupancyIdentifier": "B",
+            "PlaceName": "NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10009"
+          }
+        },
+        {
+          "raw": "157 1/2 BOWERY NEW YORK NY 10002",
+          "tags": {
+            "AddressNumber": "157",
+            "AddressNumberSuffix": "1/2",
+            "PlaceName": "BOWERY NEW YORK",
+            "StateName": "NY",
+            "ZipCode": "10002"
+          }
+        }
+      ]
+    }
+  }
+}
