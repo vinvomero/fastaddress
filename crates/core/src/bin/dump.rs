@@ -56,11 +56,18 @@ fn main() {
             usaddr_core::model::tag_attrs(&xseq).expect("tagging must not error")
         };
 
+        let (tag, tag_error) = match usaddr_core::api::tag(raw) {
+            Ok((pairs, kind)) => (Some(json!([pairs, kind])), None),
+            Err(_) => (None, Some("RepeatedLabelError")),
+        };
+
         let line = json!({
             "raw": raw,
             "tokens": tokens,
             "attrs": attrs_sorted,
             "labels": labels,
+            "tag": tag,
+            "tag_error": tag_error,
         });
         writeln!(out, "{line}").expect("stdout write");
     }

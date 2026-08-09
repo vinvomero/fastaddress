@@ -36,6 +36,13 @@ def compare_row(oracle, rust):
         return ("attrs", {"detail": "length mismatch"})
     if oracle["labels"] != rust["labels"]:
         return ("labels", {"oracle": oracle["labels"], "rust": rust["labels"]})
+    if oracle["tag_error"] != rust.get("tag_error"):
+        return ("tag", {"oracle_error": oracle["tag_error"], "rust_error": rust.get("tag_error")})
+    if oracle["tag"] is not None:
+        o_pairs = [[k, v] for k, v in oracle["tag"][0].items()]
+        o_norm = [o_pairs, oracle["tag"][1]]
+        if o_norm != rust.get("tag"):
+            return ("tag", {"oracle": o_norm, "rust": rust.get("tag")})
     return None
 
 
@@ -50,7 +57,7 @@ def run_dataset(name, dump_bin):
         oracle_rows = [json.loads(line) for line in f]
     assert len(rust_rows) == len(oracle_rows), f"{name}: row count mismatch"
 
-    stats = {"n": len(oracle_rows), "tokens": 0, "attrs": 0, "labels": 0}
+    stats = {"n": len(oracle_rows), "tokens": 0, "attrs": 0, "labels": 0, "tag": 0}
     examples = []
     for oracle, rust in zip(oracle_rows, rust_rows):
         div = compare_row(oracle, rust)
@@ -76,21 +83,23 @@ def main():
         stats, examples = run_dataset(name, args.dump_bin)
         all_stats[name] = stats
         all_examples[name] = examples
-        div = stats["tokens"] + stats["attrs"] + stats["labels"]
+        div = stats["tokens"] + stats["attrs"] + stats["labels"] + stats["tag"]
         total_div += div
         print(
             f"{name:10s} n={stats['n']}  token_div={stats['tokens']}  "
-            f"attr_div={stats['attrs']}  label_div={stats['labels']}"
+            f"attr_div={stats['attrs']}  label_div={stats['labels']}  tag_div={stats['tag']}"
         )
 
     lines = [
         "# Parity Report — Rust engine vs usaddress " + version("usaddress"),
         "",
-        "| Dataset | Rows | Token divs | Attr divs | Label divs |",
-        "|---|---|---|---|---|",
+        "| Dataset | Rows | Token divs | Attr divs | Label divs | Tag divs |",
+        "|---|---|---|---|---|---|",
     ]
     for name, s in all_stats.items():
-        lines.append(f"| {name} | {s['n']} | {s['tokens']} | {s['attrs']} | {s['labels']} |")
+        lines.append(
+            f"| {name} | {s['n']} | {s['tokens']} | {s['attrs']} | {s['labels']} | {s['tag']} |"
+        )
     lines.append("")
     if total_div:
         lines.append("## Divergence examples")
