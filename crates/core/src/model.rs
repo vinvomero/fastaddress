@@ -17,6 +17,12 @@ thread_local! {
     static TAGGER: RefCell<Option<Tagger<'static>>> = const { RefCell::new(None) };
 }
 
+/// Number of attributes in the model (sizes the word-cache cap).
+#[inline]
+pub fn num_attrs() -> u32 {
+    MODEL.num_attrs()
+}
+
 /// Resolve an attribute name to the model's attribute id (None if unknown).
 #[inline]
 pub fn attr_id(name: &str) -> Option<u32> {

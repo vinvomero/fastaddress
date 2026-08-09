@@ -1,8 +1,14 @@
-//! Port of usaddress tokenFeatures / tokens2features (v0.5.16), emitting the
-//! flattened CRFsuite attributes python-crfsuite's ItemSequence produces:
-//! bool True -> (key, 1.0); bool False -> (key, 0.0); string value ->
-//! ("key:value", 1.0) including empty strings; nested context dicts join with
-//! ':' ("previous:word:main"). Parity is enforced by the differential suite.
+//! Port of usaddress tokenFeatures / tokens2features (v0.5.16).
+//!
+//! `token_facts` computes the per-token feature decisions once; two renderers
+//! consume it: `token_attrs` (CRFsuite attribute strings, oracle/dump path)
+//! and the id renderer in `attr_cache` (production fast path). Single source
+//! of logic keeps the paths from drifting; the equivalence and parity suites
+//! enforce it.
+//!
+//! String serialization matches python-crfsuite's ItemSequence: bool True ->
+//! (key, 1.0); bool False -> (key, 0.0); string value -> ("key:value", 1.0)
+//! including empty strings; nested context dicts join with ':'.
 
 use crfs::Attribute;
 
@@ -46,6 +52,76 @@ fn ends_in_punc(token: &str) -> bool {
     }
 }
 
+/// The per-token feature decisions, computed once per token.
+pub struct TokenFacts {
+    pub abbrev: bool,
+    pub digits: &'static str, // "all_digits" | "some_digits" | "no_digits"
+    /// Some(word) when token_abbrev is not all-digits (may be empty string);
+    /// None mirrors Python's `word: False` for numeric tokens.
+    pub word: Option<String>,
+    /// Some(trailing zero run, possibly empty) for numeric tokens; None mirrors False.
+    pub zeros: Option<String>,
+    pub length_kind: char, // 'd' | 'w'
+    pub length: usize,     // codepoint count of token_abbrev
+    /// Some(last char of the original token) when endsinpunc fires; None mirrors False.
+    pub endsinpunc: Option<char>,
+    pub directional: bool,
+    pub street_name: bool,
+    pub has_vowels: bool,
+}
+
+pub fn token_facts(token: &str) -> TokenFacts {
+    let token_clean = if matches!(token, "&" | "#" | "\u{00BD}") {
+        token
+    } else {
+        clean_token(token)
+    };
+    let token_abbrev: String = token_clean.to_lowercase().replace('.', "");
+    let abbrev_is_digit = is_digit_str(&token_abbrev);
+
+    let digits = if is_digit_str(token_clean) {
+        "all_digits"
+    } else if token_clean.bytes().any(|b| b.is_ascii_digit()) {
+        "some_digits"
+    } else {
+        "no_digits"
+    };
+
+    let zeros = if abbrev_is_digit {
+        let start = token_abbrev.len() - token_abbrev.bytes().rev().take_while(|b| *b == b'0').count();
+        Some(token_abbrev[start..].to_string())
+    } else {
+        None
+    };
+
+    let endsinpunc = if ends_in_punc(token) {
+        token.chars().last()
+    } else {
+        None
+    };
+
+    let directional = DIRECTIONS.binary_search(&token_abbrev.as_str()).is_ok();
+    let street_name = STREET_NAMES.binary_search(&token_abbrev.as_str()).is_ok();
+    let has_vowels = token_abbrev
+        .chars()
+        .skip(1)
+        .any(|c| matches!(c, 'a' | 'e' | 'i' | 'o' | 'u'));
+    let length = token_abbrev.chars().count();
+
+    TokenFacts {
+        abbrev: token_clean.ends_with('.'),
+        digits,
+        length_kind: if abbrev_is_digit { 'd' } else { 'w' },
+        length,
+        endsinpunc,
+        directional,
+        street_name,
+        has_vowels,
+        word: if abbrev_is_digit { None } else { Some(token_abbrev.clone()) },
+        zeros,
+    }
+}
+
 fn attr(name: &str, value: f64) -> Attribute {
     Attribute::new(name, value)
 }
@@ -58,78 +134,43 @@ fn attr_kv(key: &str, value: &str) -> Attribute {
     Attribute::new(name, 1.0)
 }
 
-/// Base (non-context) attributes for one token, in usaddress field order.
-pub fn token_attrs(token: &str) -> Vec<Attribute> {
-    let token_clean = if matches!(token, "&" | "#" | "\u{00BD}") {
-        token
-    } else {
-        clean_token(token)
-    };
-    let token_abbrev: String = token_clean.to_lowercase().replace('.', "");
-    let abbrev_is_digit = is_digit_str(&token_abbrev);
-
+/// Render facts as CRFsuite attribute strings, in usaddress field order.
+pub fn facts_to_attrs(f: &TokenFacts) -> Vec<Attribute> {
     let mut attrs: Vec<Attribute> = Vec::with_capacity(9);
-
-    attrs.push(attr(
-        "abbrev",
-        (token_clean.ends_with('.')) as u8 as f64,
-    ));
-
-    let digits = if is_digit_str(token_clean) {
-        "all_digits"
-    } else if token_clean.bytes().any(|b| b.is_ascii_digit()) {
-        "some_digits"
-    } else {
-        "no_digits"
-    };
-    attrs.push(attr_kv("digits", digits));
-
-    if abbrev_is_digit {
-        attrs.push(attr("word", 0.0));
-    } else {
-        attrs.push(attr_kv("word", &token_abbrev));
+    attrs.push(attr("abbrev", f.abbrev as u8 as f64));
+    attrs.push(attr_kv("digits", f.digits));
+    match &f.word {
+        Some(w) => attrs.push(attr_kv("word", w)),
+        None => attrs.push(attr("word", 0.0)),
     }
-
-    if abbrev_is_digit {
-        let zeros_start = token_abbrev.len() - token_abbrev.bytes().rev().take_while(|b| *b == b'0').count();
-        attrs.push(attr_kv("trailing.zeros", &token_abbrev[zeros_start..]));
-    } else {
-        attrs.push(attr("trailing.zeros", 0.0));
+    match &f.zeros {
+        Some(z) => attrs.push(attr_kv("trailing.zeros", z)),
+        None => attrs.push(attr("trailing.zeros", 0.0)),
     }
-
     let mut length = String::with_capacity(12);
     length.push_str("length:");
-    length.push(if abbrev_is_digit { 'd' } else { 'w' });
+    length.push(f.length_kind);
     length.push(':');
-    length.push_str(&token_abbrev.chars().count().to_string());
+    length.push_str(&f.length.to_string());
     attrs.push(Attribute::new(length, 1.0));
-
-    if ends_in_punc(token) {
-        let last = token.chars().last().unwrap();
-        let mut name = String::with_capacity(12);
-        name.push_str("endsinpunc:");
-        name.push(last);
-        attrs.push(Attribute::new(name, 1.0));
-    } else {
-        attrs.push(attr("endsinpunc", 0.0));
+    match f.endsinpunc {
+        Some(c) => {
+            let mut name = String::with_capacity(12);
+            name.push_str("endsinpunc:");
+            name.push(c);
+            attrs.push(Attribute::new(name, 1.0));
+        }
+        None => attrs.push(attr("endsinpunc", 0.0)),
     }
-
-    attrs.push(attr(
-        "directional",
-        DIRECTIONS.binary_search(&token_abbrev.as_str()).is_ok() as u8 as f64,
-    ));
-    attrs.push(attr(
-        "street_name",
-        STREET_NAMES.binary_search(&token_abbrev.as_str()).is_ok() as u8 as f64,
-    ));
-
-    let has_vowels = token_abbrev
-        .chars()
-        .skip(1)
-        .any(|c| matches!(c, 'a' | 'e' | 'i' | 'o' | 'u'));
-    attrs.push(attr("has.vowels", has_vowels as u8 as f64));
-
+    attrs.push(attr("directional", f.directional as u8 as f64));
+    attrs.push(attr("street_name", f.street_name as u8 as f64));
+    attrs.push(attr("has.vowels", f.has_vowels as u8 as f64));
     attrs
+}
+
+/// Base (non-context) attributes for one token, in usaddress field order.
+pub fn token_attrs(token: &str) -> Vec<Attribute> {
+    facts_to_attrs(&token_facts(token))
 }
 
 fn push_prefixed(out: &mut Vec<Attribute>, prefix: &str, base: &[Attribute]) {

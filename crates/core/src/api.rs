@@ -4,8 +4,9 @@
 
 use std::fmt;
 
-use crate::features::tokens_to_attrs;
-use crate::model::tag_attrs;
+use crate::attr_cache::facts_to_id_seq;
+use crate::features::token_facts;
+use crate::model::{label_name, tag_attr_ids};
 use crate::tokenize::tokenize;
 
 /// Mirror of usaddress.RepeatedLabelError: raised in compat mode when a label
@@ -29,15 +30,20 @@ impl fmt::Display for RepeatedLabelError {
 
 impl std::error::Error for RepeatedLabelError {}
 
-/// usaddress.parse(): token/label pairs straight from the model.
+/// usaddress.parse(): token/label pairs straight from the model (id fast path;
+/// the string path lives in the dump binary for oracle diffing).
 pub fn parse(address: &str) -> Vec<(String, String)> {
     let tokens = tokenize(address);
     if tokens.is_empty() {
         return Vec::new();
     }
-    let attr_seq = tokens_to_attrs(&tokens);
-    let labels = tag_attrs(&attr_seq).expect("model tagging must not fail on valid attributes");
-    tokens.into_iter().zip(labels).collect()
+    let facts: Vec<_> = tokens.iter().map(|t| token_facts(t)).collect();
+    let id_seq = facts_to_id_seq(&facts);
+    let labels = tag_attr_ids(&id_seq);
+    tokens
+        .into_iter()
+        .zip(labels.into_iter().map(|lid| label_name(lid).to_string()))
+        .collect()
 }
 
 fn tag_impl(
