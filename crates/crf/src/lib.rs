@@ -1,32 +1,7 @@
-//! Pure Rust implementation of Conditional Random Fields (CRF)
+//! Pure Rust implementation of Conditional Random Fields (CRF) — vendored,
+//! inference-only fork of crfs 0.4.1 (see VENDORED.md).
 //!
-//! This library provides both training and prediction capabilities for linear-chain CRFs.
-//!
-//! # Examples
-//!
-//! ## Training
-//!
-//! ```no_run
-//! use crfs::train::Trainer;
-//! use crfs::Attribute;
-//! use std::path::Path;
-//!
-//! let mut trainer = Trainer::lbfgs();
-//! trainer.verbose(true);
-//!
-//! let xseq = vec![
-//!     vec![Attribute::new("walk", 1.0)],
-//!     vec![Attribute::new("shop", 1.0)],
-//! ];
-//! let yseq = vec!["sunny", "rainy"];
-//! trainer.append(&xseq, &yseq)?;
-//!
-//! trainer.params_mut().set_c2(1.0)?;
-//! trainer.train(Path::new("model.crfsuite"))?;
-//! # Ok::<(), std::io::Error>(())
-//! ```
-//!
-//! ## Prediction
+//! # Example
 //!
 //! ```no_run
 //! use crfs::{Attribute, Model};
@@ -50,13 +25,7 @@ mod feature;
 mod model;
 mod tagger;
 
-/// Training module containing all components for training CRF models
-pub mod train;
-
 // Re-export main types
 pub use self::attribute::Attribute;
 pub use self::model::Model;
 pub use self::tagger::Tagger;
-
-// Re-export training types for convenience
-pub use self::train::Trainer;
