@@ -1,0 +1,11 @@
+[workspace]
+members = ["crates/core"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+
+[profile.release]
+lto = true
+codegen-units = 1
