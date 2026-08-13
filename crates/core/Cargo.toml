@@ -5,6 +5,11 @@ edition.workspace = true
 license.workspace = true
 description = "Rust engine for US address parsing, running the usaddress CRF model with output parity"
 
+[features]
+# Compiles in the v2 model and its selection paths. Stays OFF until the
+# model-v2 plan's go/no-go gate enables it (plan R8).
+model-v2 = []
+
 [dependencies]
 crfs = { path = "../crf" }
 regex = "1"

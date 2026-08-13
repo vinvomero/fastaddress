@@ -4,9 +4,9 @@
 
 use std::fmt;
 
-use crate::attr_cache::facts_to_id_seq;
+use crate::attr_cache::facts_to_id_seq_for;
 use crate::features::token_facts;
-use crate::model::{label_name, tag_attr_ids};
+use crate::model::{label_name_for, tag_attr_ids_for, ModelId};
 use crate::tokenize::tokenize;
 
 /// Mirror of usaddress.RepeatedLabelError: raised in compat mode when a label
@@ -30,23 +30,29 @@ impl fmt::Display for RepeatedLabelError {
 
 impl std::error::Error for RepeatedLabelError {}
 
-/// usaddress.parse(): token/label pairs straight from the model (id fast path;
-/// the string path lives in the dump binary for oracle diffing).
-pub fn parse(address: &str) -> Vec<(String, String)> {
+/// parse() against a specific model (id fast path; the string path lives in
+/// the dump/eval binaries for oracle diffing).
+pub fn parse_with(model: ModelId, address: &str) -> Vec<(String, String)> {
     let tokens = tokenize(address);
     if tokens.is_empty() {
         return Vec::new();
     }
     let facts: Vec<_> = tokens.iter().map(|t| token_facts(t)).collect();
-    let id_seq = facts_to_id_seq(&facts);
-    let labels = tag_attr_ids(&id_seq);
+    let id_seq = facts_to_id_seq_for(model, &facts);
+    let labels = tag_attr_ids_for(model, &id_seq);
     tokens
         .into_iter()
-        .zip(labels.into_iter().map(|lid| label_name(lid).to_string()))
+        .zip(labels.into_iter().map(|lid| label_name_for(model, lid).to_string()))
         .collect()
 }
 
+/// usaddress.parse(): the parity-protected v1 default.
+pub fn parse(address: &str) -> Vec<(String, String)> {
+    parse_with(ModelId::V1, address)
+}
+
 fn tag_impl(
+    model: ModelId,
     address: &str,
     merge_repeats: bool,
     tag_mapping: Option<&std::collections::HashMap<String, String>>,
@@ -61,7 +67,7 @@ fn tag_impl(
     let mut is_intersection = false;
     let mut og_labels: Vec<String> = Vec::new();
 
-    let parsed = parse(address);
+    let parsed = parse_with(model, address);
     for (token, mut label) in parsed.clone() {
         if label == "IntersectionSeparator" {
             is_intersection = true;
@@ -127,7 +133,7 @@ fn tag_impl(
 
 /// usaddress.tag() compat mode: identical output, including RepeatedLabelError.
 pub fn tag(address: &str) -> Result<(Vec<(String, String)>, String), RepeatedLabelError> {
-    tag_impl(address, false, None)
+    tag_impl(ModelId::V1, address, false, None)
 }
 
 /// usaddress.tag(address, tag_mapping): compat mode with label remapping.
@@ -135,13 +141,27 @@ pub fn tag_with_mapping(
     address: &str,
     tag_mapping: Option<&std::collections::HashMap<String, String>>,
 ) -> Result<(Vec<(String, String)>, String), RepeatedLabelError> {
-    tag_impl(address, false, tag_mapping)
+    tag_impl(ModelId::V1, address, false, tag_mapping)
 }
 
 /// Native mode: same grouping, but a non-adjacent repeated label merges into
 /// its existing component instead of erroring. Never fails on valid input.
 pub fn tag_native(address: &str) -> (Vec<(String, String)>, String) {
-    tag_impl(address, true, None).expect("merge_repeats mode cannot error")
+    tag_impl(ModelId::V1, address, true, None).expect("merge_repeats mode cannot error")
+}
+
+/// Model-selecting variants (V2 exists only behind the `model-v2` feature and
+/// remains unreleased until the go/no-go gate).
+pub fn tag_model(
+    model: ModelId,
+    address: &str,
+    tag_mapping: Option<&std::collections::HashMap<String, String>>,
+) -> Result<(Vec<(String, String)>, String), RepeatedLabelError> {
+    tag_impl(model, address, false, tag_mapping)
+}
+
+pub fn tag_native_model(model: ModelId, address: &str) -> (Vec<(String, String)>, String) {
+    tag_impl(model, address, true, None).expect("merge_repeats mode cannot error")
 }
 
 #[cfg(test)]
