@@ -140,7 +140,53 @@ def gen_recipient(rng):
     return seq(pairs)
 
 
+def gen_bare_type_tail(rng):
+    """'2350 WASHINGTON NE PL' — street type in final position with no city
+    tail; the type must stay a post-type, not become a BuildingName."""
+    pairs = [(str(rng.randint(100, 9999)), "AddressNumber"),
+             (rng.choice(STREETS).upper(), "StreetName")]
+    if rng.random() < 0.7:
+        pairs.append((rng.choice(["NE", "NW", "SE", "SW", "N", "S", "E", "W"]),
+                      "StreetNamePostDirectional"))
+    pairs.append((rng.choice(TYPES).upper(), "StreetNamePostType"))
+    return seq(pairs)
+
+
+def gen_directional_placename(rng):
+    """'... crt n east moline il 61244' — a directional word that begins a
+    two-word city name stays PlaceName."""
+    pairs = [(str(rng.randint(100, 9999)), "AddressNumber"),
+             (rng.choice(STREETS).lower(), "StreetName"),
+             (rng.choice(TYPES).lower(), "StreetNamePostType")]
+    if rng.random() < 0.5:
+        pairs.append((rng.choice(["n", "s", "e", "w"]), "StreetNamePostDirectional"))
+    city_word = rng.choice(["east", "west", "north", "south"])
+    second = rng.choice(["moline", "chicago", "haven", "point", "bend", "salem"])
+    pairs += [(city_word, "PlaceName"), (second, "PlaceName"),
+              (rng.choice(STATE_ABBR).lower(), "StateName"),
+              (str(rng.randint(10000, 99999)), "ZipCode")]
+    return seq(pairs)
+
+
+def gen_pobox_dept(rng):
+    """'po box 33701 dept 33701 sn francisco ca 94139' — abbreviated/misspelled
+    city tokens stay PlaceName even when they look like subaddress types."""
+    num = str(rng.randint(100, 99999))
+    pairs = [("po", "USPSBoxType"), ("box", "USPSBoxType"), (num, "USPSBoxID")]
+    if rng.random() < 0.6:
+        pairs += [("dept", "SubaddressType"), (str(rng.randint(100, 99999)), "SubaddressIdentifier")]
+    city = rng.choice([["sn", "francisco"], ["st", "louis"], ["ft", "worth"],
+                       ["mt", "vernon"], ["n", "olmsted"]])
+    pairs += [(c, "PlaceName") for c in city]
+    pairs += [(rng.choice(STATE_ABBR).lower(), "StateName"),
+              (str(rng.randint(10000, 99999)), "ZipCode")]
+    return seq(pairs)
+
+
 GENERATORS = [
+    (gen_bare_type_tail, 1200),
+    (gen_directional_placename, 1200),
+    (gen_pobox_dept, 1200),
     (gen_route, 1800),
     (gen_hc_rr_box, 1500),
     (gen_business_highway, 1500),

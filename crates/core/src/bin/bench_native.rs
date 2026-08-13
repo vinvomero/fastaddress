@@ -30,6 +30,9 @@ fn main() {
 
     // Optional stage decomposition: BENCH_STAGE=tokenize|features|full (default full)
     let stage = env::var("BENCH_STAGE").unwrap_or_else(|_| "full".to_string());
+    // Optional model selection for the v2 evaluation (requires --features model-v2).
+    #[cfg(feature = "model-v2")]
+    let use_v2 = env::var("BENCH_MODEL").map(|v| v == "v2").unwrap_or(false);
     let start = Instant::now();
     let mut errors = 0usize;
     if stage == "tokenize" {
@@ -42,6 +45,20 @@ fn main() {
             errors += usaddr_core::features::tokens_to_attrs(&tokens).is_empty() as usize;
         }
     } else if threads <= 1 {
+        #[cfg(feature = "model-v2")]
+        if use_v2 {
+            for raw in &rows {
+                if usaddr_core::api::tag_model(usaddr_core::model::ModelId::V2, raw, None).is_err() {
+                    errors += 1;
+                }
+            }
+            let secs = start.elapsed().as_secs_f64();
+            println!(
+                "{{\"rows\": {}, \"threads\": 1, \"model\": \"v2\", \"secs\": {:.4}, \"per_sec\": {:.1}, \"errors\": {}}}",
+                rows.len(), secs, rows.len() as f64 / secs, errors
+            );
+            return;
+        }
         for raw in &rows {
             if usaddr_core::api::tag(raw).is_err() {
                 errors += 1;
