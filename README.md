@@ -3,12 +3,12 @@
 A drop-in replacement for [usaddress](https://github.com/datamade/usaddress) — the standard
 US address parser — running the **same trained CRF model** in a Rust engine.
 
-- **10x faster** single-core, like-for-like (110,000+ addresses/sec vs ~10,500; measured,
-  reproducible), and **210,000+ addresses/sec** multi-threaded — a million-row tax roll in
-  under 5 seconds
+- **10x faster** single-core, like-for-like (110,000+ addresses/sec vs ~10,500), and
+  **210,000+ addresses/sec** multi-threaded — a million-row tax roll in under 5 seconds
+  (measured; methodology and current numbers in [benchmark/results/speed_report.md](benchmark/results/speed_report.md))
 - **Exact output parity**: same model, same features, same predictions — verified at four layers
   (tokens, features, serialized attributes, tagged output) across 20,738 real county tax-roll
-  addresses with **zero divergences**
+  addresses with **zero divergences** (current run: [benchmark/results/parity_report.md](benchmark/results/parity_report.md))
 - **Never crashes in native mode**: inputs that raise `RepeatedLabelError` in usaddress (e.g.,
   saint-name streets like "ST JAMES PLACE") parse gracefully via `tag_native()` — compat mode
   reproduces the error exactly for drop-in fidelity
@@ -28,7 +28,8 @@ Unicode-casing differences are documented as out of parity scope.
 
 ## Why this exists
 
-usaddress is quietly enormous infrastructure — millions of monthly downloads, government and
+usaddress is quietly enormous infrastructure — [5.2M monthly downloads](https://pepy.tech/project/usaddress)
+(pepy.tech, Aug 2026), [1,145 dependent repos](https://github.com/datamade/usaddress/network/dependents) including government and
 open-data dependents — built on a CRF architecture whose Python implementation tops out around a
 few thousand addresses per second. County tax rolls, assessor records, and national datasets run
 to the millions of rows. Same model, compiled engine: the accuracy people rely on, at batch speed.

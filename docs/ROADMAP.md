@@ -1,8 +1,10 @@
 # Roadmap
 
-Grounded in an analysis of the upstream usaddress issue tracker (2026-08-12: 170 open issues
-reviewed; 37 addressed by this project's v1, 7 cheaply addressable, 112 model-level, 14 out of
-scope). The rule from CONTRIBUTING.md governs everything here: parity is the product; compat-mode
+Grounded in an analysis of the [upstream usaddress issue tracker](https://github.com/datamade/usaddress/issues)
+(fetched 2026-08-12 via the GitHub API: 170 open issues reviewed; 37 addressed by this project's
+v1, 7 cheaply addressable, 112 model-level, 14 out of scope). Performance and parity figures below
+are this repo's measurements: [benchmark/results/speed_report.md](../benchmark/results/speed_report.md)
+and [benchmark/results/parity_report.md](../benchmark/results/parity_report.md). The rule from CONTRIBUTING.md governs everything here: parity is the product; compat-mode
 behavior is frozen to usaddress 0.5.16, and improvements live in native mode or opt-in layers.
 
 ## v1.0 (built, unreleased)
