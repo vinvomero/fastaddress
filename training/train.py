@@ -27,6 +27,12 @@ def main():
     ap.add_argument("--c2", type=float, default=0.01)
     ap.add_argument("--max-iterations", type=int, default=200)
     ap.add_argument("--out", default=str(ROOT / "model" / "usaddr_v2.crfsuite"))
+    ap.add_argument(
+        "--oversample-labeled",
+        type=int,
+        default=1,
+        help="repeat upstream labeled.xml rows N times (rare-pattern class balance)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -36,8 +42,10 @@ def main():
         for line in f:
             r = json.loads(line)
             feats = usaddress.tokens2features(r["tokens"])
-            trainer.append(feats, r["labels"])
-            n += 1
+            repeats = args.oversample_labeled if r.get("origin") == "labeled.xml" else 1
+            for _ in range(repeats):
+                trainer.append(feats, r["labels"])
+                n += 1
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
@@ -58,6 +66,7 @@ def main():
     corpus_hash = hashlib.sha256(CORPUS.read_bytes()).hexdigest()[:16]
     manifest = {
         "sequences": n,
+        "oversample_labeled": args.oversample_labeled,
         "params": {
             "algorithm": "lbfgs",
             "c1": args.c1,

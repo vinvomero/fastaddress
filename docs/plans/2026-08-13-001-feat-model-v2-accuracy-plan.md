@@ -1,7 +1,7 @@
 ---
 title: "feat: Model v2 — retrained CRF for accuracy and speed"
 type: feat
-status: active
+status: completed
 date: 2026-08-13
 origin: C:/Users/vvome/docs/brainstorms/2026-08-09-us-address-parser-requirements.md
 ---

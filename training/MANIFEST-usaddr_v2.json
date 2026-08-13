@@ -1,0 +1,18 @@
+{
+ "sequences": 118884,
+ "oversample_labeled": 20,
+ "params": {
+  "algorithm": "lbfgs",
+  "c1": 0.1,
+  "c2": 0.01,
+  "max_iterations": 200,
+  "feature.minfreq": 0,
+  "feature.possible_transitions": true
+ },
+ "corpus_sha256_16": "c254f6432303bfae",
+ "usaddress_feature_version": "0.5.16",
+ "model_bytes": 185096,
+ "model_sha256_16": "a83d5755c3b3cea9",
+ "train_seconds": 1039.1,
+ "out": "usaddr_v2.crfsuite"
+}
