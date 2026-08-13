@@ -1,0 +1,18 @@
+{
+ "adjudicator": "ChatGPT (LLM), submitted by Vin 2026-08-13",
+ "note": "Blind A/B verdicts against eval/gold/ADJUDICATION.md (32 groups).",
+ "groups": {
+  "1": "A", "2": "B", "3": "B", "4": "A", "5": "B", "6": "A", "7": "B", "8": "B",
+  "9": "B", "10": "A", "11": "A", "12": "B", "13": "B", "14": "B", "15": "B",
+  "16": "B", "17": "B", "18": "B", "19": "B", "20": "neither", "21": "B",
+  "22": "A", "23": "neither", "24": "B", "25": "B", "26": "B", "27": "B",
+  "28": "skip", "29": "B", "30": "A", "31": "neither", "32": "neither"
+ },
+ "exceptions": {
+  "6 West South Water Market, Chicago, IL 60608": "A",
+  "430 FDR DRIVE WEST LANE NEW YORK NY 10002": "B"
+ },
+ "exception_reasons": {
+  "6 West South Water Market, Chicago, IL 60608": "'South Water Market' is the street name; fuller form 'South Water Market Street' appears in business records."
+ }
+}
