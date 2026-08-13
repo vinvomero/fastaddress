@@ -15,7 +15,7 @@ Original model exact match: **100.00%** (0 tokenization-mismatch rows counted as
 | StreetNamePreDirectional | 1.000 | 1.000 | 39 |
 | StreetNamePreType | 1.000 | 1.000 | 42 |
 
-Candidate exact match: **95.60%** (diff -4.40pp, 95% CI [-8.18, -1.26])
+Candidate exact match: **95.60%** (diff -4.40pp, 95% CI [-7.55, -1.26])
 
 ## gold-adjudicated: no scoreable records yet
 (1500 candidates exist; none adjudicated — gates pending human adjudication per protocol)

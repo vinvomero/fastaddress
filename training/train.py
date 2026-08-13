@@ -18,6 +18,7 @@ import usaddress
 
 ROOT = Path(__file__).parent.parent
 CORPUS = Path(__file__).parent / "corpus" / "corpus.jsonl"
+SYNTH = Path(__file__).parent / "corpus" / "synth.jsonl"
 
 
 def main():
@@ -33,19 +34,48 @@ def main():
         default=1,
         help="repeat upstream labeled.xml rows N times (rare-pattern class balance)",
     )
+    ap.add_argument(
+        "--distant-cap",
+        type=int,
+        default=None,
+        help="cap distant-supervised rows per county source (dilution control)",
+    )
+    ap.add_argument(
+        "--synth",
+        type=int,
+        default=0,
+        help="include training/corpus/synth.jsonl N times (pattern-targeted data)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
     n = 0
+    by_origin = {}
     t0 = time.perf_counter()
-    with open(CORPUS, encoding="utf-8") as f:
-        for line in f:
-            r = json.loads(line)
-            feats = usaddress.tokens2features(r["tokens"])
-            repeats = args.oversample_labeled if r.get("origin") == "labeled.xml" else 1
-            for _ in range(repeats):
-                trainer.append(feats, r["labels"])
-                n += 1
+
+    def feed(path, distant_cap=None):
+        nonlocal n
+        distant_seen = {}
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                r = json.loads(line)
+                origin = r.get("origin", "?")
+                if distant_cap and origin.endswith("-ds"):
+                    c = distant_seen.get(origin, 0)
+                    if c >= distant_cap:
+                        continue
+                    distant_seen[origin] = c + 1
+                feats = usaddress.tokens2features(r["tokens"])
+                repeats = args.oversample_labeled if origin == "labeled.xml" else 1
+                for _ in range(repeats):
+                    trainer.append(feats, r["labels"])
+                    n += 1
+                by_origin[origin] = by_origin.get(origin, 0) + repeats
+
+    feed(CORPUS, distant_cap=args.distant_cap)
+    if args.synth and SYNTH.exists():
+        for _ in range(args.synth):
+            feed(SYNTH)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
@@ -66,7 +96,10 @@ def main():
     corpus_hash = hashlib.sha256(CORPUS.read_bytes()).hexdigest()[:16]
     manifest = {
         "sequences": n,
+        "by_origin": by_origin,
         "oversample_labeled": args.oversample_labeled,
+        "distant_cap": args.distant_cap,
+        "synth_repeats": args.synth,
         "params": {
             "algorithm": "lbfgs",
             "c1": args.c1,

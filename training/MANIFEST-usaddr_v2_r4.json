@@ -1,0 +1,26 @@
+{
+ "sequences": 97209,
+ "by_origin": {
+  "openaddress_us_ia_linn.xml": 50000,
+  "allegheny-ds": 19994,
+  "cook-ds": 19990,
+  "labeled.xml": 7225
+ },
+ "oversample_labeled": 5,
+ "distant_cap": 0,
+ "synth_repeats": 0,
+ "params": {
+  "algorithm": "lbfgs",
+  "c1": 0.1,
+  "c2": 0.01,
+  "max_iterations": 200,
+  "feature.minfreq": 0,
+  "feature.possible_transitions": true
+ },
+ "corpus_sha256_16": "c254f6432303bfae",
+ "usaddress_feature_version": "0.5.16",
+ "model_bytes": 167740,
+ "model_sha256_16": "cae52775a48f1dc4",
+ "train_seconds": 439.2,
+ "out": "usaddr_v2_r4.crfsuite"
+}
