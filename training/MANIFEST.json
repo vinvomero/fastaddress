@@ -1,0 +1,11 @@
+{
+ "seed": 20260813,
+ "total": 91429,
+ "by_origin": {
+  "openaddress_us_ia_linn.xml": 50000,
+  "allegheny-ds": 19994,
+  "cook-ds": 19990,
+  "labeled.xml": 1445
+ },
+ "excluded_gold_or_clean_overlaps": 68
+}
