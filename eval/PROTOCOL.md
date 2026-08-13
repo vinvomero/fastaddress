@@ -10,8 +10,15 @@ not move after results exist.
    confidence interval on the difference that excludes zero.
 2. **Clean-set gate.** v2's exact-match rate on the clean set may not fall more than
    **1.0 percentage point** below the original model's. The clean set is upstream usaddress's
-   held-out labeled data (`measure_performance/test_data`, fetched at pinned version 0.5.16),
-   which is excluded from all training corpora by normalized-identity dedupe.
+   `measure_performance/test_data` files that follow the model's own labeling convention
+   (`labeled.xml`, `multi_word_state_addresses.xml`, `simple_address_patterns.xml`), excluded
+   from all training corpora by normalized-identity dedupe.
+
+   *Changelog (pre-training revision, disclosed):* `us50_test_tagged.xml` was originally
+   included, then excluded before any training run when baseline scoring revealed it uses a
+   coarser labeling convention than the model's schema (whole street phrases tagged
+   `StreetName`, e.g. "Road," — the original model scores ~10% exact match on it purely from
+   convention mismatch). It is unusable as an accuracy gate for either model.
 
 Both gates are applied mechanically in the go/no-go unit. A miss shelves the model (the selection
 path is reverted/disabled) and the findings are published with the same prominence a ship would
