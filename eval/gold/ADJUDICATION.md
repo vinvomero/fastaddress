@@ -4,6 +4,8 @@ The parsers now disagree on 49 of 1,500 messy addresses (16 distinct shapes). **
 
 **Models are blinded as A and B on purpose.** Judge which parse is *correct*, not which model you expect to win. (The A/B mapping is recorded in the repo, so the result stays auditable.)
 
+**Census evidence is attached where it exists.** The US Census geocoder (public domain, so it can be published with the eval set) says what the real address looks like — house number, street name, street type, city. Treat it as *evidence*, not as the answer: it reports a canonical address, not usaddress's token labels, and its component names do not carry every distinction in the schema. Where it says *no match*, it abstained — which is common on exactly the messy inputs that are hardest to judge.
+
 ## How to fill this out
 
 For each group, replace the `Verdict:` value with **A**, **B**, **neither**, or **skip** (use skip when the address is genuinely ambiguous). If one address in a group deserves a different answer than the rest, add a line under it — group verdicts are defaults, not handcuffs.
@@ -26,6 +28,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `US 6 Ind 15, Milford, IN 46542`
+  - *Census: no match* (the geocoder abstains on messy input — judge on the labels alone)
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -47,6 +50,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `Mile K Beach Road # 1, Kenai, AK 99611`
+  - *Census: no match* (the geocoder abstains on messy input — judge on the labels alone)
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -66,6 +70,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `340 E NORTH WATER 2500 CHICAGO IL 60611`
+  - *Census records:* 340 E NORTH WATER ST, CHICAGO, IL, 60611 — pre-direction `E`, street name **NORTH WATER**, street type `ST`, city **CHICAGO** *(block range 300-498, not this address's number)*
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -82,6 +87,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `99 s spruce road apt. #4b, D.C. 20500`
+  - *Census: no match* (the geocoder abstains on messy input — judge on the labels alone)
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -100,6 +106,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `RR 422 Box, Douglassville, PA 19518`
+  - *Census: no match* (the geocoder abstains on messy input — judge on the labels alone)
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -117,6 +124,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `300 orange ave, fl 7, ORL FL`
+  - *Census records:* 300 ORANGE AVE, SAINT AUGUSTINE, FL, 32092 — street name **ORANGE**, street type `AVE`, city **SAINT AUGUSTINE** *(block range 532-100, not this address's number)* ⚠️ **suspect match — the geocoder resolved to a city not in the input**
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -133,6 +141,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `33 1/2 AVE`
+  - *Census: no match* (the geocoder abstains on messy input — judge on the labels alone)
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -151,6 +160,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `210 CRYSTAL ST UNT D CARY IL 60013`
+  - *Census records:* 210 CRYSTAL ST, CARY, IL, 60013 — street name **CRYSTAL**, street type `ST`, city **CARY** *(block range 298-200, not this address's number)*
 
 **Verdict:** _____   (A / B / neither / skip)
 

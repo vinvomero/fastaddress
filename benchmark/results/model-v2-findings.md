@@ -78,3 +78,20 @@ Adjudicate the regenerated 16-group worklist (smaller than the original 32). If 
 those, it is defensible to ship it as the default with the split published. If it loses several,
 ship it as an opt-in alternate. Either way the parity promise is unaffected: v1 remains embedded,
 the v1 code path is untouched, and the four-layer parity suite is green.
+
+## Independent corroboration of the saint-name fix
+
+The US Census geocoder (public domain, redistributable — unlike Google's Address Validation API,
+whose terms forbid republishing results and would make a published gold set unauditable)
+independently resolves `113 ST MARKS PLACE NEW YORK NY 10009` to street name **SAINT MARKS**,
+street type **PL**, house number 113. That is v12's parse and not v1's, from a source with no
+stake in this comparison.
+
+Scope of that evidence, stated plainly: a geocoder answers "is this a real address and what is its
+canonical form", not "which of usaddress's 26 labels does each token carry". Its component names do
+not carry the schema's finer distinctions (pre- vs post-directional, LandmarkName vs BuildingName,
+USPS box groups), so grading against it would repeat the convention-mismatch error that disqualified
+`us50_test_tagged.xml`. It is also selective: across the 49 contested records it matched 38 and
+abstained on 11 — abstaining disproportionately on the messy inputs that are hardest to judge, and
+fuzzy-matching at least one address to a different city entirely. Evidence for the adjudicator,
+never a label source.

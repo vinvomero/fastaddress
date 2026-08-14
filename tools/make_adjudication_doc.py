@@ -30,6 +30,49 @@ def signature(rec):
     return tuple((d["v1"], d["v2"]) for d in rec["differing_tokens"])
 
 
+def census_evidence():
+    p = ROOT / "eval" / "gold" / "census_evidence.json"
+    if not p.exists():
+        return {}
+    return json.loads(p.read_text(encoding="utf-8-sig"))
+
+
+def format_evidence(ev, raw):
+    """Decision-relevant summary of a Census match.
+
+    Two honesty guards learned from a bad first pass:
+      * The component the API returns is the BLOCK RANGE of the matched street
+        segment, not the address's own house number. Presenting it as "house
+        number" was wrong (it showed 300 for a 340 address).
+      * The geocoder fuzzy-matches, and will happily resolve an address to a
+        different city. When the matched city does not appear in the input,
+        the match is flagged as suspect rather than shown as fact.
+    """
+    if not ev or ev.get("status") != "match":
+        return None
+    bits = []
+    if ev.get("pre_direction"):
+        bits.append(f"pre-direction `{ev['pre_direction']}`")
+    if ev.get("pre_type"):
+        bits.append(f"pre-type `{ev['pre_type']}`")
+    if ev.get("street"):
+        bits.append(f"street name **{ev['street']}**")
+    if ev.get("suffix_type"):
+        bits.append(f"street type `{ev['suffix_type']}`")
+    if ev.get("suffix_direction"):
+        bits.append(f"post-direction `{ev['suffix_direction']}`")
+    if ev.get("city"):
+        bits.append(f"city **{ev['city']}**")
+    line = f"{ev.get('matched')}" + (" — " + ", ".join(bits) if bits else "")
+    rng = ev.get("house_number_range") or ""
+    if rng and "None" not in rng:
+        line += f" *(block range {rng}, not this address's number)*"
+    city = (ev.get("city") or "").upper()
+    if city and city not in raw.upper():
+        line += " ⚠️ **suspect match — the geocoder resolved to a city not in the input**"
+    return line
+
+
 def prior_verdicts_by_shape():
     """Carry forward verdicts from an earlier adjudication pass.
 
@@ -91,6 +134,7 @@ def main():
     ordered = sorted(groups.values(), key=len, reverse=True)
 
     prior = prior_verdicts_by_shape()
+    census = census_evidence()
     inv = {v: k for k, v in {"A": key_a_model(a_is_v1), "B": key_b_model(a_is_v1)}.items()}
     carried = [g for g in ordered if signature(g[0]) in prior]
     fresh = [g for g in ordered if signature(g[0]) not in prior]
@@ -107,6 +151,13 @@ def main():
         "**Models are blinded as A and B on purpose.** Judge which parse is *correct*, not which "
         "model you expect to win. (The A/B mapping is recorded in the repo, so the result stays "
         "auditable.)",
+        "",
+        "**Census evidence is attached where it exists.** The US Census geocoder (public domain, "
+        "so it can be published with the eval set) says what the real address looks like — house "
+        "number, street name, street type, city. Treat it as *evidence*, not as the answer: it "
+        "reports a canonical address, not usaddress's token labels, and its component names do "
+        "not carry every distinction in the schema. Where it says *no match*, it abstained — "
+        "which is common on exactly the messy inputs that are hardest to judge.",
         "",
         "## How to fill this out",
         "",
@@ -141,6 +192,11 @@ def main():
         out.append("")
         for r in grp[:EXAMPLES_PER_GROUP]:
             out.append(f"- `{r['raw']}`")
+            eline = format_evidence(census.get(r["raw"]), r["raw"])
+            if eline:
+                out.append(f"  - *Census records:* {eline}")
+            elif census.get(r["raw"], {}).get("status") == "no_match":
+                out.append("  - *Census: no match* (the geocoder abstains on messy input — judge on the labels alone)")
         if n > EXAMPLES_PER_GROUP:
             extra = [r["raw"] for r in grp[EXAMPLES_PER_GROUP:LIST_CAP]]
             for e in extra:
