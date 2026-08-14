@@ -53,6 +53,23 @@ disagreements. Reproduce it with:
 python benchmark/compare_marginals.py --rows 5000
 ```
 
+**Does a low score actually mean a wrong parse?** Measured against the adjudicated records in
+[eval/gold](eval/gold), scoring each parse by its least-confident token:
+
+| | |
+|---|---|
+| Parses judged **correct** (contested records) | mean 0.762 |
+| Parses judged **wrong** (contested records) | mean 0.514 |
+| Separation (AUC) | **0.833** — 0.5 would mean the score tells you nothing |
+| Known-wrong parses scoring above 0.99 | **0 of 47** |
+| Clean-set parses (all correct) scoring above 0.99 | 19% |
+
+Read that as a precision/recall tradeoff, not a guarantee: above 0.99 nothing in this sample was
+wrong, but only about a fifth of correct parses get there, so it is a high-precision filter for
+routing records to review — not a way to keep most of your data unexamined. The first two rows are
+measured on contested records only (the hardest addresses in the set), which is the conservative
+place to measure: on a general mix, easy addresses score 0.999+ and separate more cleanly.
+
 ## Why this exists
 
 usaddress is quietly enormous infrastructure — [5.2M monthly downloads](https://pepy.tech/project/usaddress)
