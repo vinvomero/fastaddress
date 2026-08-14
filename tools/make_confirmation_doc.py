@@ -65,6 +65,7 @@ def main():
     base, cand = tag(raws), tag(raws, args.candidate)
     merged = json.loads((G / "verdicts-merged.json").read_text(encoding="utf-8"))
     census = json.loads((G / "census_evidence.json").read_text(encoding="utf-8")) if (G / "census_evidence.json").exists() else {}
+    citydir = json.loads((G / "citydir_evidence.json").read_text(encoding="utf-8")) if (G / "citydir_evidence.json").exists() else {}
 
     todo = []
     for i, raw in enumerate(raws):
@@ -137,6 +138,23 @@ def main():
             )
             if hn:
                 out.append(f"  (block range {hn} — the range this address falls in, not its own number){flag}")
+            out.append("")
+
+        # For the "<letter> <CITY>" ambiguity, the geocoder's own decomposition
+        # is the decisive evidence: which side of the split it put the letter on.
+        cd = citydir.get(raw)
+        if cd and cd.get("reading") in ("place", "directional"):
+            if cd["reading"] == "place":
+                out.append(
+                    f"*Census splits this as:* city **{cd.get('city')}** — the `{cd.get('letter')}` "
+                    f"is part of the **city name**, street is **{cd.get('street')}**"
+                )
+            else:
+                out.append(
+                    f"*Census splits this as:* city **{cd.get('city')}**, street **{cd.get('street')}** "
+                    f"with suffix direction **{cd.get('suffix_direction')}** — here the "
+                    f"`{cd.get('letter')}` really is a **direction**, not part of the city"
+                )
             out.append("")
 
         sug = info["verdict"] if info else None

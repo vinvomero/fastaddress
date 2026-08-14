@@ -1663,5 +1663,955 @@
   "street": "NEWARK",
   "suffix_direction": "",
   "pre_direction": "N"
+ },
+ "740 S COUNTRY DR BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "740 S COUNTRY DR, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COUNTRY",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "820 S COUNTY DR BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "S"
+ },
+ "137 W LINCOLN AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "137 W LINCOLN AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "LINCOLN",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "804 S DIVISION BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "804 S DIVISION ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "DIVISION",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "29 ACADIA DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "29 ACADIA DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "ACADIA",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "1860 N BRAYMORE DR BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "N",
+  "matched": "1860 N BRAYMORE DR, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "BRAYMORE",
+  "suffix_direction": "",
+  "pre_direction": "N"
+ },
+ "222 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "222 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "516 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "516 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "4 LOCH LANE S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "4 LOCH LN, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "LOCH",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "6 STONE RIDGE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "6 STONE RIDGE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "STONE RIDGE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "2000 N RACINE SUITE 4 CHICAGO IL 60614": {
+  "reading": "unclear",
+  "letter": "N",
+  "matched": "2000 N RACINE AVE, CHICAGO, IL, 60614",
+  "city": "CHICAGO",
+  "street": "RACINE",
+  "suffix_direction": "",
+  "pre_direction": "N"
+ },
+ "600 W RUSSELL ST #311 BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "201 W MAIN ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "201 W MAIN ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "MAIN",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "14 STONERIDGE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "14 STONE RIDGE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "STONE RIDGE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "2610 W BALMORAL AVE303 CHICAGO IL 60625": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "2610 W BALMORAL AVE, CHICAGO, IL, 60625",
+  "city": "CHICAGO",
+  "street": "BALMORAL",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "838 S COUNTRY DR BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "838 S COUNTRY DR, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COUNTRY",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "468 W RUSSELL ST#8 BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "468 W RUSSELL ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "RUSSELL",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "502 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "502 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1531 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1531 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "546 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "546 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "12 SHORESIDE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "12 SHORESIDE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "SHORESIDE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "207 W MAIN ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "207 W MAIN ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "MAIN",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "1021 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1021 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "100 E STATION ST#220 BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "100 E STATION ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "STATION",
+  "suffix_direction": "",
+  "pre_direction": "E"
+ },
+ "231 W COUNTY LINE RD BARRNGTN HLS IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "231 W COUNTY LINE RD, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COUNTY LINE",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "12 E PENNY RD S BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "12 PENNY RD, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "PENNY",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "919 S HOUGH ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "919 S HOUGH ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HOUGH",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "100 E STATION ST#332 BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "100 E STATION ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "STATION",
+  "suffix_direction": "",
+  "pre_direction": "E"
+ },
+ "144 S GLENDALE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "144 S GLENDALE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GLENDALE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "25 SHENANDOAH CIR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "25 SHENANDOAH CIR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "SHENANDOAH",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "119 W RUSSELL ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "119 W RUSSELL ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "RUSSELL",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "506 S HOUGH ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "506 S HOUGH ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HOUGH",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "424 W RUSSELL ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "424 W RUSSELL ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "RUSSELL",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "1016 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1016 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "9 EASTINGS WAY S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "9 EASTINGS WAY, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "EASTINGS",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "202 E HILLSIDE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "202 E HILLSIDE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HILLSIDE",
+  "suffix_direction": "",
+  "pre_direction": "E"
+ },
+ "3 TEWKESBURY LN S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "3 TEWKESBURY LN, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "TEWKESBURY",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "234 W LINCOLN AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "234 W LINCOLN AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "LINCOLN",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "285 W DUNDEE RD PALATINE IL 60074": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "285 W DUNDEE RD, PALATINE, IL, 60074",
+  "city": "PALATINE",
+  "street": "DUNDEE",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "4 LOCH LN S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "4 LOCH LN, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "LOCH",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "244 W LINCOLN AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "244 W LINCOLN AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "LINCOLN",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "743 S ORCHARD DR BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "743 S ORCHARD DR, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "ORCHARD",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1009 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1009 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "528 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "528 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "343 E LINCOLN AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "343 E LINCOLN AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "LINCOLN",
+  "suffix_direction": "",
+  "pre_direction": "E"
+ },
+ "18 FOREST LN S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "18 FOREST LN, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "FOREST",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "1420 W NEWCASTLE CT INVERNESS IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "1420 NEWCASTLE CT, INVERNESS, IL, 60010",
+  "city": "INVERNESS",
+  "street": "NEWCASTLE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "800 E NORTHWEST HWY PALATINE IL 60074": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "800 E NORTHWEST HWY, PALATINE, IL, 60074",
+  "city": "PALATINE",
+  "street": "NORTHWEST",
+  "suffix_direction": "",
+  "pre_direction": "E"
+ },
+ "1102 VISTA DEL MAR N DELRAY BEACH FL 33483": {
+  "reading": "directional",
+  "letter": "N",
+  "matched": "1102 VISTA DEL MAR DR N, DELRAY BEACH, FL, 33483",
+  "city": "DELRAY BEACH",
+  "street": "VISTA DEL MAR",
+  "suffix_direction": "N",
+  "pre_direction": ""
+ },
+ "831 S GROVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "831 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "615 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "615 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "28 STONE RIDGE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "28 STONE RIDGE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "STONE RIDGE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "525 W WISE RD STE F SCHAUMBURG IL 60193": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "525 W WISE RD, SCHAUMBURG, IL, 60193",
+  "city": "SCHAUMBURG",
+  "street": "WISE",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "600 W RUSSELL #2A BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "734 S GROVE ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "734 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "123 S Hager BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "123 S HAGER AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HAGER",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "637 S GROVE AVENUE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "637 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "600 W RUSSELL ST#308 BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "1853 N BRAYMORE DR INVERNESS IL 60010": {
+  "reading": "unclear",
+  "letter": "N",
+  "matched": "1853 N BRAYMORE DR, INVERNESS, IL, 60010",
+  "city": "INVERNESS",
+  "street": "BRAYMORE",
+  "suffix_direction": "",
+  "pre_direction": "N"
+ },
+ "5 TAYNTON LN S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "5 TAYNTON LN, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "TAYNTON",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "300 W ONTARIO ST CHICAGO IL 60654": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "300 W ONTARIO ST, CHICAGO, IL, 60654",
+  "city": "CHICAGO",
+  "street": "ONTARIO",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "1205 S GROVE AV BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1205 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "8 QUINCY CIR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "8 QUINCY CIR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "QUINCY",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "600 W RUSSELL ST#102 BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "767 S SUMMIT ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "767 S SUMMIT ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "SUMMIT",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "762 S SUMMIT ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "762 S SUMMIT ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "SUMMIT",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "905 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "905 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "2 DEVEAUX CT S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "2 DEVEAUX CT, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "DEVEAUX",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "26 RAINIER CIRCLE S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "26 RAINIER CIR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "RAINIER",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "875 N MICHIGAN #3400 CHICAGO IL 60611": {
+  "reading": "unclear",
+  "letter": "N",
+  "matched": "875 N MICHIGAN AVE, CHICAGO, IL, 60611",
+  "city": "CHICAGO",
+  "street": "MICHIGAN",
+  "suffix_direction": "",
+  "pre_direction": "N"
+ },
+ "600 W RUSSELL ST 109 BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "736 N WESTERN AVE #352 LAKE FOREST IL 60045": {
+  "reading": "unclear",
+  "letter": "N",
+  "matched": "736 N WESTERN AVE, LAKE FOREST, IL, 60045",
+  "city": "LAKE FOREST",
+  "street": "WESTERN",
+  "suffix_direction": "",
+  "pre_direction": "N"
+ },
+ "149 W MAIN ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "149 W MAIN ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "MAIN",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "65 W OTIS RD BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "65 OTIS RD, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "OTIS",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "1 S NORTHWEST HWY PARK RIDGE IL 60068": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1 S NORTHWEST HWY, PARK RIDGE, IL, 60068",
+  "city": "PARK RIDGE",
+  "street": "NORTHWEST",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "539 S PRAIRIE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "539 S PRAIRIE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "PRAIRIE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "236 S GEORGE ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "236 S GEORGE ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GEORGE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "600 W RUSSELL ST#110 BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "614 S SUMMIT ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "614 S SUMMIT ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "SUMMIT",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "407 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "407 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "900 S SUMMIT ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "900 S SUMMIT ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "SUMMIT",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1217 S PRAIRIE AV BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1217 S PRAIRIE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "PRAIRIE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "2 LOCH LN S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "2 LOCH LN, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "LOCH",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "1695 S BRAYMORE DR INVERNESS IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1695 S BRAYMORE DR, INVERNESS, IL, 60010",
+  "city": "INVERNESS",
+  "street": "BRAYMORE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "409 S SPRING ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "409 S SPRING ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "SPRING",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1213 S SUMMIT ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1213 S SUMMIT ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "SUMMIT",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "718 S DIVISION ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "718 S DIVISION ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "DIVISION",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "621 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "621 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "49 SHENANDOAH CIR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "49 SHENANDOAH CIR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "SHENANDOAH",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "22 WESTLAKE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "22 WESTLAKE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "WESTLAKE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "608 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "608 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1765 W SHOREWOOD DR HOFFMAN EST IL 60192": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "1765 SHOREWOOD DR, HOFFMAN EST, IL, 60192",
+  "city": "HOFFMAN EST",
+  "street": "SHOREWOOD",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "455 W HILLSIDE AV BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "455 W HILLSIDE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HILLSIDE",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "926 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "926 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1865 N BRAYMORE DR INVERNESS IL 60010": {
+  "reading": "unclear",
+  "letter": "N",
+  "matched": "1865 N BRAYMORE DR, INVERNESS, IL, 60010",
+  "city": "INVERNESS",
+  "street": "BRAYMORE",
+  "suffix_direction": "",
+  "pre_direction": "N"
+ },
+ "1745 W SHOREWOOD DR HOFFMAN ESTS IL 60192": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "1745 SHOREWOOD DR, HOFFMAN ESTATES, IL, 60192",
+  "city": "HOFFMAN ESTATES",
+  "street": "SHOREWOOD",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "19 WESTLAKE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "19 WESTLAKE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "WESTLAKE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "618 S SUMMIT ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "618 S SUMMIT ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "SUMMIT",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "36 SHENANDOAH CIR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "36 SHENANDOAH CIR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "SHENANDOAH",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "640 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "640 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "3 WINDRIDGE RD S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "3 WIND RIDGE RD, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "WIND RIDGE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "831 S HOUGH ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "831 S HOUGH ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HOUGH",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1217 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "1217 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "27 EASTINGS WAY S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "27 EASTINGS WAY, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "EASTINGS",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "743 S DIVISION ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "743 S DIVISION ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "DIVISION",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "4 SHORESIDE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "4 SHORESIDE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "SHORESIDE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "600 W RUSSELL ST#303 BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "515 E MAIN ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "515 E MAIN ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "MAIN",
+  "suffix_direction": "",
+  "pre_direction": "E"
+ },
+ "625 S GROVE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "625 S GROVE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "GROVE",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "14 LEANDA CT S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "14 LEANDA CT, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "LEANDA",
+  "suffix_direction": "",
+  "pre_direction": ""
  }
 }
