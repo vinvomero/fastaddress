@@ -31,11 +31,16 @@ def main():
         # words are legitimate landmark tokens ("West Business Center"), so a
         # sequence labeled entirely as a landmark phrase is exempt.
         is_landmark_phrase = "LandmarkName" in labels
+        # Route-designation exception, from the adjudicated parse of
+        # "Alvy Prk And Hghwy # 54": after an intersection separator, the '#'
+        # in a highway designation is part of the street name, not an
+        # identifier. Scoped to that context so the general rule still holds.
+        is_route_designation = "IntersectionSeparator" in labels
         for tok, lab in zip(r["tokens"], r["labels"]):
             if lab not in VALID_LABELS:
                 violations.append((r["tokens"], tok, lab, "not a model label"))
             # '#' is part of the identifier it precedes, never a type label.
-            if tok == "#" and lab not in ID_LABELS:
+            if tok == "#" and lab not in ID_LABELS and not (is_route_designation and lab == "StreetName"):
                 violations.append((r["tokens"], tok, lab, "'#' must carry an identifier label"))
             if (
                 tok.lower() in ("business", "bypass", "alt")

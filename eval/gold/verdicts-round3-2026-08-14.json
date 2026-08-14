@@ -1,0 +1,21 @@
+{
+ "adjudicator": "LLM-drafted with public-record and USPS citations, reviewed and confirmed by Vin (human) 2026-08-14",
+ "human_reviewed": true,
+ "note": "Round 3: the six records never previously judged. Same strict standard - a model materially mislabeling any disputed token scores 'neither'.",
+ "addresses": {
+  "Terra Alta, WV 26764": "B",
+  "3 Cherry LANE Miami": "B",
+  "12100 WILSHIRE 1210 LOS ANGELES CA 90025": "B",
+  "1 The Square, Lillington, NC 27546": "A",
+  "5051 PELICAN COLONY901 BONITA SPRGS FL 34134": "neither",
+  "807 South Central Expressway, Richardson, TX 75080": "B"
+ },
+ "reasoning": {
+  "Terra Alta, WV 26764": "Terra Alta is the USPS preferred city for ZIP 26764 - two-token PlaceName.",
+  "3 Cherry LANE Miami": "Miami follows a complete delivery address and is the locality; no secondary-unit signal.",
+  "12100 WILSHIRE 1210 LOS ANGELES CA 90025": "Canonical 12100 Wilshire Blvd Suite 1210 (PCAOB filing); WILSHIRE is the street name, 1210 the unit.",
+  "1 The Square, Lillington, NC 27546": "Local property data lists a street named 'The Square At Lillington'; context overrides the generic Square suffix.",
+  "5051 PELICAN COLONY901 BONITA SPRGS FL 34134": "Malformed fused token: COLONY belongs to street name Pelican Colony, 901 is the unit. Neither class is right for the whole token.",
+  "807 South Central Expressway, Richardson, TX 75080": "Canonical S Central Expy - Central is the street name, Expressway its suffix."
+ }
+}

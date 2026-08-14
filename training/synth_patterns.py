@@ -367,6 +367,177 @@ def gen_street_then_twoword_city(rng):
     return seq(pairs)
 
 
+ABBR_CITY_PREFIXES = ["MT", "ST", "FT", "MOUNT", "SAINT", "FORT"]
+ABBR_CITY_SECONDS = ["PROSPECT", "CHARLES", "WORTH", "PLEASANT", "VERNON", "LOUIS", "PAUL"]
+
+
+CITY_ABBRS = ["ORL", "PHL", "CHI", "ATL", "HOU", "SEA", "BOS", "DAL", "MSP", "PDX"]
+
+
+def gen_ordinal_floor_occupancy(rng):
+    """'100 Gold Street, 2nd Fl., New York, NY 10038' — an ORDINAL floor written
+    before its designator ('2nd Fl.') is occupancy, not subaddress: the ordinal
+    is the identifier and the designator the type. Distinct from 'fl 7', where
+    the designator leads.
+    """
+    pairs = [(str(rng.randint(1, 999)), "AddressNumber"),
+             (rng.choice(STREETS), "StreetName"),
+             (rng.choice(["Street,", "Ave,", "Blvd,", "Road,"]), "StreetNamePostType"),
+             (rng.choice(["2nd", "3rd", "4th", "5th", "10th", "12th", "21st"]),
+              "OccupancyIdentifier"),
+             (rng.choice(["Fl.,", "Fl,", "Floor,", "Flr.,"]), "OccupancyType")]
+    city = rng.choice([["New", "York,"], ["San", "Diego,"], ["Portland,"], ["Boston,"]])
+    pairs += [(c, "PlaceName") for c in city]
+    pairs += [(rng.choice(STATE_ABBR), "StateName"),
+              (str(rng.randint(10000, 99999)), "ZipCode")]
+    return seq(pairs)
+
+
+def gen_floor_then_city_abbr(rng):
+    """'300 orange ave, fl 7, ORL FL' — a floor designator, then a TRUNCATED
+    city abbreviation, then the state. The incumbent reads the trailing pair as
+    occupancy fields; the adjudicated parse makes ORL a PlaceName and the final
+    FL a StateName (note FL is both a floor abbreviation and Florida — position
+    disambiguates, which is what the model must learn).
+    """
+    pairs = [(str(rng.randint(100, 9999)), "AddressNumber"),
+             (rng.choice(STREETS).lower(), "StreetName"),
+             (rng.choice(["ave,", "st,", "blvd,", "rd,"]), "StreetNamePostType")]
+    if rng.random() < 0.7:
+        pairs += [(rng.choice(["fl", "flr", "ste", "apt"]), "OccupancyType"),
+                  (str(rng.randint(1, 40)) + ",", "OccupancyIdentifier")]
+    pairs += [(rng.choice(CITY_ABBRS), "PlaceName"),
+              (rng.choice(STATE_ABBR), "StateName")]
+    if rng.random() < 0.35:
+        pairs.append((str(rng.randint(10000, 99999)), "ZipCode"))
+    return seq(pairs)
+
+
+def gen_echo_building_strict(rng):
+    """The stubborn echo case: '3705 N Overlook Blvd Overlook Park Flats, ...'.
+    The street portion (number, directional, name, TYPE) must keep street
+    labels even when the building phrase repeats the street name. Always
+    echoes, always includes the street type as the boundary marker.
+    """
+    word = rng.choice(STREETS)
+    pairs = [(str(rng.randint(100, 9999)), "AddressNumber"),
+             (rng.choice(["N", "S", "E", "W"]), "StreetNamePreDirectional"),
+             (word, "StreetName"),
+             (rng.choice(["Blvd", "Ave", "St", "Rd", "Dr"]), "StreetNamePostType"),
+             (word, "BuildingName")]
+    if rng.random() < 0.7:
+        pairs.append((rng.choice(BLD_MIDS_AMBIG + BLD_MIDS_SAFE), "BuildingName"))
+    pairs.append((rng.choice(BLD_TAILS_AMBIG + BLD_TAILS_SAFE) + ",", "BuildingName"))
+    pairs += city_tail(rng)
+    return seq(pairs)
+
+
+def gen_prefixed_two_word_city(rng):
+    """'212 EAST RAND RD MT PROSPECT IL 60056' — 'MT PROSPECT' is the city
+    (Mount Prospect). The incumbent reads MT as a street type; the adjudicated
+    parse keeps the street type on RD and both city tokens as PlaceName."""
+    pairs = [(str(rng.randint(100, 9999)), "AddressNumber")]
+    if rng.random() < 0.6:
+        pairs.append((rng.choice(["EAST", "WEST", "NORTH", "SOUTH"]), "StreetNamePreDirectional"))
+    pairs += [(rng.choice(STREETS).upper(), "StreetName"),
+              (rng.choice(["RD", "ST", "AVE", "DR", "LN"]), "StreetNamePostType"),
+              (rng.choice(ABBR_CITY_PREFIXES), "PlaceName"),
+              (rng.choice(ABBR_CITY_SECONDS), "PlaceName"),
+              (rng.choice(STATE_ABBR), "StateName"),
+              (str(rng.randint(10000, 99999)), "ZipCode")]
+    return seq(pairs)
+
+
+def gen_twoword_city_full_state(rng):
+    """'5 NORTH MAIN, VAN NUYS, CALIFORNIA' — two-word city followed by a
+    spelled-out state and no ZIP. Both city tokens are PlaceName; the state
+    words are StateName."""
+    pairs = [(str(rng.randint(1, 9999)), "AddressNumber")]
+    if rng.random() < 0.7:
+        pairs.append((rng.choice(["NORTH", "SOUTH", "EAST", "WEST"]), "StreetNamePreDirectional"))
+    pairs.append((rng.choice(STREETS).upper() + ("," if rng.random() < 0.8 else ""), "StreetName"))
+    city = rng.choice([["VAN", "NUYS"], ["SANTA", "ANA"], ["EL", "PASO"], ["LAS", "VEGAS"],
+                       ["SAN", "MATEO"], ["BATON", "ROUGE"]])
+    for i, w in enumerate(city):
+        last = i == len(city) - 1
+        pairs.append((w + ("," if last and rng.random() < 0.85 else ""), "PlaceName"))
+    st = rng.choice(STATE_FULL)
+    pairs += [(t.upper(), "StateName") for t in st.split()]
+    if rng.random() < 0.4:
+        pairs.append((str(rng.randint(10000, 99999)), "ZipCode"))
+    return seq(pairs)
+
+
+def gen_and_street_name(rng):
+    """'63 HILLS AND DALES BARRINGTON IL 60010' — 'AND' inside a proper street
+    name ("Hills and Dales"), not an intersection separator or a street type."""
+    first = rng.choice(["HILLS", "OAKS", "PINES", "MEADOWS", "SPRINGS", "LAKES"])
+    second = rng.choice(["DALES", "VALES", "GLENS", "KNOLLS", "FIELDS", "WOODS"])
+    pairs = [(str(rng.randint(1, 999)), "AddressNumber"),
+             (first, "StreetName"), ("AND", "StreetName"), (second, "StreetName")]
+    if rng.random() < 0.3:
+        pairs.append((rng.choice(["RD", "DR", "LN"]), "StreetNamePostType"))
+    pairs += [(rng.choice(["BARRINGTON", "FAIRVIEW", "CLINTON", "SALEM"]), "PlaceName"),
+              (rng.choice(STATE_ABBR), "StateName"),
+              (str(rng.randint(10000, 99999)), "ZipCode")]
+    return seq(pairs)
+
+
+def gen_bare_city(rng):
+    """'Terra Alta, WV 26764' — a city/state/zip with NO street at all. The
+    two-word city must stay PlaceName; the landmark generators otherwise
+    over-fire on bare multi-word phrases. Adjudicated round 3."""
+    city = rng.choice(TWO_WORD_CITIES + [["Terra", "Alta"], ["Point", "Pleasant"],
+                                         ["White", "Sulphur"], ["Falling", "Waters"]])
+    pairs = []
+    for i, w in enumerate(city):
+        last = i == len(city) - 1
+        pairs.append((w + ("," if last and rng.random() < 0.8 else ""), "PlaceName"))
+    pairs += [(rng.choice(STATE_ABBR), "StateName"), (str(rng.randint(10000, 99999)), "ZipCode")]
+    return seq(pairs)
+
+
+def gen_city_no_comma(rng):
+    """'3 Cherry LANE Miami' — a complete street address followed by a bare
+    city, no comma and no state/zip. The trailing token is the locality, not a
+    unit identifier. Adjudicated round 3."""
+    pairs = [(str(rng.randint(1, 999)), "AddressNumber"),
+             (rng.choice(STREETS), "StreetName"),
+             (rng.choice(["LANE", "ROAD", "STREET", "AVE", "DRIVE", "Ln", "Rd"]),
+              "StreetNamePostType"),
+             (rng.choice(["Miami", "Chicago", "Denver", "Boston", "Austin", "Tampa"]),
+              "PlaceName")]
+    return seq(pairs)
+
+
+def gen_street_bare_unit(rng):
+    """'12100 WILSHIRE 1210 LOS ANGELES CA 90025' — street name with NO type
+    word, then a bare unit number, then the city. The number after the street
+    is the occupancy identifier. Adjudicated round 3 (canonical: 12100 Wilshire
+    Blvd Suite 1210)."""
+    city = rng.choice([["LOS", "ANGELES"], ["SAN", "DIEGO"], ["NEW", "YORK"], ["SANTA", "MONICA"]])
+    pairs = [(str(rng.randint(100, 99999)), "AddressNumber"),
+             (rng.choice(["WILSHIRE", "SUNSET", "VENTURA", "BROADWAY", "MAIN"]), "StreetName"),
+             (str(rng.randint(100, 4000)), "OccupancyIdentifier")]
+    pairs += [(c, "PlaceName") for c in city]
+    pairs += [(rng.choice(STATE_ABBR), "StateName"), (str(rng.randint(10000, 99999)), "ZipCode")]
+    return seq(pairs)
+
+
+def gen_long_suffix(rng):
+    """'807 South Central Expressway, Richardson, TX 75080' — spelled-out long
+    suffixes (Expressway/Parkway/Boulevard/Turnpike) are street TYPES, not part
+    of the name. Adjudicated round 3."""
+    pairs = [(str(rng.randint(100, 9999)), "AddressNumber")]
+    if rng.random() < 0.7:
+        pairs.append((rng.choice(["South", "North", "East", "West"]), "StreetNamePreDirectional"))
+    pairs.append((rng.choice(["Central", "Union", "Legacy", "Preston", "Harbor"]), "StreetName"))
+    suffix = rng.choice(["Expressway", "Parkway", "Boulevard", "Turnpike", "Freeway", "Highway"])
+    pairs.append((suffix + ("," if rng.random() < 0.8 else ""), "StreetNamePostType"))
+    pairs += city_tail(rng)
+    return seq(pairs)
+
+
 def gen_dc_state(rng):
     """'99 s spruce road apt. #4b, D.C. 20500' — 'D.C.' immediately before a ZIP
     is the state-equivalent (USPS standardizes District of Columbia to DC), not
@@ -438,6 +609,16 @@ GENERATORS = [
     (gen_street_then_building, 2200),
     (gen_street_then_twoword_city, 1800),
     (gen_abbrev_directional_city, 1000),
+    (gen_ordinal_floor_occupancy, 1300),
+    (gen_floor_then_city_abbr, 1300),
+    (gen_echo_building_strict, 2600),
+    (gen_prefixed_two_word_city, 1400),
+    (gen_twoword_city_full_state, 1200),
+    (gen_and_street_name, 900),
+    (gen_bare_city, 1400),
+    (gen_city_no_comma, 1200),
+    (gen_street_bare_unit, 1200),
+    (gen_long_suffix, 1400),
     (gen_dc_state, 1200),
     (gen_rural_route_truncated, 900),
     (gen_fractional_street, 1000),
