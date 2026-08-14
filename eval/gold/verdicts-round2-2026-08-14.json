@@ -1,0 +1,34 @@
+{
+ "adjudicator": "ChatGPT (LLM) with external source citations, submitted by Vin 2026-08-14",
+ "note": "Round 2. Group numbers index the FRESH groups shown in ADJUDICATION.md (1-8), not the full 16-group ordering. Strict standard applied: a model that gets some disputed tokens right but materially mislabels another scores 'neither', not 'closest'.",
+ "fresh_groups": {
+  "1": "neither",
+  "2": "neither",
+  "3": "neither",
+  "4": "B",
+  "5": "B",
+  "6": "A",
+  "7": "B",
+  "8": "neither"
+ },
+ "reasoning": {
+  "1": "US 6 / Ind 15 is a highway junction; A closer but collapses the second designation into StreetName.",
+  "2": "Mile K-Beach Road is mile-marker addressing; A better on the tail but 'Mile K' as LandmarkName indefensible.",
+  "3": "Canonical is 340 E North Water St; A one token away but WATER cannot be OccupancyType.",
+  "4": "D.C. before ZIP 20500 is the state-equivalent; USPS standardizes to DC.",
+  "5": "RR = Rural Route per USPS RR ## BOX ## form; string malformed (no box number) but B labels present tokens correctly.",
+  "6": "ORL is truncated Orlando (PlaceName) and final FL is Florida (StateName); confirms the flagged suspect Census match.",
+  "7": "Fractional street names exist (33 1/2 Ave S, Fargo); A would leave AVE with no preceding street name.",
+  "8": "Canonical 210 Crystal St Ste D; both wrong on UNT/D which are occupancy type/identifier."
+ },
+ "addresses": {
+  "US 6 Ind 15, Milford, IN 46542": "neither",
+  "Mile K Beach Road # 1, Kenai, AK 99611": "neither",
+  "340 E NORTH WATER 2500 CHICAGO IL 60611": "neither",
+  "99 s spruce road apt. #4b, D.C. 20500": "B",
+  "RR 422 Box, Douglassville, PA 19518": "B",
+  "300 orange ave, fl 7, ORL FL": "A",
+  "33 1/2 AVE": "B",
+  "210 CRYSTAL ST UNT D CARY IL 60013": "neither"
+ }
+}

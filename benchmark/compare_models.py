@@ -41,7 +41,8 @@ def tag(rows, model=None):
 
 
 def load_jsonl(p):
-    return [json.loads(l) for l in open(p, encoding="utf-8") if l.strip()]
+    # utf-8-sig: files recovered via shell redirect can carry a BOM.
+    return [json.loads(l) for l in open(p, encoding="utf-8-sig") if l.strip()]
 
 
 def main():
@@ -67,11 +68,16 @@ def main():
     saint_fixed = sum(1 for i in saint_idx if g_cand[i]["labels"] != g_v1[i]["labels"])
 
     # regression check against adjudicated v1-wins
-    key = json.loads((ROOT / "eval" / "gold" / "blind_key.json").read_text(encoding="utf-8"))
-    verd = json.loads((ROOT / "eval" / "gold" / "verdicts-chatgpt-2026-08-13.json").read_text(encoding="utf-8"))
+    # Round-1 adjudicated v1-wins. NOTE: this set alone is not a sufficient
+    # regression check — it only covers shapes that existed in round 1. New
+    # shapes a candidate introduces are checked separately below, a gap that
+    # let an earlier candidate report "zero regressions" while losing 3 of 4
+    # decided new-shape comparisons.
+    key = json.loads((ROOT / "eval" / "gold" / "blind_key-prior.json").read_text(encoding="utf-8-sig"))
+    verd = json.loads((ROOT / "eval" / "gold" / "verdicts-chatgpt-2026-08-13.json").read_text(encoding="utf-8-sig"))
     gv = {int(k): v for k, v in verd["groups"].items()}
     exc = verd.get("exceptions", {})
-    dis = load_jsonl(ROOT / "eval" / "gold" / "disagreements.jsonl")
+    dis = load_jsonl(ROOT / "eval" / "gold" / "disagreements-prior.jsonl")
     groups = defaultdict(list)
     for r in dis:
         groups[tuple((d["v1"], d["v2"]) for d in r["differing_tokens"])].append(r)
@@ -103,6 +109,19 @@ def main():
         print(f"   lost: {raw[:60]}")
     print(f"NEW SURFACE    candidate differs from v1 on {len(new_dis)}/{len(gold)} gold rows "
           f"({len(new_non_saint)} outside the saint class)")
+
+    # Round-2 adjudication of the shapes a candidate newly introduced.
+    r2 = ROOT / "eval" / "gold" / "verdicts-round2-2026-08-14.json"
+    k2 = ROOT / "eval" / "gold" / "blind_key.json"
+    if r2.exists() and k2.exists():
+        v2v = json.loads(r2.read_text(encoding="utf-8-sig"))
+        key2 = json.loads(k2.read_text(encoding="utf-8-sig"))
+        counts = {"v1": 0, "v2": 0, "neither": 0, "skip": 0}
+        for letter in v2v["fresh_groups"].values():
+            counts[key2.get(letter, letter)] += 1
+        print(f"NEW-SHAPE ADJ  of the newly-introduced shapes: candidate correct {counts['v2']}, "
+              f"v1 correct {counts['v1']}, both wrong {counts['neither']} "
+              f"(losses here are regressions the round-1 set cannot see)")
 
 
 if __name__ == "__main__":

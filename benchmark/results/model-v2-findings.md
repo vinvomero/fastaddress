@@ -1,10 +1,19 @@
-# Model v2 — Findings Report (Round 1 complete)
+# Model v2 — Findings Report (v14: clean across all adjudicated evidence)
 
 Per the pre-registered protocol (`eval/PROTOCOL.md`), a v2 model ships only by clearing both
-gates. The final candidate (**v12**) clears the clean gate and holds every adjudicated v1 win
-while fixing the class v1 gets wrong. It still does **not auto-ship**: the gold gate as written
-requires human adjudication, and the current evidence is LLM-adjudicated. The `model-v2` feature
-stays off pending that call.
+gates. The current candidate is **v14**. It clears the clean gate, and across the 43 contested
+messy-data records that now carry verdicts, **the incumbent is never uniquely correct** — v14 is
+right on 37, both are wrong on 5, one was skipped. Six records remain unjudged.
+
+It still does **not auto-ship**: the protocol's gold gate requires *human* adjudication and the
+verdicts so far are LLM-produced (with cited sources). The `model-v2` feature stays off pending
+that call.
+
+**A measurement correction worth recording.** An earlier candidate (v12) was reported here as
+having "zero regressions". That check only covered records adjudicated in round 1, so it was
+structurally blind to shapes the candidate newly introduced — and round 2 found v12 losing 3 of 4
+decided new-shape comparisons. `benchmark/compare_models.py` now evaluates both sets and prints
+new-shape losses explicitly. v14 fixes all three of those regressions.
 
 ## Where v12 landed
 
