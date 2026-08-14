@@ -1,8 +1,13 @@
-# Model v2 — Findings Report (v19: strictly better or equal on all measured evidence)
+# Model v2 — Findings Report
+
+> **Status correction, 2026-08-14.** This report previously concluded that v19 satisfied every
+> criterion. It does not. v19 never regresses — that part holds — but it **cannot clear the
+> pre-registered gold gate**, and the reason is arithmetic rather than a matter of judgment. See
+> *The gold gate, actually computed* below. The protocol says a miss shelves the model and the
+> finding is published with the same prominence a ship would have received; this heading is that.
 
 Per the pre-registered protocol (`eval/PROTOCOL.md`), a v2 model ships only by clearing both
-gates. The current candidate is **v19**, and it is the first to satisfy every measured criterion
-simultaneously:
+gates. The candidate **v19** satisfies every criterion that had been measured at the time:
 
 | Axis | v1 (shipped) | v19 | Verdict |
 |---|---|---|---|
@@ -19,11 +24,44 @@ USPS sources, then reviewed and confirmed by a human. Round 1 (69 records, inclu
 saint-name class) was LLM-produced; its human-review status is recorded as unconfirmed rather than
 assumed.
 
-**The remaining honest gaps.** v19 costs ~6% throughput and doubles model size. Eight contested
-records are ones where *both* models are wrong — real improvement territory, but not regressions.
-And the protocol's gold gate was written as a full-set exact-match margin; what has actually been
-adjudicated is the contested subset, which measures relative accuracy where the parsers differ.
-Any public accuracy claim should say exactly that.
+## The gold gate, actually computed
+
+The gap flagged here earlier — "the gold gate was written as a full-set margin, but only the
+contested subset was adjudicated" — turned out to be closeable exactly, and closing it produced a
+worse answer than expected.
+
+A record where both models emit the same parse contributes **exactly zero** to a margin: it adds
+the same amount to both sides of `correct(candidate) − correct(incumbent)`. So the full-set margin
+is determined entirely by the records where the models differ, and those are the adjudicated ones.
+No sampling needed. `benchmark/full_set_margin.py` computes it, and re-derives the differing set on
+every run so it reports any differing record that lacks a verdict rather than trusting a list.
+
+For v19 against v1 over the 1,500-record gold set:
+
+| | |
+|---|---|
+| Identical parse (contributes 0 to the margin) | 1,454 of 1,500 |
+| Models differ | 46 |
+| v19 wins / v1 wins / both wrong | **39 / 0 / 5** (2 unjudged) |
+| Margin, all verdicts | **+2.60 pp**, 95% CI [+1.80, +3.40] |
+| Margin, human-reviewed verdicts only | **+0.13 pp**, 95% CI [+0.00, +0.34] |
+| **Pre-registered bar** | **+3.0 pp with CI excluding zero** |
+
+**v19 misses, and cannot be rescued by more adjudication.** The protocol counts only
+human-reviewed verdicts. 40 of the 46 differing records are not yet human-reviewed, so the honest
+current margin is +0.13 pp. Even in the best case where a reviewer confirms *every one of those 40
+in v19's favour*, the margin reaches only **+2.80 pp** — still under the +3.0 pp bar. To clear it a
+model must not merely win the records it already wins; it must **fix more records than v19 fixes**.
+At 1,500 records the bar is 45 net wins; v19's ceiling is 42.
+
+This is why the Census TIGER/Line work moved to the front of the queue rather than staying a
+post-launch item. The largest remaining error class is exactly the one authoritative data
+addresses: an unjudged differing record in this very set is `295 South 250 East, Burley, ID` — a
+grid address whose trailing directional is the single most common thing the old heuristic corpus
+got wrong (71% of measured mislabels).
+
+**The other honest gaps.** v19 costs ~6% throughput and doubles model size. Eight contested records
+are ones where *both* models are wrong — real improvement territory, not regressions.
 
 **Two measurement corrections this work produced.** An earlier candidate was reported here as
 having "zero regressions" when the check covered only round 1's verdicts, so it was blind to

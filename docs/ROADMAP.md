@@ -16,11 +16,12 @@ behavior is frozen to usaddress 0.5.16, and improvements live in native mode or 
   resolves upstream's crash class (26 reports since 2017, incl. #180) and install class (#229, #347)
 - Native mode: never raises on valid input (also covers upstream #160, multiple occupancies)
 
+- **Confidence scores** (upstream #337): CRF marginal probabilities per tag and per parse. No
+  retraining; parity untouched; answers "should I trust this parse?" The highest
+  demand-per-effort item in the upstream tracker, so it ships with v1.0 rather than after it.
+
 ## v1.1
 
-- **Confidence scores** (upstream #337): expose CRF marginal probabilities per tag and per parse.
-  No retraining; parity untouched; answers "should I trust this parse?" Highest demand-per-effort
-  item in the upstream tracker.
 - **Exception fidelity**: `original_string` / `parsed_string` attributes on the Python
   `RepeatedLabelError` (drop-in gap).
 - **`bytes` input** accepted like usaddress's tokenize does (drop-in gap).
@@ -32,11 +33,24 @@ behavior is frozen to usaddress 0.5.16, and improvements live in native mode or 
   compat output.
 - Free-threaded (abi3t) wheels when audience demand appears.
 
-## Stretch (gated — see origin requirements R11)
+## Model accuracy (gated — see origin requirements R11; in progress, not yet cleared)
 
-- Model-accuracy work (the upstream tracker's 112 mislabeling issues: two-word places,
-  directionals, highways). Gated on an independently auditable gold-standard label set with
-  published methodology. No accuracy claims without it.
+Targets the upstream tracker's 112 mislabeling issues (two-word places, directionals, highways).
+Gated on an independently auditable gold-standard label set with published methodology
+([eval/PROTOCOL.md](../eval/PROTOCOL.md)). **No accuracy claims without it, and the gate has not
+been cleared.**
+
+- Candidate v19 never regresses but **misses the pre-registered +3.0pp gold gate** — margin
+  +2.60pp all-verdicts, and arithmetically capped at +2.80pp even if every outstanding record is
+  adjudicated in its favour. It fixes 39 of 1,500; the bar needs 45.
+  ([findings](../benchmark/results/model-v2-findings.md))
+- **Census TIGER/Line training corpus** — moved ahead of the other model work because it is the
+  only lever that raises the *count* of records fixed. The prior corpus split street phrases with
+  a heuristic that mislabels 9.11% of them against TIGER ground truth; 71% of those errors are
+  trailing directionals in grid addresses, the largest remaining class.
+  ([builder](../training/build_tiger_corpus.py))
+- Outstanding: human adjudication of the differing records the protocol requires before any
+  margin counts ([worklist generator](../tools/make_confirmation_doc.py)).
 - Constrained decoding for partially-structured input (upstream #94, the tracker's oldest issue).
 
 ## Ongoing

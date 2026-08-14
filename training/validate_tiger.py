@@ -47,6 +47,14 @@ def check(row):
         if first in ROUTE_DESIGNATORS and second.isdigit():
             bad.append(f"unsplit route designation: {toks[idx[0]]!r} {toks[idx[1]]!r}")
 
+    # The corpus is composed by splitting TIGER fields on whitespace, which is
+    # not how usaddress tokenizes. A row the real tokenizer would not reproduce
+    # is training on a token shape that cannot occur at inference -- and a bare
+    # "-" token (which the tokenizer strips) crashes usaddress's own feature
+    # extractor outright.
+    if usaddress.tokenize(" ".join(toks)) != toks:
+        bad.append("tokens are not what usaddress.tokenize would produce")
+
     # Structural: every emitted address is composed number-first, and a street
     # phrase without a StreetName is not a street phrase.
     if labs[0] != "AddressNumber":

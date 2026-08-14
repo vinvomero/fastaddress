@@ -94,6 +94,7 @@ import zipfile
 from pathlib import Path
 
 import shapefile
+import usaddress
 
 from build_corpus import add_noise, load_exclusions, norm_identity
 
@@ -346,9 +347,18 @@ def main():
         rows += got
         print(f"  {abbr} {statefp}{countyfp}: {len(got)} rows  ({minority} minority-encoding name rows dropped)")
 
-    out, dropped = [], 0
+    out, dropped, retokenized = [], 0, 0
     for r in rows:
         toks, labs = add_noise(rng, r["tokens"], r["labels"])
+        # These tokens were built by splitting TIGER fields on whitespace, which
+        # is not necessarily how usaddress tokenizes the same string. Any row
+        # whose tokens the real tokenizer would not reproduce is dropped: training
+        # on a token shape that cannot occur at inference teaches nothing useful,
+        # and at least one such shape (a bare "-", which the tokenizer strips)
+        # crashes usaddress's own feature extractor.
+        if usaddress.tokenize(" ".join(toks)) != toks:
+            retokenized += 1
+            continue
         if norm_identity(" ".join(toks)) in exclude:
             dropped += 1
             continue
@@ -368,6 +378,7 @@ def main():
         "total": len(out),
         "by_county": per_county_counts,
         "excluded_gold_or_clean_overlaps": dropped,
+        "dropped_tokenizer_mismatch": retokenized,
         "dropped_minority_encoding_rows": minority_total,
     }
     (Path(__file__).parent / "TIGER_MANIFEST.json").write_text(
