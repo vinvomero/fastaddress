@@ -5,9 +5,11 @@ gates. The current candidate is **v14**. It clears the clean gate, and across th
 messy-data records that now carry verdicts, **the incumbent is never uniquely correct** — v14 is
 right on 37, both are wrong on 5, one was skipped. Six records remain unjudged.
 
-It still does **not auto-ship**: the protocol's gold gate requires *human* adjudication and the
-verdicts so far are LLM-produced (with cited sources). The `model-v2` feature stays off pending
-that call.
+Adjudication status by round: **round 2 (8 records) was LLM-drafted with cited sources and then
+reviewed and confirmed by a human**, satisfying the protocol's human-adjudication requirement for
+those records. Round 1 (72 records, including the 31-record saint-name class) was LLM-produced;
+whether it received the same human review is recorded as unconfirmed rather than assumed. The
+`model-v2` feature stays off until that is settled and the six remaining records are judged.
 
 **A measurement correction worth recording.** An earlier candidate (v12) was reported here as
 having "zero regressions". That check only covered records adjudicated in round 1, so it was
@@ -76,10 +78,10 @@ minority, since real addresses do use them) resolved both axes at once.
 It means: on the clean gate, on every contested record where v1 was adjudicated correct, and on
 the saint-name class, v12 is at least as good as v1 and strictly better on one class.
 
-It does not mean: proven better overall. 18 messy-data differences remain unadjudicated
-(`eval/gold/ADJUDICATION.md`, regenerated for v12: 49 records in 16 groups), the adjudication
-backing the regression set was LLM-produced rather than human, and v12 costs ~9% speed. A
-"more accurate" claim in public copy still requires the human gate the protocol specifies.
+It does not mean: proven better overall. Six messy-data differences remain unjudged
+(`eval/gold/ADJUDICATION-round3.md`), and v14 costs ~7% speed for a larger model. Round 2's
+verdicts carry human review; round 1's status is unconfirmed. A public "more accurate" claim
+should state which evidence is human-adjudicated and which is not.
 
 ## Recommendation
 

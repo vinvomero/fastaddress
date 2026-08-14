@@ -1,6 +1,6 @@
 {
- "adjudicator": "ChatGPT (LLM) with external source citations, submitted by Vin 2026-08-14",
- "note": "Round 2. Group numbers index the FRESH groups shown in ADJUDICATION.md (1-8), not the full 16-group ordering. Strict standard applied: a model that gets some disputed tokens right but materially mislabels another scores 'neither', not 'closest'.",
+ "adjudicator": "LLM-drafted with external source citations, reviewed and confirmed by Vin (human) 2026-08-14",
+ "note": "Round 2. Group numbers index the FRESH groups shown in ADJUDICATION.md (1-8), not the full 16-group ordering. Strict standard applied: a model that gets some disputed tokens right but materially mislabels another scores 'neither', not 'closest'. Human-reviewed: the verdicts were checked by Vin before submission, satisfying the protocol's human-adjudication requirement for these records.",
  "fresh_groups": {
   "1": "neither",
   "2": "neither",
@@ -30,5 +30,6 @@
   "300 orange ave, fl 7, ORL FL": "A",
   "33 1/2 AVE": "B",
   "210 CRYSTAL ST UNT D CARY IL 60013": "neither"
- }
+ },
+ "human_reviewed": true
 }
