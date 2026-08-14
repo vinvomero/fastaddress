@@ -83,23 +83,39 @@ def main():
         return "A" if (which == "v1") == a_is_v1 else "B"
 
     out = [
-        f"# Confirmation round — {len(todo)} addresses",
+        f"# Address review — {len(todo)} parses to judge",
         "",
-        "## Why you're being asked for these",
+        "## What this is",
         "",
-        "The evaluation protocol we wrote *before* training anything says only records a human "
-        "reviewed may count toward the ship decision. The first batch of verdicts came from "
-        "ChatGPT and were never confirmed by you, so by our own rule they cannot be used.",
+        "Each entry below is one real address where the original parser and the retrained one "
+        "disagree about what the pieces mean. You're deciding which reading is right.",
         "",
-        f"These **{len(todo)}** are the only records where that matters. Everywhere else the two "
-        "models produce an identical parse, and an identical parse can't make one model look "
-        "better than the other — so those records need no judgment at all.",
+        "**This will not get the new model shipped, and it isn't meant to.** The model misses the "
+        "accuracy bar we set before building it, and it misses by more than these records can "
+        "close. What these verdicts do is make the evidence real. We're going to publish that "
+        "failure openly, with the numbers behind it — and the protocol we wrote in advance says "
+        "only records a human actually reviewed may count. The first batch of answers came from "
+        "ChatGPT and were never confirmed by you. Until they are, the published result rests on "
+        "machine-generated judgments, which is exactly the kind of claim this project exists to "
+        "not make.",
         "",
-        "Models are blinded as **A** and **B** (key re-rolled for this round and written to the "
-        "repo, so the suggestion below can't tip you off). **Suggested** is the earlier "
-        "unconfirmed answer. Confirm it or write a different one.",
+        f"These **{len(todo)}** are the only ones that matter. Everywhere else the two parsers "
+        "agree, and when they agree neither can look better than the other — so those need no "
+        "judgment at all.",
         "",
-        "Answer **A**, **B**, **neither** (both parses wrong), or **skip** (genuinely ambiguous).",
+        "## How to answer",
+        "",
+        "The two parsers are hidden as **A** and **B**, reshuffled for this round, so the "
+        "suggestion can't sway you. Each table shows the whole address so you can see the reading "
+        "in context; the rows they actually disagree on are marked **←** and bolded.",
+        "",
+        "Write one of: **A** · **B** · **neither** (both readings wrong) · **skip** (genuinely "
+        "ambiguous). **Suggested** is the earlier unconfirmed answer — agreeing with it is a fine "
+        "outcome, it just needs to be your call.",
+        "",
+        "Where a Census record was found it's quoted underneath. Treat it as evidence, not proof: "
+        "anything flagged with ⚠️ resolved to a city that isn't in the address, which usually "
+        "means the geocoder guessed.",
         "",
         "---",
         "",
@@ -125,23 +141,28 @@ def main():
 
         sug = info["verdict"] if info else None
         toks = b["tokens"]
-        out.append("| Token | Model A | Model B |")
-        out.append("|---|---|---|")
+        # The whole parse is shown, not just the differing tokens: judging "is
+        # LK a city or a street type" is impossible without seeing how the rest
+        # of the address was read. Disagreements are marked so they still stand
+        # out at a glance.
+        out.append("| | Token | Model A | Model B |")
+        out.append("|---|---|---|---|")
         for j, t in enumerate(toks):
             bl = b["labels"][j] if j < len(b["labels"]) else "-"
             cl = c["labels"][j] if j < len(c["labels"]) else "-"
-            if bl == cl:
-                continue
             al = bl if a_is_v1 else cl
             bb = cl if a_is_v1 else bl
-            out.append(f"| `{t}` | **{al}** | **{bb}** |")
+            if bl == cl:
+                out.append(f"| | `{t}` | {al} | {bb} |")
+            else:
+                out.append(f"| **←** | `{t}` | **{al}** | **{bb}** |")
         out.append("")
         if sug in ("v1", "v2"):
-            out.append(f"**Suggested:** {letter_for(sug)}  →  **Your verdict:** _____")
+            out.append(f"**Suggested: {letter_for(sug)}**  →  **Your verdict:** `      `")
         elif sug:
-            out.append(f"**Suggested:** {sug}  →  **Your verdict:** _____")
+            out.append(f"**Suggested: {sug}**  →  **Your verdict:** `      `")
         else:
-            out.append("**Suggested:** *(never judged)*  →  **Your verdict:** _____")
+            out.append("**Suggested: none — never judged**  →  **Your verdict:** `      `")
         out.append("")
         out.append("---")
         out.append("")
@@ -149,9 +170,13 @@ def main():
     out += [
         "## When you're done",
         "",
-        "Paste the answers back. The agent un-blinds them, recomputes the full-set margin using "
-        "only human-reviewed evidence, and reports whether the model clears the pre-registered "
-        "+3.0 percentage-point bar.",
+        "Paste the answers back in any form — `1. A, 2. B, 3. neither` is fine, and you can group "
+        "runs of the same answer. I'll un-blind them, fold them into the record, and recompute the "
+        "margin using only human-reviewed evidence so the published figure is one you stood "
+        "behind.",
+        "",
+        "If any of these are genuinely too ambiguous to call, **skip** is a real answer and is "
+        "recorded as such — a forced guess would be worse than an honest gap.",
     ]
     OUT.write_text("\n".join(out), encoding="utf-8")
     print(f"{len(todo)} records needing human review -> {OUT}")
