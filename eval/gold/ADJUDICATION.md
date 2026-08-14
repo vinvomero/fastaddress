@@ -1,6 +1,6 @@
-# Adjudication: 72 contested addresses
+# Adjudication round 2 — 8 addresses need your call
 
-Two parsers disagree on 49 of 1,500 messy addresses. They are grouped below by **disagreement shape** — 16 groups instead of 49 decisions.
+The parsers now disagree on 49 of 1,500 messy addresses (16 distinct shapes). **8 shapes carry your verdicts forward from last time and need no action** — they are listed at the bottom for reference only. That leaves **8 groups covering 8 addresses** to judge.
 
 **Models are blinded as A and B on purpose.** Judge which parse is *correct*, not which model you expect to win. (The A/B mapping is recorded in the repo, so the result stays auditable.)
 
@@ -12,90 +12,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 1 — 31 addresses
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `51` | AddressNumber | StreetName |
-| `ST` | StreetName | StreetNamePostType |
-| `JAMES` | StreetName | PlaceName |
-| `PLACE` | StreetNamePostType | PlaceName |
-| `NEW` | PlaceName | StateName |
-
-**Examples:**
-
-- `51 ST JAMES PLACE NEW YORK NY 10038`
-- `111 ST MARKS PLACE NEW YORK NY 10009`
-- `109 ST MARKS PLACE NEW YORK NY 10009`
-- `116 ST MARKS PLACE NEW YORK NY 10009`
-- `96 ST MARKS PLACE NEW YORK NY 10009`
-- `101 ST MARKS PLACE NEW YORK NY 10009`
-- `85 ST MARKS PLACE NEW YORK NY 10009`
-- `45 ST JAMES PLACE NEW YORK NY 10038`
-- `93 ST MARKS PLACE NEW YORK NY 10009`
-- `92 ST MARKS PLACE NEW YORK NY 10009`
-- `95 ST MARKS PLACE NEW YORK NY 10009`
-- `55 ST JAMES PLACE NEW YORK NY 10038`
-- …and 19 more with the same shape
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 2 — 3 addresses
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Square,` | StreetName | StreetNamePostType |
-
-**Examples:**
-
-- `1 The Square, Lillington, NC 27546`
-- `807 South Central Expressway, Richardson, TX 75080`
-- `6 West South Water Market, Chicago, IL 60608`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 3 — 2 addresses
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `140` | OccupancyIdentifier | StreetName |
-
-**Examples:**
-
-- `1251 N PLUM GROVE 140 SCHAUMBURG IL 60173`
-- `5051 PELICAN COLONY901 BONITA SPRGS FL 34134`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 4 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `LK` | PlaceName | StreetNamePostType |
-
-**Examples:**
-
-- `425 SHORELINE RD LK BARRNGTN IL 60010`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 5 — 1 address
+## Group 1 — 1 address
 
 **The disagreement:**
 
@@ -114,7 +31,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 6 — 1 address
+## Group 2 — 1 address
 
 **The disagreement:**
 
@@ -135,28 +52,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 7 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Mi` | StreetNamePreType | AddressNumberPrefix |
-| `K` | StreetName | AddressNumber |
-| `Beach` | StreetName | StreetNamePreType |
-| `Road` | StreetNamePostType | StreetNamePreType |
-| `#` | OccupancyIdentifier | StreetName |
-| `2,` | OccupancyIdentifier | StreetName |
-
-**Examples:**
-
-- `Mi K Beach Road # 2, Kenai, AK 99611`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 8 — 1 address
+## Group 3 — 1 address
 
 **The disagreement:**
 
@@ -175,7 +71,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 9 — 1 address
+## Group 4 — 1 address
 
 **The disagreement:**
 
@@ -191,7 +87,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 10 — 1 address
+## Group 5 — 1 address
 
 **The disagreement:**
 
@@ -209,7 +105,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 11 — 1 address
+## Group 6 — 1 address
 
 **The disagreement:**
 
@@ -226,26 +122,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 12 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `313` | AddressNumber | USPSBoxGroupID |
-| `RR` | StreetNamePreType | USPSBoxGroupType |
-| `313` | StreetName | USPSBoxID |
-| `Box,` | StreetName | USPSBoxType |
-
-**Examples:**
-
-- `Route 313 RR 313 Box, Arlington, VT 05250`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 13 — 1 address
+## Group 7 — 1 address
 
 **The disagreement:**
 
@@ -261,41 +138,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 14 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `AND` | StreetName | StreetNamePostType |
-| `DALES` | StreetName | PlaceName |
-
-**Examples:**
-
-- `63 HILLS AND DALES BARRINGTON IL 60010`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 15 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `BROADWAY` | Recipient | PlaceName |
-| `NEW` | Recipient | StateName |
-
-**Examples:**
-
-- `BROADWAY NEW YORK NY 10013`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 16 — 1 address
+## Group 8 — 1 address
 
 **The disagreement:**
 
@@ -310,6 +153,21 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 - `210 CRYSTAL ST UNT D CARY IL 60013`
 
 **Verdict:** _____   (A / B / neither / skip)
+
+---
+
+## Already decided last round — no action needed
+
+These shapes match verdicts you already gave; they are carried forward automatically and listed only so the record is complete.
+
+- 31 address(es) differing on `51`, `ST`, `JAMES` — your prior verdict favors **Model A** here
+- 3 address(es) differing on `Square,` — your prior verdict favors **Model B** here
+- 2 address(es) differing on `140` — your prior verdict favors **Model A** here
+- 1 address(es) differing on `LK` — your prior verdict favors **Model A** here
+- 1 address(es) differing on `Mi`, `K`, `Beach` — your prior verdict favors **Model A** here
+- 1 address(es) differing on `313`, `RR`, `313` — your prior verdict favors **Model skip** here
+- 1 address(es) differing on `AND`, `DALES` — your prior verdict favors **Model A** here
+- 1 address(es) differing on `BROADWAY`, `NEW` — your prior verdict favors **Model neither** here
 
 ---
 

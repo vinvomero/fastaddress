@@ -30,6 +30,37 @@ def signature(rec):
     return tuple((d["v1"], d["v2"]) for d in rec["differing_tokens"])
 
 
+def prior_verdicts_by_shape():
+    """Carry forward verdicts from an earlier adjudication pass.
+
+    A verdict is about which PARSE is correct, so it transfers to any later
+    candidate producing the identical disagreement shape. Prior letters are
+    translated through the prior blind key into model terms (incumbent vs
+    challenger), which is what actually carries.
+    """
+    prior_dis = ROOT / "eval" / "gold" / "disagreements-prior.jsonl"
+    prior_key = ROOT / "eval" / "gold" / "blind_key-prior.json"
+    prior_verd = ROOT / "eval" / "gold" / "verdicts-chatgpt-2026-08-13.json"
+    if not (prior_dis.exists() and prior_key.exists() and prior_verd.exists()):
+        return {}
+    # utf-8-sig: files recovered via shell redirect can carry a BOM.
+    key = json.loads(prior_key.read_text(encoding="utf-8-sig"))
+    verd = json.loads(prior_verd.read_text(encoding="utf-8-sig"))
+    gv = {int(k): v for k, v in verd["groups"].items()}
+    rows = [json.loads(l) for l in open(prior_dis, encoding="utf-8-sig") if l.strip()]
+    groups = defaultdict(list)
+    for r in rows:
+        groups[signature(r)].append(r)
+    ordered = sorted(groups.values(), key=len, reverse=True)
+    out = {}
+    for i, grp in enumerate(ordered, 1):
+        letter = gv.get(i)
+        if not letter:
+            continue
+        out[signature(grp[0])] = key.get(letter, letter)  # -> "v1" | "v2" | neither/skip
+    return out
+
+
 def main():
     rng = random.Random(SEED)
     rows = [json.loads(l) for l in open(SRC, encoding="utf-8") if l.strip()]
@@ -42,6 +73,12 @@ def main():
         encoding="utf-8",
     )
 
+    def key_a_model(flag):
+        return "v1" if flag else "v2"
+
+    def key_b_model(flag):
+        return "v2" if flag else "v1"
+
     def a_label(d):
         return d["v1"] if a_is_v1 else d["v2"]
 
@@ -53,11 +90,19 @@ def main():
         groups[signature(r)].append(r)
     ordered = sorted(groups.values(), key=len, reverse=True)
 
+    prior = prior_verdicts_by_shape()
+    inv = {v: k for k, v in {"A": key_a_model(a_is_v1), "B": key_b_model(a_is_v1)}.items()}
+    carried = [g for g in ordered if signature(g[0]) in prior]
+    fresh = [g for g in ordered if signature(g[0]) not in prior]
+    n_fresh = sum(len(g) for g in fresh)
+
     out = [
-        "# Adjudication: 72 contested addresses",
+        f"# Adjudication round 2 — {n_fresh} addresses need your call",
         "",
-        f"Two parsers disagree on {len(rows)} of 1,500 messy addresses. They are grouped below by "
-        f"**disagreement shape** — {len(ordered)} groups instead of {len(rows)} decisions.",
+        f"The parsers now disagree on {len(rows)} of 1,500 messy addresses ({len(ordered)} distinct "
+        f"shapes). **{len(carried)} shapes carry your verdicts forward from last time and need no "
+        f"action** — they are listed at the bottom for reference only. That leaves "
+        f"**{len(fresh)} groups covering {n_fresh} addresses** to judge.",
         "",
         "**Models are blinded as A and B on purpose.** Judge which parse is *correct*, not which "
         "model you expect to win. (The A/B mapping is recorded in the repo, so the result stays "
@@ -80,7 +125,7 @@ def main():
         "",
     ]
 
-    for i, grp in enumerate(ordered, 1):
+    for i, grp in enumerate(fresh, 1):
         n = len(grp)
         flips = grp[0]["differing_tokens"]
         out.append(f"## Group {i} — {n} address{'es' if n > 1 else ''}")
@@ -104,6 +149,26 @@ def main():
                 out.append(f"- …and {n - LIST_CAP} more with the same shape")
         out.append("")
         out.append(f"**Verdict:** _____   (A / B / neither / skip)")
+        out.append("")
+        out.append("---")
+        out.append("")
+
+    if carried:
+        out += [
+            "## Already decided last round — no action needed",
+            "",
+            "These shapes match verdicts you already gave; they are carried forward automatically "
+            "and listed only so the record is complete.",
+            "",
+        ]
+        for grp in carried:
+            model = prior[signature(grp[0])]
+            letter = inv.get(model, model)
+            flips = ", ".join(f"`{d['token']}`" for d in grp[0]["differing_tokens"][:3])
+            out.append(
+                f"- {len(grp)} address(es) differing on {flips} — your prior verdict favors "
+                f"**Model {letter}** here"
+            )
         out.append("")
         out.append("---")
         out.append("")
