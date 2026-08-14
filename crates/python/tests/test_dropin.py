@@ -78,6 +78,35 @@ def main():
         "tag_mapping mismatch",
     )
 
+    # Confidence API: additive, and never changes what the plain calls return.
+    for raw in rows[:300]:
+        triples = usaddr.parse_with_confidence(raw)
+        check(
+            [(t, l) for t, l, _c in triples] == usaddr.parse(raw),
+            f"parse_with_confidence changed parse output: {raw!r}",
+        )
+        check(
+            all(0.0 <= c <= 1.0 for _t, _l, c in triples),
+            f"confidence outside [0,1]: {raw!r}",
+        )
+        tagged, kind, conf, seq = usaddr.tag_native_with_confidence(raw)
+        plain_tagged, plain_kind = usaddr.tag_native(raw)
+        check(tagged == plain_tagged, f"tag_native_with_confidence changed output: {raw!r}")
+        check(kind == plain_kind, f"address_type changed: {raw!r}")
+        check(set(conf) == set(tagged), f"confidence keys misaligned: {raw!r}")
+        check(0.0 <= seq <= 1.0, f"sequence confidence outside [0,1]: {raw!r}")
+        check(
+            all(seq <= c + 1e-9 for c in conf.values()),
+            f"sequence confidence exceeds a component marginal: {raw!r}",
+        )
+
+    # Confidence path honors the RepeatedLabelError contract too.
+    try:
+        usaddr.tag_with_confidence("59 ST JAMES PLACE NEW YORK NY 10038")
+        sys.exit("FAIL: expected RepeatedLabelError from tag_with_confidence")
+    except usaddr.RepeatedLabelError:
+        pass
+
     print(f"OK: {len(rows)} sampled rows drop-in identical; import time {IMPORT_SECS*1000:.0f}ms")
 
 

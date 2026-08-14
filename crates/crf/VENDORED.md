@@ -10,6 +10,16 @@ project's inference-speed requirements. Local changes (each a candidate for an u
   cqdb string lookups for callers that cache attribute ids)
 - 26-label arm in the unrolled Viterbi match (the usaddress model's label count previously fell
   to the generic path)
+- Forward-backward marginals: `MarginalState`, `Context::forward_backward`, `Context::score`, and
+  the `Tagger::tag_ids_with_marginals` entry point. Upstream crfs never ported CRFsuite's
+  `crf1dc_alpha_score` / `crf1dc_beta_score`, so the `MARGINALS` flag and its context fields were
+  inert. Scaled (not log-space) forward-backward, matching CRFsuite, with one deviation: the
+  per-position state-score maximum is subtracted before `exp` and added back into `log_norm`.
+  Marginals are exactly invariant under that shift, and it keeps `exp` away from overflow.
+  Strictly additive — `tag`, `tag_ids` and their buffers are untouched.
 
 All changes preserve arithmetic order; correctness is enforced by this repo's four-layer oracle
-parity gate and the full-corpus ID-vs-string equivalence test.
+parity gate and the full-corpus ID-vs-string equivalence test. The marginals are additionally
+checked against brute-force enumeration of all label sequences on the bundled 2-label toy model
+(`tagger::tests::marginals_match_brute_force_enumeration`) and against `pycrfsuite.Tagger`
+(`benchmark/compare_marginals.py`).

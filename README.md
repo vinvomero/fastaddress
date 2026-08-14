@@ -26,6 +26,27 @@ usaddr.tag("123 N Main St Apt 4B Springfield IL 62704")
 usaddress 0.5.16 on the ASCII-dominant inputs real property data consists of; known Python/Rust
 Unicode-casing differences are documented as out of parity scope.
 
+### Confidence scores
+
+CRF marginal probabilities, the thing upstream
+[usaddress#337](https://github.com/datamade/usaddress/issues/337) asks for, computed by
+forward-backward over the same weights Viterbi uses. Opt-in: the functions above never run it.
+
+```python
+usaddr.parse_with_confidence("123 N Main St Springfield IL 62704")
+# [('123', 'AddressNumber', 0.99995), ('N', 'StreetNamePreDirectional', 0.99452), ...]
+
+tagged, address_type, confidence, sequence_confidence = usaddr.tag_with_confidence(addr)
+# tagged/address_type are byte-identical to tag(); confidence is keyed the same way
+```
+
+`confidence[label]` is the marginal probability of that component's label. When a component spans
+several tokens the value is the **minimum** across its tokens — the weakest link, so a component
+is never reported as more confident than any token inside it. `sequence_confidence` is the joint
+probability of the whole predicted labelling. Verified against `pycrfsuite.Tagger.marginal()` on
+the same model over 45,496 token positions: max absolute difference 1.7e-15
+(`benchmark/compare_marginals.py`).
+
 ## Why this exists
 
 usaddress is quietly enormous infrastructure — [5.2M monthly downloads](https://pepy.tech/project/usaddress)

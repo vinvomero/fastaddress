@@ -27,5 +27,6 @@ mod tagger;
 
 // Re-export main types
 pub use self::attribute::Attribute;
+pub use self::context::TagMarginals;
 pub use self::model::Model;
 pub use self::tagger::Tagger;

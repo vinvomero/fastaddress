@@ -71,6 +71,140 @@ impl ViterbiState {
     }
 }
 
+/// Working buffers for the forward-backward (marginal probability) pass.
+///
+/// Vendored addition. Kept in its own struct — parallel to [`ViterbiState`] —
+/// so that the Viterbi-only path never allocates or touches any of it. A
+/// default-constructed `MarginalState` owns no heap memory; the first
+/// [`Context::forward_backward`] call sizes it.
+///
+/// The algorithm mirrors CRFsuite's `crf1d_context.c`
+/// (`crf1dc_exp_state` / `crf1dc_alpha_score` / `crf1dc_beta_score` /
+/// `crf1dc_marginal_point`): scaled forward-backward rather than log-space
+/// log-sum-exp, with one scaling coefficient per position.
+///
+/// One deliberate deviation from CRFsuite: before exponentiating, the state
+/// scores at each position have that position's maximum subtracted. Marginals
+/// are exactly invariant under a per-position constant shift of the state
+/// scores (every path passes through exactly one node per position, so the
+/// shift multiplies every path weight by the same constant), and the shift
+/// keeps `exp()` away from overflow. The shift is added back into `log_norm`
+/// so the normalization constant — and therefore sequence probability —
+/// still refers to the unshifted scores.
+#[derive(Debug, Clone, Default)]
+pub struct MarginalState {
+    num_labels: u32,
+    num_items: u32,
+    /// Exponentiated (shifted) state scores, a `[T][L]` matrix.
+    exp_state: Vec<f64>,
+    /// Scaled forward scores, a `[T][L]` matrix.
+    alpha: Vec<f64>,
+    /// Scaled backward scores, a `[T][L]` matrix.
+    beta: Vec<f64>,
+    /// Per-position scaling coefficients, a `[T]` vector.
+    scale: Vec<f64>,
+    /// Per-position state-score maxima that were shifted out, a `[T]` vector.
+    shift: Vec<f64>,
+    /// Work row, an `[L]` vector.
+    row: Vec<f64>,
+    /// log of the normalization constant Z for the (unshifted) scores.
+    log_norm: f64,
+}
+
+impl MarginalState {
+    fn resize(&mut self, num_labels: u32, num_items: u32) {
+        let l = num_labels as usize;
+        let t = num_items as usize;
+        let n = t * l;
+        self.num_labels = num_labels;
+        self.num_items = num_items;
+        self.log_norm = 0.0;
+        self.exp_state.clear();
+        self.exp_state.resize(n, 0.0);
+        self.alpha.clear();
+        self.alpha.resize(n, 0.0);
+        self.beta.clear();
+        self.beta.resize(n, 0.0);
+        self.scale.clear();
+        self.scale.resize(t, 1.0);
+        self.shift.clear();
+        self.shift.resize(t, 0.0);
+        self.row.clear();
+        self.row.resize(l, 0.0);
+    }
+
+    /// log Z for the sequence most recently passed through forward-backward.
+    #[inline]
+    pub fn log_norm(&self) -> f64 {
+        self.log_norm
+    }
+
+    /// Marginal probability of label `l` at position `t`.
+    ///
+    /// `p(t,i) = alpha'[t][i] * beta'[t][i] / C_t`, the scaled-arithmetic form
+    /// of `alpha[t][i] * beta[t][i] / Z` (CRFsuite `crf1dc_marginal_point`).
+    #[inline]
+    pub fn marginal(&self, t: usize, l: u32) -> f64 {
+        let idx = self.num_labels as usize * t + l as usize;
+        self.alpha[idx] * self.beta[idx] / self.scale[t]
+    }
+
+    /// Flatten every position's marginals into a fresh `[T][L]` vector.
+    pub fn to_probabilities(&self) -> Vec<f64> {
+        let l = self.num_labels as usize;
+        let t_n = self.num_items as usize;
+        let mut out = Vec::with_capacity(t_n * l);
+        for t in 0..t_n {
+            let inv = 1.0 / self.scale[t];
+            for i in 0..l {
+                let idx = l * t + i;
+                out.push(self.alpha[idx] * self.beta[idx] * inv);
+            }
+        }
+        out
+    }
+}
+
+/// A tagged sequence together with its per-position marginal probabilities.
+#[derive(Debug, Clone, Default)]
+pub struct TagMarginals {
+    /// Viterbi (joint-maximum) label ids, one per position.
+    pub labels: Vec<u32>,
+    /// Number of distinct labels — the row stride of `probs`.
+    pub num_labels: u32,
+    /// Marginal probabilities, a flat `[T][L]` matrix.
+    pub probs: Vec<f64>,
+    /// log of the normalization constant Z.
+    pub log_norm: f64,
+    /// Unnormalized log score of `labels` (CRFsuite `crf1dc_score`).
+    pub sequence_score: f64,
+}
+
+impl TagMarginals {
+    /// Marginal probability of `label` at position `t`.
+    #[inline]
+    pub fn marginal(&self, t: usize, label: u32) -> f64 {
+        self.probs[self.num_labels as usize * t + label as usize]
+    }
+
+    /// All label marginals at position `t`.
+    #[inline]
+    pub fn marginals_at(&self, t: usize) -> &[f64] {
+        let l = self.num_labels as usize;
+        &self.probs[l * t..l * (t + 1)]
+    }
+
+    /// Probability of the whole label sequence, `exp(score - log Z)` — the
+    /// equivalent of pycrfsuite's `Tagger.probability()`.
+    #[inline]
+    pub fn sequence_probability(&self) -> f64 {
+        if self.labels.is_empty() {
+            return 1.0;
+        }
+        (self.sequence_score - self.log_norm).exp()
+    }
+}
+
 bitflags! {
     /// Reset flags
     pub struct Reset: u32 {
@@ -444,6 +578,118 @@ impl Context {
             labels[t] = back[labels[t + 1] as usize];
         }
         (labels, max_score)
+    }
+
+    /// Unnormalized log score of a label sequence.
+    ///
+    /// Mirrors CRFsuite `crf1dc_score`: the state score of the first label plus,
+    /// for every subsequent position, the transition score into it and its own
+    /// state score. Reads the same `vstate.state` matrix Viterbi consumed.
+    pub fn score(&self, vstate: &ViterbiState, labels: &[u32]) -> f64 {
+        if labels.is_empty() {
+            return 0.0;
+        }
+        let l = self.num_labels as usize;
+        let mut i = labels[0] as usize;
+        let mut ret = vstate.state[i];
+        for (t, &label) in labels.iter().enumerate().skip(1) {
+            let j = label as usize;
+            ret += self.trans[l * i + j];
+            ret += vstate.state[l * t + j];
+            i = j;
+        }
+        ret
+    }
+
+    /// Scaled forward-backward over the state scores already computed into
+    /// `vstate.state`, filling `m` with alpha/beta/scale so that
+    /// [`MarginalState::marginal`] and [`MarginalState::log_norm`] are valid.
+    ///
+    /// Vendored addition. Mirrors CRFsuite's `crf1dc_alpha_score` /
+    /// `crf1dc_beta_score`; see [`MarginalState`] for the one deviation
+    /// (per-position max shift before `exp`).
+    ///
+    /// # Panics
+    /// Panics if `vstate.num_labels` does not match `self.num_labels`.
+    pub fn forward_backward(&self, vstate: &ViterbiState, m: &mut MarginalState) {
+        assert_eq!(
+            self.num_labels, vstate.num_labels,
+            "ViterbiState num_labels ({}) must match Context num_labels ({})",
+            vstate.num_labels, self.num_labels
+        );
+        let l = self.num_labels as usize;
+        let t_n = vstate.num_items as usize;
+        m.resize(self.num_labels, vstate.num_items);
+        if t_n == 0 {
+            return;
+        }
+
+        // exp_state[t][i] = exp(state[t][i] - max_i state[t][i])
+        for t in 0..t_n {
+            let src = &vstate.state[l * t..l * (t + 1)];
+            let max = src.iter().copied().fold(f64::NEG_INFINITY, f64::max);
+            let max = if max.is_finite() { max } else { 0.0 };
+            m.shift[t] = max;
+            let dst = &mut m.exp_state[l * t..l * (t + 1)];
+            for (d, s) in dst.iter_mut().zip(src) {
+                *d = (*s - max).exp();
+            }
+        }
+
+        // Forward: alpha[0][i] = exp_state[0][i]; then
+        // alpha[t][j] = exp_state[t][j] * sum_i alpha[t-1][i] * exp_trans[i][j],
+        // each row rescaled to sum to 1 and the coefficient kept in `scale`.
+        m.alpha[..l].copy_from_slice(&m.exp_state[..l]);
+        let sum: f64 = m.alpha[..l].iter().sum();
+        m.scale[0] = if sum != 0.0 { 1.0 / sum } else { 1.0 };
+        for a in &mut m.alpha[..l] {
+            *a *= m.scale[0];
+        }
+        for t in 1..t_n {
+            let (prev, cur) = m.alpha.split_at_mut(l * t);
+            let prev = &prev[l * (t - 1)..];
+            let cur = &mut cur[..l];
+            cur.fill(0.0);
+            for (i, &a) in prev.iter().enumerate() {
+                let trans = &self.exp_trans[l * i..l * (i + 1)];
+                for (c, &tr) in cur.iter_mut().zip(trans) {
+                    *c += a * tr;
+                }
+            }
+            let state = &m.exp_state[l * t..l * (t + 1)];
+            for (c, &s) in cur.iter_mut().zip(state) {
+                *c *= s;
+            }
+            let sum: f64 = cur.iter().sum();
+            let scale = if sum != 0.0 { 1.0 / sum } else { 1.0 };
+            m.scale[t] = scale;
+            for c in cur.iter_mut() {
+                *c *= scale;
+            }
+        }
+
+        // log Z = -sum_t log(C_t), plus the per-position shifts taken out above.
+        let mut log_norm = 0.0;
+        for t in 0..t_n {
+            log_norm += m.shift[t] - m.scale[t].ln();
+        }
+        m.log_norm = log_norm;
+
+        // Backward: beta[T-1][i] = C_{T-1}; then
+        // beta[t][i] = C_t * sum_j exp_trans[i][j] * exp_state[t+1][j] * beta[t+1][j].
+        let last = l * (t_n - 1);
+        m.beta[last..last + l].fill(m.scale[t_n - 1]);
+        for t in (0..t_n - 1).rev() {
+            for j in 0..l {
+                m.row[j] = m.beta[l * (t + 1) + j] * m.exp_state[l * (t + 1) + j];
+            }
+            let scale = m.scale[t];
+            for i in 0..l {
+                let trans = &self.exp_trans[l * i..l * (i + 1)];
+                let dot: f64 = trans.iter().zip(&m.row).map(|(a, b)| a * b).sum();
+                m.beta[l * t + i] = dot * scale;
+            }
+        }
     }
 }
 

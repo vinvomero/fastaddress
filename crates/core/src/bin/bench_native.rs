@@ -28,7 +28,9 @@ fn main() {
     // Warm-up: force the lazy model parse before timing.
     let _ = usaddr_core::api::tag("123 Main St Springfield IL 62704");
 
-    // Optional stage decomposition: BENCH_STAGE=tokenize|features|full (default full)
+    // Optional stage decomposition: BENCH_STAGE=tokenize|features|confidence|full
+    // (default full). `confidence` times the opt-in marginal path against the
+    // same rows so its cost can be quoted next to the plain path.
     let stage = env::var("BENCH_STAGE").unwrap_or_else(|_| "full".to_string());
     // Optional model selection for the v2 evaluation (requires --features model-v2).
     #[cfg(feature = "model-v2")]
@@ -43,6 +45,12 @@ fn main() {
         for raw in &rows {
             let tokens = usaddr_core::tokenize::tokenize(raw);
             errors += usaddr_core::features::tokens_to_attrs(&tokens).is_empty() as usize;
+        }
+    } else if stage == "confidence" {
+        for raw in &rows {
+            if usaddr_core::api::tag_with_confidence(raw, None).is_err() {
+                errors += 1;
+            }
         }
     } else if threads <= 1 {
         #[cfg(feature = "model-v2")]

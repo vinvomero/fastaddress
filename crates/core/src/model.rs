@@ -2,7 +2,7 @@ use std::cell::RefCell;
 use std::io;
 use std::sync::LazyLock;
 
-use crfs::{Attribute, Model, Tagger};
+use crfs::{Attribute, Model, TagMarginals, Tagger};
 
 /// Which embedded model to run. V1 is the usaddress-pinned parity model and
 /// the permanent default; V2 exists only behind the `model-v2` feature and
@@ -90,6 +90,13 @@ pub fn tag_attrs_for(id: ModelId, xseq: &[Vec<Attribute>]) -> io::Result<Vec<Str
 /// resolve via `label_name_for`.
 pub fn tag_attr_ids_for(id: ModelId, seq: &[Vec<(u32, f64)>]) -> Vec<u32> {
     with_tagger(id, |tagger| tagger.tag_ids(seq))
+}
+
+/// Id path with marginals: same Viterbi labels as `tag_attr_ids_for`, plus the
+/// forward-backward marginal probabilities and log Z. Opt-in — callers of
+/// `tag_attr_ids_for` never run the forward-backward pass.
+pub fn tag_attr_ids_with_marginals_for(id: ModelId, seq: &[Vec<(u32, f64)>]) -> TagMarginals {
+    with_tagger(id, |tagger| tagger.tag_ids_with_marginals(seq))
 }
 
 // ---- v1 convenience API (unchanged surface; the parity-protected default) ----
