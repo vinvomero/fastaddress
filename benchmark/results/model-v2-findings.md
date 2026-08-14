@@ -60,6 +60,13 @@ addresses: an unjudged differing record in this very set is `295 South 250 East,
 grid address whose trailing directional is the single most common thing the old heuristic corpus
 got wrong (71% of measured mislabels).
 
+**A record-keeping gap found while computing this.** The protocol specifies a `status` field on
+every gold record (`prelabeled` / `llm_reviewed` / `adjudicated`) and says only `adjudicated`
+records count. That field was never driven: all 1,500 records still read `prelabeled`, because
+adjudication was in practice tracked in separate verdict files keyed by raw address, with a
+`human_reviewed` boolean. The two mechanisms need reconciling — the verdict files are the real
+record, and the `status` field should be written back from them rather than left stale.
+
 **The other honest gaps.** v19 costs ~6% throughput and doubles model size. Eight contested records
 are ones where *both* models are wrong — real improvement territory, not regressions.
 

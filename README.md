@@ -43,9 +43,15 @@ tagged, address_type, confidence, sequence_confidence = usaddr.tag_with_confiden
 `confidence[label]` is the marginal probability of that component's label. When a component spans
 several tokens the value is the **minimum** across its tokens — the weakest link, so a component
 is never reported as more confident than any token inside it. `sequence_confidence` is the joint
-probability of the whole predicted labelling. Verified against `pycrfsuite.Tagger.marginal()` on
-the same model over 45,496 token positions: max absolute difference 1.7e-15
-(`benchmark/compare_marginals.py`).
+probability of the whole predicted labelling.
+
+Verified against `pycrfsuite.Tagger.marginal()` running the same model over the same addresses —
+**max absolute difference 1.665e-15** across 34,028 token positions, with zero Viterbi
+disagreements. Reproduce it with:
+
+```bash
+python benchmark/compare_marginals.py --rows 5000
+```
 
 ## Why this exists
 
