@@ -60,6 +60,20 @@ addresses: an unjudged differing record in this very set is `295 South 250 East,
 grid address whose trailing directional is the single most common thing the old heuristic corpus
 got wrong (71% of measured mislabels).
 
+**A prediction recorded before the TIGER model was scored.** The gold set is drawn from Cook
+County owner-mailing text (900), NYC (225), and the us-addrs hard-case corpus (375). Counting
+grid-style addresses in it — a directional adjacent to a number — finds **36 of 1,500 (2.4%)**, and
+29 of those are NYC forms like `750 EAST 6 STREET`, which is a *pre*-directional. The Western
+`E 100 N` post-directional pattern, which is 71% of what the TIGER corpus corrects and 28% of Salt
+Lake County's streets, is close to absent.
+
+So the pre-registered gold set is largely blind to TIGER's main improvement. The training data is
+more correct either way — that is measured against Census ground truth, not against this eval — but
+this set cannot see most of it. Writing that down *before* scoring, so the result is not narrated
+after the fact whichever way it lands. The gate does not move; if the model misses, it misses. The
+finding is that a nationally-representative claim needs a geographically representative gold set,
+and this one is Midwest/Northeast.
+
 **A record-keeping gap found while computing this.** The protocol specifies a `status` field on
 every gold record (`prelabeled` / `llm_reviewed` / `adjudicated`) and says only `adjudicated`
 records count. That field was never driven: all 1,500 records still read `prelabeled`, because
