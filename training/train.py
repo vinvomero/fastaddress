@@ -21,6 +21,7 @@ CORPUS = Path(__file__).parent / "corpus" / "corpus.jsonl"
 SYNTH = Path(__file__).parent / "corpus" / "synth.jsonl"
 DISTILLED = Path(__file__).parent / "corpus" / "distilled.jsonl"
 AUGMENTED = Path(__file__).parent / "corpus" / "augmented.jsonl"
+TIGER = Path(__file__).parent / "corpus" / "tiger.jsonl"
 
 
 def main():
@@ -60,6 +61,12 @@ def main():
         default=0,
         help="include training/corpus/augmented.jsonl N times (shape-preserving v1-win data)",
     )
+    ap.add_argument(
+        "--tiger",
+        type=int,
+        default=0,
+        help="include training/corpus/tiger.jsonl N times (Census-authoritative street splits)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -96,6 +103,9 @@ def main():
     if args.augment and AUGMENTED.exists():
         for _ in range(args.augment):
             feed(AUGMENTED)
+    if args.tiger and TIGER.exists():
+        for _ in range(args.tiger):
+            feed(TIGER)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 

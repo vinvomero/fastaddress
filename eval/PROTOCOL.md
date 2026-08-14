@@ -72,6 +72,27 @@ and is accepted deliberately.
   free text, us-addrs cases, issue-derived cases). Property-address composed pairs are
   training-only.
 
+## How the gold gate is computed (method note, added 2026-08-14 — the gate itself is unchanged)
+
+The gold gate is a **margin** over the full 1,500-record set. Adjudicating all 1,500 was never
+necessary to compute it, and this note records why, because the shortcut is only valid under a
+premise that must be checked rather than assumed.
+
+A record where both models emit the *same* parse is either right for both or wrong for both. It
+adds the same amount to both sides of `correct(candidate) − correct(incumbent)` and therefore
+contributes **exactly zero** to the margin. The margin is fully determined by the records where
+the two models differ — which are precisely the records sent to adjudication.
+
+**The premise:** this holds only if *every* differing record carries a verdict. If one does not,
+the margin has an unmeasured term and is not exact. `benchmark/full_set_margin.py` recomputes the
+differing set from scratch on every run and reports any differing record lacking a verdict, rather
+than trusting a stored list. Two earlier "no regressions" claims in this project were wrong
+because the check could not see records it never enumerated; this one names its own blind spot.
+
+Consistent with the labeling method above, only human-reviewed verdicts enter the arithmetic.
+`--human-only` reports that figure; the unrestricted figure is diagnostic only and is not a gate
+result.
+
 ## Reporting
 
 `benchmark/run_accuracy.py` produces, for each model on each set: full-address exact match,

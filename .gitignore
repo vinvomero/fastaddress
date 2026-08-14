@@ -3,3 +3,4 @@ __pycache__/
 .venv/
 benchmark/oracle/
 training/corpus/
+training/tiger_cache/
