@@ -22,6 +22,7 @@ SYNTH = Path(__file__).parent / "corpus" / "synth.jsonl"
 DISTILLED = Path(__file__).parent / "corpus" / "distilled.jsonl"
 AUGMENTED = Path(__file__).parent / "corpus" / "augmented.jsonl"
 TIGER = Path(__file__).parent / "corpus" / "tiger.jsonl"
+ERRCLASS = Path(__file__).parent / "corpus" / "errclass.jsonl"
 
 
 def main():
@@ -67,6 +68,12 @@ def main():
         default=0,
         help="include training/corpus/tiger.jsonl N times (Census-authoritative street splits)",
     )
+    ap.add_argument(
+        "--errclass",
+        type=int,
+        default=0,
+        help="include training/corpus/errclass.jsonl N times (adjudication-derived error classes)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -106,6 +113,9 @@ def main():
     if args.tiger and TIGER.exists():
         for _ in range(args.tiger):
             feed(TIGER)
+    if args.errclass and ERRCLASS.exists():
+        for _ in range(args.errclass):
+            feed(ERRCLASS)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
