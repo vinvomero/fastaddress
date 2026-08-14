@@ -1,6 +1,6 @@
 # Adjudication: 72 contested addresses
 
-Two parsers disagree on 72 of 1,500 messy addresses. They are grouped below by **disagreement shape** — 32 groups instead of 72 decisions.
+Two parsers disagree on 49 of 1,500 messy addresses. They are grouped below by **disagreement shape** — 16 groups instead of 49 decisions.
 
 **Models are blinded as A and B on purpose.** Judge which parse is *correct*, not which model you expect to win. (The A/B mapping is recorded in the repo, so the result stays auditable.)
 
@@ -44,44 +44,42 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 2 — 4 addresses
+## Group 2 — 3 addresses
 
 **The disagreement:**
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `NEW` | StreetName | PlaceName |
+| `Square,` | StreetName | StreetNamePostType |
 
 **Examples:**
 
-- `76 AVENUE B NEW YORK NY 10009`
-- `127 AVENUE C NEW YORK NY 10009`
-- `34 AVENUE B NEW YORK NY 10009`
-- `163 AVENUE C NEW YORK NY 10009`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 3 — 3 addresses
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Trail` | StreetName | StreetNamePostType |
-
-**Examples:**
-
-- `1733 Tamiami Trail South, Venice, FL 34293`
-- `202 West Station Stree BARRINGTON IL 60010`
+- `1 The Square, Lillington, NC 27546`
+- `807 South Central Expressway, Richardson, TX 75080`
 - `6 West South Water Market, Chicago, IL 60608`
 
 **Verdict:** _____   (A / B / neither / skip)
 
 ---
 
-## Group 4 — 2 addresses
+## Group 3 — 2 addresses
+
+**The disagreement:**
+
+| Token | Model A says | Model B says |
+|---|---|---|
+| `140` | OccupancyIdentifier | StreetName |
+
+**Examples:**
+
+- `1251 N PLUM GROVE 140 SCHAUMBURG IL 60173`
+- `5051 PELICAN COLONY901 BONITA SPRGS FL 34134`
+
+**Verdict:** _____   (A / B / neither / skip)
+
+---
+
+## Group 4 — 1 address
 
 **The disagreement:**
 
@@ -92,39 +90,38 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `425 SHORELINE RD LK BARRNGTN IL 60010`
-- `430 FDR DRIVE WEST LANE NEW YORK NY 10002`
 
 **Verdict:** _____   (A / B / neither / skip)
 
 ---
 
-## Group 5 — 2 addresses
+## Group 5 — 1 address
 
 **The disagreement:**
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `Okemo` | BuildingName | LandmarkName |
-| `Market` | BuildingName | LandmarkName |
-| `Place,` | BuildingName | LandmarkName |
+| `US` | StreetNamePreType | SubaddressType |
+| `6` | StreetName | SubaddressIdentifier |
+| `Ind` | StreetName | SubaddressType |
+| `15,` | StreetName | SubaddressIdentifier |
 
 **Examples:**
 
-- `Okemo Market Place, Ludlow, VT 05149`
-- `Valley West Mall, West Des Moines, IA 50266`
+- `US 6 Ind 15, Milford, IN 46542`
 
 **Verdict:** _____   (A / B / neither / skip)
 
 ---
 
-## Group 6 — 2 addresses
+## Group 6 — 1 address
 
 **The disagreement:**
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `Mile` | StreetNamePreType | AddressNumberPrefix |
-| `K` | StreetName | AddressNumber |
+| `Mile` | LandmarkName | AddressNumberPrefix |
+| `K` | LandmarkName | AddressNumber |
 | `Beach` | StreetName | StreetNamePreType |
 | `Road` | StreetNamePostType | StreetNamePreType |
 | `#` | OccupancyIdentifier | StreetName |
@@ -133,42 +130,46 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 **Examples:**
 
 - `Mile K Beach Road # 1, Kenai, AK 99611`
+
+**Verdict:** _____   (A / B / neither / skip)
+
+---
+
+## Group 7 — 1 address
+
+**The disagreement:**
+
+| Token | Model A says | Model B says |
+|---|---|---|
+| `Mi` | StreetNamePreType | AddressNumberPrefix |
+| `K` | StreetName | AddressNumber |
+| `Beach` | StreetName | StreetNamePreType |
+| `Road` | StreetNamePostType | StreetNamePreType |
+| `#` | OccupancyIdentifier | StreetName |
+| `2,` | OccupancyIdentifier | StreetName |
+
+**Examples:**
+
 - `Mi K Beach Road # 2, Kenai, AK 99611`
 
 **Verdict:** _____   (A / B / neither / skip)
 
 ---
 
-## Group 7 — 2 addresses
+## Group 8 — 1 address
 
 **The disagreement:**
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `Municipal` | BuildingName | LandmarkName |
-| `Airport,` | BuildingName | LandmarkName |
+| `E` | StreetNamePreDirectional | StreetNamePostDirectional |
+| `NORTH` | StreetName | SubaddressIdentifier |
+| `WATER` | OccupancyType | SubaddressType |
+| `2500` | OccupancyIdentifier | SubaddressIdentifier |
 
 **Examples:**
 
-- `Municipal Airport, Hutchinson, KS 67501`
-- `Municipal Airport, Lincoln, NE 68524`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 8 — 2 addresses
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Lee's` | AddressNumber | StreetName |
-
-**Examples:**
-
-- `Lee's Mill Road, Moultonborough, NH 03254`
-- `Anchor Inn Road, Round Pond, ME 04564`
+- `340 E NORTH WATER 2500 CHICAGO IL 60611`
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -180,13 +181,11 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `N` | StreetNamePreDirectional | StreetNamePostDirectional |
-| `HOFFMAN` | StreetName | PlaceName |
-| `EST` | StreetNamePostType | PlaceName |
+| `D.C.` | PlaceName | StateName |
 
 **Examples:**
 
-- `4450 SHOREWOOD DR N HOFFMAN EST IL 60192`
+- `99 s spruce road apt. #4b, D.C. 20500`
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -198,12 +197,13 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `RD` | StreetNamePostType | StreetName |
-| `MT` | PlaceName | StreetNamePostType |
+| `RR` | StreetNamePreType | USPSBoxType |
+| `422` | StreetName | USPSBoxID |
+| `Box,` | StreetName | USPSBoxType |
 
 **Examples:**
 
-- `212 EAST RAND RD MT PROSPECT IL 60056`
+- `RR 422 Box, Douglassville, PA 19518`
 
 **Verdict:** _____   (A / B / neither / skip)
 
@@ -215,304 +215,18 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `140` | OccupancyIdentifier | StreetName |
+| `ORL` | PlaceName | OccupancyIdentifier |
+| `FL` | StateName | OccupancyType |
 
 **Examples:**
 
-- `1251 N PLUM GROVE 140 SCHAUMBURG IL 60173`
+- `300 orange ave, fl 7, ORL FL`
 
 **Verdict:** _____   (A / B / neither / skip)
 
 ---
 
 ## Group 12 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `US` | CornerOf | StreetNamePreType |
-
-**Examples:**
-
-- `US Highway 22, Miles City, MT 59301`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 13 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `West` | StreetNamePreDirectional | LandmarkName |
-| `Business` | StreetName | LandmarkName |
-| `Center,` | StreetName | LandmarkName |
-
-**Examples:**
-
-- `West Business Center, Wayne, PA 19087`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 14 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Road` | StreetName | StreetNamePostType |
-| `Route` | StreetNamePostType | NotAddress |
-| `776,` | OccupancyIdentifier | NotAddress |
-
-**Examples:**
-
-- `1601 Englewood Road Route 776, Englewood, FL 34223`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 15 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Glfprt` | Recipient | LandmarkName |
-| `Blx` | Recipient | LandmarkName |
-| `Rgnl` | Recipient | LandmarkName |
-| `Arpr,` | Recipient | LandmarkName |
-
-**Examples:**
-
-- `Glfprt Blx Rgnl Arpr, Gulfport, MS 39501`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 16 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `313-317` | LandmarkName | AddressNumber |
-| `Broadway,` | LandmarkName | StreetName |
-
-**Examples:**
-
-- `313-317 Broadway, Madison, IN 47250`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 17 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Lee` | AddressNumber | LandmarkName |
-| `Bird` | StreetName | LandmarkName |
-| `Fld,` | StreetNamePostType | LandmarkName |
-
-**Examples:**
-
-- `Lee Bird Fld, North Platte, NE 69101`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 18 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `POINT` | StreetNamePostType | StreetName |
-| `D` | OccupancyIdentifier | StreetNamePostType |
-
-**Examples:**
-
-- `2255 N CHARTER POINT D ARLNGTON HTS IL 60004`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 19 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `BARRNGTN` | StreetName | PlaceName |
-| `HLS` | StreetNamePostType | PlaceName |
-
-**Examples:**
-
-- `350 OLD SUTTON BARRNGTN HLS IL 60010`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 20 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `US` | USPSBoxGroupType | SubaddressType |
-| `6` | USPSBoxGroupID | SubaddressIdentifier |
-| `Ind` | StreetNamePreType | SubaddressType |
-| `15,` | StreetName | SubaddressIdentifier |
-
-**Examples:**
-
-- `US 6 Ind 15, Milford, IN 46542`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 21 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `North,` | PlaceName | StreetNamePostDirectional |
-
-**Examples:**
-
-- `15740 Aurora Avenue North, Seattle, WA 98133`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 22 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `RR` | USPSBoxGroupType | USPSBoxType |
-| `422` | USPSBoxGroupID | USPSBoxID |
-
-**Examples:**
-
-- `RR 422 Box, Douglassville, PA 19518`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 23 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `AVE303` | StreetName | OccupancyIdentifier |
-
-**Examples:**
-
-- `2610 W BALMORAL AVE303 CHICAGO IL 60625`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 24 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `South` | StreetNamePreDirectional | USPSBoxGroupID |
-| `Route` | StreetNamePreType | USPSBoxGroupType |
-| `Box` | StreetName | USPSBoxType |
-| `South` | StreetNamePostDirectional | USPSBoxID |
-| `#` | OccupancyIdentifier | USPSBoxID |
-| `7,` | OccupancyIdentifier | USPSBoxID |
-
-**Examples:**
-
-- `South Route Box South # 7, Bennington, VT 05201`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 25 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Alvy` | LandmarkName | StreetName |
-| `Prk` | LandmarkName | StreetNamePostType |
-| `And` | LandmarkName | IntersectionSeparator |
-| `#` | StreetNamePreType | StreetName |
-
-**Examples:**
-
-- `Alvy Prk And Hghwy # 54, Owensboro, KY 42301`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 26 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `West` | StreetNamePreDirectional | USPSBoxGroupID |
-| `Route` | StreetName | USPSBoxGroupType |
-| `Box` | StreetName | USPSBoxType |
-| `West` | StreetNamePostDirectional | USPSBoxID |
-| `#` | OccupancyIdentifier | USPSBoxID |
-| `4,` | OccupancyIdentifier | USPSBoxID |
-
-**Examples:**
-
-- `West Route Box West # 4, Goshen, CT 06756`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 27 — 1 address
-
-**The disagreement:**
-
-| Token | Model A says | Model B says |
-|---|---|---|
-| `Dthn` | Recipient | LandmarkName |
-| `Arprt` | Recipient | LandmarkName |
-| `Trmnl,` | Recipient | LandmarkName |
-
-**Examples:**
-
-- `Dthn Arprt Trmnl, Midland City, AL 36350`
-
-**Verdict:** _____   (A / B / neither / skip)
-
----
-
-## Group 28 — 1 address
 
 **The disagreement:**
 
@@ -531,23 +245,23 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 29 — 1 address
+## Group 13 — 1 address
 
 **The disagreement:**
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `Avn` | StreetName | StreetNamePreType |
+| `1/2` | AddressNumberSuffix | StreetName |
 
 **Examples:**
 
-- `1011 Avn Of Th Amrcs, New York, NY 10018`
+- `33 1/2 AVE`
 
 **Verdict:** _____   (A / B / neither / skip)
 
 ---
 
-## Group 30 — 1 address
+## Group 14 — 1 address
 
 **The disagreement:**
 
@@ -564,7 +278,7 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 31 — 1 address
+## Group 15 — 1 address
 
 **The disagreement:**
 
@@ -581,17 +295,19 @@ Labels are usaddress component names: `AddressNumber`, `StreetName`, `StreetName
 
 ---
 
-## Group 32 — 1 address
+## Group 16 — 1 address
 
 **The disagreement:**
 
 | Token | Model A says | Model B says |
 |---|---|---|
-| `R` | OccupancyIdentifier | PlaceName |
+| `ST` | StreetName | StreetNamePostType |
+| `UNT` | StreetName | PlaceName |
+| `D` | StreetNamePostType | PlaceName |
 
 **Examples:**
 
-- `810 BARRINGTON POINT R BARRINGTON IL 60010`
+- `210 CRYSTAL ST UNT D CARY IL 60013`
 
 **Verdict:** _____   (A / B / neither / skip)
 

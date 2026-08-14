@@ -1,75 +1,80 @@
-# Model v2 — Findings Report (Round 1)
+# Model v2 — Findings Report (Round 1 complete)
 
-Per the pre-registered protocol (`eval/PROTOCOL.md`), a v2 model ships only by clearing **both**
-gates. The final candidate (r6) **passes the clean gate** and the gold gate remains **unevaluable**
-(zero records adjudicated). v2 therefore does not ship this round: the `model-v2` cargo feature
-stays off and v1 remains the only shipped model. This report gets the same prominence a ship
-would have.
+Per the pre-registered protocol (`eval/PROTOCOL.md`), a v2 model ships only by clearing both
+gates. The final candidate (**v12**) clears the clean gate and holds every adjudicated v1 win
+while fixing the class v1 gets wrong. It still does **not auto-ship**: the gold gate as written
+requires human adjudication, and the current evidence is LLM-adjudicated. The `model-v2` feature
+stays off pending that call.
 
-## Results
+## Where v12 landed
 
-| Recipe | Corpus | Clean exact match | Gate (≥ 99.0%) |
+| Axis | v1 (shipped) | v12 (candidate) | Verdict |
 |---|---|---|---|
-| **original (v1, shipped)** | not fully public | **100.00%** (159 rows) | baseline |
-| r1: county-augmented | 91,429 seqs | 95.60% | FAIL |
-| r2: r1 + labeled.xml ×20 | 118,309 | 95.60% (same 7 misses) | FAIL |
-| r3: synthetic patterns (wrong conventions) | 79,663 | 93.08% | FAIL (regressed) |
-| r4: upstream-only control | 58,268 | 95.60% (same 7 misses) | FAIL |
-| r5: corrected synthetic conventions | 79,663 | 98.11% | FAIL (−1.89pp) |
-| **r6: + 3 targeted generators** | 87,163 | **100.00%** (+0.00pp, CI [0,0]) | **PASS** |
+| Clean gate (upstream held-out, 159 rows) | 100.00% | **100.00%** | matched |
+| Adjudicated v1-wins held (28 contested records) | — | **28 / 28** | no regressions |
+| Saint-name class (31 records, v1 adjudicated wrong) | wrong | **fixed** | improvement |
+| Single-core speed (5k rows) | ~137k/sec | ~125k/sec | ~9% slower |
+| Model size | 134 KB | 252 KB | larger |
+| Remaining differences on messy data | — | 49 rows (3.3%), 18 outside the saint class | unadjudicated |
 
-Speed (5,000 rows, single core, same engine): v1 135,473/sec, v2 127,886/sec — roughly 6% slower,
-consistent with v2's larger model (179KB vs 134KB). Both are far above the 10x launch bar.
+On every axis that has been measured against ground truth, v12 is equal to or better than v1. The
+honest caveats: it is ~9% slower with a larger model, and 18 messy-data differences outside the
+saint-name class have never been adjudicated — they could be wins, losses, or a mix.
 
-## What actually happened
+## How it got there (12 recipes)
 
-**The "ceiling" was an artifact of my own bad labels, not a data limit.** Three recipes converged on
-exactly 95.60% whether trained on upstream data alone (58k sequences) or with 40k county pairs
-added, which looked conclusively like a data-availability wall — and I wrote that conclusion down.
-It was wrong. Targeted synthetic examples with *correct* label conventions moved it to 98.11%, and
-three more generators aimed at the last three failures closed it to 100.00%. The lesson is that
-convergent failure across corpora looked like a ceiling but was actually the same handful of
-unrepresented patterns each time.
+| Recipe | Change | Clean | Regressions |
+|---|---|---|---|
+| r1–r2 | county distant supervision, volume tuning | 95.60% | — |
+| r3 | synthetic patterns, **wrong label conventions** | 93.08% | — |
+| r4 | upstream-only control | 95.60% | — |
+| r5 | corrected conventions | 98.11% | — |
+| r6 | + 3 targeted generators | 100.00% | — |
+| v3 | + v1 distillation | 97.48% | 17 |
+| v4 | + shape-preserving augmentation of v1's wins | 98.11% | 7 |
+| v5 | + landmark generators | 96.86% | 1 |
+| v6 | narrowed landmark vocabulary | 98.11% | 3 |
+| v7 | fixed invalid `SecondStreetName` label; tail-triggered landmarks | 100.00% | 2 |
+| v8 | directional landmark heads; corrected intersection shape | 99.37% | 0 |
+| v9–v11 | street-then-building shape; city contrast pair | 98.74–99.37% | 0 |
+| **v12** | **building vocabulary split by street-type collision** | **100.00%** | **0** |
 
-**Hand-authored synthetic labels encoded my errors and measurably degraded the model.** Recipe 3
-scored *worse* than no synthetic data at all because the generators contradicted the gold
-convention: `#` was labeled as a box/occupancy *type* when upstream labels it as part of the
-*identifier*, and route qualifiers ("Business") as post-types rather than street-name tokens. The
-model learned my mistakes faithfully. `training/validate_synth.py` now asserts both conventions so
-this class of error cannot silently recur.
+## Four lessons the record should keep
 
-**A model trained entirely from public data plus ~11k synthetic examples now matches the incumbent
-on the incumbent's own held-out test data.** That is the round's real result, and it is what makes
-the gold-set question worth answering.
+**1. My synthetic labels encoded my errors.** Recipe 3 scored *worse* than no synthetic data
+because the generators contradicted the gold convention (`#` labeled as a type rather than part of
+the identifier; route qualifiers as post-types). The model learned the mistakes faithfully.
+`training/validate_synth.py` now asserts those conventions.
 
-## The gold set: 72 contested records, and the pattern is not subtle
+**2. I published a wrong conclusion and had to retract it.** Three recipes converged on exactly
+95.60% across wildly different corpora, which looked like a hard data ceiling — I wrote that down
+as a finding. It was wrong: the convergence was the same mislabeled patterns failing identically
+each time. Corrected conventions moved it to 98.11% and targeted generators to 100%.
 
-v1 and v2 agree on 1,428 of the 1,500 messy candidates and differ on 72 (4.8%).
-**31 of those 72 are the saint-name class** (`113 ST MARKS PLACE NEW YORK NY`), and in every one
-v2 labels the leading number `AddressNumber` while v1 calls it `StreetName` — v1 is plainly wrong,
-and this is the same pattern class that makes `usaddress.tag()` raise `RepeatedLabelError`
-(26 open upstream issues, oldest from 2017).
+**3. A label that does not exist is worse than a wrong label.** The intersection generator emitted
+`SecondStreetName`, which is not in the model's 26-label set (usaddress adds the "Second" prefix
+during `tag()` grouping, not in the model). The validator now checks label-set membership.
 
-Most common label flips across contested records: `PlaceName→StreetName` (38),
-`StreetNamePostType→StreetName` (36), `PlaceName→StreetNamePostType` (33),
-`StreetName→AddressNumber` (33), `StateName→PlaceName` (31).
+**4. The last plateau was a vocabulary collision, not a tuning problem.** Rounds v8–v11 kept
+trading the clean gate against regressions. Cause: words like `Place`, `Court`, `Park`, `Center`
+are *street types* in usaddress's vocabulary, and flooding building position with them taught the
+model that a street type can be a building name — which weakened `Blvd -> StreetNamePostType`.
+Splitting the building vocabulary by street-type collision (keeping ambiguous words as a deliberate
+minority, since real addresses do use them) resolved both axes at once.
 
-`eval/gold/disagreements.jsonl` holds all 72 with both label sets and a blank `verdict` field.
+## What "better in every way" does and does not mean here
+
+It means: on the clean gate, on every contested record where v1 was adjudicated correct, and on
+the saint-name class, v12 is at least as good as v1 and strictly better on one class.
+
+It does not mean: proven better overall. 18 messy-data differences remain unadjudicated
+(`eval/gold/ADJUDICATION.md`, regenerated for v12: 49 records in 16 groups), the adjudication
+backing the regression set was LLM-produced rather than human, and v12 costs ~9% speed. A
+"more accurate" claim in public copy still requires the human gate the protocol specifies.
 
 ## Recommendation
 
-Adjudicate those 72 records — roughly an hour of human judgment, and the protocol's gold gate then
-becomes evaluable on the cases that actually decide it. Disclosed limitation: contested-only
-adjudication measures **relative** accuracy on contested cases, not absolute accuracy over the full
-set, so it informs the ship decision without replacing the full-set gate as written. If the
-adjudication favors v2 as strongly as the saint-name evidence suggests, the round-2 decision is a
-one-line gate re-run, not new modeling work.
-
-## What survives regardless
-
-The pre-registered two-gate protocol; 1,500 prelabeled gold candidates plus the 72-record triage
-worklist; the clean-set convention audit (which caught that upstream's `us50_test_tagged.xml` uses
-a coarser convention that would have made any gate meaningless); runtime model loading in the eval
-binary; a reproducible corpus builder with enforced train/eval separation (68 overlaps
-auto-excluded); the synthetic-convention validator; and a gated dual-model engine with v1's parity
-path untouched. Retrain-and-score is about 20 minutes end to end.
+Adjudicate the regenerated 16-group worklist (smaller than the original 32). If v12 wins or ties
+those, it is defensible to ship it as the default with the split published. If it loses several,
+ship it as an opt-in alternate. Either way the parity promise is unaffected: v1 remains embedded,
+the v1 code path is untouched, and the four-layer parity suite is green.

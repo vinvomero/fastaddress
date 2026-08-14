@@ -19,6 +19,8 @@ import usaddress
 ROOT = Path(__file__).parent.parent
 CORPUS = Path(__file__).parent / "corpus" / "corpus.jsonl"
 SYNTH = Path(__file__).parent / "corpus" / "synth.jsonl"
+DISTILLED = Path(__file__).parent / "corpus" / "distilled.jsonl"
+AUGMENTED = Path(__file__).parent / "corpus" / "augmented.jsonl"
 
 
 def main():
@@ -45,6 +47,18 @@ def main():
         type=int,
         default=0,
         help="include training/corpus/synth.jsonl N times (pattern-targeted data)",
+    )
+    ap.add_argument(
+        "--distill",
+        type=int,
+        default=0,
+        help="include training/corpus/distilled.jsonl N times (v1-imitation data)",
+    )
+    ap.add_argument(
+        "--augment",
+        type=int,
+        default=0,
+        help="include training/corpus/augmented.jsonl N times (shape-preserving v1-win data)",
     )
     args = ap.parse_args()
 
@@ -76,6 +90,12 @@ def main():
     if args.synth and SYNTH.exists():
         for _ in range(args.synth):
             feed(SYNTH)
+    if args.distill and DISTILLED.exists():
+        for _ in range(args.distill):
+            feed(DISTILLED)
+    if args.augment and AUGMENTED.exists():
+        for _ in range(args.augment):
+            feed(AUGMENTED)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
@@ -100,6 +120,8 @@ def main():
         "oversample_labeled": args.oversample_labeled,
         "distant_cap": args.distant_cap,
         "synth_repeats": args.synth,
+        "distill_repeats": args.distill,
+        "augment_repeats": args.augment,
         "params": {
             "algorithm": "lbfgs",
             "c1": args.c1,
