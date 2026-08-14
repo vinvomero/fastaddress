@@ -63,3 +63,40 @@ Keep the CRF. Revisit only if a constraint changes:
 No published benchmark gives single-core, ~10-token-sequence throughput for a quantized small
 transformer. The order-of-magnitude conclusion is safe (10-100x short at best), but the precise
 number is an extrapolation, not a measurement.
+
+---
+
+## Measured: gradient-boosted trees (XGBoost)
+
+Tested directly rather than argued, using the *same* features the CRF sees (including the
+previous:/next: context features), so the comparison isolates architecture from feature
+engineering. 415,610 labeled tokens, 11,193 feature dimensions, 29 classes.
+
+| | CRF (v19) | XGBoost |
+|---|---|---|
+| Clean-set exact match | **100.00%** (159/159) | **64.15%** (102/159) |
+| Throughput | ~96,000/sec | 95/sec (Python) |
+| Model size | 257 KB | 8.2 MB + 11k-entry vocabulary |
+
+The accuracy collapse is structural, not a tuning problem. XGBoost classifies each token
+**independently**; the CRF labels the whole sequence jointly via Viterbi. Sequence constraints —
+a street type follows a street name, a ZIP follows a state, a building phrase cannot start
+mid-street — are exactly what a per-token classifier cannot represent, and exactly what address
+parsing depends on. Neighbor features help but do not substitute for joint decoding: a
+full-address exact match requires every token right, so independent per-token errors compound.
+
+Reproduce: `python training/experiment_xgboost.py`
+
+## Summary of the option space
+
+| Approach | Accuracy vs CRF | Single-core throughput | Ships in a wheel |
+|---|---|---|---|
+| **CRF (current)** | baseline | ~96,000/sec | yes, 257 KB |
+| XGBoost | **much worse** (measured 64%) | 95/sec | 8 MB |
+| BiLSTM (deepparse) | par on clean, worse on noisy | needs PyTorch | no |
+| DistilBERT | worse on clean, better on noisy | ~10/sec | ~66 MB, marginal |
+| XLM-RoBERTa-Large | better on noisy (0.924 vs 0.781 F1) | far below 10/sec | no |
+| LLM prompting | best measured (99.8% exact-row) | API-bound | no (not offline) |
+
+Nothing beats the CRF within the constraints. The accuracy lever that fits is better training
+data — see the NAD/TIGER note in the roadmap.
