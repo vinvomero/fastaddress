@@ -74,6 +74,33 @@ after the fact whichever way it lands. The gate does not move; if the model miss
 finding is that a nationally-representative claim needs a geographically representative gold set,
 and this one is Midwest/Northeast.
 
+**The result: the prediction held, and v20 is worse than v19.** Trained on v19's exact recipe plus
+the TIGER corpus as the single new variable:
+
+| | v19 | v20 (TIGER) | |
+|---|---|---|---|
+| Clean gate (159 upstream records) | 159/159 | **155/159** | **regression — gate FAIL** |
+| Gold records fixed / broken | 39 / 0 | 38 / 0 | fewer, not more |
+| Full-set margin | +2.60 pp | **+2.53 pp** | gate FAIL (bar +3.0) |
+
+TIGER did not raise the count of records fixed, which is the only thing that could clear the gate —
+exactly as the composition analysis above predicted. The gold set does not contain the addresses
+this data improves.
+
+The clean-set regression has a cause I introduced. Two of the three distinct failures are
+`43 South Broadway Pitman, New Jersey 08071`, where v20 reads `New Jersey` as a PlaceName rather
+than a StateName. The TIGER builder emits **only two-letter state codes**, so 107,988 rows taught
+the model that a state is always a two-letter token. That is a distribution shift of my own making,
+not a fact about Census data, and it is fixable by emitting a mix of abbreviated and spelled-out
+state names. The other two failures are Occupancy-vs-Subaddress (`3rd Floor`) and a BuildingName
+confusion, neither TIGER-specific.
+
+Fixing the state-name bias would likely restore the clean gate, but it would not clear the gold
+gate: that needs *more records fixed*, and v20 fixed one fewer than v19. **The honest conclusion is
+that the +3.0pp gate is not reachable against this gold set** — not because the training data
+cannot be improved, but because these 1,500 addresses cannot see the improvement. Neither v19 nor
+v20 ships.
+
 **A record-keeping gap found while computing this.** The protocol specifies a `status` field on
 every gold record (`prelabeled` / `llm_reviewed` / `adjudicated`) and says only `adjudicated`
 records count. That field was never driven: all 1,500 records still read `prelabeled`, because

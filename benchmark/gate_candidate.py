@@ -26,12 +26,12 @@ def run(title, cmd):
     print("=" * 78)
     print(title)
     print("=" * 78)
-    r = subprocess.run([sys.executable] + cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
-    print(r.stdout.strip())
+    r = subprocess.run([sys.executable] + cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
+    print((r.stdout or "").strip())
     if r.returncode != 0:
         print(f"[exit {r.returncode}]")
         if r.stderr:
-            print(r.stderr.strip()[:1500])
+            print((r.stderr or "").strip()[:1500])
     print()
 
 
@@ -50,8 +50,8 @@ def main():
     if args.judged_parse:
         margin += ["--judged-parse", args.judged_parse]
 
-    run("3. FULL-SET GOLD MARGIN (all verdicts — diagnostic only)", margin)
-    run("4. FULL-SET GOLD MARGIN (human-reviewed only — this is the gate)", margin + ["--human-only"])
+    run("3. FULL-SET GOLD MARGIN (all verdicts - diagnostic only)", margin)
+    run("4. FULL-SET GOLD MARGIN (human-reviewed only - this is the gate)", margin + ["--human-only"])
 
     print("Reminder: PROTOCOL.md counts only human-reviewed verdicts. Section 4 is the gate "
           "result; section 3 is diagnostic and must not be quoted as a gate pass.")
