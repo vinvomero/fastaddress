@@ -1,8 +1,10 @@
 use std::collections::HashMap;
 
-use pyo3::exceptions::PyException;
+use pyo3::exceptions::{PyException, PyValueError};
 use pyo3::prelude::*;
 use pyo3::types::PyDict;
+
+use fastaddress_core::model::ModelId;
 
 pyo3::create_exception!(
     usaddr,
@@ -11,22 +13,44 @@ pyo3::create_exception!(
     "Raised when more than one area of the address string has the same label (usaddress-compatible)."
 );
 
+/// Resolve the `model=` keyword to a ModelId. Kept as a plain function
+/// (String error, no Python types) so the feature-off path is unit-testable
+/// with `cargo test`.
+fn resolve_model(model: &str) -> Result<ModelId, String> {
+    match model {
+        "v1" => Ok(ModelId::V1),
+        #[cfg(feature = "model-v2")]
+        "v2" => Ok(ModelId::V2),
+        #[cfg(not(feature = "model-v2"))]
+        "v2" => Err("model 'v2' not available in this build".to_string()),
+        other => Err(format!("unknown model '{other}'; valid options: 'v1', 'v2'")),
+    }
+}
+
+fn model_arg(model: &str) -> PyResult<ModelId> {
+    resolve_model(model).map_err(PyValueError::new_err)
+}
+
 /// usaddress.parse(): list of (token, label) tuples.
 #[pyfunction]
-fn parse(address: &str) -> Vec<(String, String)> {
-    fastaddress_core::api::parse(address)
+#[pyo3(signature = (address, model="v1"))]
+fn parse(address: &str, model: &str) -> PyResult<Vec<(String, String)>> {
+    let model = model_arg(model)?;
+    Ok(fastaddress_core::api::parse_with(model, address))
 }
 
 /// usaddress.tag(): (OrderedDict-equivalent dict, address_type). Raises
 /// RepeatedLabelError exactly where usaddress does.
 #[pyfunction]
-#[pyo3(signature = (address, tag_mapping=None))]
+#[pyo3(signature = (address, tag_mapping=None, model="v1"))]
 fn tag<'py>(
     py: Python<'py>,
     address: &str,
     tag_mapping: Option<HashMap<String, String>>,
+    model: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String)> {
-    match fastaddress_core::api::tag_with_mapping(address, tag_mapping.as_ref()) {
+    let model = model_arg(model)?;
+    match fastaddress_core::api::tag_model(model, address, tag_mapping.as_ref()) {
         Ok((pairs, kind)) => {
             let dict = PyDict::new(py);
             for (label, component) in pairs {
@@ -40,8 +64,14 @@ fn tag<'py>(
 
 /// Native mode: never raises on valid input; non-adjacent repeated labels merge.
 #[pyfunction]
-fn tag_native<'py>(py: Python<'py>, address: &str) -> PyResult<(Bound<'py, PyDict>, String)> {
-    let (pairs, kind) = fastaddress_core::api::tag_native(address);
+#[pyo3(signature = (address, model="v1"))]
+fn tag_native<'py>(
+    py: Python<'py>,
+    address: &str,
+    model: &str,
+) -> PyResult<(Bound<'py, PyDict>, String)> {
+    let model = model_arg(model)?;
+    let (pairs, kind) = fastaddress_core::api::tag_native_model(model, address);
     let dict = PyDict::new(py);
     for (label, component) in pairs {
         dict.set_item(label, component)?;
@@ -57,12 +87,14 @@ fn tag_native<'py>(py: Python<'py>, address: &str) -> PyResult<(Bound<'py, PyDic
 /// parse() with confidences: list of (token, label, confidence) triples, where
 /// confidence is the CRF marginal probability of that label at that position.
 #[pyfunction]
-fn parse_with_confidence(address: &str) -> Vec<(String, String, f64)> {
-    fastaddress_core::api::parse_with_confidence(address)
+#[pyo3(signature = (address, model="v1"))]
+fn parse_with_confidence(address: &str, model: &str) -> PyResult<Vec<(String, String, f64)>> {
+    let model = model_arg(model)?;
+    Ok(fastaddress_core::api::parse_with_confidence_model(model, address)
         .tokens
         .into_iter()
         .map(|t| (t.token, t.label, t.confidence))
-        .collect()
+        .collect())
 }
 
 fn confidence_result<'py>(
@@ -86,13 +118,15 @@ fn confidence_result<'py>(
 /// tokens' marginals. `sequence_confidence` is the probability of the entire
 /// predicted labelling. Raises RepeatedLabelError exactly where `tag()` does.
 #[pyfunction]
-#[pyo3(signature = (address, tag_mapping=None))]
+#[pyo3(signature = (address, tag_mapping=None, model="v1"))]
 fn tag_with_confidence<'py>(
     py: Python<'py>,
     address: &str,
     tag_mapping: Option<HashMap<String, String>>,
+    model: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String, Bound<'py, PyDict>, f64)> {
-    match fastaddress_core::api::tag_with_confidence(address, tag_mapping.as_ref()) {
+    let model = model_arg(model)?;
+    match fastaddress_core::api::tag_model_with_confidence(model, address, tag_mapping.as_ref()) {
         Ok(c) => confidence_result(py, c),
         Err(e) => Err(RepeatedLabelError::new_err(e.to_string())),
     }
@@ -100,11 +134,17 @@ fn tag_with_confidence<'py>(
 
 /// tag_native() with confidences; never raises on valid input.
 #[pyfunction]
+#[pyo3(signature = (address, model="v1"))]
 fn tag_native_with_confidence<'py>(
     py: Python<'py>,
     address: &str,
+    model: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String, Bound<'py, PyDict>, f64)> {
-    confidence_result(py, fastaddress_core::api::tag_native_with_confidence(address))
+    let model = model_arg(model)?;
+    confidence_result(
+        py,
+        fastaddress_core::api::tag_native_model_with_confidence(model, address),
+    )
 }
 
 #[pymodule]
@@ -117,4 +157,36 @@ fn fastaddress(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(tag_native_with_confidence, m)?)?;
     m.add("RepeatedLabelError", m.py().get_type::<RepeatedLabelError>())?;
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn v1_always_resolves() {
+        assert!(matches!(resolve_model("v1"), Ok(ModelId::V1)));
+    }
+
+    #[cfg(feature = "model-v2")]
+    #[test]
+    fn v2_resolves_when_feature_on() {
+        assert!(matches!(resolve_model("v2"), Ok(ModelId::V2)));
+    }
+
+    #[cfg(not(feature = "model-v2"))]
+    #[test]
+    fn v2_errors_when_feature_off() {
+        assert_eq!(
+            resolve_model("v2").unwrap_err(),
+            "model 'v2' not available in this build"
+        );
+    }
+
+    #[test]
+    fn unknown_model_names_the_valid_options() {
+        let err = resolve_model("nope").unwrap_err();
+        assert!(err.contains("nope"), "error should name the bad value: {err}");
+        assert!(err.contains("'v1'") && err.contains("'v2'"), "error should list options: {err}");
+    }
 }

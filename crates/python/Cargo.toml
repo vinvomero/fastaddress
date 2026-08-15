@@ -9,6 +9,12 @@ description = "Drop-in usaddress-compatible US address parser backed by a Rust e
 name = "fastaddress"
 crate-type = ["cdylib"]
 
+[features]
+# Forwards to the core crate's v2 model embedding. Stays OFF by default until
+# the model-v2 plan's go/no-go gate flips it (plan U8); without it,
+# model="v2" raises ValueError at runtime.
+model-v2 = ["fastaddress-core/model-v2"]
+
 [dependencies]
 pyo3 = { version = "0.29", features = ["abi3-py310"] }
 fastaddress-core = { path = "../core", package = "fastaddress-core" }

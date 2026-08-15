@@ -17,6 +17,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - run: cargo test --workspace
+      - run: cargo test --workspace --features fastaddress-py/model-v2
+        name: model-v2 feature path (feature stays default-off; CI exercises it explicitly)
       - run: cargo build --release -p fastaddress-core --bins
       - uses: actions/setup-python@v5
         with:
