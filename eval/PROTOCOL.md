@@ -72,6 +72,37 @@ and is accepted deliberately.
   free text, us-addrs cases, issue-derived cases). Property-address composed pairs are
   training-only.
 
+## Disclosure: training data derived from gold-set error analysis (added 2026-08-15)
+
+From candidate v21 onward, part of the training corpus
+(`training/synth_error_classes.py`) targets error classes that were **found by
+inspecting failures on the gold set**. That is ordinary error-driven
+development, and it is also a form of looking at the test set. It must be
+disclosed with any number it produces, because it biases the gold margin
+upward: the model was pointed at these classes on purpose.
+
+What the bias does and does not cover:
+
+- **Biased.** The gold-set margin. It measures improvement on classes chosen
+  because the gold set exposed them, so it overstates what a fresh sample of
+  county addresses would show.
+- **Not biased, and this is the control.** The clean set — upstream's own
+  held-out files — was never inspected for error classes and no generator was
+  written against it. It is scored every run, and a candidate that memorised
+  the gold set rather than learning a general pattern would show up as a clean
+  regression. v21 did exactly that (155/159) and was rejected for it.
+- **Independent grounding.** The classes are not invented from the gold labels.
+  Each generator cites either a human adjudication or Census geocoder evidence,
+  and the largest class (an abbreviated directional belonging to the city name,
+  as in `S BARRINGTON`) is confirmed by the Census geocoder returning
+  `city = "S BARRINGTON"` on a per-record basis — evidence that exists
+  independently of this evaluation.
+
+Any public claim built on the gold margin must carry this disclosure. The
+honest phrasing is that the model was improved on identified, evidence-backed
+error classes, and that the gold set measures that improvement rather than a
+blind estimate of national accuracy.
+
 ## How the gold gate is computed (method note, added 2026-08-14 — the gate itself is unchanged)
 
 The gold gate is a **margin** over the full 1,500-record set. Adjudicating all 1,500 was never

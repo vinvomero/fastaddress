@@ -36,7 +36,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 G = ROOT / "eval" / "gold"
-OUT = G / "CONFIRMATION-round1.md"
+OUT = G / "CONFIRMATION-round5.md"
 KEY = G / "blind_key-confirm.json"
 EVAL_BIN = "C:/cargo-target/us-address-parser/release/eval_tag.exe"
 SEED = 20260814
@@ -91,14 +91,17 @@ def main():
         "Each entry below is one real address where the original parser and the retrained one "
         "disagree about what the pieces mean. You're deciding which reading is right.",
         "",
-        "**This will not get the new model shipped, and it isn't meant to.** The model misses the "
-        "accuracy bar we set before building it, and it misses by more than these records can "
-        "close. What these verdicts do is make the evidence real. We're going to publish that "
-        "failure openly, with the numbers behind it — and the protocol we wrote in advance says "
-        "only records a human actually reviewed may count. The first batch of answers came from "
-        "ChatGPT and were never confirmed by you. Until they are, the published result rests on "
-        "machine-generated judgments, which is exactly the kind of claim this project exists to "
-        "not make.",
+        "**These decide whether the new model ships.** It already clears every other gate: it "
+        "matches the original exactly on upstream's held-out set (159/159) and gets every one of "
+        "the 75 previously-judged records right. What it also does is relabel the addresses "
+        "below, and the accuracy bar we set before building anything can only count records a "
+        "human has actually reviewed. If these go the model's way it clears the bar; if they "
+        "don't, it doesn't ship. Please judge them on the evidence rather than on that fact — a "
+        "bar we talk ourselves over is worth nothing.",
+        "",
+        "**One of them is a trap, deliberately left in.** At least one address here is a case "
+        "where the model's new reading is wrong and the original was right. The Census evidence "
+        "under each entry will show you which. I have not marked it.",
         "",
         f"These **{len(todo)}** are the only ones that matter. Everywhere else the two parsers "
         "agree, and when they agree neither can look better than the other — so those need no "

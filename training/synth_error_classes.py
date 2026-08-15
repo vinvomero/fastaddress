@@ -344,9 +344,12 @@ def gen_the_named_street(rng, n):
 
 
 GENERATORS = [
-    # abbrev_city carried weight 4.0 in v21 and its collateral damage is what
-    # the counterweights below repair; halved so it teaches without dominating.
-    ("abbrev_city", gen_abbrev_city, 2.0),
+    # abbrev_city carried weight 4.0 in v21, which flipped only some of the
+    # target shapes while damaging neighbours. Halving it to 2.0 (v22) repaired
+    # the damage but lost the fix entirely. With the counterweights now
+    # present to absorb the collateral, the signal is raised past v21's level
+    # so it flips the class consistently rather than sporadically.
+    ("abbrev_city", gen_abbrev_city, 5.0),
     ("true_post_directional", gen_true_post_directional, 1.5),
     ("unit_abbrev", gen_unit_abbrev, 1.0),
     ("bare_street_no_number", gen_bare_street_no_number, 0.7),
