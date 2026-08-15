@@ -37,7 +37,7 @@ def load_rows():
 
 
 def usaddress_worker(raw):
-    import fastaddressess
+    import usaddress
 
     try:
         usaddress.tag(raw)
@@ -65,7 +65,7 @@ def main():
     args = parser.parse_args()
 
     import fastaddress
-    import fastaddressess
+    import usaddress
 
     rows = load_rows()
     n = len(rows)

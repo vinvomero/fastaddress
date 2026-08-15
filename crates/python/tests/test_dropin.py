@@ -15,7 +15,7 @@ import fastaddress  # noqa: E402
 
 IMPORT_SECS = time.perf_counter() - t0
 
-import fastaddressess  # noqa: E402
+import usaddress  # noqa: E402
 
 DATA_DIR = Path(__file__).parents[3] / "benchmark" / "data"
 SAMPLE_PER_FILE = 250
