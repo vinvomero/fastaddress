@@ -343,6 +343,51 @@ def gen_the_named_street(rng, n):
     return out
 
 
+def gen_national_cities(rng, n):
+    """Real city names from the national Census PLACE inventory.
+
+    The national divergence scan showed the invented-vocabulary generators
+    overcorrecting outside the states they were written from: "New Orleans"
+    read as a state, "South Fulton" as a directional, "Box Elder" as a PO box,
+    "Tinley Park" as a state. This teaches the actual national distribution of
+    confusable city names, in four shapes:
+
+      <num> <street> <type> <City> <ST> <zip>     the standard frame
+      <num> <street> <type> <City>, <ST>          comma, no zip
+      <num> <street> <type> <City> <zip>          no state (the Tinley Park case)
+      <num> <street> <type> <City>                bare tail
+
+    Requires training/vocab_cities.json (build_city_vocab.py). Returns [] if
+    absent so the pipeline still runs, but the build script should fail loudly
+    in that case rather than silently training without it."""
+    vocab_path = Path(__file__).parent / "vocab_cities.json"
+    if not vocab_path.exists():
+        return []
+    vocab = json.loads(vocab_path.read_text(encoding="utf-8"))
+    pools = (
+        [tuple(x) for x in vocab["confusable_start"]] * 2  # the classes that broke
+        + [tuple(x) for x in vocab["confusable_end"]]
+        + [tuple(x) for x in vocab["two_word"]]
+    )
+    out = []
+    for _ in range(n):
+        city, st = pools[rng.randrange(len(pools))]
+        p = [(str(rng.randint(1, 9999)), "AddressNumber"),
+             (rng.choice(STREET_WORDS).split()[0], "StreetName"),
+             (rng.choice(TYPES), "StreetNamePostType")]
+        shape = rng.random()
+        cw = city.split()
+        p += [(w, "PlaceName") for w in cw]
+        if shape < 0.45:
+            p += [(st, "StateName"), (f"{rng.randint(1000, 99999):05d}", "ZipCode")]
+        elif shape < 0.70:
+            p += [(st, "StateName")]
+        elif shape < 0.90:
+            p += [(f"{rng.randint(1000, 99999):05d}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
 GENERATORS = [
     # abbrev_city carried weight 4.0 in v21, which flipped only some of the
     # target shapes while damaging neighbours. Halving it to 2.0 (v22) repaired
@@ -361,6 +406,9 @@ GENERATORS = [
     ("postdir_then_building", gen_postdir_then_building, 1.0),
     ("street_then_building", gen_street_then_building, 0.8),
     ("the_named_street", gen_the_named_street, 0.8),
+    # National counterweight: real Census place names, doubled-weighted toward
+    # the confusable-start class that the divergence scan showed breaking.
+    ("national_cities", gen_national_cities, 4.0),
 ]
 
 
