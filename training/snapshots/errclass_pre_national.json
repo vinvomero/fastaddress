@@ -1,0 +1,306 @@
+{
+ "abbrev_city": {
+  "weight": 5.0,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 308,
+   "StreetNamePostType": 300,
+   "PlaceName": 659,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "true_post_directional": {
+  "weight": 1.5,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 309,
+   "StreetNamePostType": 300,
+   "StreetNamePostDirectional": 300,
+   "PlaceName": 348,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "unit_abbrev": {
+  "weight": 1.0,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "OccupancyType": 300,
+   "OccupancyIdentifier": 300,
+   "PlaceName": 359,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "bare_street_no_number": {
+  "weight": 0.7,
+  "n_sample": 300,
+  "labels": {
+   "StreetName": 300,
+   "PlaceName": 449,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "grid_predirectional": {
+  "weight": 1.5,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetNamePreDirectional": 300,
+   "StreetName": 300,
+   "StreetNamePostDirectional": 300,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "directional_multiword_street": {
+  "weight": 1.0,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetNamePreDirectional": 300,
+   "StreetName": 600,
+   "OccupancyIdentifier": 146,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "milepost_route": {
+  "weight": 0.6,
+  "n_sample": 300,
+  "labels": {
+   "StreetNamePreType": 300,
+   "StreetName": 600,
+   "StreetNamePostType": 300,
+   "OccupancyIdentifier": 600,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "truncated_type": {
+  "weight": 0.8,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 610,
+   "StreetNamePostType": 300,
+   "PlaceName": 341,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "spelled_state": {
+  "weight": 1.5,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 176,
+   "PlaceName": 319,
+   "StateName": 600,
+   "ZipCode": 300,
+   "StreetNamePreDirectional": 129
+  }
+ },
+ "postdir_then_building": {
+  "weight": 1.0,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "StreetNamePostDirectional": 300,
+   "BuildingName": 600,
+   "PlaceName": 353,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "street_then_building": {
+  "weight": 0.8,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetNamePreDirectional": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "BuildingName": 900,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "the_named_street": {
+  "weight": 0.8,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 600,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "national_cities": {
+  "weight": 6.0,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "PlaceName": 621,
+   "ZipCode": 204,
+   "StateName": 207
+  }
+ },
+ "national_post_directional": {
+  "weight": 3.0,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetNamePreDirectional": 144,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "StreetNamePostDirectional": 300,
+   "PlaceName": 300,
+   "StateName": 243,
+   "ZipCode": 222
+  }
+ },
+ "spelled_state_one_word": {
+  "weight": 1.0,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 143,
+   "PlaceName": 325,
+   "StateName": 300,
+   "ZipCode": 150,
+   "StreetNamePreDirectional": 132
+  }
+ },
+ "wisconsin_grid_number": {
+  "weight": 0.4,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 600,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "person_named_street": {
+  "weight": 0.8,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 916,
+   "StreetNamePostType": 300,
+   "PlaceName": 223,
+   "StateName": 191,
+   "ZipCode": 191
+  }
+ },
+ "the_building": {
+  "weight": 0.6,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "BuildingName": 600,
+   "OccupancyType": 191,
+   "OccupancyIdentifier": 191,
+   "PlaceName": 351,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "county_letter_road": {
+  "weight": 0.8,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetNamePreType": 600,
+   "StreetName": 300,
+   "PlaceName": 333,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "letter_avenue_grid": {
+  "weight": 0.3,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetNamePreDirectional": 300,
+   "StreetName": 600,
+   "StreetNamePostType": 300,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "bare_route": {
+  "weight": 0.5,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetNamePreType": 300,
+   "StreetName": 300,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "inner_directional_street": {
+  "weight": 0.4,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 900,
+   "StreetNamePostType": 300,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ },
+ "postdir_before_confusable_city": {
+  "weight": 0.7,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 300,
+   "StreetNamePostType": 300,
+   "StreetNamePostDirectional": 300,
+   "PlaceName": 633,
+   "StateName": 247,
+   "ZipCode": 182
+  }
+ },
+ "pike_and_xing": {
+  "weight": 0.4,
+  "n_sample": 300,
+  "labels": {
+   "AddressNumber": 300,
+   "StreetName": 430,
+   "StreetNamePostType": 300,
+   "PlaceName": 300,
+   "StateName": 300,
+   "ZipCode": 300
+  }
+ }
+}

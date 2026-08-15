@@ -23,6 +23,7 @@ DISTILLED = Path(__file__).parent / "corpus" / "distilled.jsonl"
 AUGMENTED = Path(__file__).parent / "corpus" / "augmented.jsonl"
 TIGER = Path(__file__).parent / "corpus" / "tiger.jsonl"
 ERRCLASS = Path(__file__).parent / "corpus" / "errclass.jsonl"
+NATIONAL = Path(__file__).parent / "corpus" / "national.jsonl"
 
 
 def main():
@@ -31,7 +32,9 @@ def main():
     ap.add_argument("--c1", type=float, default=0.1)
     ap.add_argument("--c2", type=float, default=0.01)
     ap.add_argument("--max-iterations", type=int, default=200)
-    ap.add_argument("--out", default=str(ROOT / "model" / "usaddr_v2.crfsuite"))
+    # Default deliberately points at scratch, never at the shipping artifact:
+    # a grid invocation that forgets --out must not replace model/usaddr_v2.
+    ap.add_argument("--out", default=str(ROOT / "model" / "candidates" / "scratch.crfsuite"))
     ap.add_argument(
         "--oversample-labeled",
         type=int,
@@ -73,6 +76,12 @@ def main():
         type=int,
         default=0,
         help="include training/corpus/errclass.jsonl N times (adjudication-derived error classes)",
+    )
+    ap.add_argument(
+        "--national",
+        type=int,
+        default=0,
+        help="include training/corpus/national.jsonl N times (U3 coverage-floor corpus; supersedes --errclass)",
     )
     args = ap.parse_args()
 
@@ -116,6 +125,9 @@ def main():
     if args.errclass and ERRCLASS.exists():
         for _ in range(args.errclass):
             feed(ERRCLASS)
+    if args.national and NATIONAL.exists():
+        for _ in range(args.national):
+            feed(NATIONAL)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
@@ -129,6 +141,7 @@ def main():
         }
     )
     t0 = time.perf_counter()
+    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     trainer.train(args.out)
     train_secs = time.perf_counter() - t0
 
