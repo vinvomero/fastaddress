@@ -1,4 +1,4 @@
-"""Drop-in verification: the usaddr binding must match usaddress on a corpus
+"""Drop-in verification: the fastaddress binding must match usaddress on a corpus
 sample, the crash class, empty input, and tag_mapping — driven through Python.
 
 Run after installing the built wheel: python crates/python/tests/test_dropin.py
