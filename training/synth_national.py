@@ -264,6 +264,40 @@ def gen_pobox_spanish_city(rng, n):
     return out
 
 
+def gen_dirword_city(rng, n):
+    """Spelled direction-led cities (South Portland, East Hartford) at HIGH
+    exposure. The coverage floor gave each ~5 appearances against 15k+ rows of
+    directional pressure; ME+CT holdout failures (92 records in v35) are this
+    imbalance. Schedule x8 over every dir-led city, in the exact failing frame
+    (street + type + city)."""
+    dirled = [e for e in CITIES if e[0].split()[0].lower() in DIRWORDS]
+    schedule = dirled * 8
+    rng.shuffle(schedule)
+    out = []
+    for i in range(min(n, len(schedule))):
+        city, st = schedule[i]
+        p = [(str(rng.randint(1, 9999)), "AddressNumber"),
+             (rng.choice(STREET_WORDS).split()[0].title(), "StreetName"),
+             (rng.choice(TYPES), "StreetNamePostType")]
+        out.append(seq(tail(rng, p, city, st)))
+    return out
+
+
+def gen_street_named_after_city(rng, n):
+    """New London Tpke: a street NAMED AFTER a city -- name words are SN, the
+    trailing turnpike/road is the type. CT holdout class."""
+    namesakes = [c for c, _ in CITIES if len(c.split()) == 2][:400]
+    out = []
+    for _ in range(n):
+        name = rng.choice(namesakes)
+        p = [(str(rng.randint(1, 9999)), "AddressNumber")]
+        p += [(w, "StreetName") for w in name.split()]
+        p += [(rng.choice(["Tpke", "Rd", "Pike", "Hwy"]), "StreetNamePostType")]
+        city, st = PLAIN_SINGLE[rng.randrange(len(PLAIN_SINGLE))]
+        out.append(seq(tail(rng, p, city, st)))
+    return out
+
+
 NATIONAL_GENERATORS = [
     ("cities_coverage", gen_cities_coverage, None),          # size set by floor
     ("postdir_plain_city", gen_postdir_plain_city, 9000),
@@ -274,6 +308,8 @@ NATIONAL_GENERATORS = [
     ("county_letterdigit", gen_county_letterdigit, 1500),
     ("name_final_typeword", gen_name_final_typeword, 1200),
     ("pobox_spanish_city", gen_pobox_spanish_city, 1500),
+    ("dirword_city", gen_dirword_city, 6000),
+    ("street_named_after_city", gen_street_named_after_city, 1500),
 ]
 # Retained frames scale by their ORIGINAL weights (weight x 3000, the
 # errclass-era basis). v33 flattened them to a uniform 2,400 and immediately

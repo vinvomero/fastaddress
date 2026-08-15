@@ -560,7 +560,7 @@ def gen_county_letter_road(rng, n):
     # arrive as "Co Rd 653" / "Co Rte 21" / "Co Hwy D", and v28 read Co Rd as
     # part of the street name. Same upstream convention: designators are
     # StreetNamePreType, what follows is the StreetName.
-    first = ["COUNTY", "CO", "Co", "CNTY"]
+    first = ["COUNTY", "CO", "Co", "CNTY", "US", "STATE", "State"]
     second = ["ROAD", "RD", "Rd", "RTE", "Rte", "HWY", "Hwy", "HIGHWAY", "TRUNK"]
     out = []
     for _ in range(n):
@@ -685,7 +685,7 @@ def gen_pike_and_xing(rng, n):
     multi-word names kept so "Two Mile" stays street material."""
     names = ["Two Mile", "Granny White", "Old Hickory", "Lebanon", "Charlotte",
              "Nolensville", "Gallatin", "Swans", "Elm Hill"]
-    cities = [("Goodlettsville", "TN"), ("Nashville", "TN"), ("Franklin", "TN"),
+    cities = [("Goodlettsville", "TN"), ("Nashville", "TN"), ("Belle Meade", "TN"),
               ("Hendersonville", "TN"), ("Brentwood", "TN")]
     out = []
     for _ in range(n):
@@ -733,7 +733,7 @@ GENERATORS = [
     ("bare_route", gen_bare_route, 0.5),
     ("inner_directional_street", gen_inner_directional_street, 0.4),
     ("postdir_before_confusable_city", gen_postdir_before_confusable_city, 0.7),
-    ("pike_and_xing", gen_pike_and_xing, 0.4),
+    ("pike_and_xing", gen_pike_and_xing, 1.0),
 ]
 
 
