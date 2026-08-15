@@ -322,8 +322,18 @@ def county_rows(statefp, countyfp, state_abbr, per_county, rng, places):
 def load_places(statefp):
     z = fetch(f"{BASE}/PLACE/tl_2024_{statefp}_place.zip", CACHE / f"place_{statefp}.zip")
     # NAME is the bare city name ("Chicago"); NAMELSAD appends the legal type
-    # ("Chicago city"), which is not how anyone writes an address.
-    return {d["PLACEFP"]: (d.get("NAME") or "").strip() for d in read_dbf(z)}
+    # ("Chicago city"), which is not how anyone writes an address. Names that
+    # are Census bookkeeping rather than addresses -- consolidated-government
+    # labels like "Nashville-Davidson metropolitan government (balance)" --
+    # are dropped: composing them produced 11,335 junk rows in the first
+    # holdout run and would poison training the same way.
+    import re as _re
+    out = {}
+    for d in read_dbf(z):
+        name = (d.get("NAME") or "").strip()
+        if _re.fullmatch(r"[A-Za-z ]+", name):
+            out[d["PLACEFP"]] = name
+    return out
 
 
 def main():

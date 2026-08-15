@@ -76,7 +76,14 @@ def main():
             print(f"  {abbr} {statefp}{countyfp}: SKIPPED ({type(e).__name__}: {str(e)[:60]})", flush=True)
             continue
         # No noise transform: this is evaluation text, not training text.
-        rows += [{"tokens": r["tokens"], "labels": r["labels"], "state": abbr} for r in got]
+        # Drop rows whose city text is a Census bookkeeping label (hyphens,
+        # slashes, parentheses): "Nashville-Davidson metropolitan government
+        # (balance)" is a filing name, not an address anyone writes; the first
+        # run of this scan showed 11,335 such rows masquerading as failures.
+        for r in got:
+            city = [t for t, l in zip(r["tokens"], r["labels"]) if l == "PlaceName"]
+            if city and all(t.isalpha() for t in city):
+                rows.append({"tokens": r["tokens"], "labels": r["labels"], "state": abbr})
         print(f"  {abbr}: {len(got)} rows", flush=True)
 
     raws = [" ".join(r["tokens"]) for r in rows]
