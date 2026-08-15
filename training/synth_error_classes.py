@@ -388,6 +388,101 @@ def gen_national_cities(rng, n):
     return out
 
 
+def gen_national_post_directional(rng, n):
+    """<num> <street> <type> <DIR> <PlainCity> ...  ->  DIR stays a directional.
+
+    The v24 national scan showed the city-prefix training overfiring in grid
+    cities: "e 1st st n wichita" read the n as part of Wichita, failing the
+    3:1 ship rule in KS (67:458) and MO (3:76). The distinguishing signal is
+    the city itself -- Wichita has no directional-prefixed variant, S
+    Barrington does -- and that is vocabulary, learnable only if plain cities
+    appear in this frame. Uses the national single-word city pool."""
+    vocab_path = Path(__file__).parent / "vocab_cities.json"
+    if not vocab_path.exists():
+        return []
+    plain = [tuple(x) for x in json.loads(vocab_path.read_text(encoding="utf-8")).get("plain", [])]
+    if not plain:
+        return []
+    out = []
+    for _ in range(n):
+        city, st = plain[rng.randrange(len(plain))]
+        # Numbered ordinal streets half the time -- the failing shape was
+        # "e 1st st n wichita", and ordinals carry their own features.
+        if rng.random() < 0.5:
+            k = rng.randint(1, 99)
+            suf = "th" if 10 <= k % 100 <= 20 else {1: "st", 2: "nd", 3: "rd"}.get(k % 10, "th")
+            name = f"{k}{suf}"
+        else:
+            name = rng.choice(STREET_WORDS).split()[0]
+        p = [(str(rng.randint(1, 9999)), "AddressNumber")]
+        if rng.random() < 0.5:
+            p.append((rng.choice(["N", "S", "E", "W"]), "StreetNamePreDirectional"))
+        p += [(name, "StreetName"),
+              (rng.choice(TYPES), "StreetNamePostType"),
+              (rng.choice(DIRS), "StreetNamePostDirectional"),
+              (city, "PlaceName")]
+        if rng.random() < 0.8:
+            p.append((st, "StateName"))
+        if rng.random() < 0.7:
+            p.append((f"{rng.randint(1000, 99999):05d}", "ZipCode"))
+        out.append(seq(p))
+    return out
+
+
+SPELLED_STATES_ONE_WORD = [
+    ("California", "CA"), ("Texas", "TX"), ("Florida", "FL"), ("Illinois", "IL"),
+    ("Ohio", "OH"), ("Georgia", "GA"), ("Michigan", "MI"), ("Washington", "WA"),
+    ("Arizona", "AZ"), ("Colorado", "CO"), ("Oregon", "OR"), ("Nevada", "NV"),
+    ("Wisconsin", "WI"), ("Minnesota", "MN"), ("Missouri", "MO"), ("Alabama", "AL"),
+    ("Kentucky", "KY"), ("Oklahoma", "OK"), ("Connecticut", "CT"), ("Iowa", "IA"),
+]
+
+
+def gen_spelled_state_one_word(rng, n):
+    """... VAN NUYS, CALIFORNIA  ->  CALIFORNIA is a StateName.
+
+    v24 broke the clean record "5 NORTH MAIN, VAN NUYS, CALIFORNIA": the
+    spelled-state generator covered only two-word states, so a single-word
+    spelled state at the tail lost to the city-heavy prior."""
+    cities = ["Van Nuys", "Fresno", "Amarillo", "Tampa", "Peoria", "Dayton",
+              "Spokane", "Tucson", "Boulder", "Salem", "Reno", "Madison"]
+    out = []
+    for _ in range(n):
+        state, _ = rng.choice(SPELLED_STATES_ONE_WORD)
+        p = [(str(rng.randint(1, 999)), "AddressNumber")]
+        if rng.random() < 0.4:
+            p.append((rng.choice(["NORTH", "SOUTH", "EAST", "WEST"]), "StreetNamePreDirectional"))
+        p.append((rng.choice(["MAIN", "OAK", "ELM", "MARKET", "BROADWAY"]), "StreetName"))
+        if rng.random() < 0.5:
+            p.append((rng.choice(["ST", "AVE", "BLVD"]), "StreetNamePostType"))
+        city = rng.choice(cities)
+        p += [(w, "PlaceName") for w in city.split()]
+        p += [(w, "StateName") for w in state.split()]
+        if rng.random() < 0.5:
+            p.append((f"{rng.randint(10000, 99999)}", "ZipCode"))
+        out.append(seq(p))
+    return out
+
+
+def gen_wisconsin_grid_number(rng, n):
+    """N165 W2123 Tartan Ct  ->  both alphanumeric tokens are the address number.
+
+    Wisconsin's fire-numbering system. v24 read W2123 as a StreetName after the
+    national city vocabulary taught leading directional letters near the start
+    of a string; the counterweight is the actual shape."""
+    out = []
+    for _ in range(n):
+        a = f"{rng.choice(['N','S','W'])}{rng.randint(1, 199)}"
+        b = f"{rng.choice(['N','S','W'])}{rng.randint(1000, 39999)}"
+        p = [(a, "AddressNumber"), (b, "AddressNumber"),
+             (rng.choice(STREET_WORDS).split()[0].title(), "StreetName"),
+             (rng.choice(["Ct", "Rd", "Dr", "Ln", "Ave"]), "StreetNamePostType"),
+             (rng.choice(["Jackson", "Menomonee Falls", "Germantown", "Richfield"]).split()[0], "PlaceName"),
+             ("WI", "StateName"), (f"{rng.randint(53000, 54999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
 GENERATORS = [
     # abbrev_city carried weight 4.0 in v21, which flipped only some of the
     # target shapes while damaging neighbours. Halving it to 2.0 (v22) repaired
@@ -409,6 +504,11 @@ GENERATORS = [
     # National counterweight: real Census place names, doubled-weighted toward
     # the confusable-start class that the divergence scan showed breaking.
     ("national_cities", gen_national_cities, 4.0),
+    # v24-scan counterweights: plain-city post-directionals (the KS/MO fix),
+    # one-word spelled states, Wisconsin grid numbers.
+    ("national_post_directional", gen_national_post_directional, 3.0),
+    ("spelled_state_one_word", gen_spelled_state_one_word, 1.0),
+    ("wisconsin_grid_number", gen_wisconsin_grid_number, 0.4),
 ]
 
 

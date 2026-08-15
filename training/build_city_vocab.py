@@ -86,7 +86,7 @@ def names_from(zip_path):
 
 
 def main():
-    start, end, two = [], [], []
+    start, end, two, plain = [], [], [], []
     seen = set()
     for fips in STATE_FIPS:
         st = FIPS_ABBR[fips]
@@ -109,9 +109,15 @@ def main():
                 end.append(entry)
             elif len(words) == 2:
                 two.append(entry)
+            elif len(words) == 1 and len(name) >= 5:
+                plain.append(entry)
         print(f"  {st}: {n_st} usable place names", flush=True)
 
-    vocab = {"confusable_start": start, "confusable_end": end, "two_word": two}
+    # Plain single-word cities (Wichita, Billings, Seattle) are the
+    # counterweight the v24 scan showed missing: a genuine post-directional
+    # right before one of these must stay a directional.
+    vocab = {"confusable_start": start, "confusable_end": end, "two_word": two,
+             "plain": plain[:6000]}
     OUT.write_text(json.dumps(vocab), encoding="utf-8")
     print(f"\nconfusable_start {len(start)}  confusable_end {len(end)}  two_word {len(two)}")
     print(f"-> {OUT}")
