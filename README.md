@@ -80,7 +80,7 @@ can't regenerate from the repo is a bug; file an issue.
 |---|---|---|
 | What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project ([recipe manifest](training/MANIFEST-usaddr_v28.json)) |
 | Output | Bit-identical to usaddress 0.5.16 | Differs on purpose, on documented error classes |
-| Status | Shipping | **Held back** after failing a 32-state geographic holdout (near-parity with the original in never-tested states, and worse in six). See below. |
+| Status | Shipping | **Not in this release.** Failed its final pre-committed validation; details below. Ships later or not at all. |
 
 ### How v2 was evaluated
 
@@ -139,22 +139,25 @@ and made Georgia worse, which exposed self-contradicting training data (the corp
 `Rd S Fulton` as both a city and a direction-plus-city, because Fulton alone is also a city).
 v27 falsified that hypothesis: filtering the contradictions changed nothing. The real defect
 was exposure: 1,549 confusable city names sampled so thinly each one appeared about 1.5 times
-per pattern. v28 gives every confusable city guaranteed coverage and passed all of it:
-81.9% of its changes right against 12.0% wrong, every state clean, gold and clean gates intact.
+per pattern. v28 gave every confusable city guaranteed coverage and passed everything it had been iterated
+against -- so we ran a 32-state geographic holdout of states no decision had ever touched, and
+it failed there (41.1% right, 45.2% wrong). Three more iterations (v29-v31) fixed the diagnosed
+classes and eventually passed the holdout too. But by then the holdout had steered three rounds
+of fixes, so it was no longer independent either.
 
-Then we ran the check that mattered most: a 32-state geographic holdout, one county in each
-state that had never entered any training set or iteration decision, committed to git before
-its result existed. v28 failed it. After excluding Census bookkeeping artifacts (place names
-like "Nashville-Davidson metropolitan government (balance)" that no human writes), v28 was
-right on 41.1% of its divergences and wrong on 45.2%, with six states worse than 3:1 against
-it. The 16-state scan had steered six rounds of fixes, and passing a benchmark you iterated
-against is not evidence of generalization -- measuring that difference is exactly what the
-holdout was for. The failure classes are specific (two-word cities outside the hand-picked
-confusable list, like Little Rock and Sans Souci; abbreviated county routes like "Co Rd");
-work continues, and v2 stays held back until it passes in states that never influenced it.
-The whole chain is in the git history, each hypothesis committed before its test ran. Composed
-text never enters gate arithmetic; these scans are tripwires for overfitting, not accuracy
-claims.
+The final check was a third split: 20 fresh counties, never used by anything, one run, rules
+committed to git before the result, outcome binding. v31 passed the net rule decisively (47.9%
+of its changes right against 17.3%, better in 18 of 20 counties) and **failed the per-state
+rule in two counties** (Tucson AZ, 5:41 against; Cobb GA, 4:33). Per the pre-committed rule,
+that is the end of the question for this release: **the retrained model does not ship.** The
+default model -- bit-identical to usaddress -- is unaffected by any of this, which is exactly
+why it is the default.
+
+The work continues in the open: the remaining failure classes are documented, the next
+evaluation standard is a free-text, state-stratified national gold set under the same
+pre-registered protocol, and a future candidate that passes a fresh binding validation ships as
+an opt-in v2 in a later release. Every candidate, every failed gate, and every hypothesis is in
+the git history, committed before its test ran.
 
 ### Training data, all of it
 
