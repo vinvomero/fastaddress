@@ -27,8 +27,8 @@ fn main() {
     for record in reader.records() {
         let record = record.expect("csv record");
         let raw = record.get(raw_idx).unwrap_or("");
-        let tokens = usaddr_core::tokenize::tokenize(raw);
-        let attr_seq = usaddr_core::features::tokens_to_attrs(&tokens);
+        let tokens = fastaddress_core::tokenize::tokenize(raw);
+        let attr_seq = fastaddress_core::features::tokens_to_attrs(&tokens);
 
         // Sort per token for canonical comparison (matches oracle's sorted items).
         let attrs_sorted: Vec<Vec<(String, f64)>> = attr_seq
@@ -44,10 +44,10 @@ fn main() {
         let labels = if attr_seq.is_empty() {
             Vec::new()
         } else {
-            usaddr_core::model::tag_attrs(&attr_seq).expect("tagging must not error")
+            fastaddress_core::model::tag_attrs(&attr_seq).expect("tagging must not error")
         };
 
-        let (tag, tag_error) = match usaddr_core::api::tag(raw) {
+        let (tag, tag_error) = match fastaddress_core::api::tag(raw) {
             Ok((pairs, kind)) => (Some(json!([pairs, kind])), None),
             Err(_) => (None, Some("RepeatedLabelError")),
         };

@@ -9,7 +9,7 @@ use std::env;
 use std::io::{BufWriter, Write};
 
 use serde_json::json;
-use usaddr_core::model::{label_name_for, tag_attr_ids_with_marginals_for, ModelId};
+use fastaddress_core::model::{label_name_for, tag_attr_ids_with_marginals_for, ModelId};
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -32,12 +32,12 @@ fn main() {
     for record in reader.records().take(limit) {
         let record = record.expect("csv record");
         let raw = record.get(raw_idx).unwrap_or("");
-        let tokens = usaddr_core::tokenize::tokenize(raw);
+        let tokens = fastaddress_core::tokenize::tokenize(raw);
         if tokens.is_empty() {
             continue;
         }
-        let facts: Vec<_> = tokens.iter().map(|t| usaddr_core::features::token_facts(t)).collect();
-        let seq = usaddr_core::attr_cache::facts_to_id_seq_for(ModelId::V1, &facts);
+        let facts: Vec<_> = tokens.iter().map(|t| fastaddress_core::features::token_facts(t)).collect();
+        let seq = fastaddress_core::attr_cache::facts_to_id_seq_for(ModelId::V1, &facts);
         let m = tag_attr_ids_with_marginals_for(ModelId::V1, &seq);
 
         let l = m.num_labels as usize;

@@ -4,11 +4,11 @@
 //! distribution, the confidence path leaves the parity-protected `parse()` /
 //! `tag()` output untouched, and component aggregation behaves as documented.
 
-use usaddr_core::api;
-use usaddr_core::attr_cache::facts_to_id_seq;
-use usaddr_core::features::token_facts;
-use usaddr_core::model::{tag_attr_ids_with_marginals_for, ModelId};
-use usaddr_core::tokenize::tokenize;
+use fastaddress_core::api;
+use fastaddress_core::attr_cache::facts_to_id_seq;
+use fastaddress_core::features::token_facts;
+use fastaddress_core::model::{tag_attr_ids_with_marginals_for, ModelId};
+use fastaddress_core::tokenize::tokenize;
 
 /// A few hundred real rows from the benchmark corpora.
 fn corpus(limit: usize) -> Vec<String> {

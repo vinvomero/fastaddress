@@ -26,7 +26,7 @@ fn main() {
         .collect();
 
     // Warm-up: force the lazy model parse before timing.
-    let _ = usaddr_core::api::tag("123 Main St Springfield IL 62704");
+    let _ = fastaddress_core::api::tag("123 Main St Springfield IL 62704");
 
     // Optional stage decomposition: BENCH_STAGE=tokenize|features|confidence|full
     // (default full). `confidence` times the opt-in marginal path against the
@@ -39,16 +39,16 @@ fn main() {
     let mut errors = 0usize;
     if stage == "tokenize" {
         for raw in &rows {
-            errors += usaddr_core::tokenize::tokenize(raw).is_empty() as usize;
+            errors += fastaddress_core::tokenize::tokenize(raw).is_empty() as usize;
         }
     } else if stage == "features" {
         for raw in &rows {
-            let tokens = usaddr_core::tokenize::tokenize(raw);
-            errors += usaddr_core::features::tokens_to_attrs(&tokens).is_empty() as usize;
+            let tokens = fastaddress_core::tokenize::tokenize(raw);
+            errors += fastaddress_core::features::tokens_to_attrs(&tokens).is_empty() as usize;
         }
     } else if stage == "confidence" {
         for raw in &rows {
-            if usaddr_core::api::tag_with_confidence(raw, None).is_err() {
+            if fastaddress_core::api::tag_with_confidence(raw, None).is_err() {
                 errors += 1;
             }
         }
@@ -56,7 +56,7 @@ fn main() {
         #[cfg(feature = "model-v2")]
         if use_v2 {
             for raw in &rows {
-                if usaddr_core::api::tag_model(usaddr_core::model::ModelId::V2, raw, None).is_err() {
+                if fastaddress_core::api::tag_model(fastaddress_core::model::ModelId::V2, raw, None).is_err() {
                     errors += 1;
                 }
             }
@@ -68,7 +68,7 @@ fn main() {
             return;
         }
         for raw in &rows {
-            if usaddr_core::api::tag(raw).is_err() {
+            if fastaddress_core::api::tag(raw).is_err() {
                 errors += 1;
             }
         }
@@ -78,7 +78,7 @@ fn main() {
             let handles: Vec<_> = rows
                 .chunks(chunk)
                 .map(|part| {
-                    scope.spawn(move || part.iter().filter(|raw| usaddr_core::api::tag(raw).is_err()).count())
+                    scope.spawn(move || part.iter().filter(|raw| fastaddress_core::api::tag(raw).is_err()).count())
                 })
                 .collect();
             handles.into_iter().map(|h| h.join().unwrap()).sum()

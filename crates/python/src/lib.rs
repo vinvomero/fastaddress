@@ -14,7 +14,7 @@ pyo3::create_exception!(
 /// usaddress.parse(): list of (token, label) tuples.
 #[pyfunction]
 fn parse(address: &str) -> Vec<(String, String)> {
-    usaddr_core::api::parse(address)
+    fastaddress_core::api::parse(address)
 }
 
 /// usaddress.tag(): (OrderedDict-equivalent dict, address_type). Raises
@@ -26,7 +26,7 @@ fn tag<'py>(
     address: &str,
     tag_mapping: Option<HashMap<String, String>>,
 ) -> PyResult<(Bound<'py, PyDict>, String)> {
-    match usaddr_core::api::tag_with_mapping(address, tag_mapping.as_ref()) {
+    match fastaddress_core::api::tag_with_mapping(address, tag_mapping.as_ref()) {
         Ok((pairs, kind)) => {
             let dict = PyDict::new(py);
             for (label, component) in pairs {
@@ -41,7 +41,7 @@ fn tag<'py>(
 /// Native mode: never raises on valid input; non-adjacent repeated labels merge.
 #[pyfunction]
 fn tag_native<'py>(py: Python<'py>, address: &str) -> PyResult<(Bound<'py, PyDict>, String)> {
-    let (pairs, kind) = usaddr_core::api::tag_native(address);
+    let (pairs, kind) = fastaddress_core::api::tag_native(address);
     let dict = PyDict::new(py);
     for (label, component) in pairs {
         dict.set_item(label, component)?;
@@ -58,7 +58,7 @@ fn tag_native<'py>(py: Python<'py>, address: &str) -> PyResult<(Bound<'py, PyDic
 /// confidence is the CRF marginal probability of that label at that position.
 #[pyfunction]
 fn parse_with_confidence(address: &str) -> Vec<(String, String, f64)> {
-    usaddr_core::api::parse_with_confidence(address)
+    fastaddress_core::api::parse_with_confidence(address)
         .tokens
         .into_iter()
         .map(|t| (t.token, t.label, t.confidence))
@@ -67,7 +67,7 @@ fn parse_with_confidence(address: &str) -> Vec<(String, String, f64)> {
 
 fn confidence_result<'py>(
     py: Python<'py>,
-    c: usaddr_core::api::TagConfidence,
+    c: fastaddress_core::api::TagConfidence,
 ) -> PyResult<(Bound<'py, PyDict>, String, Bound<'py, PyDict>, f64)> {
     let tagged = PyDict::new(py);
     let confidences = PyDict::new(py);
@@ -92,7 +92,7 @@ fn tag_with_confidence<'py>(
     address: &str,
     tag_mapping: Option<HashMap<String, String>>,
 ) -> PyResult<(Bound<'py, PyDict>, String, Bound<'py, PyDict>, f64)> {
-    match usaddr_core::api::tag_with_confidence(address, tag_mapping.as_ref()) {
+    match fastaddress_core::api::tag_with_confidence(address, tag_mapping.as_ref()) {
         Ok(c) => confidence_result(py, c),
         Err(e) => Err(RepeatedLabelError::new_err(e.to_string())),
     }
@@ -104,11 +104,11 @@ fn tag_native_with_confidence<'py>(
     py: Python<'py>,
     address: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String, Bound<'py, PyDict>, f64)> {
-    confidence_result(py, usaddr_core::api::tag_native_with_confidence(address))
+    confidence_result(py, fastaddress_core::api::tag_native_with_confidence(address))
 }
 
 #[pymodule]
-fn usaddr(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn fastaddress(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(parse, m)?)?;
     m.add_function(wrap_pyfunction!(tag, m)?)?;
     m.add_function(wrap_pyfunction!(tag_native, m)?)?;

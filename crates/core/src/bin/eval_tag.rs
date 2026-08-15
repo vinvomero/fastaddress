@@ -39,11 +39,11 @@ fn main() {
     for record in reader.records() {
         let record = record.expect("record");
         let raw = record.get(raw_idx).unwrap_or("");
-        let tokens = usaddr_core::tokenize::tokenize(raw);
+        let tokens = fastaddress_core::tokenize::tokenize(raw);
         let labels: Vec<String> = if tokens.is_empty() {
             Vec::new()
         } else {
-            let attrs = usaddr_core::features::tokens_to_attrs(&tokens);
+            let attrs = fastaddress_core::features::tokens_to_attrs(&tokens);
             match &runtime_tagger {
                 Some(tagger) => {
                     let xseq: Vec<Vec<Attribute>> = attrs;
@@ -54,7 +54,7 @@ fn main() {
                         .map(|s| s.to_string())
                         .collect()
                 }
-                None => usaddr_core::model::tag_attrs(&attrs).expect("tagging must not error"),
+                None => fastaddress_core::model::tag_attrs(&attrs).expect("tagging must not error"),
             }
         };
         let line = json!({"raw": raw, "tokens": tokens, "labels": labels});

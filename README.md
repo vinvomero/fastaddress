@@ -1,4 +1,4 @@
-# usaddr (working name)
+# fastaddress
 
 A drop-in replacement for [usaddress](https://github.com/datamade/usaddress) — the standard
 US address parser — running the **same trained CRF model** in a Rust engine.
@@ -16,9 +16,9 @@ US address parser — running the **same trained CRF model** in a Rust engine.
   model downloads; ~265ms import
 
 ```python
-import usaddr  # instead of: import usaddress
+import fastaddress  # instead of: import usaddress
 
-usaddr.tag("123 N Main St Apt 4B Springfield IL 62704")
+fastaddress.tag("123 N Main St Apt 4B Springfield IL 62704")
 # ({'AddressNumber': '123', 'StreetNamePreDirectional': 'N', ...}, 'Street Address')
 ```
 
@@ -33,10 +33,10 @@ CRF marginal probabilities, the thing upstream
 forward-backward over the same weights Viterbi uses. Opt-in: the functions above never run it.
 
 ```python
-usaddr.parse_with_confidence("123 N Main St Springfield IL 62704")
+fastaddress.parse_with_confidence("123 N Main St Springfield IL 62704")
 # [('123', 'AddressNumber', 0.99995), ('N', 'StreetNamePreDirectional', 0.99452), ...]
 
-tagged, address_type, confidence, sequence_confidence = usaddr.tag_with_confidence(addr)
+tagged, address_type, confidence, sequence_confidence = fastaddress.tag_with_confidence(addr)
 # tagged/address_type are byte-identical to tag(); confidence is keyed the same way
 ```
 
@@ -69,6 +69,80 @@ wrong, but only about a fifth of correct parses get there, so it is a high-preci
 routing records to review — not a way to keep most of your data unexamined. The first two rows are
 measured on contested records only (the hardest addresses in the set), which is the conservative
 place to measure: on a general mix, easy addresses score 0.999+ and separate more cleanly.
+
+## Accuracy, evaluation, and data — the full record
+
+This section is the project's transparency contract: every claim links to the artifact that
+produced it, and it is updated whenever a model or evaluation changes. If a number here can't be
+regenerated from the repo, that's a bug — file an issue.
+
+### The two models
+
+| | Default (compat) | v2 (opt-in) |
+|---|---|---|
+| What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project ([recipe manifest](training/MANIFEST-usaddr_v23.json)) |
+| Output guarantee | **Bit-identical to usaddress 0.5.16** — four-layer parity, zero divergences on 20,738 addresses ([report](benchmark/results/parity_report.md)) | Differs deliberately on identified error classes |
+| Status | Shipping | **In revision — see "National behavior" below. It does not ship until every check passes.** |
+
+### How v2 was evaluated (pre-registered, human-adjudicated)
+
+The evaluation protocol — gates, adjudication rules, and disclosures — was written **before any
+training run** and is committed at [eval/PROTOCOL.md](eval/PROTOCOL.md). The gates do not move
+after results exist; two earlier candidates (v19, v20) missed them and the misses are published in
+the [findings report](benchmark/results/model-v2-findings.md) with the same prominence as the pass.
+
+| Gate | Bar | v23 result |
+|---|---|---|
+| Gold-set margin | ≥ +3.0pp, 95% CI excluding zero | **+4.73pp**, CI [+3.67, +5.87] — PASS |
+| Clean set (upstream's own held-out files) | within 1.0pp of original | **159/159, exactly equal** — PASS |
+
+Every one of the 82 gold records where v23 differs from the original carries a **human verdict**
+(5 review rounds, blinded A/B, Census evidence attached; verdicts and blind keys in
+[eval/gold/](eval/gold/)). v23 wins 73, **loses 2** — `1305 Lake Shore Dr N` and
+`Anchor Point, AK` — both adjudicated and permanent until a future candidate fixes them.
+
+**Disclosure (required with any accuracy number):** v2's training targets error classes that were
+found by inspecting gold-set failures, which biases the gold margin upward. The honest claim is
+*"measurably better on identified, evidence-backed error classes"* — never a bare accuracy
+percentage. The clean set is the uninspected control; it caught one candidate (v21) memorizing
+rather than generalizing, at 155/159.
+
+### What the gold set is — and is not
+
+1,500 real free-text addresses: 900 Cook County owner-mailing (878 of them Illinois), 225 NYC,
+375 hard cases spanning all 51 states/DC (~7–12 each). **~75% of the set is two states**, and the
+win margin inherits that: 34 of v23's 73 wins are one Illinois pattern (abbreviated city prefixes,
+`S BARRINGTON`), 31 are New York saint-name streets. This set proves the identified classes are
+fixed; it is **not** evidence of nationwide accuracy. A state-stratified free-text gold set is the
+next evaluation milestone and will be pre-registered the same way.
+
+### National behavior (the tripwire that caught v23)
+
+Because the gold set is regionally skewed, every candidate also runs a
+[16-state behavioral scan](benchmark/national_scan.py): ~108k addresses composed from Census
+TIGER data, scoring every record where the candidate changes the original's answer against the
+Census's own component labels. **v23 failed it** — 54.9% of its changes were wrong nationally
+(it read `New Orleans` as a state, `South Fulton` as a directional, `Box Elder` as a PO box), a
+consequence of counterweight training data built from an invented city list. The successor
+candidate trains on the real national inventory of confusable place names
+([builder](training/build_city_vocab.py)) and must pass two ship rules committed before its
+results existed: net national improvement, and no state worse than 3:1 against it. Composed
+text never enters gate arithmetic — this scan is a regression tripwire, not an accuracy claim.
+
+### Training data (all sources, all licenses)
+
+| Source | Role | License/status |
+|---|---|---|
+| usaddress `labeled.xml` + Iowa OpenAddresses XML | base corpus | MIT, upstream repo |
+| County parcel rolls (Cook IL, Allegheny PA) | distant supervision, capped | public open data |
+| v1-distillation + shape-preserving augmentation | stability | derived |
+| Error-class synthetics ([generator](training/synth_error_classes.py)) | targeted fixes | every generator cites the human ruling or Census evidence behind it |
+| Census PLACE national city vocabulary | national counterweight | public domain |
+| Census TIGER/FEATNAMES street splits | **experiment — not in the shipping recipe**: measured the heuristic corpus 9.11% wrong but its model (v20) regressed | public domain |
+
+No gold or clean evaluation address appears in any training corpus (normalized-identity dedupe,
+enforced by the builders). Confidence scores are verified against `pycrfsuite` to 1.665e-15 and
+their error-prediction power (AUC 0.833) is measured in the section above.
 
 ## Why this exists
 

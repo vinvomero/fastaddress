@@ -37,7 +37,7 @@ def load_rows():
 
 
 def usaddress_worker(raw):
-    import usaddress
+    import fastaddressess
 
     try:
         usaddress.tag(raw)
@@ -64,8 +64,8 @@ def main():
     )
     args = parser.parse_args()
 
-    import usaddr
-    import usaddress
+    import fastaddress
+    import fastaddressess
 
     rows = load_rows()
     n = len(rows)
@@ -74,14 +74,14 @@ def main():
 
     # Warm-up both taggers
     usaddress.tag("123 Main St Springfield IL 62704")
-    usaddr.tag("123 Main St Springfield IL 62704")
+    fastaddress.tag("123 Main St Springfield IL 62704")
 
     # Alternate sides across three rounds and keep each side's best, so
     # monotonic machine-load drift penalizes neither parser systematically.
     py_secs, rs_secs = float("inf"), float("inf")
     for _ in range(3):
         py_secs = min(py_secs, time_python_loop(usaddress.tag, usaddress.RepeatedLabelError, rows))
-        rs_secs = min(rs_secs, time_python_loop(usaddr.tag, usaddr.RepeatedLabelError, rows))
+        rs_secs = min(rs_secs, time_python_loop(fastaddress.tag, fastaddress.RepeatedLabelError, rows))
     py_rate = n / py_secs
     rs_rate = n / rs_secs
     print(f"usaddress single-core (best of 3):    {py_rate:,.0f}/sec ({py_secs:.1f}s)")

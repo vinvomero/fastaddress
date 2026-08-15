@@ -10,10 +10,10 @@ struct Fixture {
 
 #[test]
 fn model_loads_from_vendored_bytes() {
-    assert!(!usaddr_core::model::MODEL_BYTES.is_empty());
+    assert!(!fastaddress_core::model::MODEL_BYTES.is_empty());
     // Force the lazy model parse by tagging an empty-attribute single token.
     let xseq = vec![vec![]];
-    let labels = usaddr_core::model::tag_attrs(&xseq).expect("tagging must not error");
+    let labels = fastaddress_core::model::tag_attrs(&xseq).expect("tagging must not error");
     assert_eq!(labels.len(), 1);
 }
 
@@ -31,7 +31,7 @@ fn fixture_attrs_reproduce_python_labels() {
                 .collect()
         })
         .collect();
-    let labels = usaddr_core::model::tag_attrs(&xseq).expect("tagging must not error");
+    let labels = fastaddress_core::model::tag_attrs(&xseq).expect("tagging must not error");
     assert_eq!(
         labels, fixture.labels,
         "Rust labels must equal Python usaddress labels for {}",
