@@ -366,14 +366,22 @@ def gen_national_cities(rng, n):
     if not vocab_path.exists():
         return []
     vocab = json.loads(vocab_path.read_text(encoding="utf-8"))
-    pools = (
-        [tuple(x) for x in vocab["confusable_start"]] * 2  # the classes that broke
-        + [tuple(x) for x in vocab["confusable_end"]]
-        + [tuple(x) for x in vocab["two_word"]]
-    )
+    # Coverage, not sampling, for the confusable-start class. Sampling 1,549
+    # cities into a few thousand slots gave each one ~1.5 exposures per tail
+    # shape -- the v27 Georgia result showed that is not enough to learn a
+    # vocabulary. Every confusable-start city now appears a guaranteed number
+    # of times; the other pools stay sampled.
+    conf = [tuple(x) for x in vocab["confusable_start"]]
+    others = [tuple(x) for x in vocab["confusable_end"]] + [tuple(x) for x in vocab["two_word"]]
+    reps = max(1, (n * 2 // 3) // max(len(conf), 1))
+    schedule = conf * reps
+    rng.shuffle(schedule)
     out = []
-    for _ in range(n):
-        city, st = pools[rng.randrange(len(pools))]
+    for i in range(n):
+        if i < len(schedule):
+            city, st = schedule[i]
+        else:
+            city, st = others[rng.randrange(len(others))]
         p = [(str(rng.randint(1, 9999)), "AddressNumber"),
              (rng.choice(STREET_WORDS).split()[0], "StreetName"),
              (rng.choice(TYPES), "StreetNamePostType")]
@@ -534,6 +542,30 @@ def gen_the_building(rng, n):
     return out
 
 
+def gen_county_letter_road(rng, n):
+    """7575 COUNTY ROAD ZZZ, MILWAUKEE, WI  ->  COUNTY ROAD is a pre-type.
+
+    Wisconsin letter-series county roads. This clean-set record went from
+    passing to failing across corpus rebuilds -- a borderline route-designation
+    record destabilised by churn -- so the shape gets an explicit anchor.
+    Convention per upstream labeled.xml: route designators are
+    StreetNamePreType, the letters are the StreetName."""
+    letters = ["ZZZ", "KK", "J", "QQ", "XX", "M", "VV", "EE", "T"]
+    pairs = [("MILWAUKEE", "WI"), ("WAUKESHA", "WI"), ("OSHKOSH", "WI"),
+             ("APPLETON", "WI"), ("MADISON", "WI")]
+    out = []
+    for _ in range(n):
+        city, st = rng.choice(pairs)
+        p = [(str(rng.randint(1, 9999)), "AddressNumber"),
+             ("COUNTY", "StreetNamePreType"),
+             (rng.choice(["ROAD", "RD", "HWY", "HIGHWAY", "TRUNK"]), "StreetNamePreType"),
+             (rng.choice(letters), "StreetName"),
+             (city, "PlaceName"), (st, "StateName"),
+             (f"{rng.randint(53000, 54999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
 GENERATORS = [
     # abbrev_city carried weight 4.0 in v21, which flipped only some of the
     # target shapes while damaging neighbours. Halving it to 2.0 (v22) repaired
@@ -562,6 +594,7 @@ GENERATORS = [
     ("wisconsin_grid_number", gen_wisconsin_grid_number, 0.4),
     ("person_named_street", gen_person_named_street, 0.8),
     ("the_building", gen_the_building, 0.6),
+    ("county_letter_road", gen_county_letter_road, 0.3),
 ]
 
 
