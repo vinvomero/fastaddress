@@ -61,3 +61,7 @@ sampling entirely.
 - 2026-08-15: PROTOCOL2 committed. Source map complete: 11 states verified free-text, 8
   docs-verified, 28 candidates, 4 hard gaps. No candidate has been scored against gold-2.
   Scoring attempts used: 0 of 2.
+- 2026-08-16: Gold-2 fetched: 1,394 records, 34/jurisdiction, 40 states + DC, 9/9 divisions —
+  **coverage floor MET**. Spot-checks passed on all six statewide aggregates with recorded
+  evidence; gaps: CA/ID/KY/WY (legal), AR/DE/HI/MS/NH/UT (no reachable free-text source, reasons
+  in FETCH_MANIFEST.md). Dedupe verified zero overlaps. Scoring attempts used: 0 of 2.

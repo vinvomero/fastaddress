@@ -1,0 +1,246 @@
+{
+ "state": "RI",
+ "status": "fetched",
+ "note": "dataset rows=44274",
+ "records": [
+  {
+   "raw": "31 Minnesota St Providence RI 02904",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "c/o Leasing Office 941 Dyer Ave",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "621 East Shore Rd Jamestown RI 02835",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO Box 8408 Cranston RI 02920",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "178 DOYLE AVE PROVIDENCE, RI 02906-1645",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "82 Vineyard Ave Cumberland, RI 02864",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "315 IRON HORSE Way Unit 101 Providence RI 02908",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1 India St Providence, RI 02903",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "35 Minnesota St Providence RI 02904",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "722 Prospect Ave Bronx, NY 10455",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "51 Edgemere Ave Providence, RI 02909",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14 MINNESOTA ST PROVIDENCE, RI 02904-1714",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/o Mal A Salvadore, Esq 400 Reservoir Ave",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "172 Doyle Ave Unit 1 Providence RI 02906",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "16 Minnesota St Providence RI 02904",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17 Blackstone St Cumberland RI 02864",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "40 Sylvan Rd Waltham, MA 02451-2286",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14 Dakota St Providence RI 02904",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "175 Woodward Rd Providence RI 02904",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "869 Branch Ave Providence RI 02904",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "20 Dakota St Providence, RI 02904",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "31 FAIRFIELD AVE PROVIDENCE, RI 02909-4105",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "State Office Building Providence, RI 02903",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "158 Doyle Ave Apt 3 Providence RI 02906",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30 Edgemere Ave Providence RI 02909",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "166 DOYLE AVE PROVIDENCE, RI 02906-1645",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "83 EDGEMERE AVE PROVIDENCE, RI 02909-5003",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "86 Edgemere Ave Apt 2 Providence RI 02909",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "25 Bridge St PROVIDENCE RI 02903-4344",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1338 Missouri St San Diego CA 92109",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "28 EDGEMERE AVE PROVIDENCE, RI 02909-5004",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "138 Doyle Ave Providence RI 02906",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "502 MANTON AVE PROVIDENCE, RI 02909-5012",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "39 FAIRFIELD Ave Providence, RI 02909",
+   "state": "RI",
+   "source": "https://data.providenceri.gov/resource/c3q4-f95q.json",
+   "dataset": "Providence RI 2022 Property Tax Roll",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Providence RI 2022 Property Tax Roll"
+}

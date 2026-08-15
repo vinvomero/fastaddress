@@ -1,0 +1,246 @@
+{
+ "state": "SD",
+ "status": "fetched",
+ "note": "dataset rows=54400",
+ "records": [
+  {
+   "raw": "13810 EMBER RD RAPID CITY SD 57702-7364",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1671 RAPID CITY SD 57709-1671",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "102 MACARTHUR ST RAPID CITY SD 57701",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 GIANTS DR RAPID CITY SD 57701-8577",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11527 NIGHT WIND CT RAPID CITY SD 57703-8536",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "529 DEEGAN ST HILL CITY SD 57745-6548",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "23984 PALMER GULCH RD HILL CITY SD 57745-6521",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13780 BELGIAN CT RAPID CITY SD 57702-7346",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "120 MATKINS CT HILL CITY SD 57745",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 767 SUNDANCE WY 82729-0767",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1112 WILD LIFE RD RAPID CITY SD 57702",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "320 WESTBERRY CT W RAPID CITY SD 57702-2712",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "700 E BROADWAY AVE PIERRE SD 57501-2558",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2205 11TH AVE NW MINOT ND 58703",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "377 WESTBERRY CT W RAPID CITY SD 57702-2712",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13575 383RD AVE ABERDEEN SD 57401-8737",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15294 ANTELOPE CREEK RD RAPID CITY SD 57701",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2364 BLACK SADDLE RD RAPID CITY SD 57703",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 967 RAPID CITY SD 57709-0967",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3601 160TH AVE MINNEOTA MN 56264",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12729 COUNTRY VIEW RD HOT SPRINGS SD 57747",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "168 MILLER RD BETHANY CT 06524",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13510 EARL CT RAPID CITY SD 57702",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2347 MOUNT CARMEL ST RAPID CITY SD 57701-0414",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "870 KINGSWOOD CT RAPID CITY SD 57702-0266",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 31 CAPUTA SD 57725-0031",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 4160 RAPID CITY SD 57709-4160",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15937 E HIGHWAY 44 CAPUTA SD 57725-6505",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "22585 MILLER DR RAPID CITY SD 57702-6141",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13025 PINE DR RAPID CITY SD 57702-6197",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 390 HILL CITY SD 57745-0390",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "205 DUGGAN ST SILVER CITY SD 57702-6028",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 168 HILL CITY SD 57745-0168",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8103 CROYLE AVE RAPID CITY SD 57702-8964",
+   "state": "SD",
+   "source": "https://gis.rcgov.org/server/rest/services/OpenData/TaxParcels/FeatureServer/0",
+   "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Rapid City/Pennington County SD Tax Parcels (RCPC Open Data)"
+}

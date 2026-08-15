@@ -1,0 +1,246 @@
+{
+ "state": "ND",
+ "status": "fetched",
+ "note": "dataset rows=75080",
+ "records": [
+  {
+   "raw": "2301 UNIVERSITY DR N FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "102 1ST AVE N KINDRED ND 58051",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "650 MAIN ST PO BOX 123 ARTHUR ND 58006",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "321 SHEYENNE ST WEST FARGO ND 58078",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1706 11TH AVE S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1633 10TH AVE S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "309 3RD ST ALICE ND 58031",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "51 W CENTER ST PMB 600 C/O HAVEN PARK COMMUNITIES OREM UT 84057",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 5144 FARGO ND 58105",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "301 22ND AVE N FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2114 10TH ST N FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "43 18TH AVE N FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 10366 FARGO ND 58106",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2810 2ND ST N FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1114 18TH ST S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "209 SUNTREE CT WEST FARGO ND 58078",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3043 FARGO ND 58108",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1905 17TH ST S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "709 21st ST S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3445 17TH ST S FARGO ND 58104",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1602 7TH ST S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 63 ARTHUR ND 58006",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1829 17TH ST S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "229 24TH AVE N FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2515 6TH ST E WEST FARGO ND 58078",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "901 16TH ST S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1301 STARR AVE WEST FARGO ND 58078",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2413 24TH AVE S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "417 28TH AVE N APT 6 FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1902 20TH AVE S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2347 20 1/2 AVE S FARGO ND 58103",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "60 7TH AVE S KINDRED ND 58051",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 61 HORACE ND 58047",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1306 ELM ST N FARGO ND 58102",
+   "state": "ND",
+   "source": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/FeatureServer/7",
+   "dataset": "Cass County ND Tax Parcels (Open Data)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Cass County ND Tax Parcels (Open Data)"
+}

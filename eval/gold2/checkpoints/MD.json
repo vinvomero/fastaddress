@@ -1,0 +1,246 @@
+{
+ "state": "MD",
+ "status": "fetched",
+ "note": "dataset rows=238123",
+ "records": [
+  {
+   "raw": "5506 GREENHILL AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6 BIRDIE CT GRASONVILLE, MD, 21638",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. BOX 2361, 21203",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "201-A S. EATON ST., 21224",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4349 BERGER AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1900 MEDALLION CT FOREST HILL, MD, 21050",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5919 BELAIR ROAD, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "16485 PLUMAGE EAGLE ST., WOODBRIDGE, VA22191",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1006 SEARAY COURT ABINGDON, MD, 21009",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3 HONEY LOCUST CT, 21221",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4218 BERGER AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "0873 N HOWARD ST, 21201",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "217 W. READ ST., 21201",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6115 EVERALL AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "0233 W READ ST, 21201",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6114 GREENSPRING AVE, 21209",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4339 BERGER AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4208 BERGER AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9366 PARAGON WAY OWINGS MILLS, MD, 21117",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "417 E FAYETTE ST 10TH FL, 21202",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2334 GUILFORD AVE, 21218",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6112 EVERALL AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1611 HANCOCK AVE ALEXANDRIA, VA., 22301",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4103 RASPE AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5508 DUNROVIN LN PERRY HALL, MD, 21128",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4337 BERGER AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "507 S. WAYNE ST. ARLINGTON, VA, 22204",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4226 BERGER AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "0338 N BRUCE ST, 21223",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "417 E. FAYETTE STREET, ROOM 1020, 21202",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6104 EVERALL AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6317 PARK HEIGHTS AVE APT. 502, 21215",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4105 RASPE AVE, 21206",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "516 WILLOW AVE, 21212",
+   "state": "MD",
+   "source": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/Real_property_CAMA/FeatureServer/0",
+   "dataset": "Baltimore City MD Real Property CAMA",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Baltimore City MD Real Property CAMA"
+}

@@ -1,0 +1,7 @@
+{
+ "state": "AR",
+ "status": "gap-unreachable",
+ "note": "Arkansas GIS Office CAMP statewide parcel service (gis.arkansas.gov FEATURESERVICES/Planning_Cadastre) carries SITUS address components only (adrnum/pstrnam/pstrtype + composed adrlabel) and no owner mailing fields; no county alternative found this session.",
+ "records": [],
+ "dataset": ""
+}

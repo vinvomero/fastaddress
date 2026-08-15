@@ -1,0 +1,7 @@
+{
+ "state": "UT",
+ "status": "gap-unreachable",
+ "note": "No reachable source: UGRC Salt Lake LIR parcels carry no owner-mailing fields (as SOURCE_MAP warned); no county alternative found.",
+ "records": [],
+ "dataset": ""
+}

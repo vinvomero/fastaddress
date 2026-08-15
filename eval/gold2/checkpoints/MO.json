@@ -1,0 +1,246 @@
+{
+ "state": "MO",
+ "status": "fetched",
+ "note": "dataset rows=73154",
+ "records": [
+  {
+   "raw": "3660 JEFFERSON ST KANSAS CITY MO 64111",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11716 E 30TH TER INDEPENDENCE MO 64052",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12009 E 47TH TER KANSAS CITY MO 64133",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12013 E 54TH ST KANSAS CITY MO 64133",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "25501 E BUNDSCHU RD INDEPENDENCE MO 64056",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "129 S EVANSTON AVE INDEPENDENCE MO 64053",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "712 S KISNER CT INDEPENDENCE MO 64056",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "830 NE DEVON DR LEES SUMMIT MO 64064",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2459 S TRL RIDGE AVE INDEPENDENCE MO 64055",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "106 S FOREST AVE SUGAR CREEK MO 64054",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15802 E 20TH ST INDEPENDENCE MO 64050",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4608 E 12TH ST KANSAS CITY MO 64127",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3720 S COLONIAL CT INDEPENDENCE MO 64055",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3908 NW DELWOOD DR BLUE SPRINGS MO 64015",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1301 W DUNCAN BLUE SPRINGS MO 64015",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9633 REDBUD LN LENEXA KS 66220",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "421 N RIVER BLVD INDEPENDENCE MO 64050",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12220 STATE LINE RD SHAWNEE MISSION KS 66209",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13518 E 54TH TER KANSAS CITY MO 64133",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5419 S JENNINGS CT INDEPENDENCE MO 64055",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1145 ORION WAY CASTLE ROCK CO 80108",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5116 SW MARGUERITE BLUE SPRINGS MO 64015",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 2 BLUE SPRINGS MO 64013",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14819 E 48TH ST KANSAS CITY MO 64136",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6117 NE MOONSTONE CT LEES SUMMIT MO 64064",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "809 S POPE AVE INDEPENDENCE MO 64050",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8440 LEES SUMMIT RD KANSAS CITY MO 64139",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "201 N FOREST AVE INDEPENDENCE MO 64050",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "373 E 800 204 OREM UT 84097",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "99 ANCHOR DR LAKE TAPAWINGO MO 64015",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4738 HEINTZ ST KANSAS CITY MO 64133",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3517 HUNTER AVE KANSAS CITY MO 64129",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10034 E 23RD ST INDEPENDENCE MO 64052",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2724 S MAYBROOK AVE INDEPENDENCE MO 64057",
+   "state": "MO",
+   "source": "https://services.arcgis.com/sbDzK061dd6DNPHv/arcgis/rest/services/COI_Parcels_2_view/FeatureServer/0",
+   "dataset": "City of Independence MO (Jackson County) Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "City of Independence MO (Jackson County) Parcels"
+}

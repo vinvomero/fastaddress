@@ -1,0 +1,246 @@
+{
+ "state": "VT",
+ "status": "fetched",
+ "note": "dataset rows=324943",
+ "records": [
+  {
+   "raw": "19 OLD FARM RD JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. BOX 91 TROY VT 05868",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "120 MORAINE CT WAKEFIELD RI 02879",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. BOX 418 MONTGOMERY CENTER VERMONT 05471",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 903 DERBY VT 05829",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "224 SHATTUCK HILL ROAD LOT C1 NEWPORT VT 05855",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "219 BALLGROUND ROAD WESTFIELD VT 05874",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1036 VT ROUTE 100 WESTFIELD VT 05874",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "154 PACKARD RD JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "74 LILAC LN S BURLINGTON VT 05403",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "343 COBBLESTONE CIRCLE S BURLINGTON VT 05403",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7H RACEWAY RD JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11 ST JUDE WAY UNIT 8 BETHLEHEM NH 03574",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O.BOX 1305 DERBY VT 05829",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14 OWENS ST JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. BOX 169 MONTGOMERY CENTER VT 05471",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "16 GOVERNOR PECK RD JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5C WOODLAND DR JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "18 LEARY RD JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "58 FIELDSTONE DR S BURLINGTON VT 05403",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "38 STARBIRD RD JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "384 SCHOOL ST WESTFIELD VT 05874",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "54 PINEHURST DR JERICHO VT 05465",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "51 MEADOW RD S BURLINGTON VT 05403",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 DUDLEY ST SAUGUS MA 01906",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "224 SHATTUCK HILL RD LOT E7 NEWPORT VT 05855",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. BOX 360 UNDERHILL VT 05489-0360",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30 KIMBALL AVENUE SUITE 101 S BURLINGTON VT 05403",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "453 SALEM DRIVE DERBY VT 05829",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1560 WILLISTON RD S BURLINGTON VT 05403",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "52 STONEHOUSE COMMONS S BURLINGTONG VT 05403",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "122 BESSETTE RD WESTFIELD VT 05874",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 304 MONTGOMERY CTR VT 05471",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "617 ELM ST DERBY LINE VT 05830",
+   "state": "VT",
+   "source": "https://services1.arcgis.com/BkFxaEFNwHqX3tAw/arcgis/rest/services/FS_VCGI_OPENDATA_Cadastral_VTPARCELS_poly_standardized_parcels_SP_v1/FeatureServer/0",
+   "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "VCGI VT Statewide Standardized Parcels (Grand List owner mailing)"
+}

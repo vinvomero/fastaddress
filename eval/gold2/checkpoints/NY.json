@@ -1,0 +1,246 @@
+{
+ "state": "NY",
+ "status": "fetched",
+ "note": "dataset rows=93564",
+ "records": [
+  {
+   "raw": "601 DOWNING ST BUFFALO, NY 14220",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 ROHR BUFFALO, NY 14211",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "65 NIAGARA SQ RM 907 BUFFALO, NY 14202",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "71 MANHART ST BUFFALO, NY 14215",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "231 ROESCH ST BUFFALO, NY 14207",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "112 WILEY PL BUFFALO, NY 14207",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "37 ANTWERP ST BUFFALO, NY 14211",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "222 ROSLYN AVE BUFFALO, NY 14215",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "503 DARTMOUTH AVE BUFFALO, NY 14215",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "220 JOHNSON ST BUFFALO, NY 14211",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "91 NORTH PARK BUFFALO, NY 14216",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "85 PARKSIDE AVE BUFFALO, NY 14214",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "65 NIAGARA SQ RM 901 BUFFALO, NY 14202",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "347 ABBINGTON AVE BUFFALO, NY 14223",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "147 GAULBERT CHEEKTOWAGA, NY 14211",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "134 FISHER ST BUFFALO, NY 14215",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "59 NEW AMSTERDAM AVE BUFFALO, NY 14216",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "101 N TRYON ST CHARLOTTE, NC 28255",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "205 COLUMBUS AVE BUFFALO, NY 14220",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "355 WALNUT BUFFALO, NY 14204",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "94 GORSKI ST BUFFALO, NY 14206",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "22 RUHLAND AVE BUFFALO, NY 14211",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "51 ZITTEL ST BUFFALO, NY 14210",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "19 SUMNER PL #2 BUFFALO, NY 14211",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "48 FENNIMORE BUFFALO, NY 14215",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "38 EVELYN BUFFALO, NY 14207",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "50 BEACON PL STATEN ISLAND, NY 10306",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "179 WOHLERS AVE BUFFALO, NY 14208",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "47 RUHL BUFFALO, NY 14207",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "72 KAYMAR AMHERST, NY 14228",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "258 HOLLY BUFFALO, NY 14206",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "202 STEVENSON ST BUFFALO, NY 14210",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "83 FERNHILL AVE BUFFALO, NY 14215",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "72 ROSEDALE BUFFALO, NY 14207",
+   "state": "NY",
+   "source": "https://data.buffalony.gov/resource/4t8s-9yih.json",
+   "dataset": "Buffalo NY Current Assessment Roll",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Buffalo NY Current Assessment Roll"
+}

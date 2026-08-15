@@ -1,0 +1,246 @@
+{
+ "state": "OR",
+ "status": "fetched",
+ "note": "dataset rows=111413",
+ "records": [
+  {
+   "raw": "342 LANTANA XING SPRING BRANCH, TX 78070",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "67360 FRYREAR RD BEND, OR 97703",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 2327 SISTERS, OR 97759",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "18110 CASCADE ESTATES DR BEND, OR 97703",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1490 NW 15TH ST CORVALLIS, OR 97330",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12826 3RD AVE NE TULALIP, WA 98271",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "565 SHELOKUM DR SILVERTON, OR 97381",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17411 NE 140TH PL REDMOND, WA 98052",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6778 CIBOLA RD SAN DIEGO, CA 92120",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11065 NW QUAIL RD TERREBONNE, OR 97760",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 318 PACIFIC BEACH, WA 98571",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "67395 FRYREAR RD BEND, OR 97703",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17826 CASCADE ESTATES DR BEND, OR 97703",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 4164 SUNRIVER, OR 97707",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "18025 CASCADE ESTATES DR BEND, OR 97703",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "67325 FRYREAR RD BEND, OR 97703",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "342 LATANA CROSSING SPRING BRANCH, TX 78070",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "18222 SIENA DR LAKE OSWEGO, OR 97034",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "445 50TH AVE NW SALEM, OR 97304",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1922 SW COVE POINT RD BURIEN, WA 98146",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8246 NW ICE AVE TERREBONNE, OR 97760",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "85521 JASPER PARK RD PLEASANT HILL, OR 97455",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 114 EAGLE CREEK, OR 97022",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4640 SE LA COUR CT MILWAUKIE, OR 97267",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "32548 COASTSITE DR RANCHO PALOS VERDES, CA 90275",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "67360 FRYREAR RD BEND, OR 97702",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8213 22ND ST CT W TACOMA, WA 98466",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1552 RAFAEL CT N KEIZER, OR 97303",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17253 SILVER FALLS HWY SE SUBLIMITY, OR 97385",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "71290 HOLMES RD SISTERS, OR 97759",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "507 CEDAR ST APTOS, CA 95003",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "71140 NW LOWER BRIDGE WAY TERREBONNE, OR 97760-9388",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10849 NW QUAIL RD TERREBONNE, OR 97760",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "67281 FRYREAR RD BEND, OR 97703",
+   "state": "OR",
+   "source": "https://services1.arcgis.com/znO8Hz1SuVVohYhZ/arcgis/rest/services/Taxlots/FeatureServer/4",
+   "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Deschutes County OR Taxlots — GIS_MAILING (owner mailing)"
+}

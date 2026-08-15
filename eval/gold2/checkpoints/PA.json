@@ -1,0 +1,246 @@
+{
+ "state": "PA",
+ "status": "fetched",
+ "note": "dataset rows=579904",
+ "records": [
+  {
+   "raw": "1529 SWEET BRIAR RD GLADWYNE PA 19035",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2937 LEVICK ST PHILADELPHIA PA 19149-3031",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "507 S 2ND ST PHILADELPHIA PA 19147-2408",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2316 S 09TH ST PHILADELPHIA PA 19148",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1444 S BROAD ST PHILADELPHIA PA 19146",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6708 MARTINS MILL RD PHILADELPHIA PA 19111-4625",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6432 RIVER BIRCHFIELD RD JAMESVILLE NY 13078",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "64 MEER DR FEASTERVILLE TREVOSE PA 19053",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7350 BELDEN ST PHILADELPHIA PA 19111-3812",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1522 S 15TH ST PHILADELPHIA PA 19146-4806",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4851 N 15TH ST PHILADELPHIA PA 19141-2103",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "917 E CHELTEN AVE PHILADELPHIA PA 19138-1713",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "532 RIGHTER ST PHILADELPHIA PA 19128-3738",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3 SALVATORE DR LAKEWOOD NJ 08701",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9301 OUTLOOK AVE PHILADELPHIA PA 19114-3610",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2036 S 5TH ST PHILADELPHIA PA 19148-2548",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1300 W HUNTING PARK AVE PHILADELPHIA PA 19140",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "924 LOMOND LN PHILADELPHIA PA 19128-1223",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8300 GERMANTOWN AVE PHILADELPHIA PA 19118-3404",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5718 BROOMALL ST PHILADELPHIA PA 19143-4521",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2014 CAMBRIDGE STREET UNIT B PHILADELPHIA PA 19130",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3915 GLENDALE ST PHILADELPHIA PA 19124-5509",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8505 GLEN CAMPBELL RD PHILADELPHIA PA 19128-1212",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1604 67TH AVE PHILADELPHIA PA 19126",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2759 RHAWN ST PHILADELPHIA PA 19152-3416",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4225 PECHIN ST PHILADELPHIA PA 19128-5023",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3145 FANSHAWE ST PHILADELPHIA PA 19149-2609",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2702 EDDINGTON ST PHILADELPHIA PA 19137-1512",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "216 SYCAMORE AVE FOLSOM PA 19033",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2013 RIDGE AVE PHILADELPHIA PA 19121",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4719 HAZEL AVE PHILADELPHIA PA 19143",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1434 HOPELAND RD WYNCOTE PA 19095",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "604-36 S WASHINGTON SQ APT 2216 PHILADELPHIA PA 19106-4127",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4 LAUREL DR MAPLE SHADE NJ 08052",
+   "state": "PA",
+   "source": "https://phl.carto.com/api/v2/sql (opa_properties_public)",
+   "dataset": "Philadelphia OPA Properties",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Philadelphia OPA Properties"
+}

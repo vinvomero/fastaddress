@@ -1,0 +1,246 @@
+{
+ "state": "CO",
+ "status": "fetched",
+ "note": "dataset rows=10755",
+ "records": [
+  {
+   "raw": "PO BOX 683 OPHIR CO 814260000",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 803 NORWOOD CO 81423",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 964 NORWOOD CO 814230964",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7090 PINECREST PARK CITY UT 840985387",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2301 FOSTER PLACE WILMINGTON DE 19806",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "77 E 12TH ST APT 16F NEW YORK NY 100035008",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 301 NORWOOD CO 814230301",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1746 TELLURIDE CO 814351746",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3927 TELLURIDE CO 81435",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3234 TELLURIDE CO 814353234",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 4015 TELLURIDE CO 814354015",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 331 PLAINVIEW NY 118030331",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 68 NORWOOD CO 814230068",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1250 RIDGWAY CO 814321250",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "291 RIO VISTAS RD UNIT 101 TELLURIDE CO 814358918",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O RONALD D COURTNEY 1430 SE 3RD ST CEDAREDGE CO 814134207",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "220 CORTINA DR TELLURIDE CO 814359490",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "ATTN TAX DEPARTMENT 6900 E LAYTON AVE STE 700 DENVER CO 802373617",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 126 NORWOOD CO 814230126",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "ATTN JACOBER BRIDGET 811 WALDO ST SANTA FE NM 875052651",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3072 TELLURIDE CO 814353072",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3738 TELLURIDE CO 814353738",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1912 AIRPORT RD MONTROSE CO 814015984",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2450 MARIESTAD DR VALPARAISO IN 463852896",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "106 CORTINA DR TELLURIDE CO 814352078",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3819 MAPLE AVE DALLAS TX 752193913",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4949 HAPPY VALLEY RD LAFAYETTE CA 945492431",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "737 COTE AZUR DR PALM BEACH GARDENS FL 334101499",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 31 NORWOOD CO 814230031",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2103 RESEARCH FOREST DR STE 400 SPRING TX 773804163",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 495 NORWOOD CO 814230495",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "307 SOCIETY DR UNIT C TELLURIDE CO 814358919",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 260 TELLURIDE CO 814350260",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3106 TELLURIDE CO 814353106",
+   "state": "CO",
+   "source": "https://services.arcgis.com/aXqye4IXyXsdIpPb/arcgis/rest/services/TaxParcelsPublic/FeatureServer/0",
+   "dataset": "San Miguel County CO Tax Parcels (Public)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "San Miguel County CO Tax Parcels (Public)"
+}

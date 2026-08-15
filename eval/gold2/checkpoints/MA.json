@@ -1,0 +1,246 @@
+{
+ "state": "MA",
+ "status": "fetched",
+ "note": "dataset rows=2529151",
+ "records": [
+  {
+   "raw": "127 HAYWARD MILL RD CONCORD MA 01742",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "21 MAIN STREET NORTH ANDOVER MA 01845",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4245 NORTH FAIRFAX STREET ARLINGTON VA 22203-1606",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "191 BAYBERRY HILL LN LEOMINSTER MA 01453",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 POINSETTIA AVE WEYMOUTH MA 02188",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "376 GREEN ST WEYMOUTH MA 02191",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1101 OLD BRIDGE LN BELLINGHAM MA 02019",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "744 WILLARD ST LEOMINSTER MA 01453",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "50 MOONPENNY DR BOXFORD MA 01921",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "334 WEST RD ASHBY MA 01431",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "72 FISHER ST. MEDWAY MA 02053",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "125 CENTRAL AV CHELSEA MA 02150",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "726 MAIN ST LEOMINSTER MA 01453",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "121 HIBISCUS AVE WEYMOUTH MA 02188",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30 DUSTIN ST SAUGUS MA 01906",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "104 NORTH ST MATTAPOISETT MA 02739",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "149 CHESTER AV #1 CHELSEA MA 02150",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 812 568 WELLESLEY MA 02482 0021",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "223 PARK AVE ARLINGTON MA 02476",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5 MILL ROAD FAIRHAVEN MA 02719",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1661 COMMONWEALTH AVE BRIGHTON MA 02135",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "55 MOORELAND AV LEOMINSTER MA 01453",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "34-36 ATHELSTANE RD NEWTON CENTRE MA 02459",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1124 RICHARDSON RD ASHBY MA 01431",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "60 DAVIS RD WESTMINSTER MA 01473",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "88 THOMPSON RD WEYMOUTH MA 02191",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "24 WISTERIA DR LEOMINSTER MA 01453",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "41 FRIENDSHIP ST BILLERICA MA 01821",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "63 THOMPSON RD WEYMOUTH MA 02191",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10 WOODRIDGE ROAD EAST SANDWICH MA 02537-1716",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "16 WOODBERRY WAY DRACUT MA 01826",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12 SHELDON CR MIDDLETON MA 01949",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "100 B SO MAIN ST MIDDLETON MA 01949",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13 POINSETTIA AVE WEYMOUTH MA 02188",
+   "state": "MA",
+   "source": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/Massachusetts_Property_Tax_Parcels/FeatureServer/0",
+   "dataset": "MassGIS Standardized Assessors' Parcels (statewide)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "MassGIS Standardized Assessors' Parcels (statewide)"
+}

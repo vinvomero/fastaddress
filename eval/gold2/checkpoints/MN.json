@@ -1,0 +1,246 @@
+{
+ "state": "MN",
+ "status": "fetched",
+ "note": "dataset rows=360526",
+ "records": [
+  {
+   "raw": "5243 382nd Dr North Branch, MN 55056",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1500 County Road B2 W Roseville, MN 55113",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "Donna Fiero Williams 3610 West 73rd Ave Anchorage, AK 99502",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "%thayer, Grant D 713 Alberosky Way Batavia, IL 60510",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "720 Nw 5th St Po Box 744 Clara City, MN 56222",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% Murphy, Mary Ellen 243 Lake Ave S Spicer, MN 56288",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "410 Minnesota St Paynesville, MN 56362-1429",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11975 North Meadow Curv Lindstrom, MN 55045",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% Daryl & Dawn Honnold 38859 60th Ave Wahkon, MN 56386",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "414 Nicollet Mall Minneapolis, MN 55401",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "523 Fremont St Anoka Mn 55303",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "980 Evergreen Trl Lino Lakes Mn 55014",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "20846 293rd Ave Paynesville, MN 56362",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6617 Jeffery Bay S Cottage Grove, MN 55016",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1657 143rd Ln Ne Ham Lake Mn 55304",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2116 141st Ave Nw Andover Mn 55304",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "Jeffrey W & Cindy Lou Larson 6973 Cty Rd 37 Nw Akeley, MN 56433",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% Vreeman, Laurie Ttee 13650 Indian Beach Rd Spicer, MN 56288",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "Dept of Natural Resources %bureau of Land Box 30 500 Lafayette Rd Saint Paul, MN 55155",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "735 7th St Cir Rush City, MN 55069",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "550 Bunker Lake Blvd Nw Andover Mn 55304",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "28161 County Road 34 Paynesville, MN 56362",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "44703 Birch Ridge Rd Melrose, MN 56352",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "319 Ne 17th Pl Cape Coral, FL 33909-2207",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5055 Marquess Trail Cir N Lake Elmo, MN 55042",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "N56 W17000 Ridgewood Dr Menomenee Falls Wi 53051",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6641 Jeffery Bay S Cottage Grove, MN 55016",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3432 Denmark Ave Suite 440 Eagan, MN 55123",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5444 Golfview Ave N Oakdale, MN 55128",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10910 Runnymeade Ln Minnetonka Mn 55345",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "To: W C Smith Po Box 3936 Central Point, OR 97502",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2015 1st Ave Anoka Mn 55303",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "Paul J Purdes Trustees 37419 30th Ave Isle, MN 56342",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3428 Coolidge St Ne Minneapolis, MN 55418",
+   "state": "MN",
+   "source": "https://enterprise.gisdata.mn.gov/aghost/rest/services/us_mn_state_mngeo/plan_parcels_open/FeatureServer/1",
+   "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "MN Parcels, Compiled from Opt-In Open Data Counties"
+}

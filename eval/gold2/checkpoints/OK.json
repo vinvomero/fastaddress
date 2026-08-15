@@ -1,0 +1,246 @@
+{
+ "state": "OK",
+ "status": "fetched",
+ "note": "dataset rows=84318",
+ "records": [
+  {
+   "raw": "11717 SW 40TH ST MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2223 E JOYCE TER MUSTANG OK 73064-",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2437 JOYCE TERRACE MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2443 E KAREN TER MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1738 W ROSE OAK DR MUSTANG OK 73064-",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2012 W ROSE OAK DR MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2338 E KAREN TERRACE MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2207 E KAREN TERR MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11721 SW 40TH ST MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "315 S CHRIS LN MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "308 S MENGER LN MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11700 SW 40TH ST MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2337 E JOYCE TER MUSTANG OK 73064-6236",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1912 W ROSE OAK DR MUSTANG OK 73064-",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11704 SW 40TH ST MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2405 E KAREN TER MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4204 PALMETTO BLUFF DR MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4300 PALMETTO BLUFF DR MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11625 SW 40TH ST MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "407 S CHRIS LN MUSTANG OK 73064-",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4200 PALMETTO BLUFF DR MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2338 E KAREN TERR MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9566 LIME AVE FONTANA CA 92335",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2254 E PLEASANTVIEW LN MUSTANG OK 73064-",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2425 E KAREN TER MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1726 W ROSE OAK DR MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2256 E PLEASANT VIEW LN MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2124 ROSE OAK DRIVE MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2216 E PLEASANT VIEW LN MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "200 NE 21ST ST OKLAHOMA CITY OK 73105-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2424 E KAREN TER MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2300 E KAREN TER MUSTANG OK 73064",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1727 W CEDAR RIDGE DR MUSTANG OK 73064-",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "429 S BRADSHAW LN MUSTANG OK 73064-0000",
+   "state": "OK",
+   "source": "https://services2.arcgis.com/0NjdXxmJp53hZWPd/arcgis/rest/services/ParcelDataService_2_view/FeatureServer/3",
+   "dataset": "Canadian County OK Parcel Data (Public)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Canadian County OK Parcel Data (Public)"
+}

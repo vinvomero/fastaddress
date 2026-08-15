@@ -1,0 +1,246 @@
+{
+ "state": "NC",
+ "status": "fetched",
+ "note": "dataset rows=717050",
+ "records": [
+  {
+   "raw": "6000 BRASS TACK CT FUQUAY VARINA NC 27526-8776",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 10 MORGANTON NC 28680",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "129 GENTLE RIO CT GARNER NC 27529-2893",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9016 MORDEN COURT RALEIGH NC 27615",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "104 STONEWATER LN",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2336 MILLSTAFF CT RALEIGH NC 27613-3677",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "295 BROOKCREST CIRCLE NORTH WILKESBORO NC 28659",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 741 BURGAW NC 28425",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1028 TOWNES COURT LELAND NC 28451",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1050 W CORBETT AVE",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "504 HORSEMAN PARK PL WENDELL NC 27591-4400",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "204 ASHLAND HILL DR HOLLY SPRINGS NC 27540-6455",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 89",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "389 LAKEPOINT DR WILKESBORO NC 28697",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "98 WAGSTAFF LN WEST ISLIP NY 11795",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7219 SPROUSE CT",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "120 STAR THISTLE LN CARY NC 27513-3755",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "501 ASHLEY MEADOW LN",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1473 LONGLEAF COURT MATTHEWS NC 28104",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 619 MILLERS CREEK NC 28651",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2563 BELGRADE SWANSBORO RD",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3501 ICARD RHODHISS RD CONNELLY SPRINGS NC 28612",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "612 DOWELL RIDGE ROAD NORTH WILKESBORO NC 28659",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "341 DANIEL RIDGE RD WENDELL NC 27591-6889",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8075 EVANS AVE CONNELLY SPRINGS NC 28612",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5105 SHADY AVE SAN JOSE CA 95129-4265",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "105 S CAMBRIDGE ST",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "157 E KEEL DR HAMPSTEAD NC 28443",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1140 GREGORY FORK RD",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "103 CLARK ST MORGANTON NC 28655",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2504 US HWY 70 CONNELLY SPRINGS NC 28612",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "810 TUSCARORA TRL",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14497 ASHTON RD ROCKY POINT NC 28457",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "100 CHAPEL VIEW LN APEX NC 27502-9059",
+   "state": "NC",
+   "source": "https://services.nconemap.gov/secure/rest/services/NC1Map_Parcels/FeatureServer/1",
+   "dataset": "NC OneMap Parcels (statewide standardized)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "NC OneMap Parcels (statewide standardized)"
+}

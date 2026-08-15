@@ -1,0 +1,246 @@
+{
+ "state": "MI",
+ "status": "fetched",
+ "note": "dataset rows=380410",
+ "records": [
+  {
+   "raw": "500 W ILLIS # 12 DETROIT MI 48201-1706",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "16890 E 8 MILE DETROIT MI 48205*1519",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2250 CRANE DETROIT MI 48214",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3736 BEE CAVE RD #1-122 WEST LAKE HILLS TX 78746",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1081 HAMPTON CIRCLE DETROIT MI 48207",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "32500 TELEGRAPH RD STE 222 BINGHAM FARMS MI 48025-2463",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "500 GRISWOLD STREET, SUITE 1200 DETROIT MI 48226",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10383 BEACONSFIELD ST DETROIT MI 48224-2538",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "22020 WHITMORE ST OAK PARK MI 48237",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15 E KIRBY ST #920 DETROIT MI 48202",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14925 FLANDERS ST DETROIT MI 48205-4112",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3516 CRANE DETROIT MI 48214",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4 CIRCLE DRIVE HOPKINTON MA 01748",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14967 FLANDERS DETROIT MI 48205",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3414 CRANE ST DETROIT MI 48214-1934",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4202 2ND AVE DETROIT MI 48201-1706",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15 E KIRBY # 914 DETROIT MI 48226",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "735 RANDOLPH DETROIT MI 48226",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14744 W CHICAGO DETROIT MI 48224",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7225 E. JEFFERSON DETROIT MI 48214",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1 EQUITY WAY WESTLAKE OH 44145",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2244 CRANE DETROIT MI 48214",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "190 KEELSON DR #27 DETROIT MI 48215",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3856 RIVARD DETROIT MI 48207",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "650 W. PEACHTREE ST NW ATLANTA GA 30308",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13641 E. 7 MILE RD DETROIT MI 48205",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4511 BEWICK ST DETROIT MI 48214-1584",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7309 ST JOHN DETROIT MI 48210",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12680 WESTWOOD DETROIT MI 48223-1604",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3434 CRANE ST DETROIT MI 48214-1934",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "26711 NORTHWESTERN HWY STE 250 SOUTHFIELD MI 48033",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "269 WALKER, SUITE 543 DETROIT MI 48207",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8200 E JEFFERSON AVE #1604 DETROIT MI 48214",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4583 BEWICK DETROIT MI 48214",
+   "state": "MI",
+   "source": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+   "dataset": "Detroit Parcels (Current)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Detroit Parcels (Current)"
+}

@@ -1,0 +1,246 @@
+{
+ "state": "NV",
+ "status": "fetched",
+ "note": "dataset rows=21633",
+ "records": [
+  {
+   "raw": "C/O RACHEL SIPE 4900 CARSON RIVER RD CARSON CITY, NV 89701-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1957 HAMILTON AVE CARSON CITY, NV 89706-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1974 HAMILTON AVE CARSON CITY, NV 89706-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1937 HAMILTON AVE CARSON CITY, NV 89706-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "KAREN ANN FERREIRA, TRUSTEE 1620 MALAGA DR CARSON CITY, NV 89703-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "BRET T & DANI JEAN ANDREAS, TT 1200 CORDERO DR CARSON CITY, NV 89703-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2031 HAMILTON AVE CARSON CITY, NV 89706-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "KATHLEEN FOSTER GREEN, TTEE 1921 HAMILTON AVE CARSON CITY, NV 89706-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PUBLIC WORKS DEPT 3505 BUTTI WY CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4 WINDTREE CIR CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "KAREN MORENO & ERASMO COSIO, TTEES 254 WINDTREE CIR CARSON CITY, NV 89701-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "JAMES ALLEN JARRARD, TRUSTEE 3860 GS RICHARDS BLVD CARSON CITY, NV 89703-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "DARYL C & FOREST E FOX, TTEES 2016 HAMILTON AVE CARSON CITY, NV 89706-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1720 BOLERO DR CARSON CITY, NV 89703-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3303 BUTTI WAY #9 CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1949 HAMILTON AVE CARSON CITY, NV 89706-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5493 CAMUS RD CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "CHARLES & DEENA MC KENZIE, TTEES 5455 ARTEMESIA RD CARSON CITY, NV 89701-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5420 CAMUS RD CARSON CITY, NV 89701-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% SCOTT HEATON 3064 SILVER SAGE DR CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "WALTON, JOAN M 2011 HAMILTON AVE CARSON CITY, NV 89706-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5444 ARTEMESIA RD CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "46 WINDTREE CIR CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1933 HAMILTON AVE CARSON CITY, NV 89706-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "RICHARD D & NANCY M VARNER, TTEES 1700 MALAGA DR CARSON CITY, NV 89703-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1925 HAMILTON AVE CARSON CITY, NV 89706-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O EASY STREET NV, LLC WINDTREE SER PO BOX 14481 SOUTH LAKE TAHOE, CA 96151-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1701 BOLERO DR CARSON CITY, NV 89703-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "324 WINDTREE CIR CARSON CITY, NV 89701-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9575 BAPTIST CHURCH RD ELIZABETH, IN 47117-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "STANLEY EUGENE KNIGHT, TRUSTEE 1969 HAMILTON AVE CARSON CITY, NV 89706-",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6120 E BENMORE ST LONG BEACH, CA 90815-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "GEORGE ANASTASSATOS, TRUSTEE PO BOX 2121 CARSON CITY, NV 89702-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "RUSSELL W GREER, TRUSTEE 492 WINDTREE CIR CARSON CITY, NV 89701-0000",
+   "state": "NV",
+   "source": "https://portal.carsoncity.gov/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/42",
+   "dataset": "Carson City NV Assessor Data (AssrData)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Carson City NV Assessor Data (AssrData)"
+}

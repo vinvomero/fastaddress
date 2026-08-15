@@ -1,0 +1,246 @@
+{
+ "state": "ME",
+ "status": "fetched",
+ "note": "dataset rows=11539",
+ "records": [
+  {
+   "raw": "1335 State St Veazie ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 MURCH LANDING RD RAYMOND ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "211 LOVEJOY POND ROAD WAYNE ME 4284",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "29 Thompson Rd. 29 Thompson Rd Veazie ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1326 ROOSEVELT TRAIL P O BOX 1034 RAYMOND ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "23 CAPE RD PO BOX 315 RAYMOND ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 247 N. BRIDGTON ME 04057",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 Thompson Rd. 27 Thompson Rd Veazie ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "230 HOUSE RD. WAYNE ME 4265",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "643 ROCKLAND RD WINDSOR ME 04363",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "ROOSEVELT TRAIL 29 POINT SEBAGO ROAD CASCO ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 113 WAYNE ME 4284",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1116 Buck Hill Dr. 1116 Buck Hill Dr Veazie ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 902 BRIDGTON ME 04009",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "73 SWANS RD 73 SWANS ROAD RAYMOND ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. Box 217 Beals ME 4611",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "18 RICHARDSON TERRACE WAYNE ME 4284",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12 Silvers Park 1185 Chase Rd # 12 Veazie ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. Box 276 13 Gravel Ridge Rd. Beals ME 4611",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17 HATHAWAY ROAD WAYNE ME 4284",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "0 SWANS RD C/O ROBERT FOGG RAYMOND ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 51 EUSTIS ME 04936",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. Box 222 69 Mill Pond Rd. Beals ME 04611-0222",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "310 HIGH ST. HACKETTSTOWN NJ 07840",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6910 NW 116 AVE. PARKLAND FL 33076",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "0 SWANS RD 50 SWANS RD RAYMOND ME",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1240 N. 30th Street Allentown PA 18104-2808",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "177 BERRY RD. WAYNE ME 4284",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17 SHANNON'S WAY STANDISH ME 04084",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "237 BERRY RD. WAYNE ME 4284",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P.O. Box 51 South Strafford VT 05070-0051",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "34 HUTCHINS RD 24 MINUTEMAN LANE SUDBURY MA",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 100 MILBRIDGE ME 04658",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 HILLSIDE DRIVE BROOKLINE NH 3033",
+   "state": "ME",
+   "source": "https://services1.arcgis.com/RbMX0mRVOFNTdLzd/arcgis/rest/services/Maine_Parcels_Organized_Towns/FeatureServer/9",
+   "dataset": "Maine Parcels Organized Towns ADB (ownership table)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Maine Parcels Organized Towns ADB (ownership table)"
+}

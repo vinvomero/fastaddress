@@ -1,0 +1,246 @@
+{
+ "state": "TN",
+ "status": "fetched",
+ "note": "dataset rows=286749",
+ "records": [
+  {
+   "raw": "4505 SANDPIPER LN ANTIOCH TN 37013",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "802 SILKWOOD DR NASHVILLE TN 37221",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1526 DOUGLAS AVE NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1022 MAXWELL AVE NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "CORDELL HULL BLDG. NASHVILLE TN 37219",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7038 BONNAVENT DR HERMITAGE TN 37076",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "914 BAILEY ST NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2312 CAMPBELL DR NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4616 CATHER CT NASHVILLE TN 37214",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1814 CYNTHIANA LN FRANKLIN TN 37067",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3808 BRYCE RD NASHVILLE TN 37211",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5520 DORY DR ANTIOCH TN 37013",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1538 DOUGLAS AVE NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5015 BONNAWELL DR HERMITAGE TN 37076",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5532 DORY DR ANTIOCH TN 37013",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9830 YOAKUM DR BEVERLY HILLS CA 90210",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7112 RIVERFRONT DR NASHVILLE TN 37221",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "197 TANKSLEY AVE NASHVILLE TN 37211",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "50 VANTAGE WY STE 100 NASHVILLE TN 37228",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "700 BROADMOOR DR NASHVILLE TN 37216",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "436 ATLAS DR NASHVILLE TN 37211",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "916 BAILEY ST NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2920 WINGATE AVE NASHVILLE TN 37211",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "806 BROADMOOR DR NASHVILLE TN 37216",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1010 MAXWELL AVE NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3709 PLANTATION DR HERMITAGE TN 37076",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2304 CAMPBELL DR NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4216 BRUSH HILL RD NASHVILLE TN 37216",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "771 STARPOINT DR GALLATIN TN 37066",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "717 STANVID DR NASHVILLE TN 37216",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2204 BRYCE CV NASHVILLE TN 37211",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 159328 NASHVILLE TN 37215",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1014 GRANADA AVE NASHVILLE TN 37206",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "808 BRYAN ST OLD HICKORY TN 37138",
+   "state": "TN",
+   "source": "https://services2.arcgis.com/HdTo6HJqh92wn4D8/arcgis/rest/services/Parcels_view/FeatureServer/0",
+   "dataset": "Metro Nashville/Davidson County TN Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Metro Nashville/Davidson County TN Parcels"
+}

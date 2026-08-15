@@ -1,0 +1,246 @@
+{
+ "state": "VA",
+ "status": "fetched",
+ "note": "dataset rows=76879",
+ "records": [
+  {
+   "raw": "3141 Grove Ave Richmond VA 23221",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1331 Evergreen Ave Richmond VA 23224",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4322 Clarkson Rd Richmond VA 23224",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "163 Brandon Rd Richmond VA 23224",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8411 Abbey Rd Richmond VA 23235",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2616 Heartwood Road Richmond VA 23225",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "210 E Main St Richmond VA 23219",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3700 West End Drive Richmond VA 23294",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3120 Floyd Avenue Richmond VA 23221",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5017 Park Ave Richmond VA 23226",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5404 Tuckahoe Ave Richmond VA 23226",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3108 Lupine Rd Henrico VA 23228",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "500 Water St Jacksonville FL 32202",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3445 Custis Rd Richmond VA 23225",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3108 Parkwood Ave Richmond VA 23221",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6900 Able Rd Chesterfield VA 23832",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1501 Rayanne Dr N Chesterfield VA 23238",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "154 Ewing Terrace San Francisco CA 94118",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "Po Box 4853 Richmond VA 23220",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "329 Oak Lane Richmond VA 23226",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8620 Old Pond Road Quinton VA 23141",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8600 Glensvon Ct Chesterfield VA 23838",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3430 Ellwood Avenue Richmond VA 23221",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5407 Kingsbury Rd Richmond VA 23226",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "107 S 1st St Richmond VA 23219",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4700 Augusta Ave Richmond VA 23230",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1218 Greystone Ave Richmond VA 23224",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6523 St George St Chesterfield VA 23237",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8137 Grimsby Road Richmond VA 23235",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12 Granite Ave Richmond VA 23226",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5408 Cary Street Rd Richmond VA 23226",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1441 Broad Rock Blvd Richmond VA 23224",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "826 Bedrock La Richmond VA 23224",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8440 Rubimont Rd Richmond VA 23235",
+   "state": "VA",
+   "source": "https://services1.arcgis.com/k3vhq11XkBNeeOfM/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "City of Richmond VA Parcels (GeoHub)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "City of Richmond VA Parcels (GeoHub)"
+}

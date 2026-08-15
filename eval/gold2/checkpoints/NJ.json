@@ -1,0 +1,246 @@
+{
+ "state": "NJ",
+ "status": "fetched",
+ "note": "dataset rows=3073145",
+ "records": [
+  {
+   "raw": "20 GROVE ST SOMERVILLE NJ 08876",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "214 OAKLAND AVE PLEASANTVILLE, NJ 08232",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "915 S MAIN ST PLEASANTVILLE, NJ 08232",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "34 LOCUST AVE WESTVILLE, NJ 08093",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "88 S FINLEY AVE BASKING RIDGE NJ 07920",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "91 QUEEN ANNE DR BASKING RIDGE NJ 07920",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "707 STATION RD DUNELLEN, NJ 08812",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "48 KINGS RIDGE RD BASKING RIDGE NJ 07920",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "709 STATION RD DUNELLEN, NJ 08812",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "40 HIGHLAND DRIVE WEST CALDWELL NJ 07006",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "77 LIBERTY CORNER RD LIBERTY CORNER, NJ 07938",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "114 W GLENDALE AVE PLEASANTVILLE, NJ 08232",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "112 E GREENFIELD AVE PLEASANTVILLE, NJ 08232",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "105 CHILDS RD BASKING RIDGE NJ 07920",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1411 COLUMBIA AVE PLEASANTVILLE, NJ 08232",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "23 W WINDSOR AV PLEASANTVILLE, NJ 08232",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "224 MOUNTAIN RD BASKING RIDGE NJ 07920",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8787 BAY COLONY DR #704 NAPLES FL 34108",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30 TANGLEWOOD DR BASKING RIDGE NJ 07920",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13 ST CHARLES AVENUE WEST CALDWELL NJ 07006",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "38 HIGHLAND DRIVE WEST CALDWELL NJ 07006",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "70 DEPOT WAY DUNELLEN, NJ 08812",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8 ST CHARLES AVENUE WEST CALDWELL NJ 07006",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "20 DEPOT WAY DUNELLEN, NJ 08812",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "700 N FRANKLIN BLVD #1007 PLEASANTVILLE, NJ 082321586",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "502 W SOMERDALE RD SOMERDALE, NJ 08083",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 153 OLDWICK NJ 08858",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "78 RIVER FARM LN FAR HILLS NJ 07931",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "82 DEPOT WAY DUNELLEN, NJ 08812",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7 RICHARD AVENUE WEST CALDWELL NJ 07006",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7 ST CHARLES AVENUE WEST CALDWELL NJ 07006",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "466 LEE PL EXTON, PA 19341",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6 JOHNSON AVENUE WEST CALDWELL NJ 07006",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "711 STATION RD DUNELLEN, NJ 08812",
+   "state": "NJ",
+   "source": "https://services2.arcgis.com/XVOqAjTOJ5P6ngMu/arcgis/rest/services/Parcels_Composite_NJ_WM/FeatureServer/0",
+   "dataset": "NJ Parcels and MOD-IV Composite (statewide)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "NJ Parcels and MOD-IV Composite (statewide)"
+}

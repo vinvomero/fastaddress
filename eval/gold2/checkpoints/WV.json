@@ -1,0 +1,246 @@
+{
+ "state": "WV",
+ "status": "fetched",
+ "note": "dataset rows=178683",
+ "records": [
+  {
+   "raw": "C/O SLK GLOBAL SOUTIONS, 2727 LYNDON B JOHNSON FWY STE 806, DALLAS, TX 75234",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 212, ADRIAN, WV 26210",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1232 SCENIC HWY, SUMMERSVILLE, WV 26651",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12994 BLUE GRAY TRL, BRANDYWINE, WV 26802",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13230 BLUE GRAY TRL, BRANDYWINE, WV 26802",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13250 BLUE GRAY TRL, BRANDYWINE, WV 26802",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1919 6TH AVE, HUNTINGTON, WV 25703",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX A, DIXIE, WV 25059",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 1106, SAINT ALBANS, WV 25177",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7 MCCAULEY LN, ROUND HILL, VA 20141",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "37 COLUMBIA DR, KEARNEYSVILLE, WV 25430",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "511 HELEN TERRACE, NEPTUNE, NJ 07753",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 151, ADRIAN, WV 26210",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2434 CHARLES TOWN RD, KEARNEYSVILLE, WV 25430",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "80 APPRENTICE WAY, GERRARDSTOWN, WV 25420",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "420 GATES ST, DOYLESTOWN, OH 44230",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13224 BLUE GRAY TRL,",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 984, FRANKLIN, WV 26807",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1215 9TH AVE, HUNTINGTON, WV 25701",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "144 GRANTHAM FARM RD, MARTINSBURG, WV 25403",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "175 BEAUMONT RD, GRAFTON, WV 26354",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "305 N PIKE ST, GRAFTON, WV 26354",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "52 COLUMBIA DR, KEARNEYSVILLE, WV 25430",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "70 EAST MAIN STREET, BUCKHANNON, WV 26201",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 219, COALTON, WV 26257",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "144 FLAGSTONE DR, BUCKHANNON, WV 26201",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "48 MASTERS DR, KEARNEYSVILLE, WV 25430",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 232, DIXIE, WV 25059",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 1084, SHEPHERDSTOWN, WV 25443",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O STEVEN SPARKS, P O BOX 239, DIXIE, WV 25059",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1384 HOOTIN HOLLOW RD, BUCKHANNON, WV 26201",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5 CLINTON PL, HUNTINGTON, WV 25705",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "112 BROWNLOW AVE, GRAFTON, WV 26354",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "252 BEAUMONT RD, GRAFTON, WV 26354",
+   "state": "WV",
+   "source": "https://services.wvgis.wvu.edu/arcgis/rest/services/Planning_Cadastre/WV_Parcels/MapServer/0",
+   "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "WV Statewide Parcels (WVU GIS Tech Center, IAS owner mailing)"
+}

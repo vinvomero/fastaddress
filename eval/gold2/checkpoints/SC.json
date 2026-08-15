@@ -1,0 +1,246 @@
+{
+ "state": "SC",
+ "status": "fetched",
+ "note": "dataset rows=134043",
+ "records": [
+  {
+   "raw": "2321 CELANDINE WAY TEGA CAY SC 29708",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "386 PITTS RD CATAWBA SC 29704",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1759 WOODBROOK PL ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1790 OVERBROOK DR ROCK HILL SC 29732",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5138 W LIBERTY HILL RD YORK SC 29745",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "612 HOPS ALLEY FORT MILL SC 29715",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2000 GREENLEAF RD CLOVER SC 29710",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "239 BEZELLE AVE YORK SC 29745",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "220 SKIPPER ST FORT MILL SC 29715",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "419 HEMLOCK AVE ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1571 S ANDERSON RD ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2043 RIDGECREST PARK DR YORK SC 29745",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "215 BANKS ST FORT MILL SC 29715",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2210 CANBERRA DR ROCK HILL SC 29732",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "300 CONISTON PLACE ROCK HILL SC 29732",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "919 OGDEN RD ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "215 MUIRFIELD DR SPARTANBURG SC 29306",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3251 AGEAN LN YORK SC 29745",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1015 KIRBY DR FORT MILL SC 29715",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2010 OGDEN RD ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 823 FORT MILL SC 29716",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3128 HWY 160 FORT MILL SC 29715",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "682 CHERRY HILLS PL ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "289 BELLINGRATH BLVD ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "199 OLD CARRIAGE RD CLOVER SC 29710",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "776 DIGBY ROAD ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1218 GREEN ST EXT ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "706 CONGRESSIONAL LANE FORT MILL SC 29708",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O MICHELE & JAMES ROSEBORO 21 MARITIME CIR PAWLEYS ISLAND SC 29585",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2939 INDIA HOOK RD ROCK HILL SC 29732",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2270 CHARLOTTE HWY YORK SC 29745",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "402 NIMS ST FORT MILL SC 29715",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "928 COACH HOUSE CT ROCK HILL SC 29730",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1238 WEIR CT FORT MILL SC 29708",
+   "state": "SC",
+   "source": "https://services1.arcgis.com/2AGLxyiJoNiVHKwq/arcgis/rest/services/Parcels/FeatureServer/0",
+   "dataset": "York County SC Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "York County SC Parcels"
+}

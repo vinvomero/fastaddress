@@ -1,0 +1,246 @@
+{
+ "state": "WA",
+ "status": "fetched",
+ "note": "dataset rows=626327",
+ "records": [
+  {
+   "raw": "623 SW 126TH ST SEATTLE WA 98146",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 34018 SEATTLE WA 98124",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2901 AUBURN WAY S # 16 AUBURN WA 98092",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2303 SW MYRTLE ST SEATTLE WA 98106",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2701 45TH AVE SW SEATTLE WA 98116",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2744 47TH AVE SW SEATTLE WA 98116",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30332 24TH PL S FEDERAL WAY WA 98003",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2401 SW MYRTLE ST SEATTLE WA 98106",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11421 SW 11TH AVE SEATTLE WA 98146",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "31735 224TH PL SE BLACK DIAMOND WA 98010",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7330 TOLT RIVER RD NE CARNATION WA 98014",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "400 SW 152ND ST SUITE 300 BURIEN WA 98166",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30324 24TH PL S FEDERAL WAY WA 98002",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2716 47TH AV SW SEATTLE WA 98116",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11908 10TH AVE SW SEATTLE WA 98146",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2401 SW ALASKA ST SEATTLE WA 98106",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12021 4TH AVE SW SEATTLE WA 98146",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11226 11TH AVE SW SEATTLE WA 98146",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "901 FELL ST APT 1 SAN FRANCISCO CA 94117",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1024 185TH AVE NE SNOHOMISH WA 98290",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9423 20TH AVE SW SEATTLE WA 98106",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30336 24TH PL S FEDERAL WAY WA 98003",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1015 SW 112TH ST SEATTLE WA 98146",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7026 TOLT HIGHLANDS RD NE CARNATION WA 98014",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3212 NE 94TH ST SEATTLE WA 98115",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2732 47TH AVE SW SEATTLE WA 98116",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3211 SW MYRTLE ST SEATTLE WA 98106",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6602 TOLT RIVER RD NE CARNATION WA 98014",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2724 47TH AVE. S.W. SEATTLE WA 98116",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "201 S JACKSON ST #600 SEATTLE WA 98104",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7505 TOLT RIVER RD CARNATION WA 98014",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3396 SW MOORING LN PORT ORCHARD WA 98367",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "30344 24TH PL S FEDERAL WAY WA 98003",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2707 45TH AVE SW SEATTLE WA 98116",
+   "state": "WA",
+   "source": "https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services/PARCEL_ADDRESS_PUB_AREA_3069/FeatureServer/0",
+   "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "King County WA Parcels with Ownership Information (taxpayer mailing)"
+}

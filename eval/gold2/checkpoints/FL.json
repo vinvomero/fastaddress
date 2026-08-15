@@ -1,0 +1,246 @@
+{
+ "state": "FL",
+ "status": "fetched",
+ "note": "dataset rows=10831924",
+ "records": [
+  {
+   "raw": "3654 PARKRIDGE CIR SARASOTA FL 34243",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "27 Oakwood AVE Rockledge FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1667 SILVERADO DRIVE ROCKLEDGE FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1677 Silverado DR Rockledge FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O GABOURY JOHN E POA 4334 HUDSON MILL RD CATAULA GA 31804",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "21351 AUSTIN AVE PORT CHARLOTTE FL 33952",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1015 BLUEGRASS LN ROCKLEDGE FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1209 Rockledge DR Rockledge FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3582 PARKRIDGE CIR # 29-106 SARASOTA FL 34243",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "603 JENNIE RD PORTLAND AR 71663",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1245 W LAKE HAMILTON DR WINTER HAVEN FL 33881",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1430 ORION CT SAN DIEGO CA 92126",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1669 Silverado DR Rockledge FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2220 BEACON DR PORT CHARLOTTE FL 33952",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "209 E MAIN ST STE E OWATONNA MN 55060",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1840 Barton BLVD Rockledge FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3456 PARKRIDGE CIR SARASOTA FL 34243",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "805 GOLF PL ORADELL NJ 7649",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2921 W OLD STATE RD SCHENECTADY NY 12303",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1196 POLK CITY FL 33868",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8100 SW 179TH ST PALMETTO BAY FL 33157",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1010 Bluegrass LN Rockledge FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3001 FOX GLEN CT ST CHARLES IL 60174",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6040 MEURSALT RD MILTON FL 32570",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1030 BLUEGRASS LN ROCKLEDGE FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13755 ROYAL RED TER CHANTILLY VA 20151",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2700 Treasure Cay LN Melbourne FL 32940",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4411 BEE RIDGE RD PMB 177 SARASOTA FL 34233",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "22203 BAHAMA LN PORT CHARLOTTE FL 33952",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3225 LACOSTE DR JONESBORO AR 72404",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5730 N ANDREWS AVE OAKLAND PARK FL 33309",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1600 HUNTINGTON LANE ROCKLEDGE FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1970 Barton BLVD Rockledge FL 32955",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2289 WILEY ST PORT CHARLOTTE FL 33952",
+   "state": "FL",
+   "source": "https://services9.arcgis.com/Gh9awoU677aKree0/arcgis/rest/services/Florida_Statewide_Cadastral/FeatureServer/0",
+   "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "FDOR Florida Statewide Cadastral (NAL owner fields)"
+}

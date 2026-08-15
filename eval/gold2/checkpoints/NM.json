@@ -1,0 +1,246 @@
+{
+ "state": "NM",
+ "status": "fetched",
+ "note": "dataset rows=80927",
+ "records": [
+  {
+   "raw": "C/O JACK ANDERSON 845 CAMINO DE LAS TRAMPAS SANTA FE NM 87501",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "19 VISTA DE SONRISA STANLEY NM 87056",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "730 HWY 472 STANLEY NM 87056",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "46 IRBY RD STANLEY NM 87056-9750",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "NIC SNOWBERGER PO BOX 2205 ROSWELL NM 88202-2205",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1262 EDGEWOOD NM 87015",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10 VALLECITOS RD TIJERAS NM 87059-7302",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O JAMES DEAN PO BOX 2758 EDGEWOOD NM 87015",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "151 GONZALES RD #21 SANTA FE NM 87501-6184",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3 BOSQUE LOOP SANTA FE NM 87508-2231",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "90 MONTE ALTO RD SANTA FE NM 87508-8224",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "125 BELLAIRE ST DENVER CO 80220-5632",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "BOX 2670 MORIARTY NM 87035",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1723 MAN O WAR ST SE ALBUQUERQUE NM 87123-2381",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "151 GONZALES DR #20 SANTA FE NM 87501",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1392 CAMINO CORTO SANTA FE NM 87501",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3614 PIPING LN HOUSTON TX 77027-4117",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "600 MONTE ALTO SANTA FE NM 87501",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14 DESCANSO RD SANTA FE NM 87508-9125",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "598 MONTE ALTO SANTA FE NM 87501",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "NANCY CUSACH PO BOX 1746 SANTA FE NM 87504-1746",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13 VALENCIA LOOP SANTA FE NM 87508",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "28 IRBY RD STANLEY NM 87056-9750",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1685 EDGEWOOD NM 87015-1685",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2 MARIANO RD SANTA FE NM 87508-8786",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "193 IRVING RD MC INTOSH NM 87032",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10 DESCANSO RD SANTA FE NM 87508-9125",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1 DESCANSO RD SANTA FE NM 87508-9126",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "103 MONTEREY LANE BULLARD TX 75757",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "36 SUMPTION RD SANDIA PARK NM 87047-9456",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1014 VINE ST 7TH FLOOR CINCINNATI OH 45202",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3756 TAOS NM 87571",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "36 ALTURA RD SANTA FE NM 87508",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2042 OLD US 66 EDGEWOOD NM 87015-6740",
+   "state": "NM",
+   "source": "https://services7.arcgis.com/p0Gk2nDbPs7KEqSZ/arcgis/rest/services/SFC_Parcels_20250415/FeatureServer/0",
+   "dataset": "Santa Fe County NM Land Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Santa Fe County NM Land Parcels"
+}

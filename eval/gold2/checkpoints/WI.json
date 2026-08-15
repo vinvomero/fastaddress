@@ -1,0 +1,246 @@
+{
+ "state": "WI",
+ "status": "fetched",
+ "note": "dataset rows=293308",
+ "records": [
+  {
+   "raw": "870 JACKSON ST, FENNIMORE, WI 53809",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 649, WAUKESHA, WI 53187-0649",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "212 RIVER DR SUITE 2, WAUSAU, WI 54403",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "19848 53RD AVENUE CHIPPEWA FALLS WI 54729",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 8 EAU CLAIRE WI 54702",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "624 WESTHAVEN ROAD CHIPPEWA FALLS WI 54729",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13523 SWALLOW ST NW , ANDOVER , MN 55304",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "305 E ADAMS ST, FARMERSBURG, IA 52047",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1109 WILDFLOWER DR, MARSHFIELD, WI 54449",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "51560 JOHNSTOWN RD, SOLDIERS GROVE, WI 54655",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "40W980 DENNY RD , SUGAR GROVE, IL 60554",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1170 4TH AVE S , PARK FALLS, WI 54552",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10610 MAIN ST STE 10 , HAYWARD, WI 54843",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 684, OAK CREEK, WI 53154",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6022 W GRACE ST , CHICAGO, IL 60634",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "152530 HOLLIBUSH LN, WAUSAU, WI 54401",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5709 70TH STREET CHIPPEWA FALLS WI 54729",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13284 137TH AVENUE CHIPPEWA FALLS WI 54729",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "412 SANDY MOUND ST, GAYS MILLS, WI 54631",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "555 MAIN ST STE 450, RACINE, WI 53403",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1547 19 1/4 ST , CAMERON, WI 54822",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "W2295 BELVIDERE RD , SARONA, WI 54870",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2708N COUNTY HWY F , BIRCHWOOD, WI 54817-3048",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "W132N12584 MARY BUTH LN, GERMANTOWN, WI 53022",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "580 SKUNK HOLLOW RD , LA CRESCENT, MN 55947",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "745 STONECROP DR, HARTFORD, WI 53027",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1622 MOONLIT DR, RICHFIELD, WI 53076-0000",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "N127W13055 OAKWOOD DR, GERMANTOWN, WI 53022-0000",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2002 NORTH LINCOLN AVE, MARSHFIELD, WI 54449",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 579 , MINONG, WI 54859-0579",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1800 LAEMLE AVE, MARSHFIELD, WI 54449-4639",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "N120W20430 FREISTADT RD, GERMANTOWN, WI 53022-0000",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "208 GROVE ST, PO BOX 42, GAYS MILLS, WI 54631",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9901 ELLSWORTH RD , TOMAH, WI 54660",
+   "state": "WI",
+   "source": "https://services3.arcgis.com/n6uYoouQZW75n5WI/arcgis/rest/services/Wisconsin_Statewide_Parcels_DB/FeatureServer/0",
+   "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Wisconsin Statewide Parcels V12 (PSTLADRESS owner full mailing)"
+}

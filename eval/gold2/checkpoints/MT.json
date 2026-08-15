@@ -1,0 +1,246 @@
+{
+ "state": "MT",
+ "status": "fetched",
+ "note": "dataset rows=66301",
+ "records": [
+  {
+   "raw": "PO BOX 128 MALTA MT 59538-0128",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 233 EKALAKA MT 59324-0233",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 24 GREYCLIFF MT 59033-0024",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 126 WESTBY MT 59275-0126",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "101 N MAIN ST PLENTYWOOD MT 59254-1817",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 309 CEDAR GROVE NJ 07009-0309",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "MONTANA STATE OFFICE 5001 SOUTHGATE DR BILLINGS MT 59101-4669",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "HC 36 BOX 346 SAINT XAVIER MT 59075-9701",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "682 WHEELER CREEK RD BIG TIMBER MT 59011-7733",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 69 CROW AGENCY MT 59022-0069",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 22 WHITEWATER MT 59544-0022",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 32 PRAY MT 59065-0032",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 118 LIVINGSTON MT 59047-0118",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "63 NATHANIEL ANTELOPE MT 59211-9600",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "MAIL TO STATE LANDS 1625 11TH AVE HELENA MT 59601-4600",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 257 GARDINER MT 59030-0257",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 229 CULBERTSON MT 59218-0229",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5001 SOUTHGATE DR BILLINGS MT 59101-4669",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1322 PAYTON AVE HARDIN MT 59034-2403",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "305 E LEWIS ST LIVINGSTON MT 59047-3116",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 20 CLYDE PARK MT 59018-0020",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "554 BIG TIMBER CANYON RD BIG TIMBER MT 59011-7722",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "346 GIBSON RD BIG TIMBER MT 59011-7700",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 53 EKALAKA MT 59324-0053",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 454 EKALAKA MT 59324-0454",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "393 MILL IRON CAMP CROOK RD EKALAKA MT 59324-8600",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1750 MAIN BOULDER RD MC LEOD MT 59052-8801",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "HC 40 BOX 103 DECKER MT 59025-9601",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3581 S GREYTHORNE WAY CHANDLER AZ 85248-4202",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 27357 HOUSTON TX 77227-7357",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "18 REDSTONE HTS REDSTONE MT 59257-9600",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 337 BIG TIMBER MT 59011-0337",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 743 MALTA MT 59538-0743",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10 REDSTONE HTS REDSTONE MT 59257-9600",
+   "state": "MT",
+   "source": "https://services.arcgis.com/qnjIrwR8z5Izc0ij/arcgis/rest/services/Montana_Cadastral_Framework/FeatureServer/1",
+   "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Montana Cadastral Framework (DOR ORION owner mailing)"
+}

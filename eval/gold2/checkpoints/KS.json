@@ -1,0 +1,246 @@
+{
+ "state": "KS",
+ "status": "fetched",
+ "note": "dataset rows=5973",
+ "records": [
+  {
+   "raw": "2343 N RIDGE RD WICHITA KS 67205",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1707 N WATERFRONT PARKWAY WICHITA KS 67206-6617",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9508 W MOSS ROSE ST MAIZE KS 67101-4106",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3909 N RUTGERS ST MAIZE KS 67101-3720",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2243 N RIDGE RD STE 105 WICHITA KS 67205-1054",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11407 W 53RD ST N MAIZE KS 67101-9588",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1815 SOUTHWEST BLVD WICHITA KS 67213-1435",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1213 OLD HWY 63 STE 101 COLUMBIA MO 65201-7314",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10519 W 31ST. ST. N. WICHITA KS 67205-7803",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3814 N LAKE RIDGE CT WICHITA KS 67205-5200",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8405 W CENTRAL AVE APT 1310 WICHITA KS 67212-3660",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3906 N LAKE RIDGE WICHITA KS 67205-5206",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3841 N WATERCRESS CT MAIZE KS 67101-3739",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5159 N 119TH ST W MAIZE KS 67101-9560",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "303 S TOPEKA AVE WICHITA KS 67202-4309",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1900 E DOUGLAS AVE STE 100 WICHITA KS 67214-4227",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3139 N LAKECREST WICHITA KS 67205-1919",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9728 W VILLAGE PL MAIZE KS 67101-3782",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3110 N CORTINA ST WICHITA KS 67205-7538",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9751 W VILLAGE PLACE MAIZE KS 67101-3783",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1230 E OCEAN BLVD UNIT 702 LONG BEACH CA 90802-6910",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3805 N WATERCRESS CT MAIZE KS 67101-3739",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3131 N DEN HOLLOW WICHITA KS 67205-8741",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10624 W 33RD ST N WICHITA KS 67205-7814",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4590 N MAIZE RD STE 1 MAIZE KS 67101-1000",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3311 N LAKECREST CIR WICHITA KS 67205-1920",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4405 N MAIZE RD MAIZE KS 67101-9518",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4425 W ZOO BLVD STE 4 WICHITA KS 67212-1611",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4015 N WOODLAWN CIR STE 1 BEL AIRE KS 67220-3877",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10625 W 31ST ST N WICHITA KS 67205-7805",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "50 N TEMPLE ST SALT LAKE CITY UT 84150-6320",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9747 W VILLAGE PL MAIZE KS 67101-3783",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7708 W SHADOW LAKES ST WICHITA KS 67205-1910",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8314 W PALMETTO CIR WICHITA KS 67205-5213",
+   "state": "KS",
+   "source": "https://services3.arcgis.com/PRyeAMTgQS8gkd0F/arcgis/rest/services/Maize_Parcels/FeatureServer/0",
+   "dataset": "City of Maize KS Parcels (Sedgwick County)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "City of Maize KS Parcels (Sedgwick County)"
+}

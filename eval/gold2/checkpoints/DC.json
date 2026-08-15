@@ -1,0 +1,246 @@
+{
+ "state": "DC",
+ "status": "fetched",
+ "note": "dataset rows=213374",
+ "records": [
+  {
+   "raw": "930 MADISON ST NW # 1 WASHINGTON DC 20011-8222",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1527 O ST NW WASHINGTON DC 20005-5522",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1235 LINDEN PL NE WASHINGTON DC 20002-4454",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "24 MURAL WALK NE WASHINGTON DC 20011-2606",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "729 GALLATIN ST NW WASHINGTON DC 20011-4027",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "440 L ST NW # 1113 WASHINGTON DC 20001-2588",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2618 R ST SE WASHINGTON DC 20020-3921",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8401 GRANITE PEAK CT LAS VEGAS NV 89145-5430",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "919 12TH ST NE # A505 WASHINGTON DC 20002-7101",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1702 FLORIDA AVE NW WASHINGTON DC 20009-2622",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6110 CLAY ST NE WASHINGTON DC 20019-7905",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "58 CHANNING ST NW WASHINGTON DC 20001-1030",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "475 K ST NW UNIT 1017 WASHINGTON DC 20001-5270",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "201 E CAPITOL ST SE WASHINGTON DC 20003-1004",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1171 ABBEY PL NE WASHINGTON DC 20002-3415",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1309 GALLATIN ST NW WASHINGTON DC 20011-6917",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4582 S ULSTER ST STE 1700 DENVER CO 80237-2641",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "124 4TH ST SE WASHINGTON DC 20003-1012",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1820 BELTSVILLE MD 20704-1820",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "144 56TH PL SE WASHINGTON DC 20019-6570",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "355 EYE ST SW # S403 WASHINGTON DC 20024-4230",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "617 42ND ST NE WASHINGTON DC 20019-8038",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2038 18TH ST NW # 304 WASHINGTON DC 20009-1804",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4639 MINNESOTA AVE NE WASHINGTON DC 20019-3822",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3299 K ST NW STE 700 WASHINGTON DC 20007-4438",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1441 RHODE ISLAND AVE NW UNIT 221 WASHINGTON DC 20005-5441",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1325 18TH ST NW APT 401 WASHINGTON DC 20036-6503",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "227 45TH ST NE WASHINGTON DC 20019-4634",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4770 RESERVOIR RD NW WASHINGTON DC 20007-1905",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1735 P ST NW # 1 WASHINGTON DC 20036-1343",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8973 JAMES B WHITE HWY S WHITEVILLE NC 28472-6583",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "120 U ST NW WASHINGTON DC 20001-1606",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2900 TELESTAR CT FALLS CHURCH VA 22042-1206",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "115 10TH ST SE WASHINGTON DC 20003-3922",
+   "state": "DC",
+   "source": "https://maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA/Property_and_Land_WebMercator/MapServer/53",
+   "dataset": "DC Integrated Tax System Public Extract (ITSPE)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "DC Integrated Tax System Public Extract (ITSPE)"
+}

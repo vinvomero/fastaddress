@@ -1,0 +1,246 @@
+{
+ "state": "OH",
+ "status": "fetched",
+ "note": "dataset rows=482111",
+ "records": [
+  {
+   "raw": "6817 BIG CREEK PKWY Cleveland OH 44130-2604",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6289 WINTERBERRY CROSSING BEDFORD OH 44146",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3680 WYNDE TREE DR SEVEN HILLS OH 44131-5958",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3246 SUNHAVEN OVAL PARMA OH 44134",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1831 BEERSFORD AVE CLEVELAND OH 44112",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6375 MIDDLEBROOK BLVD BROOKPARK OH 44142",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6620 RHINELANDER DR LAS VEGAS NV 89108",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4223 W 48TH ST Cleveland OH 44144-1933",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14533 COIT RD Cleveland OH 44110-3615",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12904 ARLISS DR Lakewood OH 44107",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "POX 3326 MERRIFIELD VA 22119",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10130 ACKLEY RD CLEVELAND OH 44130",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1348 ROYALWOOD RD BROADVIEW HEIGHTS OH 44147",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2771 COVENTRY RD SHAKER HEIGHTS OH 44120",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2227 ELANDON DR CLEVELAND OH 44106",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3411 AUGUSTINE DR PARMA OH 44134",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1446 BLOSSOM PARK AVE LAKEWOOD OH 44107",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "22800 TRACY AVE EUCLID OH 44123",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5607 ACKLEY RD CLEVELAND OH 44134",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8303 DECKER AVE CLEVELAND OH 44103",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "21952 COTTONWOOD DR ROCKY RIVER OH 44116",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13008 DARLINGTON AVE Garfield Hts OH 44125",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17321 HARLAND AVE CLEVELAND OH 44119",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5157 PHILLIPS ST MAPLE HEIGHTS OH 44137",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10175 FORESTWOOD LN NORTH ROYALTON OH 44133",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6306 PELHAM DR PARMA OH 44134",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14134 CROWN POINT PK Strongsville OH 44136-8154",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3705 GLENCAIRN RD SHAKER HTS OH 44122",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3088 W 155 ST CLEVELAND OH 44111",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "601 LAKESIDE AVE CLEVELAND OH 44114",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4895 ALLENDALE DR CLEVELAND OH 44143",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3859 MERRYMOUND RD SOUTH EUCLID OH 44121",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2945 AUGUSTINE DR Parma OH 44134",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3409 EDGERTON RD North Royalton OH 44133",
+   "state": "OH",
+   "source": "https://gis.cuyahogacounty.us/server/rest/services/MyPLACE/Parcels_WMA_GJOIN_WGS84/MapServer/2",
+   "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Cuyahoga County OH Parcels (MyPLACE, fiscal-office join)"
+}

@@ -1,0 +1,246 @@
+{
+ "state": "IA",
+ "status": "fetched",
+ "note": "dataset rows=105738",
+ "records": [
+  {
+   "raw": "976 CEDAR WOODS RD CEDAR RAPIDS IA 52403",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2082 HARVEST CT MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "502 ROCK RIDGE RD NW CEDAR RAPIDS IA 52405",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6501 DAVIS CT NW CEDAR RAPIDS IA 52405",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3198 ARTESIAN RD MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5173 N ALBURNETT RD CENTRAL CITY IA 52214",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5714 DOSTAL DR SW CEDAR RAPIDS IA 52404",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4060 N MARION RD ALBURNETT IA 52202",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% FINANCE 101 1ST ST SE CEDAR RAPIDS IA 52401-1205",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% HERTZ FARM MANAGEMENT- RYAN KAY PO BOX 500 NEVADA IA 50201",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% MEICHER CPAS LLP 2349 DEMING WAY STE 300 MIDDLETON WI 53562",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7229 HAMPSHIRE DR NE CEDAR RAPIDS IA 52402",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "101 1ST ST SE CEDAR RAPIDS IA 52401",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "375 CEMAR CT MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1380 BERTRAM ST BERTRAM IA 52403",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "851 HAMPSHIRE CIR MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1317 STONEY POINT RD NW CEDAR RAPIDS IA 52405",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "805 CRESCENT VIEW DR NE CEDAR RAPIDS IA 52402",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3176 ARTESIAN RD MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1040 21ST ST SE CEDAR RAPIDS IA 52403",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "950 33RD AVE UNIT C MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5467 VALLEY FARM RD COGGON IA 52218",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3704 TANAGER DR NE CEDAR RAPIDS IA 52402",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1604 MATTERHORN DR NE CEDAR RAPIDS IA 52402",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "919 H AVE NW CEDAR RAPIDS IA 52405",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7137 CHOCTAW RIDGE RD NE CEDAR RAPIDS IA 52411",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "195 5TH AVE MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1645 RED FOX WAY MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3177 ARTESIAN RD MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4606 CHESTNUT RIDGE CT NE CEDAR RAPIDS IA 52402",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2148 MT VERNON RD SE CEDAR RAPIDS IA 52403",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4000 3RD AVE MARION IA 52302",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "375 COLLINS RD NE CEDAR RAPIDS IA 52402",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "319 TEAKWOOD LN NE CEDAR RAPIDS IA 52402",
+   "state": "IA",
+   "source": "https://services.arcgis.com/i14SLLmXo7Hn9vNc/arcgis/rest/services/RealEstateParcel/FeatureServer/0",
+   "dataset": "Linn County IA Real Estate Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Linn County IA Real Estate Parcels"
+}

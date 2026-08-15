@@ -1,0 +1,246 @@
+{
+ "state": "LA",
+ "status": "fetched",
+ "note": "dataset rows=849995",
+ "records": [
+  {
+   "raw": "5475 CAPITAL HEIGHTS AVE BATON ROUGE, LA 70806",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/S SANDRA T HALL 2300 MAIN ST",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O DOLLAR GENERAL - LEASE ADMIN DEPT 100 MISSION RIDGE",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "ATTN: GREG JORDAN 55 FLAMINGO ST",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "650 MOUTON ST BATON ROUGE, LA 70806",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2035 N ACADIAN THWY E BATON ROUGE, LA 70802",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "19303 S LAKEWAY AVE BATON ROUGE, LA 70810",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4253 PALM ST BATON ROUGE, LA 70808",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4968 UNDERWOOD AVE BATON ROUGE, LA 70805",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O HEALTHCARE PROPERTIES 113 EAST ST. PETER ST.",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "201 HIGHLAND OAKS BATON ROUGE, LA 70810",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O LEWIS COMPANIES 9613 INTERLINE AVE",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9191 HYACINTH AVE BATON ROUGE, LA 70810",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O HOME BOSS, LLC 677 WAVERLY DR",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4023 HUNDRED OAKS AVE BATON ROUGE, LA 70808",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "225 W WOODSTONE CT BATON ROUGE, LA 70808",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1639 N 25TH ST BATON ROUGE, LA 70802",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "LOCAL: 7686 PERKINS RD 1947 GENERAL TAYLOR AVE",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O JOSEPH M DEMPSEY 1615 POYDRAS ST STE 2279",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5055 CLAYTON DR BATON ROUGE, LA 70805",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O EDITH DANGERFIELD 1313 ROUNDHILL DR",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2144 LOUISIANA AVE BATON ROUGE, LA 70802",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O 548 PROPERTIES, LLC 4023 HUNDRED OAKS AVE",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "663 DAVENTRY DR BATON ROUGE, LA 70808",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "144 ALBERT HART DR BATON ROUGE, LA 70808",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O FELTON WINFIELD 5316 OAKLAN DR",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O ALLIANCE TAX ADVISORS 433 E LAS COLINAS BLVD # 300",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6153 W PERIMETER DR BATON ROUGE, LA 70811",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O JACQULYN JACKSON 4257 SYCAMORE ST",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O EUGENE GIVENS, JR 7053 CARLENE AVE",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O CMS MANAGEMENT PO BOX 910",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "367 W MCKINLEY ST C/O DEBRA CAREY",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "ATTN: ROBERT S. MILLER 527 N ACADIAN THWY",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O HENRY EISERLOH 4334 HARVARD AVE",
+   "state": "LA",
+   "source": "https://data.brla.gov/resource/myfc-nh6n.json",
+   "dataset": "East Baton Rouge Parish Tax Roll",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "East Baton Rouge Parish Tax Roll"
+}

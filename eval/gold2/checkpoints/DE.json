@@ -1,0 +1,7 @@
+{
+ "state": "DE",
+ "status": "gap-unreachable",
+ "note": "New Castle County official parcels layer (gis.nccde.org Base_Layers/0) has OWNADDR fields but the query endpoint rejects all queries (HTTP 400); FirstMap statewide parcels are geometry-only; hub bulk is commercial.",
+ "records": [],
+ "dataset": ""
+}

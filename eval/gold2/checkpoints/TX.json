@@ -1,0 +1,246 @@
+{
+ "state": "TX",
+ "status": "fetched",
+ "note": "dataset rows=292457",
+ "records": [
+  {
+   "raw": "15910 TWO RIVERS CV AUSTIN TX 78717",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "109 ORGAIN ST HUTTO TX 78634",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8600 LOHR VALLEY RD IRVING TX 75063",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "505 DEBRA DR TAYLOR TX 76574",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "449 43RD AVE SAN FRANCISCO CA 94121",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3700 CHURCHILL DR CELINA TX 75009",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "204 ROAMING DR HUTTO TX 78634",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13417 WISTERWOOD ST AUSTIN TX 78729",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7790 MONTGOMERY MEWS CT SEVERN MD 21144",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10384 MELISSA CT CUPERTINO CA 95014",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7676 WOODWAY DR STE 104 HOUSTON TX 77063",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1549 SAWMILL XING ROUND ROCK TX 78665",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1400 QUICKSILVER ST ROUND ROCK TX 78665",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1712 ELKINS LN CEDAR PARK TX 78613",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "264 MAGNA LN LIBERTY HILL TX 78642",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1215 ASCOT ST GEORGETOWN TX 78626",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1328 TERRACE VIEW DR GEORGETOWN TX 78628",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15047 SAVANNAH HEIGHTS DR AUSTIN TX 78717",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "405 MAGNUM FORCE DR JARRELL TX 76537",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9520 PALMBROOK DR AUSTIN TX 78717",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9801 WHITLEY BAY DR AUSTIN TX 78717",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "%DAN BROCK 15725 N DALLAS PKWY STE 300 ADDISON TX 75001",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5304 ASTERWOOD DR DUBLIN CA 94568",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "404 BLOOMINGTON LOOP HUTTO TX 78634",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "122 CREPE MYRTLE LN GEORGETOWN TX 78633",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11201 POWDER MILL TRL AUSTIN TX 78750",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "606 APPLEWOOD DR PFLUGERVILLE TX 78660",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2351 COUNTY ROAD 475 THRALL TX 76578",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13407 WISTERWOOD ST AUSTIN TX 78729",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "16915 STOCKTON DR LEANDER TX 78641",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8103 LERWICK LN ROUND ROCK TX 78681",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14901 APPLE SPRINGS HOLW LEANDER TX 78641",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6111 W PLANO PKWY STE 1000 PLANO TX 75093",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "344 MOUNTAIN VALLEY ST GEORGETOWN TX 78628",
+   "state": "TX",
+   "source": "https://gis.georgetowntexas.gov/arcgis/rest/services/OpenData/OpenData_FeatureService/FeatureServer/2",
+   "dataset": "Williamson County TX Parcels (Georgetown open data)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Williamson County TX Parcels (Georgetown open data)"
+}

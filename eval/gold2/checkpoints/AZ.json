@@ -1,0 +1,246 @@
+{
+ "state": "AZ",
+ "status": "fetched",
+ "note": "dataset rows=179224",
+ "records": [
+  {
+   "raw": "1921 W ARROYO VISTA CT TUCSON AZ 85746-8106",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2638 N NORTON AVE TUCSON AZ 85719-3233",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2607 N NORTON AVE TUCSON AZ 85719-3234",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2608 N NORTON AVE TUCSON AZ 85719-3233",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "717 W KELSO ST TUCSON AZ 85705-4125",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "514 AMERICAS WAY # 22148 BOX ELDER SD 57719-7600",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2637 N NORTON AVE TUCSON AZ 85719-3234",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2613 N TUCSON BLVD TUCSON AZ 85716-2129",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1931 W ARROYO VISTA CT TUCSON AZ 85746-8106",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "41 S CLIFF ROSE LANE SHOW LOW AZ 85901-2866",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7601 E KEITH DR TUCSON AZ 85730-0000",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5686 S HOLLADAY DR TUCSON AZ 85706-3165",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11201 N TATUM BLVD STE 300 # 120843 PHOENIX AZ 85028-6039",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2715 N 15TH AVE TUCSON AZ 85710-4218",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5678 S HOLLADAY DR TUCSON AZ 85706-3165",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2626 N NORTON AVE TUCSON AZ 85719-3233",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5638 S HOLLADAY DR TUCSON AZ 85706-3165",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5584 S HOLLADAY DR TUCSON AZ 85706-3108",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1961 W ARROYO VISTA CT TUCSON AZ 85746-8106",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7518 E 42ND ST TUCSON AZ 85730-1839",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5646 S HOLLADAY DR TUCSON AZ 85706-3165",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "970 N SINAGUA HEIGHTS DR FLAGSTAFF AZ 86004-7870",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4113 S AMBER ROCK AVE TUCSON AZ 85735-5219",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7511 E TAMARA PL TUCSON AZ 85730-1837",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2602 N NORTON AVE TUCSON AZ 85719-3233",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "732 W KELSO ST TUCSON AZ 85705-4126",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2607 N TUCSON BLVD TUCSON AZ 85716-2129",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7634 E 42ND ST TUCSON AZ 85730-1842",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3013 SE HAWTHORNE BLVD PORTLAND OR 97214-4176",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7667 E KEITH DR TUCSON AZ 85730-1815",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7679 E KEITH DR TUCSON AZ 85730-0000",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2325 E SYLVIA ST TUCSON AZ 85719-3241",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2313 E SYLVIA ST TUCSON AZ 85719-3241",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "725 W KELSO ST TUCSON AZ 85705-4125",
+   "state": "AZ",
+   "source": "https://mapdata.tucsonaz.gov/public/rest/services/PublicMaps/PropertyHousing/MapServer/40",
+   "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Pima County AZ Parcels - Regional (Tucson PropertyHousing)"
+}

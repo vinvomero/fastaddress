@@ -1,0 +1,246 @@
+{
+ "state": "AK",
+ "status": "fetched",
+ "note": "dataset rows=82406",
+ "records": [
+  {
+   "raw": "6501 N FINSBURY LN WASILLA AK 99623-0870",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1131 WILLOW AK 99688-1131",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% SHIRLEY FRIDAY PERS REP 13 1139 LEILANI AVE PAHOA HI 96778",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6961 W FLYING CROWN DR WASILLA AK 99654",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7900 ALATNA AVE ANCHORAGE AK 99507",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 202 PALMER AK 99645-0202",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7010 TRAVIS CIR ANCHORAGE AK 99507",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "70100 CAMP POLK RD SISTERS OR 97759",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9434 PAULA DR CORPUS CHRISTI TX 78410",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1420 S ANDRE CIR PALMER AK 99645",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "81 E COMMERCIAL DR PALMER AK 99645",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 299121 WASILLA AK 99629-9121",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 871267 WASILLA AK 99687-1267",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2221 N PROSPECT DR WASILLA AK 99623",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1104 WILLOW AK 99688",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2180 N LARRY TRL WASILLA AK 99654",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2231 N GUNFLINT TRL WASILLA AK 99623-9215",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "# 200 1900 W NORTHERN LGTS BLVD ANCHORAGE AK 99517-3342",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2000 N CRANBERRY CT WASILLA AK 99654",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "% MARGERY H BORDERS 1617 ELMENDORF DR ANCHORAGE AK 99504-2422",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 872130 WASILLA AK 99687-2130",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1634 E HIDDEN RANCH LOOP PALMER AK 99645",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1305 WILLOW AK 99688",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13301 MESSINIA ST ANCHORAGE AK 99516",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1290 WILLOW AK 99688",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 2673 PALMER AK 99645",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12130 JOHNS RD ANCHORAGE AK 99515-3491",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1125 E ESTY CIR PALMER AK 99645",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1135 E ESTY CIR PALMER AK 99645",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "752 SPRING VALLEY DR HURST TX 76054",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 588 WILLOW AK 99688",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "# 200 1900 W NORTHERN LGTS BLVD ANCHORAGE AK 99517",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10161 OUR RD ANCHORAGE AK 99507",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1415 MONTROSE CO 81402",
+   "state": "AK",
+   "source": "https://maps.matsugov.us/map/rest/services/OpenData/Cadastral_Parcels/FeatureServer/0",
+   "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Matanuska-Susitna Borough AK Cadastral Parcels"
+}

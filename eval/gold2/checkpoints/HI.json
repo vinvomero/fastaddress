@@ -1,0 +1,7 @@
+{
+ "state": "HI",
+ "status": "gap-unreachable",
+ "note": "No reachable source: Honolulu open-data parcels are geometry+TMK; Maui third-party layers have no mailing fields; owner data lives in qPublic (not bulk).",
+ "records": [],
+ "dataset": ""
+}

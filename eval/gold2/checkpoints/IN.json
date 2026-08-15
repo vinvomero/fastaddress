@@ -1,0 +1,246 @@
+{
+ "state": "IN",
+ "status": "fetched",
+ "note": "dataset rows=347049",
+ "records": [
+  {
+   "raw": "7617 HILLWAY DR CAMBY IN 46113-9516",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9005 SEABREEZE CT INDIANAPOLIS IN 46256-9597",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "311 CITIZENS PL INDIANAPOLIS IN 46205-4253",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9011 CLIPPER CT INDIANAPOLIS IN 462569716",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7560 PRAIRIE VIEW DR INDIANAPOLIS IN 46256-8407",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2104 E 70TH ST INDIANAPOLIS IN 46220-1304",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2737 SANGSTER AVE INDIANAPOLIS IN 46218-2643",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12722 OLD STONE DR INDIANAPOLIS IN 462369318",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7742 HILLWAY DR CAMBY IN 46113-9517",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2843 DENISON ST INDIANAPOLIS IN 462415941",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3361 BEACON CT INDIANAPOLIS IN 462221270",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7642 HILLWAY DR CAMBY IN 46113-9516",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2910 STATION ST INDIANAPOLIS IN 462182953",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6251 WELHAM RD INDIANAPOLIS IN 46220-4241",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7717 HILLWAY DR CAMBY IN 46113-9517",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8808 CAPLOCK LN INDIANAPOLIS IN 46256-1304",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7518 HILLWAY DR CAMBY IN 46113",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7641 HILLWAY DR CAMBY IN 46113-9516",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7833 HILLWAY DR CAMBY IN 46113-9518",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5010 W RAYMOND ST INDIANAPOLIS IN 462414736",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7818 HILLWAY DR CAMBY IN 46113-9518",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2034 RUCKLE ST INDIANAPOLIS IN 46202-1753",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7534 HILLWAY DR CAMBY IN 46113-9509",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6055 COPELAND MILLS DR INDIANAPOLIS IN 462214531",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11934 CHALLENGE CT INDIANAPOLIS IN 46236-8616",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1328 SHAWNEE RD INDIANAPOLIS IN 46260-4077",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2429 BREWSTER RD INDIANAPOLIS IN 46268",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2062 NEWHAVEN DR INDIANAPOLIS IN 46231-1325",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2524 BUTTERFIELD DR INDIANAPOLIS IN 46220-1322",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4844 W MARKWOOD AVE INDIANAPOLIS IN 46221-2946",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3225 MCLEOD DR STE 100 LAS VEGAS NV 89121-2257",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5401 N BOSART AVE INDIANAPOLIS IN 462205721",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4437 GLADE RD FOREST PARK GA 302973725",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7558 CRICKWOOD LN INDIANAPOLIS IN 462684730",
+   "state": "IN",
+   "source": "https://gis.indy.gov/server/rest/services/MapIndy/MapIndyProperty/MapServer/10",
+   "dataset": "Indy/Marion County Parcels w/ Owner Information",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Indy/Marion County Parcels w/ Owner Information"
+}

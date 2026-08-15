@@ -1,0 +1,246 @@
+{
+ "state": "CT",
+ "status": "fetched",
+ "note": "dataset rows=1351485",
+ "records": [
+  {
+   "raw": "15 SEELEY STREET DANBURY CT 06810",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "443 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "498 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "424 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "26 MADISON ST EAST HARTFORD CT 06118",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3 LYNN ST EAST HARTFORD CT 06108",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "479 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 189 EAST BERLIN CT 06023",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13 SEELEY ST DANBURY CT 06810",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "38 KONDRACKI LN WALLINGFORD CT 06492",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "55 CURTIS AVE STAMFORD CT 06902",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10 WILSON ST DANBURY CT 06810",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "490 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8719 EVANGEL DR SPRINGFIELD VA 22153",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "49 WILLIAM ST APT #1 DANBURY CT 06810",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "430 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "99 WOODCREST DR HOPEWELL JUNCTION NY 12533",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "163 SOUTH ST #93 DANBURY CT 06810",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 983 DANBURY CT 06813",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "20 BROOKVALE DR WALLINGFORD CT 06492",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "41 MOUNTAINVILLE AVE DANBURY CT 06810",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "475 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15 SHELTER ROCK ROAD BETHEL CT 06801",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "25 SIGWIN DR WALLINGFORD CT 06492",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "14 WARD ST BRISTOL CT 06010",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "84 DOVER RD NEW BRITAIN CT 06052",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "95B CLINIC DR UNIT 5B NEW BRITAIN CT 06051",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "155 NORTH WHITTLESEY AVE WALLINGFORD CT 06492",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3 MADISON ST EAST HARTFORD CT 06118",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "49 EAST ST WALLINGFORD CT 06492",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "52 GRIEB TRL WALLINGFORD CT 06492",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "453 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "459 COMMONWEALTH AVE NEW BRITAIN CT 06053",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "32 MADISON ST EAST HARTFORD CT 06118",
+   "state": "CT",
+   "source": "https://data.ct.gov/resource/pqrn-qghw.json",
+   "dataset": "CT Parcel and CAMA Data (statewide)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "CT Parcel and CAMA Data (statewide)"
+}

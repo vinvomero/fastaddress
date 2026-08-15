@@ -1,0 +1,246 @@
+{
+ "state": "IL",
+ "status": "fetched",
+ "note": "dataset rows=127931",
+ "records": [
+  {
+   "raw": "250 SOUTH PARK AVE SOUTH BELOIT IL 61080",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3655 RAILROAD AVE JBLM WA 98433",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "C/O TERRY KURZINSKI 4141 N ROCKTON AVE ROCKFORD IL 61103",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5137 WIL ACRE DR LOVES PARK IL 61111",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6488 OLD COLONY BEND ROCKFORD IL 61108",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5102 CITADEL COURT ROCKFORD IL 61109",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "731 GREGLYNN ST MACHESNEY PARK IL 61115",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1524 16TH AVE ROCKFORD IL 61104",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3432 CHADWICK DRIVE ROCKFORD IL 61109",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "105 DEARBORN AVE BELOIT WI 53511",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2404 BELDEN ST ROCKFORD IL 61101",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3945 OLD GATE RD ROCKFORD IL 61109",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "401 HAWKINS DR WINNEBAGO IL 61088",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6148 SULKEY LN ROCKFORD IL 61108",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6722 SONOMA RD ROCKFORD IL 61114",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2063 SHAW WOODS DR ROCKFORD IL 61107",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6041 NIMTZ RD LOVES PARK IL 61111",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6277 E RIVERSIDE BLVD ROCKFORD IL 61108",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "317 HOWARD AVE. ROCKFORD IL 61102",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "616 LANAE WAY SOUTH BELOIT IL 61080",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4601 ALLEGRO CHASE ROCKFORD IL 61109",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1511 BRYN MAWR LANE ROCKFORD IL 61107",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "834 GOLF COURSE RD CRYSTAL LAKE IL 60014",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6356 GALAHAD COURT LOVES PARK IL 61111",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "15062 HAULEY RD DURAND IL 61024",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3815 N MULFORD RD ROCKFORD IL 61114",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 3306 SOLDOTNA AK 99669",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2103 OVERDENE AVE ROCKFORD IL 61103",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13647 METRIC ROAD ROSCOE IL 61073",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "214 SHORELAND RD MACHESNEY PARK IL 61115",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2521 SKOKIE DR ROCKFORD IL 61108",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2232 HOLMES ST ROCKFORD IL 61108",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11317 BERTRAM RD MACHESNEY PARK IL 61115",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17615 TRASK BRIDGE RD PECATONICA IL 61063",
+   "state": "IL",
+   "source": "https://services9.arcgis.com/s8vOzt2hgxqrWawQ/arcgis/rest/services/Parcels_and_Addresses/FeatureServer/1",
+   "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Winnebago County IL Parcel Ownership (taxpayer mailing)"
+}

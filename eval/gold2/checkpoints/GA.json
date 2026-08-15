@@ -1,0 +1,246 @@
+{
+ "state": "GA",
+ "status": "fetched",
+ "note": "dataset rows=372067",
+ "records": [
+  {
+   "raw": "9007 WOODLAND TRL ALPHARETTA GA 30009",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3039 POMONA WAY EAST POINT GA 30344",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4032 PRINCETON LAKES WAY SW ATLANTA GA 30331",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4036 PRINCETON LAKES WAY SW ATLANTA GA 30331",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6860 VIRLYN B SMITH RD FAIRBURN GA 30213",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 369 UNION CITY GA 30291",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3765 LYNARBOR LANE ATLANTA GA 30349",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "4045 PRINCETON LAKE PASS SW ATLANTA GA 30331-5526",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "185 CRESENT HILL DR ORTONVILLE MI 48462",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2000 ASHLEY MANOR DR ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1120 ORCHARD WAY ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6116 WOODLAND LANE ALPHARETTA GA 30009",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3969 PRINCETON LAKES PASS SW ATLANTA GA 30331",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5742 BARRINGTON RUN UNION CITY GA 30291-6104",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6115 WOODLAND LANE ALPHARETTA GA 30009",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3973 PRINCETON LAKES PASS SW # 55 ATLANTA GA 30331",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "P O BOX 2624 WEST DOVER VT 05356",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6001 WOODLAND LN ALPHARETTA GA 30009",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12907 ETRIS WALK ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1040 ASHLEY MANOR DR ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6111 WOODLAND LANE ALPHARETTA GA 30009",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3558 CUMBERLAND RD EAST POINT GA 30344",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5175 HARBOUR RIDGE DR ALPHARETTA GA 30005",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1070 ASHLEY MANOR DR ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "105 BIG ELK CT SW ATLANTA GA 30349",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5562 VILLAGE TRCE UNION CITY GA 30291-5147",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3981 PRINCETON LAKE PASS SW ATLANTA GA 30331",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2005 HUNTWICK LN ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "6102 PROVIDENCE WAY UNION CITY GA 30291",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1150 ORCHARD WAY ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1000 HUNTWICK CT ROSWELL GA 30075",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3548 CHARLES DR EAST POINT GA 30344",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "130 PROMINENCE POINT PKWY STE 130 149 CANTON GA 30114",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5211 VILLAGE CT UNION CITY GA 30291",
+   "state": "GA",
+   "source": "https://gismaps.fultoncountyga.gov/arcgispub2/rest/services/PropertyMapViewer/PropertyMapViewer/MapServer/11",
+   "dataset": "Fulton County GA Tax Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Fulton County GA Tax Parcels"
+}

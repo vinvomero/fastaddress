@@ -1,0 +1,246 @@
+{
+ "state": "NE",
+ "status": "fetched",
+ "note": "dataset rows=77176",
+ "records": [
+  {
+   "raw": "3606 N 156TH ST STE 101-302 OMAHA NE 68116",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2104 EAGLE CREST DR PAPILLION NE 68133",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "7518 S 134TH ST OMAHA NE 68138",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13603 SLAYTON ST OMAHA NE 68138",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11910 S 214TH ST GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "8502 S 48TH ST OMAHA NE 68157",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "9391 CINAMMON DR OMAHA NE 68136",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "204 N MCKENNA ST GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1186 S 14TH AVE BLAIR NE 68008",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "13509 GRISSOM ST OMAHA NE 68138",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "20304 WESTRIDGE RD GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 311 SPRINGFIELD NE 68059",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "20526 CAMELBACK AVE GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10811 S 219TH ST GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "105 WESGAYE ST GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3305 N 191ST AVE ELKHORN NE 68022",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "3068 THUNDER RD FARGO ND 58104",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "20366 JEANNIE LN GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10082 S 172ND CIR OMAHA NE 68136",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "733 WILLOW CIR BELLEVUE NE 68005",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1607 RIDGEVIEW DR PAPILLION NE 68046",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1011 GOLD COAST RD PAPILLION NE 68046",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11725 FISHER HOUSE RD BELLEVUE NE 68123",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "17126 FAIRWAY DR OMAHA NE 68136",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "21329 CASTLEROCK LN GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "105 E 16TH ST SCOTTSBLUFF NE 69361",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1005 VALLEYVIEW DR PAPILLION NE 68046",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "16109 MANDERSON ST OMAHA NE 68116",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "11417 S 147TH ST OMAHA NE 68138",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2104 ABERDEEN PLZ PAPILLION NE 68133",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2206 PLATTE RIVER DR BELLEVUE NE 68123",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1106 PARC DR PAPILLION NE 68046",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "10813 S 220TH ST GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "12307 WESTRIDGE RD GRETNA NE 68028",
+   "state": "NE",
+   "source": "https://geodata.sarpy.gov/arcgis/rest/services/Cadastral/LandRecordsSearch/MapServer/5",
+   "dataset": "Sarpy County NE Tax Parcels",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Sarpy County NE Tax Parcels"
+}

@@ -1,0 +1,246 @@
+{
+ "state": "AL",
+ "status": "fetched",
+ "note": "dataset rows=398120",
+ "records": [
+  {
+   "raw": "2121 LAKESIDE DR MC CALLA AL 35111-3742",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "745 CHESTNUT DR PINSON AL 35126-3643",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2514 TIMBER TRL PINSON AL 35126",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5422 TYLER LOOP RD PINSON AL 35126-3673",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2128 LAKESIDE DR MC CALLA AL 35111-3732",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5647 LAKE TRACE DR BIRMINGHAM AL 35244-3969",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5650 LAKE TRACE DR HOOVER AL 35244-3967",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2104 LAKESIDE DR MCCALLA AL 35111",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "211 YEAGER PARKWAY STE #B PELHAM AL 35124",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "74 LAKESHORE VIEW WEST JASPER AL 35503",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2100 LAKESIDE DR MC CALLA AL 35111-3732",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2518 TIMBER TRL PINSON AL 35126-3627",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5142 RICK DR PINSON AL 35126-3610",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5635 LAKE TRACE DR BIRMINGHAM AL 35244-3969",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5106 RICK DR PINSON AL 35126-3610",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5586 TYLER LOOP RD PINSON AL 35126",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2144 LAKESIDE DR MC CALLA AL 35111-3732",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2109 LAKESIDE DR MC CALLA AL 35111-3742",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2132 LAKESIDE DR BESSEMER AL 35111",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5423 ROSEMARY ROAD MT OLIVE ALQ 35117",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1454 SARDIS RD GARDENDALE AL 35071",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5759 CHESTNUT TRACE BIRMINGHAM AL 35244",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1096 HALEYVILLE AL 35565",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5655 LAKE TRACE DR HOOVER AL 35244-3969",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5136 RICK DR PINSON AL 35126-3610",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "741 CHESTNUT DR PINSON AL 35126-3643",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2137 LAKESIDE DR MC CALLA AL 35111-3742",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2112 LAKESIDE DR MC CALLA AL 35111-3732",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "2017 LAKESIDE DR MC CALLA AL 35111-3741",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "PO BOX 1549 JASPER AL 35502-1549",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1543 MCGAUGHY RD GARDENDALE AL 35071",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5775 CHESTNUT TRCE HOOVER AL 35244",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "1519 MCGAUGHY DR GARDENDALE AL 35071",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  },
+  {
+   "raw": "5651 LAKE TRACE DR BIRMINGHAM AL 35244-3969",
+   "state": "AL",
+   "source": "https://jccgis.jccal.org/server/rest/services/Basemap/Parcels/MapServer/0",
+   "dataset": "Jefferson County AL Parcels (Basemap)",
+   "fetched": "2026-08-15"
+  }
+ ],
+ "dataset": "Jefferson County AL Parcels (Basemap)"
+}
