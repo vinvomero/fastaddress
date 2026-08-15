@@ -254,7 +254,11 @@ NATIONAL_GENERATORS = [
     ("county_letterdigit", gen_county_letterdigit, 1500),
     ("name_final_typeword", gen_name_final_typeword, 1200),
 ]
-RETAINED_SCALE = 2400  # per retained frame; distributions pinned by snapshot
+# Retained frames scale by their ORIGINAL weights (weight x 3000, the
+# errclass-era basis). v33 flattened them to a uniform 2,400 and immediately
+# lost 33 human-adjudicated records -- the weights encode the adjudicated
+# class balance won across v21-v31 and are not free to flatten.
+RETAINED_BASIS = 3000
 
 
 def main():
@@ -266,7 +270,7 @@ def main():
         counts[name] = len(got)
         rows += [dict(r, origin=f"nat-{name}") for r in got]
     for name, fn, _w in RETAINED:
-        got = fn(rng, RETAINED_SCALE)
+        got = fn(rng, int(_w * RETAINED_BASIS))
         counts[f"retained:{name}"] = len(got)
         rows += [dict(r, origin=f"ret-{name}") for r in got]
 
