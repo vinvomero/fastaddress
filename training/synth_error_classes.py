@@ -596,6 +596,76 @@ def gen_letter_avenue_grid(rng, n):
     return out
 
 
+def gen_bare_route(rng, n):
+    """474 Rte 101 Bedford NH  ->  Rte is a pre-type even with no prefix word.
+
+    All 40 New Hampshire holdout failures were this one shape: the route
+    generators always carried a prefix (State Rte, US Hwy, Co Rd), so a bare
+    designator read as a street name."""
+    cities = [("BEDFORD", "NH"), ("CONCORD", "NH"), ("KEENE", "NH"),
+              ("BRATTLEBORO", "VT"), ("AUBURN", "ME"), ("KEARNEY", "NE")]
+    out = []
+    for _ in range(n):
+        city, st = rng.choice(cities)
+        p = [(str(rng.randint(1, 9999)), "AddressNumber"),
+             (rng.choice(["Rte", "RTE", "Route", "ROUTE", "Hwy", "HWY", "SR"]), "StreetNamePreType"),
+             (str(rng.randint(1, 999)), "StreetName"),
+             (city, "PlaceName"), (st, "StateName"),
+             (f"{rng.randint(10000, 99999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_inner_directional_street(rng, n):
+    """5670 Lawton Loop W Dr Lawrence IN  ->  Loop and W are the street name.
+
+    Indianapolis's paired-drive idiom: "<Name> Loop East Drive" / "West Drive".
+    A type-word or directional followed by ANOTHER type at the end belongs to
+    the name; only the final Dr is the type. ~30 Indiana holdout failures."""
+    mids = ["Loop", "Lane", "Boulevard", "Trail", "Bay", "Run"]
+    dirs_ = ["E", "W", "East", "West", "N", "S"]
+    cities = [("Lawrence", "IN"), ("Indianapolis", "IN"), ("Speedway", "IN")]
+    out = []
+    for _ in range(n):
+        city, st = rng.choice(cities)
+        p = [(str(rng.randint(1, 9999)), "AddressNumber"),
+             (rng.choice(STREET_WORDS).split()[0].title(), "StreetName"),
+             (rng.choice(mids), "StreetName"),
+             (rng.choice(dirs_), "StreetName"),
+             (rng.choice(["Dr", "Drive"]), "StreetNamePostType"),
+             (city, "PlaceName"), (st, "StateName"),
+             (f"{rng.randint(46000, 46999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_postdir_before_confusable_city(rng, n):
+    """10 Mariners Cv N New Orleans LA  ->  the N stays a directional.
+
+    The national scan showed a residual leak: a genuine post-directional right
+    before a confusable-start city gets absorbed into the city. The frame
+    type + DIR + confusable-city teaches that the directional survives even
+    when "New Orleans" follows."""
+    vocab_path = Path(__file__).parent / "vocab_cities.json"
+    if not vocab_path.exists():
+        return []
+    conf = [tuple(x) for x in json.loads(vocab_path.read_text(encoding="utf-8"))["confusable_start"]]
+    out = []
+    for _ in range(n):
+        city, st = conf[rng.randrange(len(conf))]
+        p = [(str(rng.randint(1, 9999)), "AddressNumber"),
+             (rng.choice(STREET_WORDS).split()[0].title(), "StreetName"),
+             (rng.choice(["Cv", "Ct", "Dr", "Ln", "St", "Ave"]), "StreetNamePostType"),
+             (rng.choice(["N", "S", "E", "W"]), "StreetNamePostDirectional")]
+        p += [(w, "PlaceName") for w in city.split()]
+        if rng.random() < 0.8:
+            p.append((st, "StateName"))
+        if rng.random() < 0.6:
+            p.append((f"{rng.randint(10000, 99999)}", "ZipCode"))
+        out.append(seq(p))
+    return out
+
+
 GENERATORS = [
     # abbrev_city carried weight 4.0 in v21, which flipped only some of the
     # target shapes while damaging neighbours. Halving it to 2.0 (v22) repaired
@@ -626,6 +696,9 @@ GENERATORS = [
     ("the_building", gen_the_building, 0.6),
     ("county_letter_road", gen_county_letter_road, 0.8),
     ("letter_avenue_grid", gen_letter_avenue_grid, 0.3),
+    ("bare_route", gen_bare_route, 0.5),
+    ("inner_directional_street", gen_inner_directional_street, 0.4),
+    ("postdir_before_confusable_city", gen_postdir_before_confusable_city, 1.0),
 ]
 
 

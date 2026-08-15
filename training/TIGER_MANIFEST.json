@@ -8,7 +8,7 @@
   "PLACE"
  ],
  "counties": 18,
- "total": 107988,
+ "total": 107987,
  "by_county": {
   "17031": 6000,
   "48201": 6000,
@@ -30,6 +30,6 @@
   "29095": 6000
  },
  "excluded_gold_or_clean_overlaps": 1,
- "dropped_tokenizer_mismatch": 11,
+ "dropped_tokenizer_mismatch": 12,
  "dropped_minority_encoding_rows": 121
 }
