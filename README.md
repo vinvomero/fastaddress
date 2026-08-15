@@ -26,11 +26,11 @@ What you get:
   Imports in about a quarter second.
 - **Confidence scores**, the thing [usaddress#337](https://github.com/datamade/usaddress/issues/337)
   has been asking for. Details below.
-- **An optional retrained model (v2)** that fixes documented error classes while the default
-  stays bit-identical to usaddress. It cleared a pre-registered, human-adjudicated accuracy gate
-  (+4.80 points on a 1,500-address gold set, bar was +3.0) and a 16-state national regression
-  check. Getting there took six candidates; the failures are published alongside the pass in
-  [the accuracy record](#the-accuracy-record).
+- **An optional retrained model (v2), currently held back.** It cleared a pre-registered,
+  human-adjudicated accuracy gate (+4.80 points, bar +3.0) and a 16-state regression check, and
+  then failed a 32-state geographic holdout we ran precisely because those 16 states had steered
+  its training. It does not ship until it passes in states that never influenced it. The whole
+  chain, failures included, is in [the accuracy record](#the-accuracy-record).
 
 `parse()`, `tag()` (including `tag_mapping`), and `RepeatedLabelError` behave identically to
 usaddress 0.5.16 on the ASCII-dominant inputs real property data consists of. Known Python/Rust
@@ -80,7 +80,7 @@ can't regenerate from the repo is a bug; file an issue.
 |---|---|---|
 | What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project ([recipe manifest](training/MANIFEST-usaddr_v28.json)) |
 | Output | Bit-identical to usaddress 0.5.16 | Differs on purpose, on documented error classes |
-| Status | Shipping | Shipping, opt-in. Candidate v28, the sixth attempt; see below for what the first five broke. |
+| Status | Shipping | **Held back** after failing a 32-state geographic holdout (near-parity with the original in never-tested states, and worse in six). See below. |
 
 ### How v2 was evaluated
 
@@ -139,11 +139,22 @@ and made Georgia worse, which exposed self-contradicting training data (the corp
 `Rd S Fulton` as both a city and a direction-plus-city, because Fulton alone is also a city).
 v27 falsified that hypothesis: filtering the contradictions changed nothing. The real defect
 was exposure: 1,549 confusable city names sampled so thinly each one appeared about 1.5 times
-per pattern. v28 gives every confusable city guaranteed coverage, and passes everything:
+per pattern. v28 gives every confusable city guaranteed coverage and passed all of it:
 81.9% of its changes right against 12.0% wrong, every state clean, gold and clean gates intact.
+
+Then we ran the check that mattered most: a 32-state geographic holdout, one county in each
+state that had never entered any training set or iteration decision, committed to git before
+its result existed. v28 failed it. After excluding Census bookkeeping artifacts (place names
+like "Nashville-Davidson metropolitan government (balance)" that no human writes), v28 was
+right on 41.1% of its divergences and wrong on 45.2%, with six states worse than 3:1 against
+it. The 16-state scan had steered six rounds of fixes, and passing a benchmark you iterated
+against is not evidence of generalization -- measuring that difference is exactly what the
+holdout was for. The failure classes are specific (two-word cities outside the hand-picked
+confusable list, like Little Rock and Sans Souci; abbreviated county routes like "Co Rd");
+work continues, and v2 stays held back until it passes in states that never influenced it.
 The whole chain is in the git history, each hypothesis committed before its test ran. Composed
-text never enters gate arithmetic; the scan is a tripwire for regional overfitting, not an
-accuracy claim.
+text never enters gate arithmetic; these scans are tripwires for overfitting, not accuracy
+claims.
 
 ### Training data, all of it
 
