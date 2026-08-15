@@ -83,6 +83,56 @@ def save_ckpt(state):
     CKPT.write_text(json.dumps(state), encoding="utf-8")
 
 
+def extract_record_batch(records, counters):
+    """Accumulate type/qualifier/name-lead counters from FEATNAMES records.
+
+    Reads BOTH the abbreviated fields (PRETYPABRV/SUFTYPABRV) and the
+    full-form fields (PRETYP/SUFTYP): TIGER puts "Cll" in the former and
+    "Calle"/"Camino"/"Grove" in the latter, and the first sweep read only the
+    abbreviations -- which is why the exemplar check found Camino/Grove/Wynd
+    missing. Vernacular forms living inside NAME (a "Cmo Amistoso" whose
+    pre-type field is empty) surface through name_lead_words."""
+    for d in records:
+        for f, key in (("PRETYPABRV", "street_type_pre"), ("PRETYP", "street_type_pre"),
+                       ("SUFTYPABRV", "street_type_suf"), ("SUFTYP", "street_type_suf")):
+            v = (d.get(f) or "").strip()
+            if v:
+                counters[key][v] += 1
+        for q in ("PREQUALABR", "SUFQUALABR", "PREQUAL", "SUFQUAL"):
+            v = (d.get(q) or "").strip()
+            if v:
+                counters["qualifiers"][v] += 1
+        name = (d.get("NAME") or "").strip()
+        if name and " " in name:
+            lead = name.split()[0]
+            if re.fullmatch(r"[A-Za-z.-]+", lead):
+                counters["name_lead_words"][lead] += 1
+
+
+def reextract():
+    """Re-run extraction over the already-cached zips (no downloads)."""
+    import collections as _c
+    st = load_ckpt()
+    counters = {k: _c.Counter() for k in
+                ("street_type_pre", "street_type_suf", "qualifiers", "name_lead_words")}
+    zips = sorted((CACHE / "featnames").glob("tl_2024_*_featnames.zip"))
+    print(f"re-extracting from {len(zips)} cached county files", flush=True)
+    done = []
+    for i, z in enumerate(zips, 1):
+        try:
+            extract_record_batch(read_dbf(z), counters)
+            done.append(z.stem.split("_")[2])
+        except Exception as e:
+            print(f"  MISS {z.name}: {type(e).__name__}", flush=True)
+        if i % 400 == 0:
+            print(f"  {i}/{len(zips)}", flush=True)
+    st["done"] = done
+    for k in counters:
+        st[k] = dict(counters[k])
+    save_ckpt(st)
+    print("re-extraction complete", flush=True)
+
+
 def sweep():
     fips = enumerate_counties()
     st = load_ckpt()
@@ -95,22 +145,7 @@ def sweep():
         dest = CACHE / "featnames" / f"tl_2024_{cf}_featnames.zip"
         try:
             fetch(f"{BASE}/FEATNAMES/tl_2024_{cf}_featnames.zip", dest)
-            for d in read_dbf(dest):
-                pre = (d.get("PRETYPABRV") or "").strip()
-                suf = (d.get("SUFTYPABRV") or "").strip()
-                if pre:
-                    counters["street_type_pre"][pre] += 1
-                if suf:
-                    counters["street_type_suf"][suf] += 1
-                for q in ("PREQUALABR", "SUFQUALABR"):
-                    v = (d.get(q) or "").strip()
-                    if v:
-                        counters["qualifiers"][v] += 1
-                name = (d.get("NAME") or "").strip()
-                if name and " " in name:
-                    lead = name.split()[0]
-                    if re.fullmatch(r"[A-Za-z.-]+", lead):
-                        counters["name_lead_words"][lead] += 1
+            extract_record_batch(read_dbf(dest), counters)
             done.add(cf)
         except Exception as e:
             st["missing"].append(cf)
@@ -145,9 +180,14 @@ def finalize():
                 seen.add(name.lower())
                 cities.append([name, sf_])
 
+    # The full-form PRETYP/SUFTYP fields carry numeric codes, not text --
+    # filter type tables to alphabetic keys so codes never enter generators.
+    import re as _re
+    def _alpha(d):
+        return {k: v for k, v in d.items() if _re.search(r"[A-Za-z]", k)}
     inv = {
-        "street_type_pre": st["street_type_pre"],
-        "street_type_suf": st["street_type_suf"],
+        "street_type_pre": _alpha(st["street_type_pre"]),
+        "street_type_suf": _alpha(st["street_type_suf"]),
         "qualifiers": st["qualifiers"],
         "name_lead_words": {k: v for k, v in st["name_lead_words"].items() if v >= 5},
         "cities_multiword": cities,
@@ -174,9 +214,12 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--sweep", action="store_true")
     ap.add_argument("--finalize", action="store_true")
+    ap.add_argument("--reextract", action="store_true")
     a = ap.parse_args()
     if a.sweep:
         sweep()
+    if a.reextract:
+        reextract()
     if a.finalize:
         finalize()
     if not (a.sweep or a.finalize):

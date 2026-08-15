@@ -1,0 +1,19 @@
+{
+ "counties_swept": 3204,
+ "counties_total": 3235,
+ "coverage": 0.9904,
+ "national": true,
+ "missing": [
+  "08014",
+  "21169",
+  "21183",
+  "26009",
+  "27121",
+  "35059",
+  "37075"
+ ],
+ "source": "US Census Bureau TIGER/Line 2024 (public domain)",
+ "cities_multiword": 7975,
+ "distinct_pre_types": 257,
+ "distinct_suf_types": 322
+}
