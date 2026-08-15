@@ -2613,5 +2613,162 @@
   "street": "LEANDA",
   "suffix_direction": "",
   "pre_direction": ""
+ },
+ "644 S COOK ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "644 S COOK ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COOK",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "1 CHIPPING CAMPDEN DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "1 CHIPPING CAMPDEN DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "CHIPPING CAMPDEN",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "35 STONE RIDGE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "35 STONE RIDGE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "STONE RIDGE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "54 W PENNY RD S BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "54 W PENNY RD, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "PENNY",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "328 W LINCOLN AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "328 W LINCOLN AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "LINCOLN",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "841 S COUNTRY DRIVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "841 S COUNTRY DR, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "COUNTRY",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "417 S HOUGH ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "417 S HOUGH ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HOUGH",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "42 SHENANDOAH CIR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "42 SHENANDOAH CIR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "SHENANDOAH",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "320 W RUSSELL ST BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "W",
+  "matched": "320 W RUSSELL ST, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "RUSSELL",
+  "suffix_direction": "",
+  "pre_direction": "W"
+ },
+ "123 S HAGER AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "123 S HAGER AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HAGER",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "20 WESTLAKE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "20 WESTLAKE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "WESTLAKE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "828 E HILLSIDE AVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "E",
+  "matched": "828 E HILLSIDE AVE, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "HILLSIDE",
+  "suffix_direction": "",
+  "pre_direction": "E"
+ },
+ "2 CHIPPING CAMDEN DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "2 CHIPPING CAMPDEN DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "CHIPPING CAMPDEN",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "744 S ORCHARD DRIVE BARRINGTON IL 60010": {
+  "reading": "unclear",
+  "letter": "S",
+  "matched": "744 S ORCHARD DR, BARRINGTON, IL, 60010",
+  "city": "BARRINGTON",
+  "street": "ORCHARD",
+  "suffix_direction": "",
+  "pre_direction": "S"
+ },
+ "600 W RUSSELL ST#109 BARRINGTON IL 60010": {
+  "reading": "no_match",
+  "letter": "W"
+ },
+ "17 EASTINGS WAY S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "17 EASTINGS WAY, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "EASTINGS",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "14 WESTLAKE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "14 WESTLAKE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "WESTLAKE",
+  "suffix_direction": "",
+  "pre_direction": ""
+ },
+ "2 STONE RIDGE DR S BARRINGTON IL 60010": {
+  "reading": "place",
+  "letter": "S",
+  "matched": "2 STONE RIDGE DR, S BARRINGTON, IL, 60010",
+  "city": "S BARRINGTON",
+  "street": "STONE RIDGE",
+  "suffix_direction": "",
+  "pre_direction": ""
  }
 }

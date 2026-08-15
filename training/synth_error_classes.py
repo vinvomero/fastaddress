@@ -236,15 +236,128 @@ def gen_truncated_type(rng, n):
     return out
 
 
+# ------------------------------------------- counterweights (added after v21)
+# v21 cleared the target classes but broke four clean-set records. Each
+# generator below repairs one of those breaks. They exist because the first
+# pass taught a pattern without teaching its neighbours, which is the same
+# mistake that made an earlier synthetic round degrade the model.
+
+SPELLED_STATES = [
+    ("New Jersey", "NJ"), ("New York", "NY"), ("New Mexico", "NM"),
+    ("New Hampshire", "NH"), ("North Carolina", "NC"), ("South Carolina", "SC"),
+    ("North Dakota", "ND"), ("South Dakota", "SD"), ("West Virginia", "WV"),
+    ("Rhode Island", "RI"), ("Puerto Rico", "PR"),
+]
+
+
+def gen_spelled_state(rng, n):
+    """... Pitman, New Jersey 08071  ->  New Jersey is a two-word StateName.
+
+    v21 broke "43 South Broadway Pitman, New Jersey 08071", reading New Jersey
+    as a city. The corpus was dense with two-word PLACE names and had almost no
+    spelled-out two-word STATE names, so the model learned the wrong prior for
+    "New <Word>". Same root cause as the v20 clean-set regression."""
+    cities = ["Pitman", "Trenton", "Camden", "Dover", "Concord", "Raleigh",
+              "Durham", "Fargo", "Providence", "Charleston", "Santa Fe"]
+    out = []
+    for _ in range(n):
+        state, _ = rng.choice(SPELLED_STATES)
+        p = [(str(rng.randint(1, 999)), "AddressNumber")]
+        if rng.random() < 0.5:
+            p.append((rng.choice(["North", "South", "East", "West"]), "StreetNamePreDirectional"))
+        p += [(rng.choice(["Broadway", "Main", "Market", "Union", "Chestnut"]), "StreetName")]
+        if rng.random() < 0.6:
+            p.append((rng.choice(["Street", "Avenue", "Road", "St", "Ave"]), "StreetNamePostType"))
+        city = rng.choice(cities)
+        p += [(w, "PlaceName") for w in city.split()]
+        p += [(w, "StateName") for w in state.split()]
+        p += [(f"{rng.randint(1000,99999):05d}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_postdir_then_building(rng, n):
+    """2908 Bryant Ave S Uptown Square, Minneapolis  ->  S stays a direction.
+
+    v21 relabelled that S as a BuildingName: the abbreviated-city generator had
+    taught it that a trailing letter before a capitalised word belongs to a
+    place. A building name can follow a genuine post-directional, so both
+    shapes must be present."""
+    buildings = ["Uptown Square", "Riverside Tower", "Lakeview Commons",
+                 "Grand Plaza", "Harbor Point", "The Metropolitan"]
+    out = []
+    for _ in range(n):
+        city, st, zc = rng.choice(PLAIN_CITIES)
+        p = [(str(rng.randint(1, 4999)), "AddressNumber"),
+             (rng.choice(STREET_WORDS).split()[0], "StreetName"),
+             (rng.choice(["Ave", "St", "Blvd", "Rd"]), "StreetNamePostType"),
+             (rng.choice(DIRS), "StreetNamePostDirectional")]
+        p += [(w, "BuildingName") for w in rng.choice(buildings).split()]
+        p += [(w, "PlaceName") for w in city.split()]
+        p += [(st, "StateName"), (zc, "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_street_then_building(rng, n):
+    """3705 N Overlook Blvd Overlook Park Flats, Portland  ->  street survives.
+
+    v21 swallowed "Overlook Blvd" into the BuildingName. The street phrase and
+    the building name can share a word, so the boundary has to be learned
+    rather than guessed from the vocabulary."""
+    stems = ["Overlook", "Riverside", "Lakeview", "Hillcrest", "Fairview"]
+    out = []
+    for _ in range(n):
+        stem = rng.choice(stems)
+        p = [(str(rng.randint(1, 4999)), "AddressNumber"),
+             (rng.choice(["N", "S", "E", "W"]), "StreetNamePreDirectional"),
+             (stem, "StreetName"),
+             (rng.choice(["Blvd", "Ave", "St", "Dr"]), "StreetNamePostType")]
+        p += [(stem, "BuildingName"),
+              (rng.choice(["Park", "Court", "Garden"]), "BuildingName"),
+              (rng.choice(["Flats", "Apartments", "Lofts"]), "BuildingName")]
+        p += [(rng.choice(["Portland", "Seattle", "Denver"]), "PlaceName"),
+              (rng.choice(["OR", "WA", "CO"]), "StateName"),
+              (f"{rng.randint(10000,99999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_the_named_street(rng, n):
+    """1 The Square, Lillington, NC  ->  Square is part of the NAME.
+
+    A type-word preceded by "The" is the street's proper name, not its suffix.
+    v21 reverted this to StreetNamePostType and lost a record the reviewer had
+    already ruled on in round 3."""
+    words = ["Square", "Circle", "Green", "Commons", "Mall", "Crescent", "Grove", "Row"]
+    cities = [("Lillington", "NC"), ("Bethesda", "MD"), ("Concord", "MA"), ("Salem", "OR")]
+    out = []
+    for _ in range(n):
+        city, st = rng.choice(cities)
+        p = [(str(rng.randint(1, 99)), "AddressNumber"),
+             ("The", "StreetName"),
+             (rng.choice(words), "StreetName"),
+             (city, "PlaceName"), (st, "StateName"),
+             (f"{rng.randint(10000,99999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
 GENERATORS = [
-    ("abbrev_city", gen_abbrev_city, 4.0),
+    # abbrev_city carried weight 4.0 in v21 and its collateral damage is what
+    # the counterweights below repair; halved so it teaches without dominating.
+    ("abbrev_city", gen_abbrev_city, 2.0),
     ("true_post_directional", gen_true_post_directional, 1.5),
     ("unit_abbrev", gen_unit_abbrev, 1.0),
-    ("bare_street_no_number", gen_bare_street_no_number, 1.0),
+    ("bare_street_no_number", gen_bare_street_no_number, 0.7),
     ("grid_predirectional", gen_grid_predirectional, 1.5),
     ("directional_multiword_street", gen_directional_multiword_street, 1.0),
     ("milepost_route", gen_milepost_route, 0.6),
-    ("truncated_type", gen_truncated_type, 1.0),
+    ("truncated_type", gen_truncated_type, 0.8),
+    ("spelled_state", gen_spelled_state, 1.5),
+    ("postdir_then_building", gen_postdir_then_building, 1.0),
+    ("street_then_building", gen_street_then_building, 0.8),
+    ("the_named_street", gen_the_named_street, 0.8),
 ]
 
 
