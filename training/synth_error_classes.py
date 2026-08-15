@@ -17,6 +17,8 @@ from pathlib import Path
 
 import usaddress
 
+from build_corpus import add_noise
+
 OUT = Path(__file__).parent / "corpus" / "errclass.jsonl"
 SEED = 20260815
 
@@ -483,6 +485,55 @@ def gen_wisconsin_grid_number(rng, n):
     return out
 
 
+def gen_person_named_street(rng, n):
+    """250 JOHN W MORROW JR PKWY  ->  the middle initial stays StreetName.
+
+    v25 read the W as a post-directional after the plain-city post-directional
+    counterweight landed. Person-named streets carry initials and suffixes in
+    the middle of the name; the whole phrase before the type is StreetName."""
+    firsts = ["JOHN", "JAMES", "ROBERT", "MARY", "MARTIN", "GEORGE", "CESAR"]
+    lasts = ["MORROW", "KING", "CHAVEZ", "PARKS", "LEE", "BYRD", "LUCAS"]
+    sufs = ["JR", "SR", "III"]
+    out = []
+    for _ in range(n):
+        p = [(str(rng.randint(1, 4999)), "AddressNumber"), (rng.choice(firsts), "StreetName")]
+        if rng.random() < 0.6:
+            p.append((rng.choice("WEABCDHLM"), "StreetName"))  # middle initial
+        p.append((rng.choice(lasts), "StreetName"))
+        if rng.random() < 0.5:
+            p.append((rng.choice(sufs), "StreetName"))
+        p.append((rng.choice(["PKWY", "BLVD", "DR", "AVE", "WAY"]), "StreetNamePostType"))
+        if rng.random() < 0.6:
+            city, st, zc = rng.choice(PLAIN_CITIES)
+            p += [(w, "PlaceName") for w in city.split()]
+            p += [(st, "StateName"), (zc, "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_the_building(rng, n):
+    """102 Sottile St The Merchant, Unit 305  ->  The Merchant is a building.
+
+    The counterweight for gen_the_named_street: "The <word>" after a COMPLETE
+    street phrase is a building name, not more street. v25 ate one."""
+    names = ["Merchant", "Residences", "Metropolitan", "Standard", "Foundry",
+             "Armory", "Exchange", "Landmark", "Waverly"]
+    out = []
+    for _ in range(n):
+        p = [(str(rng.randint(1, 4999)), "AddressNumber"),
+             (rng.choice(STREET_WORDS).split()[0].title(), "StreetName"),
+             (rng.choice(["St", "Ave", "Blvd", "Dr"]), "StreetNamePostType"),
+             ("The", "BuildingName"), (rng.choice(names), "BuildingName")]
+        if rng.random() < 0.6:
+            p += [(rng.choice(["Unit", "Apt", "Ste"]), "OccupancyType"),
+                  (str(rng.randint(1, 999)), "OccupancyIdentifier")]
+        city, st, zc = rng.choice(PLAIN_CITIES)
+        p += [(w, "PlaceName") for w in city.split()]
+        p += [(st, "StateName"), (zc, "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
 GENERATORS = [
     # abbrev_city carried weight 4.0 in v21, which flipped only some of the
     # target shapes while damaging neighbours. Halving it to 2.0 (v22) repaired
@@ -509,6 +560,8 @@ GENERATORS = [
     ("national_post_directional", gen_national_post_directional, 3.0),
     ("spelled_state_one_word", gen_spelled_state_one_word, 1.0),
     ("wisconsin_grid_number", gen_wisconsin_grid_number, 0.4),
+    ("person_named_street", gen_person_named_street, 0.8),
+    ("the_building", gen_the_building, 0.6),
 ]
 
 
@@ -537,6 +590,16 @@ def main():
         got = fn(rng, int(args.per_pattern * weight))
         counts[name] = len(got)
         rows += got
+
+    noised = []
+    for r in rows:
+        if rng.random() < 0.5:
+            toks, labs = add_noise(rng, r["tokens"], r["labels"])
+            if usaddress.tokenize(" ".join(toks)) == toks:
+                noised.append({"tokens": toks, "labels": labs, "origin": r["origin"]})
+                continue
+        noised.append(r)
+    rows = noised
 
     bad = validate(rows)
     if bad:
