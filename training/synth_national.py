@@ -73,8 +73,12 @@ SUF_FORMS = sorted([k for k, v in INV["street_type_suf"].items()
 
 # Name-internal spelled forms: verified present as name-lead words in the
 # national inventory (Calle 1402 counties, Camino 2008, Paseo 1612, Cmo 17...).
+# "Rancho" removed: it was an invention, not taxonomy -- in the U1 data
+# Rancho leads CITY names (Rancho San Diego, Rancho Santa Fe), and teaching it
+# as a street lead broke the clean record "PO Box 9580 Rancho Santa Fe" in
+# every grid cell. Rancho-led cities get boosted coverage instead.
 NAME_LEAD_SPANISH = [w for w in ("Calle", "Camino", "Paseo", "Avenida", "Vista",
-                                 "Corte", "Cmo", "Via", "Rancho", "Vía")
+                                 "Corte", "Cmo", "Via", "Vía")
                      if INV["name_lead_words"].get(w)]
 SPANISH_SECOND = ["Hacienda", "Amistoso", "Sur", "Norte", "Grande", "Bonita", "Del Sol",
                   "Verde", "Linda", "Sereno", "Alegre", "Tortola", "Luna", "Feliz"]
@@ -98,7 +102,7 @@ def gen_cities_coverage(rng, n):
     conf2 = [e for e in CITIES if e[0].split()[0].lower() in
              DIRWORDS | {"new", "lake", "saint", "st", "mount", "mt", "port",
                          "grand", "park", "fort", "ft", "box", "little", "cross",
-                         "black", "fair", "sun", "bella", "sans"}]
+                         "black", "fair", "sun", "bella", "sans", "rancho"}]
     schedule = CITIES * FLOOR_CITY + conf2 * 2
     rng.shuffle(schedule)
     out = []

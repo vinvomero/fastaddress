@@ -1,8 +1,8 @@
 {
  "seed": 20260816,
- "total": 103640,
+ "total": 103680,
  "by_generator": {
-  "cities_coverage": 27191,
+  "cities_coverage": 27225,
   "postdir_plain_city": 9000,
   "postdir_before_confusable": 3000,
   "pretype_forms": 6000,
@@ -33,7 +33,7 @@
   "retained:pike_and_xing": 2400
  },
  "dropped_tokenizer_mismatch": 0,
- "dropped_eval_overlap": 51,
+ "dropped_eval_overlap": 45,
  "floors": {
   "city": 3,
   "form": 60
