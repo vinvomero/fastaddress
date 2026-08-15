@@ -1,6 +1,6 @@
 {
  "seed": 20260816,
- "total": 117491,
+ "total": 118977,
  "by_generator": {
   "cities_coverage": 27225,
   "postdir_plain_city": 9000,
@@ -10,6 +10,7 @@
   "ut_numeric_street": 2400,
   "county_letterdigit": 1500,
   "name_final_typeword": 1200,
+  "pobox_spanish_city": 1500,
   "retained:abbrev_city": 15000,
   "retained:true_post_directional": 4500,
   "retained:unit_abbrev": 3000,
@@ -33,7 +34,7 @@
   "retained:pike_and_xing": 1200
  },
  "dropped_tokenizer_mismatch": 0,
- "dropped_eval_overlap": 34,
+ "dropped_eval_overlap": 48,
  "floors": {
   "city": 3,
   "form": 60

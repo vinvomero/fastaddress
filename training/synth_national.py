@@ -244,6 +244,26 @@ def gen_name_final_typeword(rng, n):
     return out
 
 
+def gen_pobox_spanish_city(rng, n):
+    """PO Box 9580 Rancho Santa Fe CA -> the city survives the Spanish prior.
+
+    The corpus teaches Rancho=PlaceName 103:1, yet v34 still read it as a
+    street name: the Spanish name-frames create generalization pressure
+    ("Spanish lead word starts a street name") and no frame showed a
+    Spanish-led CITY after a PO Box, the one context the clean set tests.
+    Convention per the clean gold record: PO/Box=USPSBoxType, id=USPSBoxID."""
+    spanish_led = [e for e in CITIES if e[0].split()[0].lower() in
+                   ("rancho", "santa", "san", "el", "las", "los", "la", "sierra")]
+    pool = spanish_led * 3 + CITIES
+    out = []
+    for _ in range(n):
+        city, st = pool[rng.randrange(len(pool))]
+        p = [("PO", "USPSBoxType"), ("Box", "USPSBoxType"),
+             (str(rng.randint(1, 99999)), "USPSBoxID")]
+        out.append(seq(tail(rng, p, city, st)))
+    return out
+
+
 NATIONAL_GENERATORS = [
     ("cities_coverage", gen_cities_coverage, None),          # size set by floor
     ("postdir_plain_city", gen_postdir_plain_city, 9000),
@@ -253,6 +273,7 @@ NATIONAL_GENERATORS = [
     ("ut_numeric_street", gen_ut_numeric_street, 2400),
     ("county_letterdigit", gen_county_letterdigit, 1500),
     ("name_final_typeword", gen_name_final_typeword, 1200),
+    ("pobox_spanish_city", gen_pobox_spanish_city, 1500),
 ]
 # Retained frames scale by their ORIGINAL weights (weight x 3000, the
 # errclass-era basis). v33 flattened them to a uniform 2,400 and immediately
