@@ -566,6 +566,8 @@ def gen_county_letter_road(rng, n):
     for _ in range(n):
         city, st = rng.choice(pairs)
         name = rng.choice(letters) if rng.random() < 0.4 else str(rng.randint(10, 9999))
+        if name.isdigit() and rng.random() < 0.25:
+            name += rng.choice(["W", "S", "E", "N", "A"])
         p = [(str(rng.randint(1, 9999)), "AddressNumber"),
              (rng.choice(first), "StreetNamePreType"),
              (rng.choice(second), "StreetNamePreType"),
@@ -607,9 +609,12 @@ def gen_bare_route(rng, n):
     out = []
     for _ in range(n):
         city, st = rng.choice(cities)
+        num = str(rng.randint(1, 999))
+        if rng.random() < 0.35:
+            num += rng.choice(["W", "S", "E", "N", "A", "a", "B"])
         p = [(str(rng.randint(1, 9999)), "AddressNumber"),
              (rng.choice(["Rte", "RTE", "Route", "ROUTE", "Hwy", "HWY", "SR"]), "StreetNamePreType"),
-             (str(rng.randint(1, 999)), "StreetName"),
+             (num, "StreetName"),
              (city, "PlaceName"), (st, "StateName"),
              (f"{rng.randint(10000, 99999)}", "ZipCode")]
         out.append(seq(p))
@@ -650,6 +655,12 @@ def gen_postdir_before_confusable_city(rng, n):
     if not vocab_path.exists():
         return []
     conf = [tuple(x) for x in json.loads(vocab_path.read_text(encoding="utf-8"))["confusable_start"]]
+    # Direction-first cities are excluded: teaching "St N South Portland" with
+    # the N as a directional pulled the South back into a directional too (all
+    # 61 Maine holdout failures in v30). The leak this generator repairs was
+    # "N New Orleans", and New/Lake/Saint/Mount cities carry no such conflict.
+    DIRWORDS = {"north", "south", "east", "west"}
+    conf = [(c, st) for c, st in conf if c.split()[0].lower() not in DIRWORDS]
     out = []
     for _ in range(n):
         city, st = conf[rng.randrange(len(conf))]
@@ -662,6 +673,29 @@ def gen_postdir_before_confusable_city(rng, n):
             p.append((st, "StateName"))
         if rng.random() < 0.6:
             p.append((f"{rng.randint(10000, 99999)}", "ZipCode"))
+        out.append(seq(p))
+    return out
+
+
+def gen_pike_and_xing(rng, n):
+    """595 Two Mile Pike Goodlettsville TN  ->  Pike is the street type.
+
+    Nashville's pikes and the Xing/Scn abbreviations were absorbed into city
+    names in the Tennessee holdout county. Types per the upstream vocabulary;
+    multi-word names kept so "Two Mile" stays street material."""
+    names = ["Two Mile", "Granny White", "Old Hickory", "Lebanon", "Charlotte",
+             "Nolensville", "Gallatin", "Swans", "Elm Hill"]
+    cities = [("Goodlettsville", "TN"), ("Nashville", "TN"), ("Franklin", "TN"),
+              ("Hendersonville", "TN"), ("Brentwood", "TN")]
+    out = []
+    for _ in range(n):
+        city, st = rng.choice(cities)
+        name = rng.choice(names)
+        p = [(str(rng.randint(1, 9999)), "AddressNumber")]
+        p += [(w, "StreetName") for w in name.split()]
+        p += [(rng.choice(["Pike", "Xing", "Scn", "Pkwy"]), "StreetNamePostType"),
+              (city, "PlaceName"), (st, "StateName"),
+              (f"{rng.randint(37000, 38599)}", "ZipCode")]
         out.append(seq(p))
     return out
 
@@ -698,7 +732,8 @@ GENERATORS = [
     ("letter_avenue_grid", gen_letter_avenue_grid, 0.3),
     ("bare_route", gen_bare_route, 0.5),
     ("inner_directional_street", gen_inner_directional_street, 0.4),
-    ("postdir_before_confusable_city", gen_postdir_before_confusable_city, 1.0),
+    ("postdir_before_confusable_city", gen_postdir_before_confusable_city, 0.7),
+    ("pike_and_xing", gen_pike_and_xing, 0.4),
 ]
 
 
