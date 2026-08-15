@@ -1,6 +1,16 @@
 # Model v2 — Findings Report
 
-> **Final status, 2026-08-15: candidate v23 CLEARS both pre-registered gates.**
+> **Final status, 2026-08-15 (superseding the v23 note below): candidate v28 ships as v2.**
+> v23 cleared the two gold gates and then failed the 16-state national scan (54.9% of its
+> changes wrong outside the gold set's home states). Five iterations against pre-committed ship
+> rules followed: v24 (fixed Louisiana, broke Kansas), v25 (fixed Kansas), v26 (fixed the clean
+> set, worsened Georgia), v27 (falsified the contradiction hypothesis), v28 (guaranteed per-city
+> coverage; everything passes). Final numbers: gold margin **+4.80pp** CI [+3.74, +5.94] with a
+> +4.67 floor; clean **159/159**; national **81.9% right vs 12.0%** with all 16 states inside
+> 3:1; one adjudicated loss (`Anchor Point, AK`). Each hypothesis was committed before its test
+> ran; the chain is in the git history.
+
+> **v23 status note (historical):** candidate v23 cleared both pre-registered gates.
 >
 > | Gate | Requirement | v23 | |
 > |---|---|---|---|

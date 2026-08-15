@@ -26,9 +26,10 @@ What you get:
   Imports in about a quarter second.
 - **Confidence scores**, the thing [usaddress#337](https://github.com/datamade/usaddress/issues/337)
   has been asking for. Details below.
-- **A retrained model in the works.** It beat the original on a pre-registered evaluation, then
-  failed our own national regression check, so we're holding it back until a successor passes
-  both. The full story, including the failures, is in
+- **An optional retrained model (v2)** that fixes documented error classes while the default
+  stays bit-identical to usaddress. It cleared a pre-registered, human-adjudicated accuracy gate
+  (+4.80 points on a 1,500-address gold set, bar was +3.0) and a 16-state national regression
+  check. Getting there took six candidates; the failures are published alongside the pass in
   [the accuracy record](#the-accuracy-record).
 
 `parse()`, `tag()` (including `tag_mapping`), and `RepeatedLabelError` behave identically to
@@ -77,9 +78,9 @@ can't regenerate from the repo is a bug; file an issue.
 
 | | Default (compat) | v2 (opt-in) |
 |---|---|---|
-| What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project ([recipe manifest](training/MANIFEST-usaddr_v23.json)) |
+| What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project ([recipe manifest](training/MANIFEST-usaddr_v28.json)) |
 | Output | Bit-identical to usaddress 0.5.16 | Differs on purpose, on documented error classes |
-| Status | Shipping | **Held back.** See "National behavior" below. It does not ship until every check passes. |
+| Status | Shipping | Shipping, opt-in. Candidate v28, the sixth attempt; see below for what the first five broke. |
 
 ### How v2 was evaluated
 
@@ -89,16 +90,18 @@ review them, what gets disclosed. The gates don't move once results exist. Two e
 candidates missed them, and those misses are published in the
 [findings report](benchmark/results/model-v2-findings.md) with the same prominence as the pass.
 
-| Gate | Bar | Candidate v23 |
+| Gate | Bar | v2 (candidate v28) |
 |---|---|---|
-| Gold-set margin | at least +3.0pp, 95% CI excluding zero | +4.73pp, CI [+3.67, +5.87]. Pass. |
+| Gold-set margin | at least +3.0pp, 95% CI excluding zero | +4.80pp, CI [+3.74, +5.94]. Pass, and the floor is +4.67 even if every unadjudicated record went against it. |
 | Clean set (upstream's own held-out files) | within 1.0pp of the original | 159/159, exactly equal. Pass. |
+| National scan, net improvement | more right than wrong on its changes | 81.9% right vs 12.0%. Pass. |
+| National scan, per-state | no state worse than 3:1 against it | All 16 states. Pass. |
 
-Every one of the 82 gold records where v23 changes the original's answer was judged by a human:
-five review rounds, models blinded as A/B, Census records attached as evidence, verdicts and
-blind keys committed in [eval/gold/](eval/gold/). v23 wins 73 and loses 2. The losses are
-`1305 Lake Shore Dr N` and `Anchor Point, AK`, and they stay lost until some future candidate
-fixes them.
+The deciding gold records were judged by a human: five review rounds, models blinded as A/B,
+Census records attached as evidence, verdicts and blind keys committed in
+[eval/gold/](eval/gold/). v28 wins 73 and loses 1: `Anchor Point, AK`, which stays lost until
+some future candidate fixes it. (An earlier candidate also lost `1305 Lake Shore Dr N`; v28
+fixed it.)
 
 One disclosure has to travel with any of these numbers: v2's training data targets error classes
 we found by studying gold-set failures. That biases the gold margin upward. The honest claim is
@@ -124,16 +127,23 @@ Because the gold set leans regional, every candidate also runs a
 TIGER data, scoring every record where the candidate changes the original's answer against the
 Census's own component labels.
 
-v23 failed it. Badly. 54.9% of its changes were wrong nationally. It had learned its
-counterweights from an invented city list, and the side effects showed up in states the gold set
-barely touches: it read `New Orleans` as a state, `South Fulton` as a directional, `Box Elder`
-as a PO box. So the model that passed both pre-registered gates is not shipping.
+The first candidate to pass the gold gates (v23) failed this scan badly: 54.9% of its changes
+were wrong nationally. It had learned its counterweights from an invented city list, and the
+side effects showed up in states the gold set barely touches: it read `New Orleans` as a state,
+`South Fulton` as a directional, `Box Elder` as a PO box. It did not ship.
 
-Its successor trains on the real national inventory of confusable place names, extracted from
-the Census PLACE files ([builder](training/build_city_vocab.py)), and has to pass two ship rules
-that were committed to git before any of its results existed: net national improvement on the
-scan, and no state left worse than 3:1 against it. Composed text never enters gate arithmetic;
-the scan is a tripwire for regional overfitting, not an accuracy claim.
+Five iterations followed, each against two ship rules committed to git before any results
+existed: net national improvement on the scan, and no state left worse than 3:1 against it.
+v24 fixed Louisiana and broke grid cities in Kansas. v25 fixed Kansas. v26 fixed the clean set
+and made Georgia worse, which exposed self-contradicting training data (the corpus taught
+`Rd S Fulton` as both a city and a direction-plus-city, because Fulton alone is also a city).
+v27 falsified that hypothesis: filtering the contradictions changed nothing. The real defect
+was exposure: 1,549 confusable city names sampled so thinly each one appeared about 1.5 times
+per pattern. v28 gives every confusable city guaranteed coverage, and passes everything:
+81.9% of its changes right against 12.0% wrong, every state clean, gold and clean gates intact.
+The whole chain is in the git history, each hypothesis committed before its test ran. Composed
+text never enters gate arithmetic; the scan is a tripwire for regional overfitting, not an
+accuracy claim.
 
 ### Training data, all of it
 

@@ -13,19 +13,22 @@ released PyPI package (`usaddress/usaddr.crfsuite`).
 
 ## usaddr_v2.crfsuite (the v2 model, opt-in)
 
-`usaddr_v2.crfsuite` (285,396 bytes, sha256 prefix `aa0309cc8a44099f`) is candidate **v23**,
+`usaddr_v2.crfsuite` (320,360 bytes, sha256 prefix `89d99e84607fa34e`) is candidate **v28**,
 trained by this project on 2026-08-15. Exact recipe in
-`training/MANIFEST-usaddr_v23.json`; corpus builders and the full evaluation protocol are in
-`training/` and `eval/PROTOCOL.md`.
+`training/MANIFEST-usaddr_v28.json`; corpus builders and the full evaluation protocol are in
+`training/` and `eval/PROTOCOL.md`. Five earlier candidates (v23-v27) cleared subsets of the
+checks and failed others; their artifacts, manifests, and failure analyses are retained in the
+repo and findings report.
 
 - Training sources: upstream usaddress MIT training XMLs, distant supervision from county open
   data, shape-preserving augmentation, v1 distillation, and adjudication-derived error-class
   data (`training/synth_error_classes.py` — every generator cites the human ruling or Census
   evidence behind it).
-- Gates cleared (pre-registered, human-adjudicated): gold margin +4.73pp against a +3.0pp bar,
-  95% CI [+3.67, +5.87]; clean set 159/159, exactly equal to the original.
-- Known losses, adjudicated: `1305 Lake Shore Dr N` (genuine post-directional read as a city
-  prefix) and `Anchor Point, AK`.
+- Gates cleared (pre-registered, human-adjudicated): gold margin +4.80pp against a +3.0pp bar,
+  95% CI [+3.74, +5.94], floor +4.67 with all unadjudicated records counted against; clean set
+  159/159, exactly equal to the original; 16-state national scan 81.9% right vs 12.0% wrong on
+  divergent records, no state worse than 3:1.
+- Known loss, adjudicated: `Anchor Point, AK`.
 - Disclosure: training targeted error classes surfaced by the gold set itself; see PROTOCOL.md.
   Public phrasing is "measurably better on identified, evidence-backed error classes".
 - The pinned original model above is untouched; compat mode still uses it exclusively, and the

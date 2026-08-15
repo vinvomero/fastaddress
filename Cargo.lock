@@ -86,6 +86,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "fastaddress-core"
+version = "0.1.0"
+dependencies = [
+ "crfs",
+ "csv",
+ "mimalloc",
+ "regex",
+ "rustc-hash",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "fastaddress-py"
+version = "0.1.0"
+dependencies = [
+ "fastaddress-core",
+ "pyo3",
+]
+
+[[package]]
 name = "find-msvc-tools"
 version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -343,27 +364,6 @@ name = "unicode-ident"
 version = "1.0.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
-
-[[package]]
-name = "usaddr-core"
-version = "0.1.0"
-dependencies = [
- "crfs",
- "csv",
- "mimalloc",
- "regex",
- "rustc-hash",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "usaddr-py"
-version = "0.1.0"
-dependencies = [
- "pyo3",
- "usaddr-core",
-]
 
 [[package]]
 name = "zmij"
