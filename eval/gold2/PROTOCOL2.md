@@ -72,3 +72,11 @@ sampling entirely.
   after it, gold-2b from unused sources is required. The composed-tier dominance
   (70.5%/17.3% on the binding split) did not transfer to free text — recorded as the
   central finding for the next generation.
+- 2026-08-16: **Spend rule for scoring attempt 2 of 2, frozen before any v37-generation candidate
+  exists or is scored.** Attempt 2 fires only for a candidate that (a) beats v1 on the held-out
+  real-text dev set (`eval/realtext_dev.jsonl`, stratified, never trained on) with net positive
+  divergent-record margin and a 95% bootstrap CI excluding zero, AND (b) is simultaneously green
+  on every existing surface: clean 159/159, all human-adjudicated gold-1 verdicts, both national
+  scans, all spent splits. No candidate meeting less than this bar may be scored against gold-2.
+  After attempt 2, pass or fail, gold-2 is spent and gold-2b (sources disjoint per
+  GOLD2B_SOURCES.md) is the only remaining claim path.
