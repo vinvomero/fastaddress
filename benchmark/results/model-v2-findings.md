@@ -1,5 +1,16 @@
 # Model v2 — Findings Report
 
+> **Claim-tier result, 2026-08-16: candidate v36 FAILED gold-2 — the retrained model still
+> does not ship.** v36 passed everything composed: clean 159/159, gold-1 fully human-adjudicated
+> at +4.73pp, both national scans, and the one-shot binding validation (70.5% vs 17.3%, all 20
+> never-touched counties clean, El Paso stratified in). Then 62 human-adjudicated disagreements
+> on 1,394 real free-text records from 40 states + DC produced +0.215pp, CI [-0.861, +1.291] —
+> statistically indistinguishable from the original — with the Mountain division net-negative.
+> Composed-data dominance did not transfer to free text; the evidence ladder's re-scoped honesty
+> note ("composed binding evidence certifies coverage and non-regression, not transfer") is now
+> an empirical result, not a caveat. Gold-2 scoring attempt 1 of 2 is spent. Every number above
+> ships with this disclosure.
+
 > **Final status, 2026-08-15 (superseding the v23 note below): candidate v28 ships as v2.**
 > v23 cleared the two gold gates and then failed the 16-state national scan (54.9% of its
 > changes wrong outside the gold set's home states). Five iterations against pre-committed ship

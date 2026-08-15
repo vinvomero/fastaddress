@@ -65,3 +65,10 @@ sampling entirely.
   **coverage floor MET**. Spot-checks passed on all six statewide aggregates with recorded
   evidence; gaps: CA/ID/KY/WY (legal), AR/DE/HI/MS/NH/UT (no reachable free-text source, reasons
   in FETCH_MANIFEST.md). Dedupe verified zero overlaps. Scoring attempts used: 0 of 2.
+- 2026-08-16: **Scoring attempt 1 of 2: FAIL.** Candidate v36 vs v1, 62 disagreements
+  human-adjudicated in full (no tripwire): 30 candidate / 27 incumbent / 5 neither.
+  Net +0.215 pp, 95% CI [-0.861, +1.291] — includes zero (Gate 1 FAIL). Mountain division
+  binding net-negative, -6 on 10 divergents (Gate 2 FAIL). One scoring attempt remains;
+  after it, gold-2b from unused sources is required. The composed-tier dominance
+  (70.5%/17.3% on the binding split) did not transfer to free text — recorded as the
+  central finding for the next generation.
