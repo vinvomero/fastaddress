@@ -51,7 +51,10 @@ Three problems compound:
 ## Requirements
 
 - **R-A (net national)**: v2 beats v1 net on never-touched geography, with no state/county worse
-  than 3:1 on divergent records — measured on a binding split used exactly once.
+  than 3:1 on divergent records — measured on a binding split used exactly once. The per-geography
+  3:1 test binds only where a geography has ≥20 divergent records (the qualifier the existing
+  binding-split tooling already uses); below that, geographies roll up to the state level. This
+  threshold is recorded in the ledger with the split spec, before the run.
 - **R-B (no regression)**: clean set stays 159/159; every human-adjudicated verdict stays
   satisfied (known loss Anchor Point must be won or explicitly re-accepted); every previously
   passed split stays green (cumulative, not just the newest).
@@ -62,8 +65,14 @@ Three problems compound:
   untouched (Option A, decided 2026-08-15).
 - **R-E (publication discipline)**: every attempt, pass or fail, lands in the findings report and
   README accuracy record with the disclosure language; claims phrased per PROTOCOL.md.
-- **R-F (statistical honesty)**: one binding attempt per candidate generation; binding split
-  drawn from never-used counties; a spent-split ledger makes "never-used" auditable.
+- **R-F (statistical honesty)**: one binding attempt per candidate **generation**, where a
+  generation is a committed corpus/recipe changeset carrying a pre-registered failure diagnosis
+  and intended fix — grid cells within one corpus share a single binding attempt via dev-tier
+  selection, and a tweak-and-retrain does not mint a new generation without a new committed
+  diagnosis. Binding splits draw from never-used counties; the ledger makes "never-used"
+  auditable; and the ship-time findings report must state the **cumulative count of binding
+  attempts across all generations**, so the final pass is interpretable against the number of
+  tries.
 
 ---
 
@@ -81,12 +90,27 @@ Three problems compound:
    times across frames (the v28 lesson: sampling 1,549 cities into thin slots taught nothing);
    high-frequency items scale up but never crowd the floor (the v27 lesson: exposure, not
    contradiction, was the binding constraint).
-3. **Evidence ladder with an independence budget.** Three tiers: *dev* (clean + gold-1 + 16-state
-   + 32-state + all spent splits — iterate freely), *binding* (a fresh, never-used county split —
-   one run per candidate generation, result final for that candidate), *claim* (free-text
-   gold-2 — gates pre-registered before any candidate is scored against it). Spent counties are
-   recorded in a ledger; ~3,000 US counties remain unused, so the budget is real but must be
-   auditable. A candidate ships only when green on all three tiers in one pass.
+3. **Evidence ladder with an independence budget — for every tier, including the claim tier.**
+   Three tiers: *dev* (clean + gold-1 + 16-state + 32-state + all spent splits — iterate freely),
+   *binding* (a fresh, never-used county split — one run per generation, result final), *claim*
+   (free-text gold-2). Spent counties are recorded in a ledger; ~3,000 US counties remain unused.
+   A candidate ships only when green on all three tiers in one pass.
+
+   Two honesty rules the first draft of this plan missed, both from adversarial review:
+
+   - **Gold-2 is spendable too.** A failed claim-tier run whose diagnosis feeds the next
+     generation spends gold-2 exactly the way gold-1 was spent. PROTOCOL2 pre-registers a
+     maximum of **two** gold-2 scoring attempts; any public claim must disclose the attempt
+     count; exhausting the budget forces a fresh gold-2b built from unused sources before any
+     further claim-tier run. The evaluation-assets table reflects this.
+   - **The binding tier is re-scoped to what it can honestly test.** Vocabulary-complete training
+     from TIGER makes TIGER-composed binding splits easy *by construction* — geographic novelty
+     was only ever a proxy for vocabulary novelty, and this plan deliberately removes the proxy.
+     Composed binding evidence therefore certifies **coverage and non-regression**, not transfer;
+     transfer evidence for the national claim rests on gold-2 alone, and the claims language says
+     so. To keep the binding tier discriminating at all, each binding draw is stratified to
+     include at least one hard-class geography from the U1 taxonomy (e.g., a high-Spanish-pre-type
+     county).
 4. **Free-text gold-2 from multi-state owner-mailing sources.** County assessor/tax-roll
    owner-mailing fields (true free text, the messiest real source, per gold-1 methodology)
    sampled across all states via open-data portals, stratified ~30/state; prelabel → LLM review →
@@ -121,7 +145,7 @@ flowchart TD
     end
     subgraph CLAIM["Claim tier — pre-registered"]
         E -->|pass| G[Free-text gold-2:<br/>candidate vs v1, human-adjudicated<br/>disagreements only]
-        G -->|fail| F
+        G -->|fail: attempt spent<br/>max 2, then gold-2b required| F
         G -->|pass| H[SHIP v2 opt-in release<br/>README/provenance/claims flip]
     end
 ```
@@ -135,8 +159,8 @@ Evaluation assets and their status:
 | 16-state scan (~108k) | composed | v24–v28 | dev tier |
 | 32-state holdout (~126k) | composed | v29–v31 | dev tier |
 | 20-county final split | composed | spent 2026-08-15 | dev tier (cumulative green) |
-| Fresh binding splits | composed | never (by rule) | binding tier, one run each |
-| Gold-2 (~1,500 free-text, stratified) | free-text, national | never (gates pre-registered) | claim tier |
+| Fresh binding splits | composed | never (by rule) | binding tier: coverage/non-regression, one run each, hard-class-stratified |
+| Gold-2 (~1,500 free-text, stratified) | free-text, national | never; budget: max 2 scorings, then gold-2b | claim tier — sole transfer evidence |
 
 ---
 
@@ -150,14 +174,19 @@ the 3+-word-city and abbreviation classes sized.
 **Requirements:** R-A.
 **Dependencies:** none (the split is already spent; using its failures is what "spent" means).
 **Files:** `benchmark/taxonomy_final_split.py` (new), `benchmark/results/final-split-taxonomy.md` (new).
-**Approach:** Same signature-clustering diagnostic used for ME/TN, run over all 20 counties, both
-failure buckets, output a ranked class table with exemplar records. Classes feed U2's inventory
-requirements; both-wrong classes (768 records — larger than the loss bucket) are in scope
-because "highest accuracy possible" targets them too, not just win/loss flips.
+**Approach:** The validation run cached no per-record outputs (its script prints summary counters
+only), so the taxonomy tool first re-derives the split via the exact recorded SEED/county-list/
+filter path, dumps per-record JSONL (raw, gold labels, v1 labels, candidate labels) to
+`benchmark/results/`, and **asserts the regenerated divergence counters match the recorded
+2026-08-15 totals before any classification runs** — a drifted reconstruction silently classifies
+the wrong record set. Then the ME/TN-style signature clustering (session methodology, committed
+here as code for the first time) runs over all 20 counties and both failure buckets, producing a
+ranked class table with exemplars. Both-wrong classes (768 records — larger than the loss bucket)
+are in scope because "highest accuracy possible" targets them too, not just win/loss flips.
 **Test scenarios:** Test expectation: none — analysis tooling over cached eval outputs; correctness
 is reviewed via the taxonomy report, not unit tests.
-**Verification:** Taxonomy report accounts for ≥95% of candidate-wrong records in named classes;
-Cobb GA class named with count and exemplars.
+**Verification:** Taxonomy report accounts for ≥95% of candidate-wrong AND both-wrong records in
+named classes; Cobb GA class named with count and exemplars.
 
 ### U2. National vocabulary inventories from TIGER
 
@@ -168,8 +197,13 @@ included), route designator forms — each with national frequency counts.
 **Dependencies:** U1 (classes tell us which inventory dimensions are load-bearing).
 **Files:** `training/build_vocab_inventories.py` (new, supersedes `build_city_vocab.py`),
 `training/vocab_inventories.json` (generated, committed for reproducibility).
-**Approach:** Sweep all state FEATNAMES/PLACE files (cache outside OneDrive, pattern established).
-Emit frequency-ranked inventories; keep the Census-bookkeeping-name filter. Existing adjudicated
+**Approach:** PLACE files are per-state; **FEATNAMES files are per-county (~3,200 nationally)** —
+the sweep enumerates all county FIPS from the national TIGER COUNTY file (one download), then runs
+a resumable per-county FEATNAMES fetch into the existing outside-OneDrive cache, with the manifest
+recording the county count so "national" is auditable. Sampling a county subset is exactly the
+shortcut that loses the rare regional forms this inventory exists to capture, so partial sweeps
+are marked as such in the manifest and never presented as national. Emit frequency-ranked
+inventories; keep the Census-bookkeeping-name filter. Existing adjudicated
 conventions (route designators as pre-types, `#`-identifier rule, etc.) remain enforced by the
 validators, which stay in force unchanged.
 **Patterns to follow:** `training/build_city_vocab.py` (fetch/cache/extract shape),
@@ -231,8 +265,8 @@ splits with spent/unspent status making "never-used" auditable.
 **Files:** `benchmark/gauntlet.py` (new, extends `gate_candidate.py`), `eval/SPLITS.md` (new
 ledger), `benchmark/final_validation.py` (generalized to take a split spec instead of a
 hardcoded county list).
-**Approach:** Ledger lists every split ever used (18-county corpus, 32-state holdout, 20-county
-final, gold sources) with dates, role, and spent-by. Fresh binding splits are drawn by sampling
+**Approach:** Ledger lists every split ever used (the 16-state scan's 18-county corpus, the 32-state holdout,
+the 20-county final split, gold sources) with dates, role, and spent-by. Fresh binding splits are drawn by sampling
 unused counties, recorded in the ledger *before* the run (the pre-commit pattern, now enforced by
 tooling instead of discipline).
 **Test scenarios:** Gauntlet exits nonzero if any sub-check fails (verify with the known-failing
@@ -254,10 +288,35 @@ owner-mailing sources; PROTOCOL-2 with gates pre-registered **before any candida
 **Approach:** Source discovery per state: county assessor portals (Socrata/CKAN/ArcGIS open data)
 with owner-mailing free-text fields, following the gold-1 sourcing rule (composed and
 distant-supervised text ineligible). States without reachable free-text sources are documented as
-gaps in PROTOCOL2 rather than silently backfilled with composed text. Gates to pre-register:
-candidate-vs-v1 net margin positive with 95% bootstrap CI excluding zero on the full set;
-no census division net-negative; clean/gold-1 regression gates unchanged. Adjudication scope:
-disagreement records only, blinded A/B, Census evidence attached (established flow).
+gaps in PROTOCOL2 rather than silently backfilled with composed text. Source-map discovery runs
+as the **first action** of this track, so a coverage shortfall surfaces before the corpus
+overhaul is sunk cost.
+
+Gates and rules to pre-register in PROTOCOL2, all before any candidate is scored:
+
+- **Margin gate:** candidate-vs-v1 net margin positive with 95% bootstrap CI excluding zero on
+  the full set; clean/gold-1 regression gates unchanged.
+- **Division gate with a minimum-n rule:** no census division net-negative, applied only where a
+  division has ≥10 divergent records (at ~2.7% disagreement rates a division yields 2–8
+  divergents, and an un-thresholded gate converts one unlucky verdict into a burned attempt);
+  sub-threshold divisions are reported but non-gating — mirroring the binding tier's ≥20 rule.
+- **Coverage floor for the word "national":** claim language requires all 9 census divisions
+  represented and ≥40 states; below the floor, pre-drafted enumerated-coverage phrasing ("better
+  across N states") applies instead. The floor is fixed now, not at scoring time.
+- **Two pre-committed language tiers:** the CI gate alone unlocks "measurably better than
+  usaddress on a stratified national free-text sample (+X pp, CI, attempt count disclosed)"; a
+  second, pre-committed effect-size threshold unlocks any stronger headline. Both variants are
+  drafted before the run. PROTOCOL2 also carries an explicit limitation note: per-state n≈30
+  cannot detect concentrated sub-state failure classes.
+- **Adjudication-volume tripwire:** if candidate-vs-v1 disagreements exceed 150 (plausible after
+  a from-scratch corpus overhaul; the ≤40-records experience comes from incrementally tuned
+  candidates), the gate switches to exhaustive adjudication of a pre-committed random sample with
+  a sampling-adjusted margin CI — the human-only standard survives without stalling.
+- **Gold-2 spend budget:** maximum two scoring attempts, disclosure of attempt count in any
+  claim, gold-2b from unused sources required after exhaustion (KTD 3).
+
+Adjudication scope: disagreement records only, blinded A/B, Census evidence attached
+(established flow).
 **Execution note:** PROTOCOL2 gates must be committed before the first candidate is scored
 against gold-2 — same pre-registration standard as everything else in this project.
 **Test scenarios:** Sampler asserts: no overlap with gold-1/clean/training corpora
@@ -276,8 +335,12 @@ models embedded in the wheel; default path provably untouched.
 (model-parameterized entry points exist behind the `model-v2` feature — surface them),
 `crates/python/tests/test_dropin.py` (extend), `crates/python/tests/test_model_select.py` (new),
 `.github/workflows/wheels.yml` (build with `model-v2` feature).
-**Approach:** Feature flag becomes default-on at the crate level; selection is runtime by
-parameter. Invalid model names raise `ValueError` naming the valid options.
+**Approach:** U7 lands the surfacing code with the `model-v2` feature **default-off**; CI
+exercises it via an explicit `--features model-v2` job. The default-on flip moves to U8, landing
+in the same commit that promotes the validated artifact — otherwise any wheel cut between U7 and
+U8 ships `model="v2"` backed by the unvalidated stand-in, directly against the claims discipline.
+Selection is runtime by parameter. Invalid model names raise `ValueError` naming the valid
+options.
 **Patterns to follow:** existing PyO3 binding conventions in `crates/python/src/lib.rs`; the
 RepeatedLabelError compat contract.
 **Test scenarios:** default call byte-identical to pre-change behavior on the parity corpus
@@ -300,6 +363,19 @@ language, cut the v2 release; on fail, publish the miss and loop to the next gen
 pre-scripted: the pass path's claims language is drafted and reviewed *before* the run so success
 can't tempt inflation; the fail path publishes with the same prominence (protocol rule). Known
 loss Anchor Point: candidate must win it or the release notes re-state it explicitly.
+
+Two additions from review, both mandatory for the ship flip:
+
+- **Both-wrong measurement.** Every gate is relative to v1 and therefore structurally blind to
+  the 768 both-wrong records the plan declares in scope. The binding-split report must include
+  the candidate's both-wrong rate per U1 class alongside the net-win gate, with the expectation
+  of net reduction against the spent-split baseline. Report-mandatory; unmeasured is not an
+  option.
+- **Field mileage by design, not hope.** The deferred 2.0 default-flip depends on field evidence
+  nothing previously generated. The release ships an adopter-facing "when to use v2" README
+  section with 3–5 concrete divergent addresses from the U1 taxonomy (v1 vs v2 side by side), a
+  one-line recommendation for who should opt in, and an issue template asking for v2 field
+  reports.
 **Test scenarios:** Test expectation: none — this unit is evaluation and release mechanics;
 its correctness is the gauntlet output plus doc review.
 **Verification:** All three tiers green in a single pass for the shipped candidate; README
@@ -352,11 +428,14 @@ evidence; both-wrong improvements (not just win/loss flips).
 
 ## Success Metrics
 
-- Binding split: net candidate-right > v1-right with zero states/counties beyond 3:1 — on first
-  and only run.
-- Gold-2: pre-registered margin gate passed; national claim language unlocked with disclosure.
+- Binding split: net candidate-right > v1-right, no qualifying geography beyond 3:1 (≥20
+  divergents rule) — on first and only run; both-wrong rate per class reported with net reduction
+  vs the spent-split baseline.
+- Gold-2: pre-registered gates passed within the two-attempt budget; claim language at the tier
+  the evidence earns, attempt count disclosed.
 - Zero regressions: clean 159/159, all human verdicts, all spent splits green in the same pass.
-- Ship artifact: `model="v2"` in the released wheel; docs flipped in the same commit.
+- Ship artifact: `model="v2"` in the released wheel; docs, adoption section, and field-report
+  channel flipped in the same commit; cumulative binding-attempt count published.
 
 ---
 
