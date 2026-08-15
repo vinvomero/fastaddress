@@ -418,5 +418,514 @@
   "verdict": "v1",
   "round": 4,
   "human_reviewed": true
+ },
+ "9 WALNUT LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "474 n lake shore 3910 CHICAGO IL 60611": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1305 Lake Shore Dr N BARRINGTON IL 60010": {
+  "verdict": "v1",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4 DEVERAUX COURT S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5 BROOKHAVEN CIRCLE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "27 WYCHWOOD LANE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "32 WYCHWOOD LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6 LEANDA LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "13 SPRING CREEK DRIVE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "37 BEECHNUT DRIVE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5 BROOKE LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1 WALNUT LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "8 FALCON COURT S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "12 BROOKE LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "42 HAVERSHAM LN N BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "10 BROOKE LANE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2 LEANDA LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6 WOODBURY CT S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "30 W PENNY RD S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4 WIND RIDGE RD S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "46 SHENANDOAH CIRCLE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "7 LOCH LANE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6 E PENNY RD S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4 LOCH LANE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "12 E PENNY RD S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3 TEWKESBURY LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4 LOCH LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "Anchor Point, AK 99556": {
+  "verdict": "v1",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "18 FOREST LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5 TAYNTON LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2 DEVEAUX CT S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "26 RAINIER CIRCLE S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2 LOCH LN S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3 WINDRIDGE RD S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "14 LEANDA CT S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "54 W PENNY RD S BARRINGTON IL 60010": {
+  "verdict": "v2",
+  "round": 5,
+  "human_reviewed": true,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
  }
 }

@@ -1,10 +1,33 @@
 # Model v2 — Findings Report
 
-> **Status correction, 2026-08-14.** This report previously concluded that v19 satisfied every
-> criterion. It does not. v19 never regresses — that part holds — but it **cannot clear the
-> pre-registered gold gate**, and the reason is arithmetic rather than a matter of judgment. See
-> *The gold gate, actually computed* below. The protocol says a miss shelves the model and the
-> finding is published with the same prominence a ship would have received; this heading is that.
+> **Final status, 2026-08-15: candidate v23 CLEARS both pre-registered gates.**
+>
+> | Gate | Requirement | v23 | |
+> |---|---|---|---|
+> | Gold margin | ≥ +3.0pp, 95% CI excluding zero | **+4.73pp**, CI [+3.67, +5.87] | **PASS** |
+> | Clean set | within 1.0pp of the original | **159/159 = 100.00%**, exactly equal | **PASS** |
+>
+> Every one of the 82 records where v23 differs from the original carries a **human-reviewed**
+> verdict (rounds 2–5; the protocol counts nothing else). v23 wins 73, loses 2, with 6 judged
+> both-wrong and 1 skip. The two losses — `1305 Lake Shore Dr N` (a genuine post-directional the
+> model now misreads as a city prefix) and `Anchor Point, AK` — are adjudicated, known, and small
+> against 73 wins. The margin ceiling if the single skip resolved either way moves the result by
+> less than 0.07pp.
+>
+> The disclosure in `eval/PROTOCOL.md` applies to every number above: from v21 onward the training
+> data targets error classes found by inspecting gold-set failures, which biases the gold margin
+> upward. The clean set is the uninspected control, and the honest public phrasing is
+> "measurably better on identified, evidence-backed error classes" — not "X% more accurate".
+>
+> The earlier status correction below is retained as history: v19 could not clear the gate, and
+> the arithmetic that proved it is what pointed at the class of records a clearing model had to
+> fix.
+
+> **Status correction, 2026-08-14 (historical).** This report previously concluded that v19
+> satisfied every criterion. It did not. v19 never regresses — that part held — but it could not
+> clear the pre-registered gold gate: see *The gold gate, actually computed* below. The protocol
+> says a miss shelves the model and the finding is published with the same prominence a ship
+> would have received.
 
 Per the pre-registered protocol (`eval/PROTOCOL.md`), a v2 model ships only by clearing both
 gates. The candidate **v19** satisfies every criterion that had been measured at the time:

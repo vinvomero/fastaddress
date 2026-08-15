@@ -124,12 +124,14 @@ def main():
         v = info["verdict"]
         if v == "v2":
             # The reviewer approved a specific parse, not "anything but v1".
-            if judged is not None:
-                i = idx[r]
-                if cand[i]["labels"] != judged[i]["labels"]:
-                    third.append(r)
-                    unknown += 1
-                    continue
+            # Round 5 onward stores that parse's labels on the record itself;
+            # earlier rounds fall back to the --judged-parse model.
+            i = idx[r]
+            approved = info.get("judged_labels") or (judged[i]["labels"] if judged is not None else None)
+            if approved is not None and cand[i]["labels"] != approved:
+                third.append(r)
+                unknown += 1
+                continue
             contrib.append(1)
         elif v == "v1":
             contrib.append(-1)

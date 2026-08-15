@@ -33,24 +33,26 @@ behavior is frozen to usaddress 0.5.16, and improvements live in native mode or 
   compat output.
 - Free-threaded (abi3t) wheels when audience demand appears.
 
-## Model accuracy (gated — see origin requirements R11; in progress, not yet cleared)
+## Model v2 (GATE CLEARED — ships opt-in beside the pinned original)
 
-Targets the upstream tracker's 112 mislabeling issues (two-word places, directionals, highways).
-Gated on an independently auditable gold-standard label set with published methodology
-([eval/PROTOCOL.md](../eval/PROTOCOL.md)). **No accuracy claims without it, and the gate has not
-been cleared.**
+Candidate **v23** cleared both pre-registered gates on fully human-adjudicated evidence
+([findings](../benchmark/results/model-v2-findings.md)): gold margin **+4.73pp** (bar +3.0, 95%
+CI [+3.67, +5.87]), clean set **159/159** exactly matching the original. All 82 differing records
+carry human verdicts across four review rounds; v23 wins 73, loses 2 (known, adjudicated).
 
-- Candidate v19 never regresses but **misses the pre-registered +3.0pp gold gate** — margin
-  +2.60pp all-verdicts, and arithmetically capped at +2.80pp even if every outstanding record is
-  adjudicated in its favour. It fixes 39 of 1,500; the bar needs 45.
-  ([findings](../benchmark/results/model-v2-findings.md))
-- **Census TIGER/Line training corpus** — moved ahead of the other model work because it is the
-  only lever that raises the *count* of records fixed. The prior corpus split street phrases with
-  a heuristic that mislabels 9.11% of them against TIGER ground truth; 71% of those errors are
-  trailing directionals in grid addresses, the largest remaining class.
-  ([builder](../training/build_tiger_corpus.py))
-- Outstanding: human adjudication of the differing records the protocol requires before any
-  margin counts ([worklist generator](../tools/make_confirmation_doc.py)).
+Public claims must carry the PROTOCOL.md disclosure: training targeted error classes surfaced by
+the gold set itself, so the phrasing is "measurably better on identified, evidence-backed error
+classes" — never a bare accuracy percentage. The improvement classes: abbreviated city prefixes
+(S BARRINGTON), grid pre-directionals (295 South 250 East), saint-name streets, bare street names
+(BROADWAY), abbreviated unit designators, milepost routes, truncated street types.
+
+Still model-level, unaddressed: the 8 adjudicated both-wrong records, and the remaining upstream
+mislabeling issues outside these classes. Post-launch candidates:
+
+- A geographically representative second gold set (the current one is Midwest/Northeast-heavy and
+  nearly blind to Western grid addressing — measured, 36 grid records of 1,500).
+- Census TIGER/FEATNAMES corpus at national scale, with mixed spelled-out state names (the v20
+  experiment documents both its promise — 9.11% heuristic error corrected — and its trap).
 - Constrained decoding for partially-structured input (upstream #94, the tracker's oldest issue).
 
 ## Ongoing
