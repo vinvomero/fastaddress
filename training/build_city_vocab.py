@@ -116,6 +116,16 @@ def main():
     # Plain single-word cities (Wichita, Billings, Seattle) are the
     # counterweight the v24 scan showed missing: a genuine post-directional
     # right before one of these must stay a directional.
+    #
+    # Contradiction filter, from the v26 Georgia result: if a plain city is
+    # also the REMAINDER of a confusable-start city (Fulton / South Fulton,
+    # Jordan / West Jordan), then "Rd S Fulton GA" appears in training with
+    # BOTH readings -- city-prefix in one generator, directional+city in the
+    # other -- and the corpus caps its own accuracy by teaching a
+    # self-contradiction. Those cities are removed from the plain pool; the
+    # directional reading is still taught by thousands of unambiguous names.
+    remainders = {" ".join(name.split()[1:]).lower() for name, _ in start}
+    plain = [e for e in plain if e[0].lower() not in remainders]
     vocab = {"confusable_start": start, "confusable_end": end, "two_word": two,
              "plain": plain[:6000]}
     OUT.write_text(json.dumps(vocab), encoding="utf-8")
