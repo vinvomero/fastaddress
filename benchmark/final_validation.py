@@ -47,7 +47,12 @@ PER_COUNTY = 4000
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--candidate", required=True)
+    ap.add_argument("--spec", help="JSON file with [[statefp, countyfp, abbr], ...]; default = the spent 20-county split")
     args = ap.parse_args()
+    global HOLDOUT
+    if args.spec:
+        import json as _json
+        HOLDOUT = [tuple(x) for x in _json.loads(Path(args.spec).read_text(encoding="utf-8"))]
 
     rng = random.Random(SEED)
     rows = []
