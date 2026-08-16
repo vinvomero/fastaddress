@@ -91,3 +91,18 @@ sampling entirely.
   before any v37-generation candidate exists: attempt 2 will not be spent on a candidate
   whose dev-tier net margin does not materially exceed the v36 anchor (+0.900 pp point
   estimate).** This only tightens the frozen rule; nothing is loosened.
+- 2026-08-16: **Spend decision: scoring attempt 2 of 2 will be spent on candidate v43.**
+  Eligibility under the frozen rule, verified before this entry: real-text dev holdout
+  +2.400 pp, 95% CI [+1.750, +3.100] (CI floor above the v36 anchor's +0.900 point
+  estimate — tightened guard met); full gauntlet ALL GREEN (clean 159/159; all
+  human-adjudicated gold-1 verdicts matched, 115/0; both national scans pass; spent
+  20-county split pass). v43 recipe: v36's + realtext corpus at weight 1 + four
+  counterweight frames added across v41-v43, each committed before its test
+  (git 75b47bc, 3f65549, 214720d). Cumulative candidate count this generation: 5
+  trained (v37, v39, v41, v42, v43), 2 untrainable (v38, v40, memory).
+  **Outcome paths, scripted now:** PASS -> ship flip per the prior plan's U8 (artifact
+  promotion, model-v2 feature default-on in the same commit, README/provenance/findings
+  updated, attempt counts disclosed: binding 2, gold-2 2). FAIL -> published with the
+  same prominence, gold-2 is spent, gold-2b (GOLD2B_SOURCES.md) becomes the only claim
+  path. Round-8 adjudication is blinded under a fresh key; only human verdicts enter
+  gate arithmetic.
