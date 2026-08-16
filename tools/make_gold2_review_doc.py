@@ -10,6 +10,11 @@ No suggestions are shown — gold-2 records have no prior LLM verdicts, and a
 clean first read is worth more than a prefilled one.
 
 Usage: python tools/make_gold2_review_doc.py --candidate model/candidates/v36.crfsuite
+       python tools/make_gold2_review_doc.py --candidate ... --round 8 --attempt 2
+
+Round 8 (attempt 2 of 2) uses a fresh seed and a fresh blind key; the
+tripwire semantics are identical and the sample spec (if triggered) is
+still drawn before any verdicts exist.
 """
 
 import argparse
@@ -23,7 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 G2 = ROOT / "eval" / "gold2"
 EVAL_BIN = "C:/cargo-target/us-address-parser/release/eval_tag.exe"
-SEED = 20260816
+BASE_SEED = 20260809  # + round; round 7 reproduces the original 20260816
 TRIPWIRE = 150
 
 
@@ -42,7 +47,11 @@ def tag(raws, model=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--candidate", required=True)
+    ap.add_argument("--round", type=int, default=7)
+    ap.add_argument("--attempt", type=int, default=1)
     args = ap.parse_args()
+    rnd = args.round
+    seed = BASE_SEED + rnd
 
     rows = [json.loads(l) for l in open(G2 / "candidates.jsonl", encoding="utf-8-sig") if l.strip()]
     raws = [r["raw"] for r in rows]
@@ -59,21 +68,21 @@ def main():
     sampled = False
     if total > TRIPWIRE:
         # Tripwire: seeded sample drawn before any verdicts, spec persisted.
-        rng = random.Random(SEED)
+        rng = random.Random(seed)
         idx = sorted(rng.sample(range(total), TRIPWIRE))
-        (G2 / "tripwire_sample_r7.json").write_text(
-            json.dumps({"seed": SEED, "total_disagreements": total, "sample_size": TRIPWIRE,
+        (G2 / f"tripwire_sample_r{rnd}.json").write_text(
+            json.dumps({"seed": seed, "total_disagreements": total, "sample_size": TRIPWIRE,
                         "indices": idx}), encoding="utf-8")
         disagreements = [disagreements[i] for i in idx]
         sampled = True
 
-    rng = random.Random(SEED + 1)
+    rng = random.Random(seed + 1)
     a_is_v1 = rng.random() < 0.5
-    (G2 / "blind_key_r7.json").write_text(
+    (G2 / f"blind_key_r{rnd}.json").write_text(
         json.dumps({"A": "v1" if a_is_v1 else "v2", "B": "v2" if a_is_v1 else "v1"}, indent=1),
         encoding="utf-8")
 
-    head = [f"# Address review — Round 7 (national free-text): {len(disagreements)} parses", "",
+    head = [f"# Address review — Round {rnd} (national free-text): {len(disagreements)} parses", "",
             "## What this is", "",
             "Real owner-mailing addresses fetched from state and county open-data portals across "
             "the country — free text as assessors wrote it, the evidence base for any public "
@@ -110,12 +119,12 @@ def main():
     tailer = ["## When you're done", "",
               "Paste answers back in any form. They get un-blinded, stored with the approved "
               "label sequences, and the pre-registered gates compute from human verdicts only. "
-              "This is scoring attempt 1 of 2 against gold-2 — the attempt count ships with any "
-              "claim either way."]
+              f"This is scoring attempt {args.attempt} of 2 against gold-2 — the attempt count "
+              "ships with any claim either way."]
     doc = "\n".join(head + body + tailer)
-    (G2 / "REVIEW-round7.md").write_text(doc, encoding="utf-8")
-    print(f"{len(disagreements)} disagreements ({total} before tripwire, sampled={sampled}) "
-          f"-> {G2 / 'REVIEW-round7.md'}")
+    out = G2 / f"REVIEW-round{rnd}.md"
+    out.write_text(doc, encoding="utf-8")
+    print(f"{len(disagreements)} disagreements ({total} before tripwire, sampled={sampled}) -> {out}")
 
 
 if __name__ == "__main__":
