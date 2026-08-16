@@ -51,6 +51,12 @@ ABBREV_CITIES = [
     (["MT", "PROSPECT"], "IL", "60056"),
     (["ARLINGTON", "HTS"], "IL", "60004"),
     (["HOFFMAN", "ESTA"], "IL", "60169"),
+    # Round-6 ruling: FOX RVR GRV is a city. GRV/RVR double as TIGER suffix
+    # abbreviations, and the realtext corpus's 146k genuine-suffix rows pull
+    # these tokens toward street labels; these entries hold the city reading.
+    (["FOX", "RVR", "GRV"], "IL", "60021"),
+    (["ELK", "GRV", "VLG"], "IL", "60007"),
+    (["BUFF", "GRV"], "IL", "60089"),
     (["S", "PASADENA"], "CA", "91030"),
     (["N", "HOLLYWOOD"], "CA", "91601"),
     (["E", "LANSING"], "MI", "48823"),
@@ -621,6 +627,31 @@ def gen_bare_route(rng, n):
     return out
 
 
+def gen_route_spelled_postdir(rng, n):
+    """1285 Highway 7 East Hutchinson MN  ->  East is a post-directional.
+
+    Ruling: round 6, #4 -- the human verdict keeps "East" after a numbered
+    highway as StreetNamePostDirectional, not a city lead. The realtext
+    corpus's direction-led city rows pull the other way; this frame is the
+    counterweight. Spelled forms doubled: abbreviations already have cover."""
+    cities = [("Hutchinson", "MN"), ("Willmar", "MN"), ("Glencoe", "MN"),
+              ("KEARNEY", "NE"), ("MOULTRIE", "GA"), ("PARIS", "TX")]
+    dirs_ = ["East", "West", "North", "South",
+             "East", "West", "North", "South", "E", "W", "N", "S"]
+    out = []
+    for _ in range(n):
+        city, st = rng.choice(cities)
+        p = [(str(rng.randint(1, 9999)), "AddressNumber")]
+        lead = rng.choice(["Highway", "Hwy", "HIGHWAY", "State Highway", "Route"])
+        p += [(w, "StreetNamePreType") for w in lead.split()]
+        p += [(str(rng.randint(1, 999)), "StreetName"),
+              (rng.choice(dirs_), "StreetNamePostDirectional")]
+        p += [(w, "PlaceName") for w in city.split()]
+        p += [(st, "StateName"), (f"{rng.randint(10000, 99999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
 def gen_inner_directional_street(rng, n):
     """5670 Lawton Loop W Dr Lawrence IN  ->  Loop and W are the street name.
 
@@ -706,8 +737,13 @@ GENERATORS = [
     # the damage but lost the fix entirely. With the counterweights now
     # present to absorb the collateral, the signal is raised past v21's level
     # so it flips the class consistently rather than sporadically.
-    ("abbrev_city", gen_abbrev_city, 5.0),
+    # Raised 5.0 -> 8.0 for the realtext era: the 558k-sequence corpus
+    # dilutes this frame's share, and v37/v39 both regressed the round-6
+    # FOX RVR GRV record with it at 5.0.
+    ("abbrev_city", gen_abbrev_city, 8.0),
     ("true_post_directional", gen_true_post_directional, 1.5),
+    # Round-6 #4 (Highway 7 East, Hutchinson MN) -- see the generator.
+    ("route_spelled_postdir", gen_route_spelled_postdir, 1.0),
     ("unit_abbrev", gen_unit_abbrev, 1.0),
     ("bare_street_no_number", gen_bare_street_no_number, 0.7),
     ("grid_predirectional", gen_grid_predirectional, 1.5),
