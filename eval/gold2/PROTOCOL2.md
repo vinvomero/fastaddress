@@ -117,3 +117,19 @@ sampling entirely.
   is under that resolution. No claim-tier language may cite gold-2. Further claim-tier
   runs require gold-2b built from GOLD2B_SOURCES.md, subject to the same pre-registered
   discipline and a fresh two-attempt budget.
+- 2026-08-16: **Gold-2b pre-registration, committed before any gold-2b record is fetched.**
+  All PROTOCOL2 gates carry over unchanged to gold-2b (margin CI gate; division gate with
+  min-10; coverage floor 9 divisions + ≥40 states for "national" language, enumerated-coverage
+  phrasing below it; two language tiers with the +1.5 pp effect threshold; 150-record
+  adjudication tripwire; human-only verdict arithmetic; judged_labels storage), with these
+  gold-2b-specific terms fixed now: (1) **size floor 2,900 records** — the gold-2 postmortem
+  showed 1,394 records resolve only ~±1.1 pp and two real effects fell under it; below the
+  size floor gold-2b may not be scored at all; (2) **source disjointness per the amended
+  GOLD2B_SOURCES.md** — dataset-level disjoint from gold-2's fetched datasets AND from every
+  training-consumed dataset (Cook IL, Allegheny PA, the 30 realtext datasets); (3) **dedupe**
+  by normalized identity against gold-1, gold-2, clean, the realtext training corpus, and
+  eval/realtext_dev.jsonl; (4) **spend budget: 2 scoring attempts**, attempt counts disclosed
+  in any claim, spend rule for each attempt: candidate green on every existing surface
+  (gauntlet ALL GREEN) — the realtext dev-holdout bar and v36-anchor guard carry over;
+  (5) same per-state ~n≈30-per-jurisdiction stratified sampling, composed-text spot-check
+  requirement for statewide aggregates, gaps documented never backfilled.
