@@ -133,3 +133,7 @@ sampling entirely.
   (gauntlet ALL GREEN) — the realtext dev-holdout bar and v36-anchor guard carry over;
   (5) same per-state ~n≈30-per-jurisdiction stratified sampling, composed-text spot-check
   requirement for statewide aggregates, gaps documented never backfilled.
+- 2026-08-16 (correction, before any fetch): term (5) above is internally inconsistent with
+  the 2,900 size floor (30 × ~44 jurisdictions < 2,900). Corrected: sampling is stratified
+  **evenly per jurisdiction at whatever per-jurisdiction n meets the size floor** (~65-70
+  per jurisdiction at 44 reachable jurisdictions). All other terms unchanged.
