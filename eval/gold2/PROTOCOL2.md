@@ -98,7 +98,7 @@ sampling entirely.
   human-adjudicated gold-1 verdicts matched, 115/0; both national scans pass; spent
   20-county split pass). v43 recipe: v36's + realtext corpus at weight 1 + four
   counterweight frames added across v41-v43, each committed before its test
-  (git 75b47bc, 3f65549, 214720d). Cumulative candidate count this generation: 5
+  (git 79b76a8, 644e04e, e3889b5). Cumulative candidate count this generation: 5
   trained (v37, v39, v41, v42, v43), 2 untrainable (v38, v40, memory).
   **Outcome paths, scripted now:** PASS -> ship flip per the prior plan's U8 (artifact
   promotion, model-v2 feature default-on in the same commit, README/provenance/findings
