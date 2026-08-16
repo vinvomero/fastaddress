@@ -137,3 +137,13 @@ sampling entirely.
   the 2,900 size floor (30 × ~44 jurisdictions < 2,900). Corrected: sampling is stratified
   **evenly per jurisdiction at whatever per-jurisdiction n meets the size floor** (~65-70
   per jurisdiction at 44 reachable jurisdictions). All other terms unchanged.
+- 2026-08-16: **Gold-2b fetched: 3,066 records, 73/jurisdiction × 42 states, 9/9 divisions —
+  both floors MET** (survives WY removal at 2,993/41). Independent post-build verification:
+  zero overlap with gold-1, gold-2, clean, realtext training corpus, and realtext dev holdout;
+  zero internal duplicates. Six former gold-2 gap states converted (AR, DE, HI, MS, UT, WY);
+  remaining gaps documented in SOURCE_MAP_2B.md (CA/ID/KY legal; CT, DC, KS, ME, NH, VT
+  no-disjoint-source). **Pending human source review before any use** — four flagged judgment
+  calls at the top of SOURCE_MAP_2B.md, chiefly the WI/WV/MN statewide aggregates (rule (a)
+  vs strategy #1 tension: same datasets gold-2 sampled, different counties, zero record
+  overlap; dropping them would break both floors at 2,847/39). No candidate has been scored
+  against gold-2b. Scoring attempts used: 0 of 2.
