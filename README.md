@@ -54,7 +54,9 @@ What you get:
 
 `parse()`, `tag()` (including `tag_mapping` and usaddress's parameter names), and
 `RepeatedLabelError` (same attributes, same message text) behave identically to usaddress
-0.5.16 on the ASCII-dominant inputs real property data consists of. Known Python/Rust Unicode
+0.5.16 on the ASCII-dominant inputs real property data consists of. One type-level
+difference: `tag()` returns a plain insertion-ordered dict where usaddress returns an
+OrderedDict -- equal by `==`, distinguishable by `isinstance`. Known Python/Rust Unicode
 differences in casing and digit classification (fullwidth or Arabic-Indic digits can take a
 different label) are out of parity scope; standalone `½` tokens are preserved and parity-tested.
 
@@ -84,7 +86,8 @@ Viterbi disagreements. Reproduce with `python benchmark/compare_marginals.py --r
 Second, what they can and can't tell you about errors. On the hardest slice we have -- the 40
 human-adjudicated records that carry approved label sequences, almost all of them cases where
 the default model gets something wrong -- weakest-token confidence separates right from wrong
-parses with an AUC of 0.703 (means 0.935 vs 0.891). That's a modest signal on contested
+parses with an AUC of 0.703 (means 0.935 vs 0.891 -- and only 5 of the 40 are
+judged-correct, so treat the split as directional, not precise). That's a modest signal on contested
 records, and we say so: an earlier draft quoted stronger numbers from an analysis we can no
 longer regenerate, so out they went. Regenerate today's with
 `python benchmark/confidence_error_auc.py`. On a general mix, easy addresses sit at 0.999+
@@ -269,7 +272,8 @@ appears in an evaluation file, it is because the assessor published it in the ma
 field and the parser has to handle it (a `Recipient` line is a real parsing class). We commit
 no data beyond what the source already made public: no SSNs, no non-public fields, nothing
 fetched from behind authentication. If your name appears here and you want it replaced with a
-placeholder, open an issue -- the eval sets can substitute a record without weakening anything.
+placeholder, open an issue -- the record's name tokens can be masked in place without touching the
+locked cohorts or weakening any evaluation.
 
 ## Why this exists
 

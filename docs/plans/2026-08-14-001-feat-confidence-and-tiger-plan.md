@@ -1,4 +1,8 @@
 ---
+
+> Historical note (2026-08-16): the confidence error-prediction figures cited in this
+> plan (AUC 0.833 et al.) were later found unreproducible from committed artifacts and
+> were withdrawn; current regenerable numbers come from `benchmark/confidence_error_auc.py`.
 title: "feat: Confidence scores in v1.0 + Census TIGER training corpus"
 type: feat
 status: completed

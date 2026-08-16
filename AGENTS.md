@@ -29,8 +29,8 @@ git+ URL works with no subdirectory tricks. Release-profile compile takes a few 
 python -c "import fastaddress; print(fastaddress.tag('123 N Main St Springfield IL 62704'))"
 ```
 
-Expected: an (OrderedDict, 'Street Address') pair identical to what `usaddress.tag`
-returns. For the full drop-in check (needs `pip install usaddress` too):
+Expected: a (dict, 'Street Address') pair whose contents equal `usaddress.tag`'s output
+(fastaddress returns a plain insertion-ordered dict, not OrderedDict). For the full drop-in check (needs `pip install usaddress` too):
 
 ```bash
 python crates/python/tests/test_dropin.py

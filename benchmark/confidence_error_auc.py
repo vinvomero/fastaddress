@@ -5,7 +5,7 @@ file (judged_labels, rounds 5+), run the default model's confidence path and
 ask: did the parse match the human-approved labels, and how confident was its
 weakest token? Reports mean weakest-token confidence for correct vs wrong
 parses, the AUC of weakest-token confidence as a wrong-parse detector, and
-the >0.99 precision tradeoff quoted in the README.
+the counts above 0.99 either way.
 
 Usage: python benchmark/confidence_error_auc.py
 """

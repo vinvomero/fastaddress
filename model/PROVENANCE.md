@@ -11,32 +11,26 @@ released PyPI package (`usaddress/usaddr.crfsuite`).
   `site-packages/usaddress/usaddr.crfsuite` here; update the version and byte size in this file.
   The parity oracle (benchmark) must be regenerated against the same version.
 
-## usaddr_v2.crfsuite (the v2 model, opt-in)
+## usaddr_v2.crfsuite (the v2 model, opt-in, feature-gated)
 
-`usaddr_v2.crfsuite` (320,360 bytes, sha256 prefix `89d99e84607fa34e`) is candidate **v28**,
-trained by this project on 2026-08-15. Exact recipe in
-`training/MANIFEST-usaddr_v28.json`; corpus builders and the full evaluation protocol are in
-`training/` and `eval/PROTOCOL.md`. Five earlier candidates (v23-v27) cleared subsets of the
-checks and failed others; their artifacts, manifests, and failure analyses are retained in the
-repo and findings report.
+`usaddr_v2.crfsuite` (371,744 bytes, sha256 prefix `c5cbb26b5fe8586c`) is candidate **v43**,
+the final and best candidate of the retraining campaign, trained 2026-08-16. Exact recipe in
+`training/MANIFEST-v43.json`; corpus builders and both evaluation protocols are in
+`training/`, `eval/PROTOCOL.md`, and `eval/gold2/PROTOCOL2.md`.
 
-- Training sources: upstream usaddress MIT training XMLs, distant supervision from county open
-  data, shape-preserving augmentation, v1 distillation, and adjudication-derived error-class
-  data (`training/synth_error_classes.py` — every generator cites the human ruling or Census
-  evidence behind it).
-- Gates cleared (pre-registered, human-adjudicated): gold margin +4.80pp against a +3.0pp bar,
-  95% CI [+3.74, +5.94], floor +4.67 with all unadjudicated records counted against; clean set
-  159/159, exactly equal to the original; 16-state national scan 81.9% right vs 12.0% wrong on
-  divergent records, no state worse than 3:1.
-- Known loss, adjudicated: `Anchor Point, AK`.
-- Disclosure: training targeted error classes surfaced by the gold set itself; see PROTOCOL.md.
-- **Status update (2026-08-16): this artifact never shipped and is not the current candidate.**
-  After the gates above, v28 failed a 32-state geographic holdout (41.1% right vs 45.2% wrong
-  on its changes) and was superseded through candidate **v43**
-  (`training/MANIFEST-v43.json`), which passed every internal surface and then failed the
-  final national free-text claim gate (gold-2 attempt 2 of 2: +0.789pp, CI includes zero).
-  No v2-line model ships in this release. Full chain:
-  `benchmark/results/model-v2-findings.md` and `eval/gold2/PROTOCOL2.md`.
+Its full record, stated plainly:
+
+- Green on every internal surface simultaneously (the only candidate ever to manage it):
+  clean set 159/159; every human-adjudicated gold-1 verdict matched (74 wins, 0 losses);
+  both national scans; the spent 20-county binding split; real-text dev holdout +2.400pp,
+  95% CI [+1.750, +3.100].
+- **Failed the national free-text claim gate** (gold-2 scoring attempt 2 of 2: +0.789pp,
+  95% CI [-0.287, +1.865] -- includes zero). Both pre-registered attempts are spent.
+- Consequence: this model ships **feature-gated and default-off**, carries no claim of
+  national superiority, and the feature stays off in released wheels. It is provided so the
+  documented record is testable, not because it cleared the bar. Earlier candidates
+  (v23-v42, including v28 which briefly occupied this file) and their failure analyses are
+  retained in the repo, manifests, and `benchmark/results/model-v2-findings.md`.
   Public phrasing is "measurably better on identified, evidence-backed error classes".
 - The pinned original model above is untouched; compat mode still uses it exclusively, and the
   four-layer parity guarantee applies to that path only.

@@ -56,6 +56,7 @@ def main():
     tagged, kind = fastaddress.tag("123 N Main St Springfield IL 62704")
     check(list(tagged.keys())[0] == "AddressNumber", "component order not preserved")
     check(kind == "Street Address", "address_type wrong")
+    check(type(tagged) is dict, "tag() must return a plain insertion-ordered dict (documented divergence from OrderedDict)")
 
     # Crash-class behavior
     try:
