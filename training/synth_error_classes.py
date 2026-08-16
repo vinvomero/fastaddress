@@ -109,7 +109,13 @@ def gen_true_post_directional(rng, n):
     """<number> <street> <type> N, BARRINGTON IL  ->  N really is a directional.
 
     Counterweight to the generator above so the model keeps both readings.
-    Census showed "1305 Lake Shore Dr N" resolves with suffixDirection='N'."""
+    Census showed "1305 Lake Shore Dr N" resolves with suffixDirection='N'.
+    Spelled forms added for the realtext era: round-6 ruling kept "Southwest"
+    in "2926 Franklin Road Southwest, Roanoke VA" as the post-directional
+    (quadrant style), and no frame covered spelled directions after a named
+    street; v41 regressed exactly there."""
+    spelled = ["North", "South", "East", "West",
+               "Northeast", "Northwest", "Southeast", "Southwest"]
     out = []
     for _ in range(n):
         city, st, zc = rng.choice(PLAIN_CITIES)
@@ -117,7 +123,33 @@ def gen_true_post_directional(rng, n):
         p = [(str(rng.randint(1, 4999)), "AddressNumber")]
         p += [(w, "StreetName") for w in name.split()]
         p += [(rng.choice(TYPES), "StreetNamePostType"),
-              (rng.choice(DIRS), "StreetNamePostDirectional")]
+              (rng.choice(DIRS + spelled), "StreetNamePostDirectional")]
+        p += [(w, "PlaceName") for w in city.split()]
+        p += [(st, "StateName"), (zc, "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_landmark_field(rng, n):
+    """Lee Bird Fld, North Platte NE  ->  the pre-city phrase is a landmark.
+
+    Ruling: round 1 approved the LandmarkName reading of "Lee Bird Fld" (the
+    North Platte airfield). The realtext corpus contains zero LandmarkName
+    rows, so suffix pressure (Fld=Field) pulls these toward street labels;
+    this is the counterweight. No address number -- that absence plus the
+    landmark-typical final word is what distinguishes the class."""
+    firsts = ["Lee", "Casey", "Miller", "Baker", "Wiley", "Hays", "Ross", "Ward"]
+    seconds = ["Bird", "Jones", "Young", "Webb", "Clark", "Boyd", "Reed"]
+    ends = ["Fld", "Field", "Airport", "Arpt", "Municipal Airport",
+            "Fairgrounds", "Stadium", "Regional Airport"]
+    out = []
+    for _ in range(n):
+        city, st, zc = rng.choice(PLAIN_CITIES)
+        words = [rng.choice(firsts)]
+        if rng.random() < 0.8:
+            words.append(rng.choice(seconds))
+        words += rng.choice(ends).split()
+        p = [(w, "LandmarkName") for w in words]
         p += [(w, "PlaceName") for w in city.split()]
         p += [(st, "StateName"), (zc, "ZipCode")]
         out.append(seq(p))
@@ -741,9 +773,14 @@ GENERATORS = [
     # dilutes this frame's share, and v37/v39 both regressed the round-6
     # FOX RVR GRV record with it at 5.0.
     ("abbrev_city", gen_abbrev_city, 8.0),
-    ("true_post_directional", gen_true_post_directional, 1.5),
+    # Raised 1.5 -> 2.5: the frame now also carries spelled forms (round-6
+    # Franklin Road Southwest ruling), and the same weight would halve the
+    # abbreviation exposure that won the original class.
+    ("true_post_directional", gen_true_post_directional, 2.5),
     # Round-6 #4 (Highway 7 East, Hutchinson MN) -- see the generator.
     ("route_spelled_postdir", gen_route_spelled_postdir, 1.0),
+    # Round-1 Lee Bird Fld ruling; realtext has zero LandmarkName rows.
+    ("landmark_field", gen_landmark_field, 0.6),
     ("unit_abbrev", gen_unit_abbrev, 1.0),
     ("bare_street_no_number", gen_bare_street_no_number, 0.7),
     ("grid_predirectional", gen_grid_predirectional, 1.5),
