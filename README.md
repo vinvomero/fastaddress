@@ -20,9 +20,8 @@ out around eight thousand addresses a second, while county tax rolls and nationa
 to millions of rows. People work around that with sampling, overnight jobs, and multiprocessing
 pools.
 
-There is no accuracy tradeoff to make here. The model is good; the runtime is the bottleneck.
-So this is the same model DataMade trained, redistributed unmodified, running in a compiled
-engine: the accuracy people already rely on, at batch speed.
+There's no accuracy tradeoff on offer here. The model is good. The runtime is the bottleneck.
+So: DataMade's model, redistributed unmodified, running in a compiled engine.
 
 ## Install
 
@@ -43,42 +42,38 @@ Agents get their own runbook in [AGENTS.md](AGENTS.md).
 
 What you get:
 
-- **11.3x faster single-core**, like for like: 89,653 addresses/sec against usaddress's 7,941
-  on the same machine, same run. The native Rust engine reaches 360,035/sec on 8 threads (the
-  Python API itself is single-threaded per call). A million-row tax roll in seconds. Measured
-  2026-08-16 on the release build; method and current numbers in
-  [benchmark/results/speed_report.md](benchmark/results/speed_report.md) -- rerun it yourself
-  with `python benchmark/run_speed.py`.
-- **The same answers.** Not similar. Identical, checked at four layers (tokens, features,
+- **11.3x faster single-core**, like for like: 89,653 addresses/sec against usaddress's 7,941,
+  same machine, same run. The native Rust engine hits 360,035/sec on 8 threads. A million-row
+  tax roll in seconds. ([speed report](benchmark/results/speed_report.md), rerun it with
+  `python benchmark/run_speed.py`)
+- **The same answers.** Not similar -- identical, checked at four layers (tokens, features,
   serialized attributes, tagged output) across 20,738 real county addresses, zero divergences
   ([parity report](benchmark/results/parity_report.md)).
-- **No crashes in native mode.** Addresses that raise `RepeatedLabelError` in usaddress
-  (saint-name streets like "ST JAMES PLACE" have been crashing it since 2017) parse fine through
-  `tag_native()`. Compat mode still reproduces the error exactly, because drop-in means drop-in.
-- **A 0.8MB wheel with the model inside.** No C toolchain, no model download, works on Lambda.
-  Imports in about a quarter second.
-- **Confidence scores**, the thing [usaddress#337](https://github.com/datamade/usaddress/issues/337)
-  has been asking for. Details below.
-- **A retrained model that doesn't ship, and we'll tell you exactly why.** Our best candidate
-  wins 74-0 on human-adjudicated hard cases. It beats the original by +2.4 points on held-out
-  real mail text. And on the 1,394-record national free-text exam, its edge came out to
-  +0.789 points with a confidence interval that includes zero -- so under rules we set before
-  seeing any results, it stays out. Both allowed scoring attempts are spent. The whole chain,
-  failures included, is in [the accuracy record](#the-accuracy-record).
+- **No crashes in native mode.** Saint-name streets like "ST JAMES PLACE" have raised
+  `RepeatedLabelError` in usaddress since 2017; they parse fine through `tag_native()`. Compat
+  mode still reproduces the error exactly, because drop-in means drop-in.
+- **A 0.8MB wheel with the model inside.** No C toolchain, no model download, works on Lambda,
+  imports in about a quarter second.
+- **Confidence scores** per token and per parse -- the long-standing
+  [usaddress#337](https://github.com/datamade/usaddress/issues/337) request.
+- **A retrained model that doesn't ship, and the full reason why.** Our best candidate wins 74-0
+  on human-adjudicated hard cases and beats the original by +2.4 points on held-out real mail
+  text -- but on the national free-text exam its edge (+0.789 points) has a confidence interval
+  that includes zero. Under rules set before any results existed, it stays out. Both scoring
+  attempts are spent. The chain, failures included, is in
+  [the accuracy record](#the-accuracy-record).
 
-`parse()`, `tag()` (including `tag_mapping` and usaddress's parameter names), and
-`RepeatedLabelError` (same attributes, same message text) behave identically to usaddress
-0.5.16 on the ASCII-dominant inputs real property data consists of. One type-level
-difference: `tag()` returns a plain insertion-ordered dict where usaddress returns an
-OrderedDict -- equal by `==`, distinguishable by `isinstance`. Known Python/Rust Unicode
-differences in casing and digit classification (fullwidth or Arabic-Indic digits can take a
-different label) are out of parity scope; standalone `½` tokens are preserved and parity-tested.
+`parse()`, `tag()` (with `tag_mapping` and usaddress's parameter names), and
+`RepeatedLabelError` (same attributes, same message) behave identically to usaddress 0.5.16 on
+the ASCII-dominant inputs property data consists of. Two documented differences: `tag()` returns
+a plain insertion-ordered dict rather than an OrderedDict (equal by `==`, distinguishable by
+`isinstance`), and Unicode casing/digit classification can diverge on non-ASCII digits.
 
 ## Confidence scores
 
-Every parse can tell you how sure the model is, per token and for the whole sequence. It's the
-CRF's marginal probabilities, computed by forward-backward over the same weights Viterbi already
-uses. Opt-in; the plain functions never pay for it.
+Every parse can report how sure the model is, per token and for the whole sequence -- the CRF's
+marginal probabilities, computed by forward-backward over the same weights Viterbi already uses.
+Opt-in; the plain functions never pay for it. This is [usaddress#337](https://github.com/datamade/usaddress/issues/337).
 
 ```python
 fastaddress.parse_with_confidence("123 N Main St Springfield IL 62704")
@@ -88,31 +83,25 @@ tagged, address_type, confidence, sequence_confidence = fastaddress.tag_with_con
 # tagged/address_type are byte-identical to tag(); confidence is keyed the same way
 ```
 
-When a component spans several tokens, its confidence is the minimum across them. The weakest
-link, so a component is never reported as more confident than any token inside it.
+A multi-token component reports the minimum across its tokens -- the weakest link.
 
-Two facts worth knowing before you trust these numbers.
+The numbers are correct: verified against `pycrfsuite.Tagger.marginal()` on the same model and
+addresses, max absolute difference 1.665e-15 across 34,028 token positions, zero Viterbi
+disagreements (`python benchmark/compare_marginals.py --rows 5000`).
 
-First, they're correct: verified against `pycrfsuite.Tagger.marginal()` running the same model
-over the same addresses, max absolute difference 1.665e-15 across 34,028 token positions, zero
-Viterbi disagreements. Reproduce with `python benchmark/compare_marginals.py --rows 5000`.
-
-Second, what they can and can't tell you about errors. On the hardest slice we have -- the 40
-human-adjudicated records that carry approved label sequences, almost all of them cases where
-the default model gets something wrong -- weakest-token confidence separates right from wrong
-parses with an AUC of 0.703 (means 0.935 vs 0.891 -- and only 5 of the 40 are
-judged-correct, so treat the split as directional, not precise). That's a modest signal on contested
-records, and we say so: an earlier draft quoted stronger numbers from an analysis we can no
-longer regenerate, so out they went. Regenerate today's with
-`python benchmark/confidence_error_auc.py`. On a general mix, easy addresses sit at 0.999+
-and separate cleanly; treat confidence as a filter for routing doubtful records to human
-review, never as permission to skip it.
+How well they predict errors is a smaller claim. On our 40 hardest adjudicated records,
+weakest-token confidence separates right from wrong parses with an AUC of 0.703 (means 0.935 vs
+0.891) -- and only 5 of those 40 are judged-correct, so read it as directional. An earlier draft
+quoted stronger figures from an analysis we could no longer regenerate, so they were withdrawn.
+Regenerate today's with `python benchmark/confidence_error_auc.py`. On a general mix, easy
+addresses sit at 0.999+ and separate cleanly. Treat confidence as a filter for routing doubtful
+records to review, never as permission to skip it.
 
 ## The accuracy record
 
-This section is the project's transparency contract. Every claim links to the artifact that
-produced it, and it gets updated whenever a model or evaluation changes. A number here that you
-can't regenerate from the repo is a bug; file an issue.
+Every claim here links to the artifact that produced it, and this section gets updated whenever
+a model or evaluation changes. If you can't regenerate a number from this repo, that's a bug.
+File an issue.
 
 ### The two models
 
@@ -120,15 +109,14 @@ can't regenerate from the repo is a bug; file an issue.
 |---|---|---|
 | What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project (current candidate: [recipe manifest](training/MANIFEST-v43.json)) |
 | Output | Bit-identical to usaddress 0.5.16 | Differs on purpose, on documented error classes |
-| Status | Shipping | **Not in this release.** Wins on every composed surface; statistically indistinguishable from the default on real free-text. Details below. Ships when that changes, or not at all. |
+| Status | Shipping | **Not in this release.** It wins everywhere we built the test ourselves and ties on real mail text. Ships when that changes, or never. |
 
 ### How v2 was evaluated
 
-The rules were set before any training happened and are committed at
-[eval/PROTOCOL.md](eval/PROTOCOL.md): what the gates are, how records get labeled, who has to
-review them, what gets disclosed. The gates don't move once results exist. Two earlier
-candidates missed them, and those misses are published in the
-[findings report](benchmark/results/model-v2-findings.md) with the same prominence as the pass.
+Rules first, training second. [eval/PROTOCOL.md](eval/PROTOCOL.md) fixed the gates, the labeling
+method, who reviews, and what gets disclosed, all before a model existed. Gates don't move once
+results arrive. Candidates that missed them are published in the
+[findings report](benchmark/results/model-v2-findings.md) as loudly as the ones that passed.
 
 | Gate | Bar | Current candidate (v43) |
 |---|---|---|
@@ -139,129 +127,65 @@ candidates missed them, and those misses are published in the
 | Real-text dev holdout (2,000 held-out real mail lines) | beat the original, CI excluding zero | +2.400pp, CI [+1.750, +3.100]. Pass. |
 | **Gold-2: real free-text, 40 states + DC (two attempts, both spent)** | net margin positive, CI excluding zero; no census division net-negative | Attempt 1 (v36): +0.215pp, CI [-0.861, +1.291] -- fail. **Attempt 2 (v43): +0.789pp, CI [-0.287, +1.865] -- fail.** |
 
-The deciding gold records were judged by a human: seven review rounds so far, models blinded
-as A/B, Census records attached as evidence, verdicts and blind keys committed in
-[eval/gold/](eval/gold/) and [eval/gold2/](eval/gold2/). Margins here are computed from human verdicts only -- every counted disagreement carries
-one. The current candidate's 14 newest divergences are still unreviewed and count for
-nothing, which is why its gold-1 row says "passes at the floor" rather than an exact figure. (You'll
-find LLM-generated suggestion files in the eval folders too -- those were prelabeling triage,
-committed for transparency. The protocol counts human verdicts and nothing else;
-[eval/PROTOCOL.md](eval/PROTOCOL.md) is explicit about it.)
+Every deciding record was judged by a human: seven blinded review rounds, Census evidence
+attached, verdicts and keys committed in [eval/gold/](eval/gold/) and [eval/gold2/](eval/gold2/).
+Only human verdicts count -- the LLM suggestion files in those folders were prelabeling triage,
+committed for transparency and excluded from every margin. The candidate's 14 newest gold-1
+divergences are unreviewed and count for nothing, which is why that row says "at the floor."
 
-One disclosure has to travel with any of these numbers: v2's training data targets error classes
-we found by studying gold-set failures. That biases the gold margin upward. The honest claim is
-"measurably better on identified, evidence-backed error classes," never a bare accuracy
-percentage. The clean set is the control that was never studied, and it caught one candidate
-(v21) memorizing instead of generalizing, at 155/159.
+One disclosure travels with these numbers: v2's training targets error classes found by studying
+gold-set failures, which biases the gold margin upward. The honest claim is "measurably better on
+identified, evidence-backed error classes," never a bare accuracy percentage. The clean set is the
+control nobody studied, and it caught one candidate (v21) memorizing instead of generalizing.
 
 ### What the gold set is, and is not
 
-1,500 real free-text addresses: 900 Cook County owner-mailing records (878 of them Illinois),
-225 from NYC, and 375 hard cases spread thin across all 51 states and DC. So roughly 75% of the
-set is two states, and the win margin inherits that. 34 of v23's 73 wins are one Illinois
-pattern (abbreviated city prefixes like `S BARRINGTON`); 31 are New York saint-name streets.
+Gold-1 is 1,500 real free-text addresses, and three quarters of it is two states: 900 Cook
+County records, 225 from NYC. The margin inherits that skew, badly. Thirty-four of one
+candidate's 73 wins were a single Illinois pattern. So the set proves the identified classes got
+fixed and proves nothing about nationwide accuracy. We never claimed otherwise, and that gap is
+the whole reason gold-2 exists.
 
-This set proves the identified classes are fixed. It is not evidence of nationwide accuracy, and
-we don't claim otherwise. The promised state-stratified free-text set now exists
-([eval/gold2/](eval/gold2/)); how that exam went is two sections down.
+### The checks that caught our own models
 
-### National behavior, or: the check that caught our own model
+Four surfaces, each added because the last one turned out to be too easy. Each caught something.
+Full blow-by-blow in the [findings report](benchmark/results/model-v2-findings.md).
 
-Because the gold set leans regional, every candidate also runs a
-[16-state behavioral scan](benchmark/national_scan.py): about 108k addresses built from Census
-TIGER data, scoring every record where the candidate changes the original's answer against the
-Census's own component labels.
+First, a 16-state scan over 108k Census TIGER addresses. It failed the first candidate that
+cleared the gold gates, and not narrowly: 54.9% of v23's changes were wrong nationally. It had
+started reading `New Orleans` as a state and `Box Elder` as a PO box. Five iterations fixed
+that, each against rules committed before the run.
 
-The first candidate to pass the gold gates (v23) failed this scan badly: 54.9% of its changes
-were wrong nationally. It had learned its counterweights from an invented city list, and the
-side effects showed up in states the gold set barely touches: it read `New Orleans` as a state,
-`South Fulton` as a directional, `Box Elder` as a PO box. It did not ship.
+Then a 32-state holdout of places no decision had ever touched. It failed the candidate that had
+just passed everything it was iterated against: 41.1% right, 45.2% wrong. Three more iterations
+got it green. But those three rounds meant the holdout had steered the fixes, so it wasn't
+independent anymore either.
 
-Five iterations followed, each against two ship rules committed to git before any results
-existed: net national improvement on the scan, and no state left worse than 3:1 against it.
-v24 fixed Louisiana and broke grid cities in Kansas. v25 fixed Kansas. v26 fixed the clean set
-and made Georgia worse, which exposed self-contradicting training data (the corpus taught
-`Rd S Fulton` as both a city and a direction-plus-city, because Fulton alone is also a city).
-v27 falsified that hypothesis: filtering the contradictions changed nothing. The real defect
-was exposure: 1,549 confusable city names sampled so thinly each one appeared about 1.5 times
-per pattern. v28 gave every confusable city guaranteed coverage and passed everything it had been iterated
-against -- so we ran a 32-state geographic holdout of states no decision had ever touched, and
-it failed there (41.1% right, 45.2% wrong). Three more iterations (v29-v31) fixed the diagnosed
-classes and eventually passed the holdout too. But by then the holdout had steered three rounds
-of fixes, so it was no longer independent either.
+Which is the trap this whole section is about. A test you iterate against stops being a test.
 
-The final check was a third split: 20 fresh counties, never used by anything, one run, rules
-committed to git before the result, outcome binding. v31 passed the net rule decisively (47.9%
-of its changes right against 17.3%, better in 18 of 20 counties) and **failed the per-state
-rule in two counties** (Tucson AZ, 5:41 against; Cobb GA, 4:33). Per the pre-committed rule,
-that is the end of the question for this release: **the retrained model does not ship.** The
-default model -- bit-identical to usaddress -- is unaffected by any of this, which is exactly
-why it is the default.
+So the third surface was one-shot: fresh counties drawn by committed seed, a single run, outcome
+final. The first attempt failed on two counties and the model got pulled from the release. The
+second passed decisively, 70.5% of changes right against 17.3%, all 20 counties clean.
 
-### The free-text exam, where the winning streak stopped
+That earned the real exam. Gold-2 is 1,394 owner-mailing addresses from 40 states and DC, every
+census division, as assessors actually typed them, with two scoring attempts allowed for the
+lifetime of the set. Attempt 1 (v36): 30 wins, 27 losses, +0.215pp, interval includes zero.
+Attempt 2 (v43): 35 wins, 24 losses, +0.789pp, interval includes zero. Both fail.
 
-After v31, the failure classes got a systematic rebuild: type-word and city vocabularies
-inventoried from all 3,235 counties' TIGER data, a corpus that guarantees every confusable name
-a minimum number of exposures, and a fresh generation of candidates. The survivor, v36, passed
-everything the previous generation had failed -- including a second one-shot binding split
-(20 fresh counties drawn by a committed seed): 70.5% of its changes right, 17.3% wrong, all 20
-counties clean.
+Between those attempts we did the thing that should have been done first, which was train on
+real text. 299,832 owner-mail lines from 30 states, labeled by alignment against Census records,
+every line that didn't match exactly thrown away rather than guessed at. 55% survived. (The last
+corpus this project built with heuristics measured 9.11% wrong. Alignment or nothing.)
 
-Then it took the exam all of that was practice for. Gold-2 is the promised free-text set:
-1,394 owner-mailing addresses from 40 states + DC, all nine census divisions, fetched from
-county and state open-data portals as assessors actually wrote them, gates pre-registered in
-[eval/gold2/PROTOCOL2.md](eval/gold2/PROTOCOL2.md) with a lifetime budget of two scoring
-attempts. On attempt 1 the two models disagreed on 62 records; a human adjudicated every one,
-blinded. Result: 30 for v36, 27 for the original, 5 neither. That is +0.215pp with a CI of
-[-0.861, +1.291] -- statistically nothing -- and the Mountain division net-negative. Fail, on
-both gates.
+It worked, mostly. v43 came out the first candidate ever green on every internal surface at
+once, and the free-text margin nearly quadrupled. It still didn't clear the bar, because a
+64-disagreement exam can't certify an effect under about 1.1 points. Right direction, not enough
+resolution to prove it.
 
-The pattern deserves plain words: a model trained on composed text dominates composed exams and
-ties on real text. The one time real adjudicated examples entered training (the gold-1 error
-classes), the improvement transferred and held. Synthetic coverage did not transfer.
-
-### The real-text generation, and the final attempt
-
-The response was to train on real text for the first time. 299,832 real owner-mail lines
-were fetched from 30 states' open-data portals and labeled by alignment: city/state/zip
-taken from the source's own fields, street interiors matched exactly against Census TIGER
-records, and every line that didn't match dropped rather than guessed -- 164,879 survived
-(55.0%), with per-source yields and drop reasons in
-[training/REALTEXT_MANIFEST.json](training/REALTEXT_MANIFEST.json). (The last
-heuristically-labeled corpus this project built measured 9.11% wrong. Alignment or nothing.)
-A 2,000-row holdout was carved out before any new model existed
-([eval/realtext_dev.jsonl](eval/realtext_dev.jsonl)), and the spend rule for the final
-gold-2 attempt was frozen first: beat the original on that holdout with a CI excluding
-zero, stay green on every earlier surface, and materially exceed v36's +0.900 anchor.
-
-Five candidates later (two more were untrainable in available memory -- documented, not
-hidden), v43 met all of it: +2.400pp on the holdout with every one of 48 divergents going
-its way, zero regressions on any adjudicated verdict, every composed surface green. It was
-the first candidate in the project's history clean everywhere at once. It earned the final
-attempt.
-
-Attempt 2, adjudicated blind by a human across all 64 disagreements: 35 for v43, 24 for
-the original, 5 neither. Net +0.789pp, CI [-0.287, +1.865]. The interval includes zero.
-**Fail.** The division gate passed this time -- attempt 1's Mountain-division failure is
-fixed -- and the margin nearly quadrupled (+3 records to +11). But a 64-disagreement exam
-cannot certify an effect smaller than about 1.1 points, and +0.789 is under that line. The
-rules were set before the results; the result is the result.
-
-So: gold-2 is spent, both attempts disclosed, and the retrained model stays opt-in and
-unheadlined. What real-text training measurably did -- the 4x margin move, the fixed
-regional failure, the 74-0 hard-case record -- ships as documentation, not as a claim of
-national superiority.
-
-The next exam already exists. Gold-2b was fetched and locked before launch: 2,912 records
-in its strict cohort across 32 states, drawn only from datasets that neither gold-2 nor any
-training corpus ever touched, with the sampling rules and analysis structure committed to
-[PROTOCOL2](eval/gold2/PROTOCOL2.md) before a single record was fetched. One source failed
-its provenance check during the build (a city layer quietly mixing in excluded-lineage
-parcels) and was dropped -- the process working as designed. No candidate has been scored
-against it. Two attempts, ever, same as before.
-
-Every candidate, every failed gate, and every hypothesis is in the git history, committed
-before its test ran.
+Gold-2 is spent now, both attempts disclosed. The replacement is already built and untouched:
+gold-2b, 2,912 records across 32 states, drawn only from datasets that neither gold-2 nor any
+training corpus ever saw, pre-registered before a single record was fetched. One source failed
+its provenance check mid-build and got dropped. Nothing has been scored against it.
 
 ### Training data, all of it
 
@@ -280,25 +204,19 @@ with normalized-identity dedupe.
 
 ### The data and the people in it
 
-Every address in this repo comes from public county and state assessor rolls -- records
-governments publish precisely so property information can be checked. Where an owner's name
-appears in an evaluation file, it is because the assessor published it in the mailing-address
-field and the parser has to handle it (a `Recipient` line is a real parsing class). We commit
-no data beyond what the source already made public: no SSNs, no non-public fields, nothing
-fetched from behind authentication. If your name appears here and you want it replaced with a
-placeholder, open an issue -- the record's name tokens can be masked in place without touching the
-locked cohorts or weakening any evaluation.
+Every address here comes from public county and state assessor rolls -- records governments
+publish so property information can be checked. Owner names appear only where the assessor put
+them in the mailing-address field and the parser has to handle them (`Recipient` is a real
+parsing class). Nothing goes beyond what the source already made public: no SSNs, no non-public
+fields, nothing behind authentication. If your name is here and you'd rather it weren't, open an
+issue -- name tokens can be masked in place without disturbing any locked cohort.
 
 ## Trust, not claims
 
-- `benchmark/run_parity.py`: the four-layer differential suite against Python usaddress
-  ([current report](benchmark/results/parity_report.md))
-- `benchmark/run_speed.py`: the three-way benchmark, interleaved best-of-three
-  ([current report](benchmark/results/speed_report.md))
-- `benchmark/fetch_data.py`: reproducible public-data fetch (NYC, Cook County IL, Allegheny
-  County PA open-data portals)
-
-Run them yourself before you believe any of this.
+Every number above regenerates from this repo: `benchmark/run_parity.py` (four-layer differential
+suite), `run_speed.py` (three-way interleaved benchmark), `confidence_error_auc.py`,
+`compare_marginals.py`, and `fetch_data.py` for the public-data fetch. Run them before you
+believe any of it.
 
 ## Credit
 
