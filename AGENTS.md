@@ -39,7 +39,7 @@ python crates/python/tests/test_dropin.py
 ## What this package is
 
 - `fastaddress.parse / tag / tag_mapping semantics / RepeatedLabelError` — byte-identical
-  to `usaddress` 0.5.16 on ASCII-dominant input, ~10x faster. Same model, redistributed
+  to `usaddress` 0.5.16 on ASCII-dominant input, 11.3x faster single-core. Same model, redistributed
   unmodified (`model/PROVENANCE.md`).
 - `parse_with_confidence / tag_with_confidence` — per-token CRF marginal probabilities.
 - `tag_native` — no-crash variant for inputs that raise `RepeatedLabelError` upstream.

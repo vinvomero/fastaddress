@@ -10,6 +10,20 @@ fastaddress.tag("123 N Main St Apt 4B Springfield IL 62704")
 # ({'AddressNumber': '123', 'StreetNamePreDirectional': 'N', ...}, 'Street Address')
 ```
 
+## Why this exists
+
+usaddress is quietly enormous infrastructure:
+[5.2M monthly downloads](https://pepy.tech/project/usaddress) (pepy.tech, Aug 2026) and
+[1,145 dependent repos](https://github.com/datamade/usaddress/network/dependents), including
+government and open-data projects. It is also built on a Python CRF implementation that tops
+out around eight thousand addresses a second, while county tax rolls and national datasets run
+to millions of rows. People work around that with sampling, overnight jobs, and multiprocessing
+pools.
+
+There is no accuracy tradeoff to make here. The model is good; the runtime is the bottleneck.
+So this is the same model DataMade trained, redistributed unmodified, running in a compiled
+engine: the accuracy people already rely on, at batch speed.
+
 ## Install
 
 Not on PyPI yet -- until it is, this repo and its release page are the only official
@@ -274,16 +288,6 @@ no data beyond what the source already made public: no SSNs, no non-public field
 fetched from behind authentication. If your name appears here and you want it replaced with a
 placeholder, open an issue -- the record's name tokens can be masked in place without touching the
 locked cohorts or weakening any evaluation.
-
-## Why this exists
-
-usaddress is quietly enormous infrastructure:
-[5.2M monthly downloads](https://pepy.tech/project/usaddress) (pepy.tech, Aug 2026),
-[1,145 dependent repos](https://github.com/datamade/usaddress/network/dependents) including
-government and open-data projects. And it's built on a Python CRF implementation that tops out
-around a few thousand addresses a second, while county tax rolls and national datasets run to
-millions of rows. Same model, compiled engine: the accuracy people already rely on, at batch
-speed.
 
 ## Trust, not claims
 
