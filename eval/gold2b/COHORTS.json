@@ -1,0 +1,61 @@
+{
+  "strict": [
+    "AK",
+    "AL",
+    "AR",
+    "AZ",
+    "CO",
+    "DE",
+    "HI",
+    "IA",
+    "IL",
+    "IN",
+    "LA",
+    "MD",
+    "MI",
+    "MO",
+    "MS",
+    "ND",
+    "NE",
+    "NM",
+    "NV",
+    "NY",
+    "OH",
+    "OK",
+    "OR",
+    "PA",
+    "RI",
+    "SC",
+    "SD",
+    "TN",
+    "TX",
+    "UT",
+    "VA",
+    "WY"
+  ],
+  "lineage_sensitivity": [
+    "FL",
+    "GA",
+    "MA",
+    "MT",
+    "NC",
+    "NJ"
+  ],
+  "aggregate_sensitivity": [
+    "WI",
+    "WV",
+    "MN"
+  ],
+  "wy_amendment": [
+    "WY"
+  ],
+  "fidelity": {
+    "AL": "PASS",
+    "LA": "PASS",
+    "TX": "PASS",
+    "MS": "PASS",
+    "WA": "FAIL"
+  },
+  "strict_total": 2912,
+  "grand_total": 3569
+}

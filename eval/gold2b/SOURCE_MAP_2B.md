@@ -67,7 +67,7 @@ aggregates spot-checked for composed text BEFORE sampling, evidence in
 | UT | Millcreek Parcels (Salt Lake County assessor attributes) | gold-2: gap (UGRC LIR lacks owner mailing) | New state vs gold-2. City-published copy of SL County assessor attributes: own_addr line + own_citystate + zip + care_of. |
 | VA | City of Newport News Parcels (city GIS, maps.nnva.gov) | gold-2/training used City of Richmond | Different city/publisher. PSTLADDRESS1/2 + city/state/zip ("97 28TH ST, UNIT B" comma style = pass-through). Loudoun/Henrico/VB were probed first and rejected (no mailing, tiny subsets, or biased delinquency lists). |
 | VT | — GAP | gold-2/training used VCGI statewide | All VT parcel data flows through the VCGI statewide program (the training dataset); no town-published alternative found. |
-| WA | Pierce County parcels via City of Milton planning layer | gold-2/training used King County | Different county (Pierce assessor taxpayer fields), city-published extract. |
+| WA | Pierce County parcels via City of Milton planning layer | gold-2/training used King County | ~~Different county (Pierce assessor taxpayer fields), city-published extract.~~ **DROPPED 2026-08-16: pass-through fidelity check FAILED — the Milton layer mixes counties and 50/73 sampled records are King County (excluded lineage) parcels, not Pierce; see `FIDELITY_CHECKS.md`. WA records removed from candidates.jsonl; no replacement this session.** |
 | WI | Statewide Parcels V12 aggregate (PSTLADRESS) | fetched by gold-2; NOT consumed by training (single-blob tail) | GOLD2B_SOURCES #1 exception — see review flags. Fresh spot-check passed. |
 | WV | WVU GIS Tech Center statewide parcels | fetched by gold-2; NOT consumed by training (single-blob tail) | GOLD2B_SOURCES #1 exception — see review flags. Fresh spot-check passed. |
 | WY | Sheridan County Parcels (owner mailing) | pre-registered hard gap | REVIEW FLAG (biggest judgment call): WY's gold-2 gap was availability ("no bulk open source"), not a statute like CA/ID. An open county service with free-text owner mailing now exists. Fetched so the option exists; including WY amends the pre-registered gap list only if Vin approves. Dropping WY costs one jurisdiction (see manifest totals). |
@@ -109,6 +109,13 @@ the second time).
 at review — still above both floors). All 9 census divisions covered. DC not covered
 (dataset-level disjointness unattainable, see DC row); the PROTOCOL2 coverage floor
 counts states, so this does not affect the floor.**
+
+**Update 2026-08-16 (post human ruling + fidelity checks + top-up):** WA dropped
+(fidelity FAIL, see `FIDELITY_CHECKS.md`); the 32 surviving strict states topped up to
+91 records each per the ruling's size-floor repair. Current file: 41 states, 3,569
+records — strict cohort 32 x 91 = 2,912 (floor MET), sensitivity states 9 x 73 = 657
+untouched. Cohorts in `COHORTS.json`; top-up details appended to `FETCH_MANIFEST_2B.md`.
+Both cohorts still cover 9/9 census divisions.
 
 ## Sample-review fixes (recorded for auditability)
 

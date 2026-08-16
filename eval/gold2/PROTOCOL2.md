@@ -177,3 +177,14 @@ sampling entirely.
   cohort is topped up from its own already-approved sources to ≥2,900 records (~91/state,
   robust to a TX drop) — more data from approved sources, nothing reweighted, nothing
   removed. Scoring attempts used: 0 of 2.
+- 2026-08-16: **Fidelity checks executed; gold-2b final structure locked.** Verdicts
+  (evidence in eval/gold2b/FIDELITY_CHECKS.md): AL PASS, LA PASS, TX PASS (10/10 parcels
+  verbatim against BCAD's official records at matching vintage), MS PASS, **WA FAIL —
+  dropped**: the Milton layer mixed counties, and 49 of 50 non-Pierce parcels were King
+  County — excluded training lineage. The fidelity rule caught real contamination.
+  Strict cohort topped up 73→91 per state from approved sources, no shortfalls.
+  **Final: strict primary 32 states × 91 = 2,912 (size floor MET); sensitivity states
+  9 × 73 = 657; grand total 3,569 across 41 states; 9/9 divisions in both cohorts.**
+  Cohort membership machine-readable in eval/gold2b/COHORTS.json. Independently verified:
+  zero internal duplicates, zero overlap with all exclusion sets. Gold-2b is locked
+  pending nothing — it waits for a candidate. Scoring attempts used: 0 of 2.

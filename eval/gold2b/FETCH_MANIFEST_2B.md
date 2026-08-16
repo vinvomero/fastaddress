@@ -409,3 +409,46 @@ Dedupe (normalized uppercase-alphanumeric identity) enforced against gold-1, gol
 | Pacific | AK, HI, OR, WA | YES |
 
 **Totals: 42 states, 3066 records (even n=73 × 42 jurisdictions), 9/9 divisions. Coverage floor (9 divisions + >=40 states): MET. Size floor (>= 2900): MET.** (DC counted separately, not as a state.)
+
+## Strict-cohort top-up (2026-08-16, post fidelity checks)
+
+Per the human ruling in `eval/gold2/PROTOCOL2.md` (size-floor repair: strict cohort topped up from its own already-approved sources to >=2,900, ~91/state) and the fidelity outcome in `FIDELITY_CHECKS.md` (**WA FAIL -> its 73 records removed from candidates.jsonl and excluded from the top-up**; AL/LA/TX/MS PASS). Executed by `benchmark/topup_gold2b.py`.
+
+Rules: the 73 in-set records per strict state are preserved unchanged; the 12 already-fetched, already-deduped checkpoint spares (85 kept - 73 trimmed) were added first; the remainder came from fresh seeded windows on the SAME approved endpoint (per-state RNG seed `20260819-topup-<ST>`), deduped by normalized identity against gold-1, gold-2, clean, the realtext training corpus, eval/realtext_dev.jsonl, all gold-2b checkpoint records, and within the top-up. Sensitivity states (FL/GA/MA/MT/NC/NJ lineage; WI/WV/MN aggregate) untouched at 73. Top-up checkpoints: `C:/cargo-target/us-address-parser/gold2b_cache/checkpoints_topup/<ST>.json`.
+
+| State | Existing | Spares used | New fetched | In set now | Shortfall | Top-up dedupe removed | Top-up windows |
+|---|---|---|---|---|---|---|---|
+| AK | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=66262 offsets=[26217, 29804, 36556, 37554, 43145] chunk=10 |
+| AL | 73 | 12 | 6 | 91 | 0 | 0 | attempt 1 fetch error: GET failed after 2 tries: https://services7.arcgis.com/xNUwUjOJqYE54USz/arcgis/rest/services/Sex_Offender_Residential_Restrictions_WFL1/FeatureServer/3/query?where=MailAddress1+IS+NOT+NULL&returnCount; arcgis n=104809 offsets=[22235, 36522, 69525, 71208, 81570] chunk=16 |
+| AR | 73 | 12 | 6 | 91 | 0 | realtext-train:1 | arcgis n=17823 offsets=[2774, 3245, 4312, 5671, 11375] chunk=10 |
+| AZ | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=40235 offsets=[2794, 12294, 14335, 26722, 39158] chunk=10 |
+| CO | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=179549 offsets=[6728, 139382, 155582, 173477, 177447] chunk=10 |
+| DE | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=82275 offsets=[1350, 15364, 15383, 45458, 55588] chunk=10 |
+| HI | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=33249 offsets=[2907, 4114, 9665, 16698, 22037] chunk=10 |
+| IA | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=75098 offsets=[7486, 11697, 28099, 57389, 66030] chunk=10 |
+| IL | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=278809 offsets=[4280, 20271, 125722, 128724, 146063] chunk=10 |
+| IN | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=78785 offsets=[9511, 14979, 37311, 55006, 71197] chunk=10 |
+| LA | 73 | 12 | 6 | 91 | 0 | gold2b-existing:2 | arcgis n=9701 offsets=[1116, 2596, 2776, 4992, 9544] chunk=10 |
+| MD | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=2965 offsets=[149, 243, 1169, 1612, 2331] chunk=10 |
+| MI | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=105469 offsets=[19124, 28759, 75201, 85540, 86345] chunk=10 |
+| MO | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=171734 offsets=[8299, 25135, 36901, 96980, 136030] chunk=10 |
+| MS | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=100776 offsets=[6122, 13600, 29380, 41791, 85030] chunk=10 |
+| ND | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=21041 offsets=[6148, 9887, 17298, 18215, 20821] chunk=10 |
+| NE | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=145492 offsets=[25341, 44360, 67806, 82736, 123565] chunk=10 |
+| NM | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=96287 offsets=[19976, 26570, 33861, 40864, 89949] chunk=10 |
+| NV | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=193920 offsets=[31970, 42172, 119533, 132185, 176499] chunk=10 |
+| NY | 73 | 12 | 6 | 91 | 0 | 0 | aggregate counties sampled: ['Sullivan', 'Schuyler', 'Chautauqua', 'Lewis', 'Albany', 'Ulster', 'Greene', 'Suffolk']; arcgis n=55919 offsets=[22535, 30692, 31090, 33685, 48332] chunk=10 where+=(COUNTY_NAME = 'Sullivan'); arcgis n=12101 offsets=[35, 2974, 8546, 10516, 11167] chunk=10 where+=(COUNTY_NAME = 'Schuyler'); arcgis n=81612 offsets=[17242, 46150, 52619, 66415, 67058] chunk=10 where+=(COUNTY_NAME = 'Chautauqua'); arcgis n=21529 offsets=[616, 943, 8349, 9980, 16356] chunk=10 where+=(COUNTY_NAME = 'Lewis'); arcgis n=108875 offsets=[10772, 33470, 82025, 102836, 104489] chunk=10 where+=(COUNTY_NAME = 'Albany'); arcgis n=76826 offsets=[21269, 25972, 32511, 39903, 51183] chunk=10 where+=(COUNTY_NAME = 'Ulster'); arcgis n=33481 offsets=[12438, 12627, 14269, 24576, 27198] chunk=10 where+=(COUNTY_NAME = 'Greene'); arcgis n=567156 offsets=[125205, 196383, 396485, 485196, 544234] chunk=10 where+=(COUNTY_NAME = 'Suffolk') |
+| OH | 73 | 12 | 6 | 91 | 0 | gold2b-existing:5 | arcgis n=479837 offsets=[48150, 76436, 96015, 265337, 426975] chunk=10 |
+| OK | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=336336 offsets=[58584, 103928, 149064, 169887, 331534] chunk=10 |
+| OR | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=206506 offsets=[5992, 57728, 89674, 167518, 181773] chunk=10 |
+| PA | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=175778 offsets=[31078, 72259, 88850, 102148, 119562] chunk=10 |
+| RI | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=33355 offsets=[3186, 5135, 15679, 18165, 32871] chunk=10 |
+| SC | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=42856 offsets=[5830, 11571, 16981, 22711, 34942] chunk=10 |
+| SD | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=66840 offsets=[19581, 19994, 34577, 52859, 56919] chunk=10 |
+| TN | 73 | 12 | 6 | 91 | 0 | gold2b-existing:1 | arcgis n=122545 offsets=[6910, 79554, 94619, 102957, 114858] chunk=10 |
+| TX | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=665130 offsets=[20584, 39763, 161906, 481802, 641843] chunk=10 |
+| UT | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=21580 offsets=[5911, 13207, 14437, 16107, 18229] chunk=10 |
+| VA | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=54281 offsets=[14998, 15785, 33162, 36379, 49408] chunk=10 |
+| WY | 73 | 12 | 6 | 91 | 0 | 0 | arcgis n=18068 offsets=[35, 2322, 12840, 13651, 15402] chunk=10 |
+
+**Post-top-up totals: strict cohort 32 states x 91 = 2912 records (size floor >=2,900: MET); sensitivity states 9 x 73 = 657 (unchanged); WA dropped (0); grand total 3569. Cohort membership in `COHORTS.json`.**
