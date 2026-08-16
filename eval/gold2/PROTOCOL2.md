@@ -147,3 +147,33 @@ sampling entirely.
   vs strategy #1 tension: same datasets gold-2 sampled, different counties, zero record
   overlap; dropping them would break both floors at 2,847/39). No candidate has been scored
   against gold-2b. Scoring attempts used: 0 of 2.
+- 2026-08-16: **Human rulings on the four flagged judgment calls, recorded before any scoring
+  and before any candidate exists for gold-2b.** The reviewer resolved every ambiguity AGAINST
+  post-hoc loosening:
+  1. **WI/WV/MN statewide aggregates: EXCLUDED from the primary score.** The rule-vs-strategy
+     contradiction is not resolved in favor of inclusion after seeing the data; record-level
+     dedupe does not cure the pre-registration problem. Retained only as a clearly labeled
+     sensitivity analysis (include-vs-exclude both reported).
+  2. **Wyoming: INCLUDED, with explicit amendment disclosure** ("WY was pre-registered as an
+     availability gap; an eligible source became available before evaluation and was added
+     before scoring") **and a score-without-WY robustness check.**
+  3. **Same-lineage sources (FL Hernando, GA Atlanta, MA Boston, MT Lake, NC Guilford,
+     NJ Newark): EXCLUDED from the strict headline evaluation.** Upstream rolls feed excluded
+     compilations; formatting/convention dependence survives record-level dedupe, so
+     "completely disjoint" is not defensible for these six. Included only in a separately
+     named dataset-disjoint sensitivity analysis.
+  4. **Provenance-flagged publishers (AL, LA, TX, MS, WA; the reviewer wrote "SC" where the
+     flagged list has MS — interpreted as the flagged class): INCLUDED conditional on
+     documented pass-through fidelity** (fields originate from the stated assessor roll; no
+     intermediary normalization/reconstruction of the mailing line; samples remain raw free
+     text). Any source failing the check is dropped, not argued for. TX (unofficial AGOL
+     republication) gets the most aggressive inspection; if fidelity cannot be established,
+     TX is dropped rather than speculated about.
+  **Resulting analysis structure, fixed now:** PRIMARY = strict-disjoint cohort (33 states
+  before fidelity checks; enumerated-coverage phrasing applies since it sits below the
+  40-state floor — the pre-drafted below-floor language rule, unchanged). SENSITIVITY-A =
+  dataset-disjoint (adds the six same-lineage states). SENSITIVITY-B = adds WI/WV/MN.
+  ROBUSTNESS = primary without WY. **Size floor repair, before any scoring:** the strict
+  cohort is topped up from its own already-approved sources to ≥2,900 records (~91/state,
+  robust to a TX drop) — more data from approved sources, nothing reweighted, nothing
+  removed. Scoring attempts used: 0 of 2.
