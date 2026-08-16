@@ -110,12 +110,10 @@ def gen_true_post_directional(rng, n):
 
     Counterweight to the generator above so the model keeps both readings.
     Census showed "1305 Lake Shore Dr N" resolves with suffixDirection='N'.
-    Spelled forms added for the realtext era: round-6 ruling kept "Southwest"
-    in "2926 Franklin Road Southwest, Roanoke VA" as the post-directional
-    (quadrant style), and no frame covered spelled directions after a named
-    street; v41 regressed exactly there."""
-    spelled = ["North", "South", "East", "West",
-               "Northeast", "Northwest", "Southeast", "Southwest"]
+    Abbreviated forms ONLY: v42 mixed spelled directions into this frame and
+    its PLAIN_CITIES tail generated "PL South BARRINGTON" rows that flipped
+    nine adjudicated S-BARRINGTON records. Spelled forms live in
+    gen_spelled_postdir_street with a disjoint city list."""
     out = []
     for _ in range(n):
         city, st, zc = rng.choice(PLAIN_CITIES)
@@ -123,9 +121,34 @@ def gen_true_post_directional(rng, n):
         p = [(str(rng.randint(1, 4999)), "AddressNumber")]
         p += [(w, "StreetName") for w in name.split()]
         p += [(rng.choice(TYPES), "StreetNamePostType"),
-              (rng.choice(DIRS + spelled), "StreetNamePostDirectional")]
+              (rng.choice(DIRS), "StreetNamePostDirectional")]
         p += [(w, "PlaceName") for w in city.split()]
         p += [(st, "StateName"), (zc, "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_spelled_postdir_street(rng, n):
+    """2926 Franklin Road Southwest, Roanoke VA  ->  Southwest is a directional.
+
+    Ruling: round 6, #3 (quadrant style). Split out of true_post_directional
+    after v42: spelled directions must never precede cities that also appear
+    direction-prefixed in ABBREV_CITIES, or the frame teaches against the
+    adjudicated city readings. This list is disjoint by construction."""
+    spelled = ["North", "South", "East", "West",
+               "Northeast", "Northwest", "Southeast", "Southwest"]
+    cities = [("Roanoke", "VA", "24014"), ("Hutchinson", "MN", "55350"),
+              ("Rochester", "NY", "14604"), ("Decatur", "GA", "30030"),
+              ("Knoxville", "TN", "37902"), ("Billings", "MT", "59101")]
+    out = []
+    for _ in range(n):
+        city, st, zc = rng.choice(cities)
+        name = rng.choice(STREET_WORDS)
+        p = [(str(rng.randint(1, 4999)), "AddressNumber")]
+        p += [(w, "StreetName") for w in name.split()]
+        p += [(rng.choice(TYPES), "StreetNamePostType"),
+              (rng.choice(spelled), "StreetNamePostDirectional")]
+        p += [(city, "PlaceName"), (st, "StateName"), (zc, "ZipCode")]
         out.append(seq(p))
     return out
 
@@ -773,10 +796,9 @@ GENERATORS = [
     # dilutes this frame's share, and v37/v39 both regressed the round-6
     # FOX RVR GRV record with it at 5.0.
     ("abbrev_city", gen_abbrev_city, 8.0),
-    # Raised 1.5 -> 2.5: the frame now also carries spelled forms (round-6
-    # Franklin Road Southwest ruling), and the same weight would halve the
-    # abbreviation exposure that won the original class.
-    ("true_post_directional", gen_true_post_directional, 2.5),
+    ("true_post_directional", gen_true_post_directional, 1.5),
+    # Spelled post-directionals, disjoint city list (v42 lesson).
+    ("spelled_postdir_street", gen_spelled_postdir_street, 1.0),
     # Round-6 #4 (Highway 7 East, Hutchinson MN) -- see the generator.
     ("route_spelled_postdir", gen_route_spelled_postdir, 1.0),
     # Round-1 Lee Bird Fld ruling; realtext has zero LandmarkName rows.
