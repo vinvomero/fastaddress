@@ -4,5 +4,7 @@ __pycache__/
 benchmark/oracle/
 training/corpus/
 training/tiger_cache/
+# ignored except v36/v43 (force-tracked: PROTOCOL2 pins their hashes for the
+# accuracy record's regenerate-from-repo promise)
 model/candidates/
 dist_local/

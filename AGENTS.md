@@ -43,7 +43,8 @@ python crates/python/tests/test_dropin.py
   unmodified (`model/PROVENANCE.md`).
 - `parse_with_confidence / tag_with_confidence` — per-token CRF marginal probabilities.
 - `tag_native` — no-crash variant for inputs that raise `RepeatedLabelError` upstream.
-- `model=` keyword on all six functions loads an alternate `.crfsuite` file at runtime.
+- `model=` keyword on all six functions selects a built-in model by id (`"v1"` default;
+  `"v2"` only in feature-enabled builds -- it raises ValueError in the shipping wheel).
 
 ## Repo layout
 

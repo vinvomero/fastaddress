@@ -9,6 +9,9 @@ Usage: python benchmark/run_parity.py [--dump-bin PATH]
 
 import argparse
 import os
+import sys
+sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parent))
+from binpath import bin_path
 import json
 import subprocess
 import sys
@@ -72,7 +75,7 @@ def run_dataset(name, dump_bin):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dump-bin", default=str(ROOT / "target" / "release" / ("dump.exe" if os.name == "nt" else "dump")))
+    parser.add_argument("--dump-bin", default=bin_path("dump"))
     args = parser.parse_args()
 
     RESULTS_DIR.mkdir(exist_ok=True)

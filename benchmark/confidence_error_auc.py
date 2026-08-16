@@ -28,6 +28,9 @@ def main():
         triples = fastaddress.parse_with_confidence(raw)
         labels = [l for _, l, _ in triples]
         if len(labels) != len(judged):
+            # A token-count mismatch is definitionally a wrong parse; counting it
+            # any other way would bias the separation upward.
+            rows.append((False, min((c for _, _, c in triples), default=0.0)))
             continue
         weakest = min(c for _, _, c in triples)
         rows.append((labels == judged, weakest))

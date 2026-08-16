@@ -123,6 +123,8 @@ def main():
             check(str(fe) == str(ue),
                   "exception message mismatch: " + repr(str(fe)) + " vs " + repr(str(ue)))
             check(fe.message == ue.message, "exception .message attribute mismatch")
+            check(type(fe).__module__ == "fastaddress",
+                  "exception module is " + type(fe).__module__ + ", want fastaddress")
 
     # Keyword-argument fidelity: usaddress's parameter names must work.
     check(fastaddress.parse(address_string="123 N Main St") == usaddress.parse(address_string="123 N Main St"),
@@ -130,6 +132,9 @@ def main():
     t_f = fastaddress.tag(address_string="123 N Main St Springfield IL 62704")
     t_u = usaddress.tag(address_string="123 N Main St Springfield IL 62704")
     check(dict(t_f[0]) == dict(t_u[0]) and t_f[1] == t_u[1], "tag(address_string=...) keyword call mismatch")
+    for fn in (fastaddress.tag_native, fastaddress.parse_with_confidence,
+               fastaddress.tag_with_confidence, fastaddress.tag_native_with_confidence):
+        fn(address_string="123 N Main St Springfield IL 62704")  # must accept the kwarg
 
     # Unicode No-category tokens: standalone half fractions must survive.
     for half in ["123 ½ Main St Springfield IL", "123½ Main St", "230 ½ W 5TH ST"]:

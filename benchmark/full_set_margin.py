@@ -54,6 +54,7 @@ Usage:
 """
 
 import argparse
+import sys
 import csv
 import json
 import random
@@ -61,9 +62,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-import sys as _sys
-from pathlib import Path as _P
-_sys.path.insert(0, str(_P(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from binpath import bin_path
 
 ROOT = Path(__file__).parent.parent

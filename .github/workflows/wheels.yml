@@ -30,6 +30,11 @@ jobs:
         name: four-layer parity gate
       - run: python crates/python/tests/test_dropin.py
       - run: python crates/python/tests/test_model_select.py
+      - name: model-v2 feature wheel branch
+        run: |
+          maturin build --release -m crates/python/Cargo.toml --features model-v2 -o dist-v2
+          pip install --force-reinstall --no-deps dist-v2/*.whl
+          python crates/python/tests/test_model_select.py
 
   build-wheels:
     needs: test

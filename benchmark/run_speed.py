@@ -17,6 +17,9 @@ import csv
 import json
 import multiprocessing
 import os
+import sys
+sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parent))
+from binpath import bin_path
 import subprocess
 import sys
 import time
@@ -60,7 +63,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--bench-bin",
-        default=os.environ.get("BENCH_NATIVE", str(Path("target/release") / ("bench_native.exe" if os.name == "nt" else "bench_native"))),
+        default=os.environ.get("BENCH_NATIVE") or bin_path("bench_native"),
     )
     args = parser.parse_args()
 

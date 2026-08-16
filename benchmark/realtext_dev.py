@@ -17,6 +17,7 @@ Usage: python benchmark/realtext_dev.py --candidate model/candidates/v37.crfsuit
 """
 
 import argparse
+import sys
 import collections
 import csv
 import json
@@ -25,9 +26,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-import sys as _sys
-from pathlib import Path as _P
-_sys.path.insert(0, str(_P(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from binpath import bin_path
 
 ROOT = Path(__file__).parent.parent

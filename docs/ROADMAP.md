@@ -10,8 +10,8 @@ behavior is frozen to usaddress 0.5.16, and improvements live in native mode or 
 ## v1.0 (built, unreleased)
 
 - Rust engine running the usaddress-trained CRF model with four-layer verified output parity
-  (20,738-address corpus + 738 us-addrs regression cases, zero divergences)
-- 10x single-core like-for-like; 210k+/sec multi-threaded
+  (20,738-address corpus (including 738 us-addrs regression cases), zero divergences)
+- 11.3x single-core like-for-like; 360k/sec multi-threaded (native engine)
 - Drop-in Python wheel (tag/parse/tag_mapping/RepeatedLabelError), 0.8MB, no build toolchain —
   resolves upstream's crash class (26 reports since 2017, incl. #180) and install class (#229, #347)
 - Native mode: never raises on valid input (also covers upstream #160, multiple occupancies)

@@ -56,6 +56,8 @@ mod tests {
         assert_eq!(tokenize("123\u{00BD} Main"), vec!["123\u{00BD}", "Main"]);
         assert_eq!(tokenize("\u{00BD},"), vec!["\u{00BD},"]);
         assert_eq!(tokenize("\u{00BD}Main"), vec!["\u{00BD}Main"]);
+        // Bare No-char as the final token, no trailing punctuation.
+        assert_eq!(tokenize("123 Main \u{00BD}"), vec!["123", "Main", "\u{00BD}"]);
     }
 
     #[test]

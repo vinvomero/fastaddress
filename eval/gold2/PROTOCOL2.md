@@ -183,6 +183,12 @@ sampling entirely.
   training/MANIFEST-v36.json) and round 8's is `model/candidates/v43.crfsuite`
   (sha256/16 `c5cbb26b5fe8586c`, matching training/MANIFEST-v43.json). The blind-key files
   themselves are unmodified round artifacts; this entry is the hash linkage.
+- 2026-08-16: **Append-only exception, disclosed.** A history rewrite (removal of leaked
+  editor tokens and business-sensitive text before going public) changed every commit ID in
+  the repo. The three commit SHAs cited in the earlier spend-decision entry were updated IN
+  PLACE to their post-rewrite equivalents so they resolve for readers — an edit to an
+  otherwise append-only log, recorded here as the exception it is. The commits themselves
+  are unchanged in content; the mapping came from git-filter-repo's commit-map.
 - 2026-08-16: **Fidelity checks executed; gold-2b final structure locked.** Verdicts
   (evidence in eval/gold2b/FIDELITY_CHECKS.md): AL PASS, LA PASS, TX PASS (10/10 parcels
   verbatim against BCAD's official records at matching vintage), MS PASS, **WA FAIL —

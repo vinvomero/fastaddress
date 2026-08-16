@@ -124,8 +124,9 @@ candidates missed them, and those misses are published in the
 
 The deciding gold records were judged by a human: seven review rounds so far, models blinded
 as A/B, Census records attached as evidence, verdicts and blind keys committed in
-[eval/gold/](eval/gold/) and [eval/gold2/](eval/gold2/). The +4.73 margin is exact rather than
-estimated because every record where the two models disagree carries a human verdict. (You'll
+[eval/gold/](eval/gold/) and [eval/gold2/](eval/gold2/). Margins here are computed from human verdicts only -- every counted disagreement carries
+one. The current candidate's 14 newest divergences are still unreviewed and count for
+nothing, which is why its gold-1 row says "passes at the floor" rather than an exact figure. (You'll
 find LLM-generated suggestion files in the eval folders too -- those were prelabeling triage,
 committed for transparency. The protocol counts human verdicts and nothing else;
 [eval/PROTOCOL.md](eval/PROTOCOL.md) is explicit about it.)
