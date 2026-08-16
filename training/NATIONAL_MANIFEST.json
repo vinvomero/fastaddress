@@ -1,6 +1,6 @@
 {
  "seed": 20260816,
- "total": 127676,
+ "total": 144516,
  "by_generator": {
   "cities_coverage": 27225,
   "postdir_plain_city": 9000,
@@ -13,8 +13,11 @@
   "pobox_spanish_city": 1500,
   "dirword_city": 6000,
   "street_named_after_city": 1500,
-  "retained:abbrev_city": 15000,
+  "retained:abbrev_city": 24000,
   "retained:true_post_directional": 4500,
+  "retained:spelled_postdir_street": 3000,
+  "retained:route_spelled_postdir": 3000,
+  "retained:landmark_field": 1800,
   "retained:unit_abbrev": 3000,
   "retained:bare_street_no_number": 2100,
   "retained:grid_predirectional": 4500,
@@ -35,8 +38,8 @@
   "retained:inner_directional_street": 1200,
   "retained:pike_and_xing": 3000
  },
- "dropped_tokenizer_mismatch": 614,
- "dropped_eval_overlap": 35,
+ "dropped_tokenizer_mismatch": 560,
+ "dropped_eval_overlap": 49,
  "floors": {
   "city": 3,
   "form": 60
