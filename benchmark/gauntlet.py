@@ -69,6 +69,9 @@ def gauntlet(candidate, judged_parse):
     ok &= run("5. 20-COUNTY FINAL SPLIT (spent; dev tier)",
               ["benchmark/final_validation.py", "--candidate", candidate],
               expect=["net improvement      : PASS", "no state worse 3:1   : PASS"])
+    ok &= run("6. REAL-TEXT DEV HOLDOUT (2,000 rows, 30 states; PROTOCOL2 spend-rule floor)",
+              ["benchmark/realtext_dev.py", "--candidate", candidate],
+              expect=["net positive, CI excludes zero : PASS"])
     print("=" * 78)
     print(f"GAUNTLET VERDICT: {'ALL GREEN — candidate may proceed to a binding draw' if ok else 'RED — not eligible for a binding attempt'}")
     return ok

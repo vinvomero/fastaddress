@@ -80,3 +80,14 @@ sampling entirely.
   scans, all spent splits. No candidate meeting less than this bar may be scored against gold-2.
   After attempt 2, pass or fail, gold-2 is spent and gold-2b (sources disjoint per
   GOLD2B_SOURCES.md) is the only remaining claim path.
+- 2026-08-15: Dev holdout carved (`eval/realtext_dev.jsonl`, 2,000 rows, 30 states, seed
+  20260818, physically removed from the training corpus before any v37-generation model
+  existed). **Anchor result: v36 scores +0.900 pp, 95% CI [+0.300, +1.500] on the dev
+  holdout — it PASSES the tier that gold-2 failed.** Cause: selection bias — the holdout
+  contains only rows whose interiors aligned exactly against TIGER (55% of raw), while
+  gold-2 also contains the unalignable classes (dropped suffixes, misspellings,
+  non-TIGER phrases) where v36 lost. The dev tier is therefore easier than gold-2, and
+  the frozen spend rule above is a floor, not a predictor. **Additional guard, recorded
+  before any v37-generation candidate exists: attempt 2 will not be spent on a candidate
+  whose dev-tier net margin does not materially exceed the v36 anchor (+0.900 pp point
+  estimate).** This only tightens the frozen rule; nothing is loosened.
