@@ -8,3 +8,4 @@ training/tiger_cache/
 # accuracy record's regenerate-from-repo promise)
 model/candidates/
 dist_local/
+dist_v2_local/
