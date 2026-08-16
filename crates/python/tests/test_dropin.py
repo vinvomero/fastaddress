@@ -107,6 +107,40 @@ def main():
     except fastaddress.RepeatedLabelError:
         pass
 
+
+    # Exception fidelity: attributes and message must match usaddress exactly.
+    crash = "59 ST JAMES PLACE NEW YORK NY 10038"
+    try:
+        usaddress.tag(crash)
+        sys.exit("FAIL: usaddress did not raise on the crash-class input")
+    except usaddress.RepeatedLabelError as ue:
+        try:
+            fastaddress.tag(crash)
+            sys.exit("FAIL: fastaddress did not raise on the crash-class input")
+        except fastaddress.RepeatedLabelError as fe:
+            check(fe.original_string == ue.original_string, "exception original_string mismatch")
+            check(fe.parsed_string == ue.parsed_string, "exception parsed_string mismatch")
+            check(str(fe) == str(ue),
+                  "exception message mismatch: " + repr(str(fe)) + " vs " + repr(str(ue)))
+            check(fe.message == ue.message, "exception .message attribute mismatch")
+
+    # Keyword-argument fidelity: usaddress's parameter names must work.
+    check(fastaddress.parse(address_string="123 N Main St") == usaddress.parse(address_string="123 N Main St"),
+          "parse(address_string=...) keyword call mismatch")
+    t_f = fastaddress.tag(address_string="123 N Main St Springfield IL 62704")
+    t_u = usaddress.tag(address_string="123 N Main St Springfield IL 62704")
+    check(dict(t_f[0]) == dict(t_u[0]) and t_f[1] == t_u[1], "tag(address_string=...) keyword call mismatch")
+
+    # Unicode No-category tokens: standalone half fractions must survive.
+    for half in ["123 ½ Main St Springfield IL", "123½ Main St", "230 ½ W 5TH ST"]:
+        check(fastaddress.parse(half) == usaddress.parse(half), f"½ parity mismatch: {half!r}")
+
+    # tag_mapping falsy-value branch: empty-string mapping leaves the label unchanged.
+    m = {"AddressNumber": ""}
+    check(fastaddress.tag("123 Main St", tag_mapping=m) == usaddress.tag("123 Main St", tag_mapping=m),
+          "tag_mapping falsy-value branch mismatch")
+
+
     print(f"OK: {len(rows)} sampled rows drop-in identical; import time {IMPORT_SECS*1000:.0f}ms")
 
 

@@ -177,6 +177,12 @@ sampling entirely.
   cohort is topped up from its own already-approved sources to ≥2,900 records (~91/state,
   robust to a TX drop) — more data from approved sources, nothing reweighted, nothing
   removed. Scoring attempts used: 0 of 2.
+- 2026-08-16: **Candidate artifact pinning (transparency repair, pre-launch review).** The
+  model binaries behind the scored rounds are now committed: round 7's candidate is
+  `model/candidates/v36.crfsuite` (sha256/16 `ec5815de46b9602f`, matching
+  training/MANIFEST-v36.json) and round 8's is `model/candidates/v43.crfsuite`
+  (sha256/16 `c5cbb26b5fe8586c`, matching training/MANIFEST-v43.json). The blind-key files
+  themselves are unmodified round artifacts; this entry is the hash linkage.
 - 2026-08-16: **Fidelity checks executed; gold-2b final structure locked.** Verdicts
   (evidence in eval/gold2b/FIDELITY_CHECKS.md): AL PASS, LA PASS, TX PASS (10/10 parcels
   verbatim against BCAD's official records at matching vintage), MS PASS, **WA FAIL —

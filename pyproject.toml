@@ -1,0 +1,30 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "fastaddress"
+version = "0.1.0"
+description = "Drop-in usaddress-compatible US address parser backed by a Rust engine (exact output parity, dramatically faster)"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+readme = "README.md"
+keywords = ["address", "parser", "usaddress", "crf", "geocoding"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Repository = "https://github.com/vinvomero/fastaddress"
+
+# Root-level install support: `pip install git+https://github.com/vinvomero/fastaddress`
+# builds the Python package from crates/python without needing #subdirectory=.
+[tool.maturin]
+manifest-path = "crates/python/Cargo.toml"
+features = ["pyo3/extension-module"]
+module-name = "fastaddress"

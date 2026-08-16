@@ -3,7 +3,7 @@ title: "feat: Real-text training — close the composed-to-real transfer gap"
 type: feat
 status: active
 date: 2026-08-16
-origin: C:/Users/vvome/docs/brainstorms/2026-08-09-us-address-parser-requirements.md
+origin: 2026-08-09 requirements brainstorm (pre-repo, kept locally)
 ---
 
 # feat: Real-text training — close the composed-to-real transfer gap

@@ -2,7 +2,7 @@
 
 Measures, over all benchmark datasets combined:
   1. usaddress single-core (Python, compat tag loop)         <- baseline
-  2. usaddr wheel single-core (same loop through the binding) <- like-for-like headline
+  2. fastaddress wheel single-core (same loop through the binding) <- like-for-like headline
   3. native Rust single-core (bench_native binary)
   4. multi-core: multiprocessing usaddress vs threaded native Rust
 
@@ -60,7 +60,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--bench-bin",
-        default=os.environ.get("BENCH_NATIVE", str(Path("target/release/bench_native.exe"))),
+        default=os.environ.get("BENCH_NATIVE", str(Path("target/release") / ("bench_native.exe" if os.name == "nt" else "bench_native"))),
     )
     args = parser.parse_args()
 
@@ -85,7 +85,7 @@ def main():
     py_rate = n / py_secs
     rs_rate = n / rs_secs
     print(f"usaddress single-core (best of 3):    {py_rate:,.0f}/sec ({py_secs:.1f}s)")
-    print(f"usaddr wheel single-core (best of 3): {rs_rate:,.0f}/sec ({rs_secs:.1f}s)")
+    print(f"fastaddress wheel single-core (best of 3): {rs_rate:,.0f}/sec ({rs_secs:.1f}s)")
 
     # Native side runs over the SAME full corpus (every dataset CSV), aggregated.
     env = {**os.environ, "BENCH_STAGE": "full"}
@@ -125,12 +125,12 @@ def main():
     report = f"""# Speed Report — three-way benchmark
 
 Corpus: {n} addresses (all benchmark datasets). Machine: {cores} logical cores.
-usaddress {version('usaddress')} (python-crfsuite), usaddr wheel 0.1.0 (Rust, same model).
+usaddress {version('usaddress')} (python-crfsuite), fastaddress wheel 0.1.0 (Rust, same model).
 
 | Configuration | Addresses/sec | Multiplier vs baseline |
 |---|---|---|
 | usaddress, single core (baseline) | {py_rate:,.0f} | 1.0x |
-| **usaddr wheel, single core (like-for-like)** | {rs_rate:,.0f} | **{like_for_like:.1f}x** |
+| **fastaddress wheel, single core (like-for-like)** | {rs_rate:,.0f} | **{like_for_like:.1f}x** |
 | native Rust, single core | {native_rate_1:,.0f} | {native_mult:.1f}x |
 | usaddress, {cores} processes (multiprocessing) | {mp_rate:,.0f} | {mp_rate / py_rate:.1f}x |
 | native Rust, {cores} threads | {native_rate_n:,.0f} | {native_rate_n / py_rate:.1f}x |

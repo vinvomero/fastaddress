@@ -3,7 +3,7 @@ title: "feat: Rust-core US address parser with exact usaddress parity"
 type: feat
 status: completed
 date: 2026-08-09
-origin: C:/Users/vvome/docs/brainstorms/2026-08-09-us-address-parser-requirements.md
+origin: 2026-08-09 requirements brainstorm (pre-repo, kept locally)
 ---
 
 # feat: Rust-core US address parser with exact usaddress parity
@@ -207,7 +207,6 @@ Carried from origin — **Deferred for later:** multinational parsing; the PySAL
 - **Speed bar miss.** If U7 measures <10x single-core, launch pauses for an explicit decision (reframe vs optimize further); the plan does not ship a weak headline.
 - **crfs crate correctness.** Low risk (prior art); if inference mismatches appear, cross-check against the CRFsuite C bindings as oracle before suspecting the port.
 - **Model redistribution.** PROVENANCE.md check in U1; fallback design (load from user's installed usaddress) documented if redistribution is not permitted.
-[redacted pre-launch]
 
 ---
 

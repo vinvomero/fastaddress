@@ -33,12 +33,17 @@ behavior is frozen to usaddress 0.5.16, and improvements live in native mode or 
   compat output.
 - Free-threaded (abi3t) wheels when audience demand appears.
 
-## Model v2 (GATE CLEARED — ships opt-in beside the pinned original)
+## Model v2 (NOT in this release — both claim-tier attempts spent)
 
-Candidate **v23** cleared both pre-registered gates on fully human-adjudicated evidence
-([findings](../benchmark/results/model-v2-findings.md)): gold margin **+4.73pp** (bar +3.0, 95%
-CI [+3.67, +5.87]), clean set **159/159** exactly matching the original. All 82 differing records
-carry human verdicts across four review rounds; v23 wins 73, loses 2 (known, adjudicated).
+The retrained model does not ship. The final candidate, **v43**, is green on every internal
+surface (clean 159/159, 74-0 on adjudicated hard cases, both national scans, +2.4pp on the
+held-out real-text set) and still could not statistically prove its edge on the national
+free-text exam: gold-2 attempt 2 of 2 came in at +0.789pp with a CI including zero. Under the
+pre-registered rules ([findings](../benchmark/results/model-v2-findings.md),
+[PROTOCOL2](../eval/gold2/PROTOCOL2.md)), that is a fail, both scoring attempts are spent, and
+any future claim requires the already-built gold-2b set. The v43 artifact and full recipe stay
+in the repo as documented candidates. An earlier candidate (v23) cleared the first-generation
+gates and then failed the national scans — that history is in the findings report.
 
 Public claims must carry the PROTOCOL.md disclosure: training targeted error classes surfaced by
 the gold set itself, so the phrasing is "measurably better on identified, evidence-backed error

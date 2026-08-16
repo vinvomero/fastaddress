@@ -23,3 +23,10 @@ parity gate and the full-corpus ID-vs-string equivalence test. The marginals are
 checked against brute-force enumeration of all label sequences on the bundled 2-label toy model
 (`tagger::tests::marginals_match_brute_force_enumeration`) and against `pycrfsuite.Tagger`
 (`benchmark/compare_marginals.py`).
+
+## CRFsuite attribution
+
+The alpha/beta scaling scheme and decoder structure are ports of CRFsuite's
+`crf1d` C implementation (Naoaki Okazaki, BSD 3-clause). The full license and
+copyright notice travel with this crate in `LICENSE-CRFSUITE`, alongside the
+MIT license of the `crfs` Rust crate this vendoring started from.

@@ -2,16 +2,51 @@ use std::collections::HashMap;
 
 use pyo3::exceptions::{PyException, PyValueError};
 use pyo3::prelude::*;
-use pyo3::types::PyDict;
+use pyo3::types::{PyDict, PyList};
 
 use fastaddress_core::model::ModelId;
 
 pyo3::create_exception!(
-    usaddr,
+    fastaddress,
     RepeatedLabelError,
     PyException,
     "Raised when more than one area of the address string has the same label (usaddress-compatible)."
 );
+
+/// Build a RepeatedLabelError carrying usaddress's exact contract: the
+/// `message`, `original_string`, and `parsed_string` attributes, and a str()
+/// identical to probableparsing's MESSAGE (+ DOCS_MESSAGE) as usaddress
+/// renders it — person/corporation wording and all, because drop-in means
+/// drop-in. `parsed_string` is a list of (token, label) tuples; its repr in
+/// the message comes from Python itself so quoting matches byte-for-byte.
+fn repeated_label_err(py: Python<'_>, e: fastaddress_core::api::RepeatedLabelError) -> PyErr {
+    let build = || -> PyResult<PyErr> {
+        let parsed = PyList::new(
+            py,
+            e.parsed_string
+                .iter()
+                .map(|(t, l)| (t.as_str(), l.as_str())),
+        )?;
+        let parsed_repr: String = parsed.repr()?.extract()?;
+        let message = format!(
+            "\nERROR: Unable to tag this string because more than one area of the string has the same label\n\n\
+             ORIGINAL STRING:  {}\n\
+             PARSED TOKENS:    {}\n\
+             UNCERTAIN LABEL:  {}\n\n\
+             When this error is raised, it's likely that either (1) the string is not a valid person/corporation name or (2) some tokens were labeled incorrectly\n\n\
+             To report an error in labeling a valid name, open an issue at https://github.com/datamade/usaddress/issues/new - it'll help us continue to improve probablepeople!\n\n\
+             For more information, see the documentation at https://usaddress.readthedocs.io/",
+            e.original_string, parsed_repr, e.repeated_label
+        );
+        let exc_type = py.get_type::<RepeatedLabelError>();
+        let inst = exc_type.call1((message.clone(),))?;
+        inst.setattr("message", message)?;
+        inst.setattr("original_string", e.original_string.as_str())?;
+        inst.setattr("parsed_string", &parsed)?;
+        Ok(PyErr::from_value(inst))
+    };
+    build().unwrap_or_else(|err| err)
+}
 
 /// Resolve the `model=` keyword to a ModelId. Kept as a plain function
 /// (String error, no Python types) so the feature-off path is unit-testable
@@ -33,24 +68,24 @@ fn model_arg(model: &str) -> PyResult<ModelId> {
 
 /// usaddress.parse(): list of (token, label) tuples.
 #[pyfunction]
-#[pyo3(signature = (address, model="v1"))]
-fn parse(address: &str, model: &str) -> PyResult<Vec<(String, String)>> {
+#[pyo3(signature = (address_string, model="v1"))]
+fn parse(address_string: &str, model: &str) -> PyResult<Vec<(String, String)>> {
     let model = model_arg(model)?;
-    Ok(fastaddress_core::api::parse_with(model, address))
+    Ok(fastaddress_core::api::parse_with(model, address_string))
 }
 
 /// usaddress.tag(): (OrderedDict-equivalent dict, address_type). Raises
 /// RepeatedLabelError exactly where usaddress does.
 #[pyfunction]
-#[pyo3(signature = (address, tag_mapping=None, model="v1"))]
+#[pyo3(signature = (address_string, tag_mapping=None, model="v1"))]
 fn tag<'py>(
     py: Python<'py>,
-    address: &str,
+    address_string: &str,
     tag_mapping: Option<HashMap<String, String>>,
     model: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String)> {
     let model = model_arg(model)?;
-    match fastaddress_core::api::tag_model(model, address, tag_mapping.as_ref()) {
+    match fastaddress_core::api::tag_model(model, address_string, tag_mapping.as_ref()) {
         Ok((pairs, kind)) => {
             let dict = PyDict::new(py);
             for (label, component) in pairs {
@@ -58,20 +93,20 @@ fn tag<'py>(
             }
             Ok((dict, kind))
         }
-        Err(e) => Err(RepeatedLabelError::new_err(e.to_string())),
+        Err(e) => Err(repeated_label_err(py, e)),
     }
 }
 
 /// Native mode: never raises on valid input; non-adjacent repeated labels merge.
 #[pyfunction]
-#[pyo3(signature = (address, model="v1"))]
+#[pyo3(signature = (address_string, model="v1"))]
 fn tag_native<'py>(
     py: Python<'py>,
-    address: &str,
+    address_string: &str,
     model: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String)> {
     let model = model_arg(model)?;
-    let (pairs, kind) = fastaddress_core::api::tag_native_model(model, address);
+    let (pairs, kind) = fastaddress_core::api::tag_native_model(model, address_string);
     let dict = PyDict::new(py);
     for (label, component) in pairs {
         dict.set_item(label, component)?;
@@ -87,10 +122,10 @@ fn tag_native<'py>(
 /// parse() with confidences: list of (token, label, confidence) triples, where
 /// confidence is the CRF marginal probability of that label at that position.
 #[pyfunction]
-#[pyo3(signature = (address, model="v1"))]
-fn parse_with_confidence(address: &str, model: &str) -> PyResult<Vec<(String, String, f64)>> {
+#[pyo3(signature = (address_string, model="v1"))]
+fn parse_with_confidence(address_string: &str, model: &str) -> PyResult<Vec<(String, String, f64)>> {
     let model = model_arg(model)?;
-    Ok(fastaddress_core::api::parse_with_confidence_model(model, address)
+    Ok(fastaddress_core::api::parse_with_confidence_model(model, address_string)
         .tokens
         .into_iter()
         .map(|t| (t.token, t.label, t.confidence))
@@ -118,32 +153,32 @@ fn confidence_result<'py>(
 /// tokens' marginals. `sequence_confidence` is the probability of the entire
 /// predicted labelling. Raises RepeatedLabelError exactly where `tag()` does.
 #[pyfunction]
-#[pyo3(signature = (address, tag_mapping=None, model="v1"))]
+#[pyo3(signature = (address_string, tag_mapping=None, model="v1"))]
 fn tag_with_confidence<'py>(
     py: Python<'py>,
-    address: &str,
+    address_string: &str,
     tag_mapping: Option<HashMap<String, String>>,
     model: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String, Bound<'py, PyDict>, f64)> {
     let model = model_arg(model)?;
-    match fastaddress_core::api::tag_model_with_confidence(model, address, tag_mapping.as_ref()) {
+    match fastaddress_core::api::tag_model_with_confidence(model, address_string, tag_mapping.as_ref()) {
         Ok(c) => confidence_result(py, c),
-        Err(e) => Err(RepeatedLabelError::new_err(e.to_string())),
+        Err(e) => Err(repeated_label_err(py, e)),
     }
 }
 
 /// tag_native() with confidences; never raises on valid input.
 #[pyfunction]
-#[pyo3(signature = (address, model="v1"))]
+#[pyo3(signature = (address_string, model="v1"))]
 fn tag_native_with_confidence<'py>(
     py: Python<'py>,
-    address: &str,
+    address_string: &str,
     model: &str,
 ) -> PyResult<(Bound<'py, PyDict>, String, Bound<'py, PyDict>, f64)> {
     let model = model_arg(model)?;
     confidence_result(
         py,
-        fastaddress_core::api::tag_native_model_with_confidence(model, address),
+        fastaddress_core::api::tag_native_model_with_confidence(model, address_string),
     )
 }
 

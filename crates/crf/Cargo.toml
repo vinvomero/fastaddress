@@ -3,6 +3,7 @@
 # are removed; correctness is enforced by this repo's parity and equivalence suites.
 
 [package]
+publish = false
 name = "crfs"
 version = "0.4.1"
 edition = "2024"

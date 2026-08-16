@@ -6,8 +6,15 @@ use regex::Regex;
 // token regex; behavioral parity is enforced by the differential suite, not by
 // regex-string similarity.
 static AMP_RE: LazyLock<Regex> = LazyLock::new(|| Regex::new("(&#38;)|(&amp;)").unwrap());
-static TOKEN_RE: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"\(*\b[^\s,;#&()]+[.,;)\n]*|[#&]").unwrap());
+// Python's re treats No/Nl characters (½, ¼, Roman numerals) as word chars, so
+// its \b fires before a standalone '½'; Rust's \w excludes No/Nl and the same
+// token silently vanished (usaddress keeps it — '123 ½ Main St' is real assessor
+// data). The extra alternations restore Python's boundary behavior for those
+// categories without touching anything the parity suite already pins.
+static TOKEN_RE: LazyLock<Regex> = LazyLock::new(|| {
+    Regex::new(r"\(*(?:[\p{No}\p{Nl}]|\b)[^\s,;#&()]+[.,;)\n]*|\(*[\p{No}\p{Nl}][.,;)\n]*|[#&]")
+        .unwrap()
+});
 
 pub fn tokenize(address: &str) -> Vec<String> {
     let normalized = AMP_RE.replace_all(address, "&");
@@ -37,6 +44,18 @@ mod tests {
     #[test]
     fn trailing_punctuation_stays_attached() {
         assert_eq!(tokenize("ab. cd,ef"), vec!["ab.", "cd,", "ef"]);
+    }
+
+    #[test]
+    fn standalone_half_fraction_is_kept() {
+        // Python \w includes ½ (category No); usaddress keeps it as a token.
+        assert_eq!(
+            tokenize("123 \u{00BD} Main St"),
+            vec!["123", "\u{00BD}", "Main", "St"]
+        );
+        assert_eq!(tokenize("123\u{00BD} Main"), vec!["123\u{00BD}", "Main"]);
+        assert_eq!(tokenize("\u{00BD},"), vec!["\u{00BD},"]);
+        assert_eq!(tokenize("\u{00BD}Main"), vec!["\u{00BD}Main"]);
     }
 
     #[test]

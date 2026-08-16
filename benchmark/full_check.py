@@ -21,8 +21,13 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parent))
+from binpath import bin_path
+
 ROOT = Path(__file__).parent.parent
-EVAL_BIN = "C:/cargo-target/us-address-parser/release/eval_tag.exe"
+EVAL_BIN = bin_path("eval_tag")
 
 
 def tag(raws, model=None):

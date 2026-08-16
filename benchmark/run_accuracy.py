@@ -19,6 +19,11 @@ import tempfile
 from collections import defaultdict
 from pathlib import Path
 
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parent))
+from binpath import bin_path
+
 ROOT = Path(__file__).parent.parent
 GOLD = ROOT / "eval" / "gold" / "candidates.jsonl"
 CLEAN = ROOT / "eval" / "clean" / "clean.jsonl"
@@ -98,7 +103,7 @@ def main():
     ap.add_argument("--candidate", default=None, help="path to a candidate .crfsuite")
     ap.add_argument(
         "--eval-bin",
-        default=str(Path("C:/cargo-target/us-address-parser/release/eval_tag.exe")),
+        default=str(Path(bin_path("eval_tag"))),
     )
     args = ap.parse_args()
 

@@ -3,7 +3,7 @@ title: "feat: Confidence scores in v1.0 + Census TIGER training corpus"
 type: feat
 status: completed
 date: 2026-08-14
-origin: C:/Users/vvome/docs/brainstorms/2026-08-09-us-address-parser-requirements.md
+origin: 2026-08-09 requirements brainstorm (pre-repo, kept locally)
 ---
 
 # feat: Confidence scores in v1.0 + Census TIGER training corpus

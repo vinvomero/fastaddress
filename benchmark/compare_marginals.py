@@ -25,9 +25,14 @@ from pathlib import Path
 import pycrfsuite
 import usaddress
 
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parent))
+from binpath import bin_path
+
 ROOT = Path(__file__).parent.parent
 MODEL = ROOT / "model" / "usaddr.crfsuite"
-DUMP_BIN = "C:/cargo-target/us-address-parser/release/dump_marginals.exe"
+DUMP_BIN = bin_path("dump_marginals")
 
 
 def main() -> int:

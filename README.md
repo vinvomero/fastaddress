@@ -10,12 +10,31 @@ fastaddress.tag("123 N Main St Apt 4B Springfield IL 62704")
 # ({'AddressNumber': '123', 'StreetNamePreDirectional': 'N', ...}, 'Street Address')
 ```
 
+## Install
+
+Not on PyPI yet -- until it is, this repo and its release page are the only official
+sources. Two ways in:
+
+```bash
+# Prebuilt wheel, no Rust needed: grab the one matching your OS/Python from
+# https://github.com/vinvomero/fastaddress/releases  then
+pip install <downloaded-wheel>.whl
+
+# Or build from source (needs a Rust toolchain from https://rustup.rs; takes a few minutes)
+pip install git+https://github.com/vinvomero/fastaddress
+```
+
+Verify: `python -c "import fastaddress; print(fastaddress.tag('123 N Main St Springfield IL 62704'))"`.
+Agents get their own runbook in [AGENTS.md](AGENTS.md).
+
 What you get:
 
-- **10.5x faster single-core**, like for like: 110,119 addresses/sec against usaddress's 10,493.
-  On 8 threads, 212,916/sec. A million-row tax roll in under five seconds. Measured 2026-08-09,
-  interleaved runs on a quiet machine; method and current numbers in
-  [benchmark/results/speed_report.md](benchmark/results/speed_report.md).
+- **11.3x faster single-core**, like for like: 89,653 addresses/sec against usaddress's 7,941
+  on the same machine, same run. The native Rust engine reaches 360,035/sec on 8 threads (the
+  Python API itself is single-threaded per call). A million-row tax roll in seconds. Measured
+  2026-08-16 on the release build; method and current numbers in
+  [benchmark/results/speed_report.md](benchmark/results/speed_report.md) -- rerun it yourself
+  with `python benchmark/run_speed.py`.
 - **The same answers.** Not similar. Identical, checked at four layers (tokens, features,
   serialized attributes, tagged output) across 20,738 real county addresses, zero divergences
   ([parity report](benchmark/results/parity_report.md)).
@@ -26,17 +45,18 @@ What you get:
   Imports in about a quarter second.
 - **Confidence scores**, the thing [usaddress#337](https://github.com/datamade/usaddress/issues/337)
   has been asking for. Details below.
-- **An optional retrained model (v2), currently held back.** The current candidate wins 74-0
-  on human-adjudicated hard cases and beats the original by +2.4 points on held-out real
-  mail text -- and on the 1,394-record national free-text exam, its edge (+0.789 points)
-  is still inside the statistical noise. Two pre-registered scoring attempts were allowed;
-  both are spent; neither cleared the bar. So it does not ship, and the next exam will be
-  built from fresh sources. The whole chain, failures included, is in
-  [the accuracy record](#the-accuracy-record).
+- **A retrained model that doesn't ship, and we'll tell you exactly why.** Our best candidate
+  wins 74-0 on human-adjudicated hard cases. It beats the original by +2.4 points on held-out
+  real mail text. And on the 1,394-record national free-text exam, its edge came out to
+  +0.789 points with a confidence interval that includes zero -- so under rules we set before
+  seeing any results, it stays out. Both allowed scoring attempts are spent. The whole chain,
+  failures included, is in [the accuracy record](#the-accuracy-record).
 
-`parse()`, `tag()` (including `tag_mapping`), and `RepeatedLabelError` behave identically to
-usaddress 0.5.16 on the ASCII-dominant inputs real property data consists of. Known Python/Rust
-Unicode-casing differences are documented as out of parity scope.
+`parse()`, `tag()` (including `tag_mapping` and usaddress's parameter names), and
+`RepeatedLabelError` (same attributes, same message text) behave identically to usaddress
+0.5.16 on the ASCII-dominant inputs real property data consists of. Known Python/Rust Unicode
+differences in casing and digit classification (fullwidth or Arabic-Indic digits can take a
+different label) are out of parity scope; standalone `½` tokens are preserved and parity-tested.
 
 ## Confidence scores
 
@@ -61,14 +81,15 @@ First, they're correct: verified against `pycrfsuite.Tagger.marginal()` running 
 over the same addresses, max absolute difference 1.665e-15 across 34,028 token positions, zero
 Viterbi disagreements. Reproduce with `python benchmark/compare_marginals.py --rows 5000`.
 
-Second, they actually predict errors. Scored against our human-adjudicated records
-([eval/gold](eval/gold)), parses judged correct average 0.762 on their weakest token; parses
-judged wrong average 0.514 (AUC 0.833). None of the 47 known-wrong parses scored above 0.99,
-while 19% of known-correct ones did. Read that as a precision tradeoff: above 0.99 nothing in
-this sample was wrong, but only a fifth of correct parses get there. It's a filter for routing
-doubtful records to review, not permission to skip reviewing. And those first two numbers come
-from contested records, the hardest addresses in the set. On a general mix, easy addresses sit
-at 0.999+ and separate more cleanly.
+Second, what they can and can't tell you about errors. On the hardest slice we have -- the 40
+human-adjudicated records that carry approved label sequences, almost all of them cases where
+the default model gets something wrong -- weakest-token confidence separates right from wrong
+parses with an AUC of 0.703 (means 0.935 vs 0.891). That's a modest signal on contested
+records, and we say so: an earlier draft quoted stronger numbers from an analysis we can no
+longer regenerate, so out they went. Regenerate today's with
+`python benchmark/confidence_error_auc.py`. On a general mix, easy addresses sit at 0.999+
+and separate cleanly; treat confidence as a filter for routing doubtful records to human
+review, never as permission to skip it.
 
 ## The accuracy record
 
@@ -104,7 +125,10 @@ candidates missed them, and those misses are published in the
 The deciding gold records were judged by a human: seven review rounds so far, models blinded
 as A/B, Census records attached as evidence, verdicts and blind keys committed in
 [eval/gold/](eval/gold/) and [eval/gold2/](eval/gold2/). The +4.73 margin is exact rather than
-estimated because every record where the two models disagree carries a human verdict.
+estimated because every record where the two models disagree carries a human verdict. (You'll
+find LLM-generated suggestion files in the eval folders too -- those were prelabeling triage,
+committed for transparency. The protocol counts human verdicts and nothing else;
+[eval/PROTOCOL.md](eval/PROTOCOL.md) is explicit about it.)
 
 One disclosure has to travel with any of these numbers: v2's training data targets error classes
 we found by studying gold-set failures. That biases the gold margin upward. The honest claim is
@@ -208,9 +232,15 @@ rules were set before the results; the result is the result.
 So: gold-2 is spent, both attempts disclosed, and the retrained model stays opt-in and
 unheadlined. What real-text training measurably did -- the 4x margin move, the fixed
 regional failure, the 74-0 hard-case record -- ships as documentation, not as a claim of
-national superiority. A future claim requires gold-2b, built from sources gold-2 never
-touched ([the list is already drafted](eval/gold2/GOLD2B_SOURCES.md)), under the same
-pre-registered discipline.
+national superiority.
+
+The next exam already exists. Gold-2b was fetched and locked before launch: 2,912 records
+in its strict cohort across 32 states, drawn only from datasets that neither gold-2 nor any
+training corpus ever touched, with the sampling rules and analysis structure committed to
+[PROTOCOL2](eval/gold2/PROTOCOL2.md) before a single record was fetched. One source failed
+its provenance check during the build (a city layer quietly mixing in excluded-lineage
+parcels) and was dropped -- the process working as designed. No candidate has been scored
+against it. Two attempts, ever, same as before.
 
 Every candidate, every failed gate, and every hypothesis is in the git history, committed
 before its test ran.
@@ -229,6 +259,16 @@ before its test ran.
 
 No gold or clean evaluation address appears in any training corpus. The builders enforce this
 with normalized-identity dedupe.
+
+### The data and the people in it
+
+Every address in this repo comes from public county and state assessor rolls -- records
+governments publish precisely so property information can be checked. Where an owner's name
+appears in an evaluation file, it is because the assessor published it in the mailing-address
+field and the parser has to handle it (a `Recipient` line is a real parsing class). We commit
+no data beyond what the source already made public: no SSNs, no non-public fields, nothing
+fetched from behind authentication. If your name appears here and you want it replaced with a
+placeholder, open an issue -- the eval sets can substitute a record without weakening anything.
 
 ## Why this exists
 
@@ -279,5 +319,5 @@ python benchmark/fetch_data.py && python benchmark/dump_oracle.py
 cargo build --release && python benchmark/run_parity.py
 ```
 
-Issue triage is committed for at least 12 months post-launch (owner to be finalized at release).
+Issue triage is committed for at least 12 months post-launch, by the repo owner (@vinvomero).
 The engine is maintenance-light by design: no retraining pipeline, no external data dependency.

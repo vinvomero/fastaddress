@@ -1,3 +1,7 @@
+> **Superseded (2026-08-16).** This early-project snapshot predates the adjudicated
+> record. Current accuracy reporting lives in the README's accuracy record,
+> `benchmark/results/model-v2-findings.md`, and the PROTOCOL status logs.
+
 # Accuracy Report
 
 ## clean (159 rows)

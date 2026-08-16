@@ -33,9 +33,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "training"))
 import build_tiger_corpus as btc
+import os as _os
+_legacy = Path("C:/cargo-target/us-address-parser")
+_cache_root = Path(_os.environ.get("FASTADDRESS_CACHE_DIR",
+    str(_legacy if _legacy.exists() else Path.home() / ".cache" / "fastaddress")))
 
 # Cache outside OneDrive; ~1GB of shapefiles has no business syncing.
-btc.CACHE = Path("C:/cargo-target/us-address-parser/tiger_holdout_cache")
+btc.CACHE = _cache_root / "tiger_holdout_cache"
 
 ROOT = Path(__file__).parent.parent
 SEED = 20260815

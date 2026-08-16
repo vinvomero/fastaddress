@@ -29,6 +29,7 @@ jobs:
       - run: python benchmark/dump_oracle.py && python benchmark/run_parity.py --dump-bin target/release/dump
         name: four-layer parity gate
       - run: python crates/python/tests/test_dropin.py
+      - run: python crates/python/tests/test_model_select.py
 
   build-wheels:
     needs: test
@@ -42,6 +43,14 @@ jobs:
         with:
           command: build
           args: --release -m crates/python/Cargo.toml -o dist
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: wheel install + import smoke
+        shell: bash
+        run: |
+          pip install dist/*.whl
+          python -c "import fastaddress; t, k = fastaddress.tag('123 N Main St Springfield IL 62704'); assert k == 'Street Address', k; print('wheel OK:', t)"
       - uses: actions/upload-artifact@v4
         with:
           name: wheels-${{ matrix.os }}

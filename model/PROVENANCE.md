@@ -30,6 +30,13 @@ repo and findings report.
   divergent records, no state worse than 3:1.
 - Known loss, adjudicated: `Anchor Point, AK`.
 - Disclosure: training targeted error classes surfaced by the gold set itself; see PROTOCOL.md.
+- **Status update (2026-08-16): this artifact never shipped and is not the current candidate.**
+  After the gates above, v28 failed a 32-state geographic holdout (41.1% right vs 45.2% wrong
+  on its changes) and was superseded through candidate **v43**
+  (`training/MANIFEST-v43.json`), which passed every internal surface and then failed the
+  final national free-text claim gate (gold-2 attempt 2 of 2: +0.789pp, CI includes zero).
+  No v2-line model ships in this release. Full chain:
+  `benchmark/results/model-v2-findings.md` and `eval/gold2/PROTOCOL2.md`.
   Public phrasing is "measurably better on identified, evidence-backed error classes".
 - The pinned original model above is untouched; compat mode still uses it exclusively, and the
   four-layer parity guarantee applies to that path only.

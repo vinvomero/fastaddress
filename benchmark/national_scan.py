@@ -26,8 +26,13 @@ import subprocess
 import tempfile
 from pathlib import Path
 
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parent))
+from binpath import bin_path
+
 ROOT = Path(__file__).parent.parent
-EVAL_BIN = "C:/cargo-target/us-address-parser/release/eval_tag.exe"
+EVAL_BIN = bin_path("eval_tag")
 TIGER = ROOT / "training" / "corpus" / "tiger.jsonl"
 FIPS = {"17": "IL", "48": "TX", "49": "UT", "22": "LA", "13": "GA", "12": "FL",
         "06": "CA", "36": "NY", "04": "AZ", "53": "WA", "35": "NM", "42": "PA",
