@@ -106,3 +106,14 @@ sampling entirely.
   same prominence, gold-2 is spent, gold-2b (GOLD2B_SOURCES.md) becomes the only claim
   path. Round-8 adjudication is blinded under a fresh key; only human verdicts enter
   gate arithmetic.
+- 2026-08-16: **Scoring attempt 2 of 2: FAIL. Gold-2 is spent.** Candidate v43 vs v1,
+  64 disagreements human-adjudicated in full (no tripwire): 35 candidate / 24 incumbent /
+  5 neither. Net +11 records = +0.789 pp, 95% CI [-0.287, +1.865] — includes zero
+  (Gate 1 FAIL). Gate 2 PASS: no binding division net-negative; the Mountain division
+  problem from attempt 1 is resolved. Verdicts with approved label sequences in
+  verdicts_r8.json. Honest progress note recorded with the fail: the margin moved from
+  +3 (attempt 1, v36) to +11 (attempt 2, v43) and the division gate flipped to pass;
+  at 64 divergents this set cannot certify an effect below roughly +1.1 pp, and +0.789
+  is under that resolution. No claim-tier language may cite gold-2. Further claim-tier
+  runs require gold-2b built from GOLD2B_SOURCES.md, subject to the same pre-registered
+  discipline and a fresh two-attempt budget.

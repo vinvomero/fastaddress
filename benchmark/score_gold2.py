@@ -39,6 +39,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--verdicts", default="eval/gold2/verdicts_r7.json")
     ap.add_argument("--total", type=int, default=1394)
+    ap.add_argument("--attempt", type=int, default=1)
     args = ap.parse_args()
 
     verd = json.loads((ROOT / args.verdicts).read_text(encoding="utf-8"))
@@ -80,7 +81,7 @@ def main():
     if g1 and g2:
         tier = "strong" if point >= 1.5 else "measurable"
     print(f"\nRESULT: {'PASS — language tier: ' + tier if tier else 'FAIL — claim tier not passed'}")
-    print("Scoring attempt: 1 of 2 (disclose in any claim).")
+    print(f"Scoring attempt: {args.attempt} of 2 (disclose in any claim).")
 
 
 if __name__ == "__main__":

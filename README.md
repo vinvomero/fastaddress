@@ -26,12 +26,13 @@ What you get:
   Imports in about a quarter second.
 - **Confidence scores**, the thing [usaddress#337](https://github.com/datamade/usaddress/issues/337)
   has been asking for. Details below.
-- **An optional retrained model (v2), currently held back.** The current candidate has cleared
-  every gate we built from assembled data -- a human-adjudicated +4.73-point margin, two
-  national scans, a one-shot binding split of 20 never-used counties -- and then landed at
-  statistical parity on a 1,394-record exam of real free-text addresses from 40 states. Better
-  on composed text, not yet provably better on the text people actually write, so it does not
-  ship. The whole chain, failures included, is in [the accuracy record](#the-accuracy-record).
+- **An optional retrained model (v2), currently held back.** The current candidate wins 74-0
+  on human-adjudicated hard cases and beats the original by +2.4 points on held-out real
+  mail text -- and on the 1,394-record national free-text exam, its edge (+0.789 points)
+  is still inside the statistical noise. Two pre-registered scoring attempts were allowed;
+  both are spent; neither cleared the bar. So it does not ship, and the next exam will be
+  built from fresh sources. The whole chain, failures included, is in
+  [the accuracy record](#the-accuracy-record).
 
 `parse()`, `tag()` (including `tag_mapping`), and `RepeatedLabelError` behave identically to
 usaddress 0.5.16 on the ASCII-dominant inputs real property data consists of. Known Python/Rust
@@ -79,7 +80,7 @@ can't regenerate from the repo is a bug; file an issue.
 
 | | Default (compat) | v2 (opt-in) |
 |---|---|---|
-| What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project (current candidate: [recipe manifest](training/MANIFEST-v36.json)) |
+| What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project (current candidate: [recipe manifest](training/MANIFEST-v43.json)) |
 | Output | Bit-identical to usaddress 0.5.16 | Differs on purpose, on documented error classes |
 | Status | Shipping | **Not in this release.** Wins on every composed surface; statistically indistinguishable from the default on real free-text. Details below. Ships when that changes, or not at all. |
 
@@ -91,13 +92,14 @@ review them, what gets disclosed. The gates don't move once results exist. Two e
 candidates missed them, and those misses are published in the
 [findings report](benchmark/results/model-v2-findings.md) with the same prominence as the pass.
 
-| Gate | Bar | Current candidate (v36) |
+| Gate | Bar | Current candidate (v43) |
 |---|---|---|
-| Gold-set margin (composed-era set) | at least +3.0pp, 95% CI excluding zero | +4.73pp, exact -- every disagreement human-adjudicated, no CI needed. Pass. |
+| Gold-set margin (composed-era set) | at least +3.0pp, 95% CI excluding zero | 74 wins, 0 losses on adjudicated disagreements (14 new ones pending review); passes the bar at the floor. Pass. |
 | Clean set (upstream's own held-out files) | within 1.0pp of the original | 159/159, exactly equal. Pass. |
 | National scans (16-state, then a 32-state holdout) | net improvement; no state worse than 3:1 | Both pass. |
-| Binding split: 20 never-used counties, one run, outcome final | same two rules, committed before the draw | 70.5% of its changes right vs 17.3% wrong, all 20 counties clean. Pass. |
-| **Gold-2: real free-text, 40 states + DC** | net margin positive, CI excluding zero; no census division net-negative | **+0.215pp, CI [-0.861, +1.291]. Fail, both gates.** |
+| 20-county split (spent by v36's one-shot binding run: 70.5% right vs 17.3%) | same two rules | Pass. |
+| Real-text dev holdout (2,000 held-out real mail lines) | beat the original, CI excluding zero | +2.400pp, CI [+1.750, +3.100]. Pass. |
+| **Gold-2: real free-text, 40 states + DC (two attempts, both spent)** | net margin positive, CI excluding zero; no census division net-negative | Attempt 1 (v36): +0.215pp, CI [-0.861, +1.291] -- fail. **Attempt 2 (v43): +0.789pp, CI [-0.287, +1.865] -- fail.** |
 
 The deciding gold records were judged by a human: seven review rounds so far, models blinded
 as A/B, Census records attached as evidence, verdicts and blind keys committed in
@@ -176,23 +178,39 @@ The pattern deserves plain words: a model trained on composed text dominates com
 ties on real text. The one time real adjudicated examples entered training (the gold-1 error
 classes), the improvement transferred and held. Synthetic coverage did not transfer.
 
-### What we're doing about it
+### The real-text generation, and the final attempt
 
-Training on real text. 299,832 real owner-mail lines were fetched from 30 states' open-data
-portals and labeled by alignment: city/state/zip taken from the source's own fields, street
-interiors matched exactly against Census TIGER records, and every line that didn't match
-dropped rather than guessed -- 164,879 survived (55.0%), with per-source yields and drop
-reasons in [training/REALTEXT_MANIFEST.json](training/REALTEXT_MANIFEST.json). (The last
+The response was to train on real text for the first time. 299,832 real owner-mail lines
+were fetched from 30 states' open-data portals and labeled by alignment: city/state/zip
+taken from the source's own fields, street interiors matched exactly against Census TIGER
+records, and every line that didn't match dropped rather than guessed -- 164,879 survived
+(55.0%), with per-source yields and drop reasons in
+[training/REALTEXT_MANIFEST.json](training/REALTEXT_MANIFEST.json). (The last
 heuristically-labeled corpus this project built measured 9.11% wrong. Alignment or nothing.)
-
 A 2,000-row holdout was carved out before any new model existed
-([eval/realtext_dev.jsonl](eval/realtext_dev.jsonl)), and the spend rule for the final gold-2
-attempt is frozen in PROTOCOL2: no candidate gets scored unless it first beats the original on
-that holdout with a CI excluding zero and stays green on every earlier surface. One measured
-caveat, recorded the day the holdout was built: v36 scores +0.900pp on it despite its gold-2
-parity, because the holdout only contains lines that aligned -- the easier 55%. So the holdout
-is a floor, not a predictor, and the bar for spending the last attempt sits above v36's number,
-not at zero.
+([eval/realtext_dev.jsonl](eval/realtext_dev.jsonl)), and the spend rule for the final
+gold-2 attempt was frozen first: beat the original on that holdout with a CI excluding
+zero, stay green on every earlier surface, and materially exceed v36's +0.900 anchor.
+
+Five candidates later (two more were untrainable in available memory -- documented, not
+hidden), v43 met all of it: +2.400pp on the holdout with every one of 48 divergents going
+its way, zero regressions on any adjudicated verdict, every composed surface green. It was
+the first candidate in the project's history clean everywhere at once. It earned the final
+attempt.
+
+Attempt 2, adjudicated blind by a human across all 64 disagreements: 35 for v43, 24 for
+the original, 5 neither. Net +0.789pp, CI [-0.287, +1.865]. The interval includes zero.
+**Fail.** The division gate passed this time -- attempt 1's Mountain-division failure is
+fixed -- and the margin nearly quadrupled (+3 records to +11). But a 64-disagreement exam
+cannot certify an effect smaller than about 1.1 points, and +0.789 is under that line. The
+rules were set before the results; the result is the result.
+
+So: gold-2 is spent, both attempts disclosed, and the retrained model stays opt-in and
+unheadlined. What real-text training measurably did -- the 4x margin move, the fixed
+regional failure, the 74-0 hard-case record -- ships as documentation, not as a claim of
+national superiority. A future claim requires gold-2b, built from sources gold-2 never
+touched ([the list is already drafted](eval/gold2/GOLD2B_SOURCES.md)), under the same
+pre-registered discipline.
 
 Every candidate, every failed gate, and every hypothesis is in the git history, committed
 before its test ran.

@@ -1,0 +1,922 @@
+{
+ "% SHIRLEY FRIDAY PERS REP 13 1139 LEILANI AVE PAHOA HI 96778": {
+  "verdict": "v1",
+  "state": "AK",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "SubaddressIdentifier",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "74 LAKESHORE VIEW WEST JASPER AL 35503": {
+  "verdict": "v2",
+  "state": "AL",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5423 ROSEMARY ROAD MT OLIVE ALQ 35117": {
+  "verdict": "neither",
+  "state": "AL",
+  "round": 8,
+  "judged_labels": null
+ },
+ "7090 PINECREST PARK CITY UT 840985387": {
+  "verdict": "v2",
+  "state": "CO",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "163 SOUTH ST #93 DANBURY CT 06810": {
+  "verdict": "v2",
+  "state": "CT",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4411 BEE RIDGE RD PMB 177 SARASOTA FL 34233": {
+  "verdict": "v1",
+  "state": "FL",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "PMB = Private Mailbox; federal standard: Subaddress Type + Identifier"
+ },
+ "2289 WILEY ST PORT CHARLOTTE FL 33952": {
+  "verdict": "v2",
+  "state": "FL",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3039 POMONA WAY EAST POINT GA 30344": {
+  "verdict": "v2",
+  "state": "GA",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5742 BARRINGTON RUN UNION CITY GA 30291-6104": {
+  "verdict": "v2",
+  "state": "GA",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5562 VILLAGE TRCE UNION CITY GA 30291-5147": {
+  "verdict": "v2",
+  "state": "GA",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6488 OLD COLONY BEND ROCKFORD IL 61108": {
+  "verdict": "v1",
+  "state": "IL",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "616 LANAE WAY SOUTH BELOIT IL 61080": {
+  "verdict": "v2",
+  "state": "IL",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3906 N LAKE RIDGE WICHITA KS 67205-5206": {
+  "verdict": "v2",
+  "state": "KS",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3131 N DEN HOLLOW WICHITA KS 67205-8741": {
+  "verdict": "v2",
+  "state": "KS",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Den Hollow is the street name; omitted St is the suffix"
+ },
+ "C/O DOLLAR GENERAL - LEASE ADMIN DEPT 100 MISSION RIDGE": {
+  "verdict": "v1",
+  "state": "LA",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType"
+  ]
+ },
+ "C/O HEALTHCARE PROPERTIES 113 EAST ST. PETER ST.": {
+  "verdict": "v1",
+  "state": "LA",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType"
+  ]
+ },
+ "201 HIGHLAND OAKS BATON ROUGE, LA 70810": {
+  "verdict": "v2",
+  "state": "LA",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "C/O 548 PROPERTIES, LLC 4023 HUNDRED OAKS AVE": {
+  "verdict": "v2",
+  "state": "LA",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType"
+  ]
+ },
+ "ATTN: ROBERT S. MILLER 527 N ACADIAN THWY": {
+  "verdict": "neither",
+  "state": "LA",
+  "round": 8,
+  "judged_labels": null,
+  "note": "neither handles the full disputed span (Thwy terminal type vs N predirectional)"
+ },
+ "100 B SO MAIN ST MIDDLETON MA 01949": {
+  "verdict": "v2",
+  "state": "MA",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "AddressNumberSuffix",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3 HONEY LOCUST CT, 21221": {
+  "verdict": "v1",
+  "state": "MD",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "ZipCode"
+  ]
+ },
+ "ROOSEVELT TRAIL 29 POINT SEBAGO ROAD CASCO ME": {
+  "verdict": "neither",
+  "state": "ME",
+  "round": 8,
+  "judged_labels": null,
+  "note": "29 = AddressNumber; leading ROOSEVELT TRAIL unexplained by either"
+ },
+ "0 SWANS RD C/O ROBERT FOGG RAYMOND ME": {
+  "verdict": "neither",
+  "state": "ME",
+  "round": 8,
+  "judged_labels": null,
+  "note": "0 Swans Rd / C/O Robert Fogg / Raymond ME; both sequences misplace a span"
+ },
+ "16890 E 8 MILE DETROIT MI 48205*1519": {
+  "verdict": "v2",
+  "state": "MI",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "15 E KIRBY # 914 DETROIT MI 48226": {
+  "verdict": "v2",
+  "state": "MI",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "OccupancyIdentifier",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "14744 W CHICAGO DETROIT MI 48224": {
+  "verdict": "v2",
+  "state": "MI",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "14744 W Chicago, Detroit: Chicago is StreetName"
+ },
+ "6617 Jeffery Bay S Cottage Grove, MN 55016": {
+  "verdict": "v2",
+  "state": "MN",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "Jeffrey W & Cindy Lou Larson 6973 Cty Rd 37 Nw Akeley, MN 56433": {
+  "verdict": "v1",
+  "state": "MN",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6641 Jeffery Bay S Cottage Grove, MN 55016": {
+  "verdict": "v2",
+  "state": "MN",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2459 S TRL RIDGE AVE INDEPENDENCE MO 64055": {
+  "verdict": "v1",
+  "state": "MO",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "S Trail Ridge Ave: TRL belongs to StreetName, not pre-type"
+ },
+ "2504 US HWY 70 CONNELLY SPRINGS NC 28612": {
+  "verdict": "v1",
+  "state": "NC",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "51 W CENTER ST PMB 600 C/O HAVEN PARK COMMUNITIES OREM UT 84057": {
+  "verdict": "v1",
+  "state": "ND",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2347 20 1/2 AVE S FARGO ND 58103": {
+  "verdict": "v2",
+  "state": "ND",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "20 1/2 Ave S: 20 = StreetName"
+ },
+ "40 HIGHLAND DRIVE WEST CALDWELL NJ 07006": {
+  "verdict": "v2",
+  "state": "NJ",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "13 ST CHARLES AVENUE WEST CALDWELL NJ 07006": {
+  "verdict": "v1",
+  "state": "NJ",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "38 HIGHLAND DRIVE WEST CALDWELL NJ 07006": {
+  "verdict": "v2",
+  "state": "NJ",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "8 ST CHARLES AVENUE WEST CALDWELL NJ 07006": {
+  "verdict": "v1",
+  "state": "NJ",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "7 RICHARD AVENUE WEST CALDWELL NJ 07006": {
+  "verdict": "v1",
+  "state": "NJ",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "7 ST CHARLES AVENUE WEST CALDWELL NJ 07006": {
+  "verdict": "v1",
+  "state": "NJ",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6 JOHNSON AVENUE WEST CALDWELL NJ 07006": {
+  "verdict": "v1",
+  "state": "NJ",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "C/O JACK ANDERSON 845 CAMINO DE LAS TRAMPAS SANTA FE NM 87501": {
+  "verdict": "v2",
+  "state": "NM",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2042 OLD US 66 EDGEWOOD NM 87015-6740": {
+  "verdict": "v1",
+  "state": "NM",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreModifier",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "KAREN MORENO & ERASMO COSIO, TTEES 254 WINDTREE CIR CARSON CITY, NV 89701-": {
+  "verdict": "v1",
+  "state": "NV",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "JAMES ALLEN JARRARD, TRUSTEE 3860 GS RICHARDS BLVD CARSON CITY, NV 89703-0000": {
+  "verdict": "v1",
+  "state": "NV",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6289 WINTERBERRY CROSSING BEDFORD OH 44146": {
+  "verdict": "v1",
+  "state": "OH",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Winterberry Xing: CROSSING is the terminal street type"
+ },
+ "POX 3326 MERRIFIELD VA 22119": {
+  "verdict": "v2",
+  "state": "OH",
+  "round": 8,
+  "judged_labels": [
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "342 LANTANA XING SPRING BRANCH, TX 78070": {
+  "verdict": "v2",
+  "state": "OR",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "342 LATANA CROSSING SPRING BRANCH, TX 78070": {
+  "verdict": "neither",
+  "state": "OR",
+  "round": 8,
+  "judged_labels": null,
+  "note": "Lantana: CROSSING should be post-type; neither model has it"
+ },
+ "8213 22ND ST CT W TACOMA, WA 98466": {
+  "verdict": "v2",
+  "state": "OR",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1218 GREEN ST EXT ROCK HILL SC 29730": {
+  "verdict": "v1",
+  "state": "SC",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostModifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "320 WESTBERRY CT W RAPID CITY SD 57702-2712": {
+  "verdict": "v2",
+  "state": "SD",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Westberry Ct W: W is a post-directional"
+ },
+ "377 WESTBERRY CT W RAPID CITY SD 57702-2712": {
+  "verdict": "v2",
+  "state": "SD",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Westberry Ct W: W is a post-directional"
+ },
+ "808 BRYAN ST OLD HICKORY TN 37138": {
+  "verdict": "v2",
+  "state": "TN",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "14901 APPLE SPRINGS HOLW LEANDER TX 78641": {
+  "verdict": "v1",
+  "state": "TX",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Apple Springs Holw: HOLW is the terminal suffix"
+ },
+ "1501 Rayanne Dr N Chesterfield VA 23238": {
+  "verdict": "v2",
+  "state": "VA",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "N Chesterfield = abbreviated locality; N is PlaceName"
+ },
+ "P.O. BOX 418 MONTGOMERY CENTER VERMONT 05471": {
+  "verdict": "v1",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "74 LILAC LN S BURLINGTON VT 05403": {
+  "verdict": "v2",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "343 COBBLESTONE CIRCLE S BURLINGTON VT 05403": {
+  "verdict": "v2",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "P.O.BOX 1305 DERBY VT 05829": {
+  "verdict": "v2",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "58 FIELDSTONE DR S BURLINGTON VT 05403": {
+  "verdict": "v2",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "51 MEADOW RD S BURLINGTON VT 05403": {
+  "verdict": "v2",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1560 WILLISTON RD S BURLINGTON VT 05403": {
+  "verdict": "v2",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "52 STONEHOUSE COMMONS S BURLINGTONG VT 05403": {
+  "verdict": "v1",
+  "state": "VT",
+  "round": 8,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "COMMONS -> CMNS is a USPS street suffix; COMMONS = StreetNamePostType"
+ },
+ "C/O STEVEN SPARKS, P O BOX 239, DIXIE, WV 25059": {
+  "verdict": "v1",
+  "state": "WV",
+  "round": 8,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "P O BOX = spaced PO BOX; P, O, BOX are the box type"
+ }
+}

@@ -1,7 +1,21 @@
 # Model v2 — Findings Report
 
-> **Claim-tier result, 2026-08-16: candidate v36 FAILED gold-2 — the retrained model still
-> does not ship.** v36 passed everything composed: clean 159/159, gold-1 fully human-adjudicated
+> **Claim-tier result, 2026-08-16 (final for this evaluation set): candidate v43 FAILED
+> gold-2 scoring attempt 2 of 2 — the retrained model does not ship, and gold-2 is spent.**
+> v43 was the first candidate green on every surface at once: clean 159/159, gold-1
+> 74 wins / 0 losses on adjudicated records, both national scans, the spent binding split,
+> and the new real-text dev holdout at +2.400 pp CI [+1.750, +3.100] (trained on 162,879
+> aligned real owner-mail lines — the composed-to-real transfer fix working as designed on
+> its training distribution). On gold-2's 64 human-adjudicated disagreements it took
+> 35 / 24 / 5: net +0.789 pp, 95% CI [-0.287, +1.865] — includes zero, Gate 1 FAIL.
+> Gate 2 passed (the Mountain division problem from attempt 1 is resolved). The honest
+> summary: real-text training nearly quadrupled the free-text margin (+3 → +11 records)
+> and fixed the regional failure, but the effect is below what a 64-divergent set can
+> certify (~±1.1 pp resolution). Both scoring attempts are spent; future claim-tier runs
+> require gold-2b (eval/gold2/GOLD2B_SOURCES.md), pre-registered the same way. Attempt
+> counts disclosed: binding 2 of 2 used, gold-2 2 of 2 used.
+
+> **Prior claim-tier note, 2026-08-16 (attempt 1): candidate v36 FAILED gold-2.** v36 passed everything composed: clean 159/159, gold-1 fully human-adjudicated
 > at +4.73pp, both national scans, and the one-shot binding validation (70.5% vs 17.3%, all 20
 > never-touched counties clean, El Paso stratified in). Then 62 human-adjudicated disagreements
 > on 1,394 real free-text records from 40 states + DC produced +0.215pp, CI [-0.861, +1.291] —
