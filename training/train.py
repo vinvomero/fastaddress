@@ -24,6 +24,7 @@ AUGMENTED = Path(__file__).parent / "corpus" / "augmented.jsonl"
 TIGER = Path(__file__).parent / "corpus" / "tiger.jsonl"
 ERRCLASS = Path(__file__).parent / "corpus" / "errclass.jsonl"
 NATIONAL = Path(__file__).parent / "corpus" / "national.jsonl"
+REALTEXT = Path(__file__).parent / "corpus" / "realtext.jsonl"
 
 
 def main():
@@ -83,6 +84,12 @@ def main():
         default=0,
         help="include training/corpus/national.jsonl N times (U3 coverage-floor corpus; supersedes --errclass)",
     )
+    ap.add_argument(
+        "--realtext",
+        type=int,
+        default=0,
+        help="include training/corpus/realtext.jsonl N times (RT-U1 aligned real owner-mail text; dev holdout already carved out)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -128,6 +135,9 @@ def main():
     if args.national and NATIONAL.exists():
         for _ in range(args.national):
             feed(NATIONAL)
+    if args.realtext and REALTEXT.exists():
+        for _ in range(args.realtext):
+            feed(REALTEXT)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
@@ -155,6 +165,10 @@ def main():
         "synth_repeats": args.synth,
         "distill_repeats": args.distill,
         "augment_repeats": args.augment,
+        "tiger_repeats": args.tiger,
+        "errclass_repeats": args.errclass,
+        "national_repeats": args.national,
+        "realtext_repeats": args.realtext,
         "params": {
             "algorithm": "lbfgs",
             "c1": args.c1,
