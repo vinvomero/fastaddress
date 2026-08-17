@@ -321,3 +321,13 @@ sampling entirely.
     unspent. Any future candidate must first beat v1 on gold-2c's suffix-present class,
     which is the class that decides real free text. Publication of this finding accompanies
     the release with the same prominence as any passing result.
+- 2026-08-17: **The single-frame experiment closes the targeted-fix question.** v52 = v19's
+  exact recipe + one frame (abbreviated-city, 24,000 rows, with its adjudicated
+  counterweight). Result: adjudicated failures 36 -> 3, and gold-2c suffix-present 42/47 ->
+  38/47 -- the entire independent-data advantage, spent on one fix. With every other variable
+  held constant, the trade is isolated and causal: teaching mined error classes buys
+  adjudicated wins at the price of real-world accuracy on the commonest address shape. At the
+  smallest possible dose. The approach is closed, not paused. Gold-2b retains its final
+  attempt, unspent; no candidate from any existing line may be proposed for it. A future v2
+  requires a categorically different input -- a large human-labeled representative corpus of
+  real free text -- not another synthesis strategy.

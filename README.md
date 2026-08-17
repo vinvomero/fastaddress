@@ -177,8 +177,14 @@ from the same material. The one model that beats the original here, v19, predate
 targeted work -- though its +2 has a confidence interval including zero, so it isn't a win
 either, just an absence of self-inflicted damage.
 
-Gold-2b has one scoring attempt left. It stays unspent: no candidate from this line may be
-proposed for it, and any future one has to beat the original on suffix-present addresses first.
+We then ran the experiment that settles it: v19's recipe plus exactly one error-class frame,
+everything else held constant. That single frame fixed 33 of 36 adjudicated failures and gave
+back the entire suffix-present advantage (42/47 down to 38/47). One variable, clean trade,
+mechanism confirmed at the smallest possible dose. The targeted-fix approach is closed.
+
+Gold-2b has one scoring attempt left. It stays unspent. A future v2 would need what this
+project never had: a large human-labeled corpus of representative real free text -- new data,
+not another training trick.
 
 One disclosure travels with every number above, required by
 [eval/PROTOCOL.md](eval/PROTOCOL.md): the candidate's training targeted error classes found by

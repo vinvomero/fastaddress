@@ -1,0 +1,40 @@
+{
+ "sequences": 295607,
+ "by_origin": {
+  "openaddress_us_ia_linn.xml": 50000,
+  "allegheny-ds": 3000,
+  "cook-ds": 3000,
+  "labeled.xml": 21675,
+  "synth": 126300,
+  "distill-v1": 34012,
+  "augment-v1wins": 29120,
+  "min-abbrev_city": 24000,
+  "min-true_post_directional": 4500
+ },
+ "oversample_labeled": 15,
+ "distant_cap": 3000,
+ "synth_repeats": 3,
+ "distill_repeats": 1,
+ "augment_repeats": 4,
+ "tiger_repeats": 0,
+ "errclass_repeats": 0,
+ "national_repeats": 0,
+ "realtext_repeats": 0,
+ "realtext2_repeats": 0,
+ "minimal_abbrev_repeats": 1,
+ "drop_rung_2a": false,
+ "params": {
+  "algorithm": "lbfgs",
+  "c1": 0.1,
+  "c2": 0.01,
+  "max_iterations": 200,
+  "feature.minfreq": 0.0,
+  "feature.possible_transitions": true
+ },
+ "corpus_sha256_16": "c254f6432303bfae",
+ "usaddress_feature_version": "0.5.16",
+ "model_bytes": 272676,
+ "model_sha256_16": "dc0645f8fe84f5f3",
+ "train_seconds": 2053.9,
+ "out": "v52.crfsuite"
+}
