@@ -1,0 +1,5217 @@
+{
+ "seed": 20260816,
+ "built": "2026-08-16",
+ "unit": "G2B-U2 (plan 2026-08-16-003)",
+ "method": "extended alignment ladder over the cached drop pools of build_realtext_corpus; labels always from the TIGER record or the source's own city/state/zip fields",
+ "no_fetch": "asserted: socket.connect/create_connection/getaddrinfo raise NetworkForbidden for the whole build",
+ "input_cache": "C:\\cargo-target\\us-address-parser\\realtext_cache\\checkpoints",
+ "tiger": "US Census Bureau TIGER/Line 2024 FEATNAMES (public domain)",
+ "rungs_enabled": [
+  "2a",
+  "2b",
+  "2c",
+  "2d",
+  "2e"
+ ],
+ "rung_2e_canonicalization": {
+  "note": "TIGER stores only abbreviated street types, so the expansion cannot be read out of TIGER; the abbreviation SET is data-derived (vocab_inventories.json, counted over the national FEATNAMES pull) and every expansion is gated at match time by the slot-role and variant-agreement guards, so an uncorroborated entry is idle rather than dangerous",
+  "suffix_expansions": 96,
+  "suffix_expansions_uncorroborated": [
+   "bend->bnd",
+   "center->ctr",
+   "forest->frst",
+   "glacier->glcr",
+   "green->grn",
+   "grove->grv",
+   "island->is",
+   "islands->iss",
+   "junction->jct",
+   "knoll->knl",
+   "manor->mnr",
+   "meadow->mdw",
+   "meadows->mdws",
+   "orchard->orch",
+   "ranch->rnch",
+   "rapids->rpds",
+   "rest->rst",
+   "shore->shr",
+   "springs->spgs",
+   "station->sta",
+   "summit->smt",
+   "valley->vly",
+   "village->vlg"
+  ],
+  "directional_expansions": 8
+ },
+ "rung_2c_evidence_substitution": "plan Amendment 1: the source's owner-NAME field was never fetched and R-C forbids fetching it, so the prefix is evidenced by (a) sitting in an owner-MAILING field ahead of a line that aligns authoritatively and (b) passing name_like (no digits, no unit or box token, not a street name in that geography). 2c rows carry origin 'rt2-2c-<ST>' so the rung can be ablated on its own.",
+ "total_rows": 22547,
+ "rows_before_dedupe": 28664,
+ "per_rung_kept": {
+  "2e": 15526,
+  "2a": 3098,
+  "2c": 2179,
+  "2b": 1619,
+  "2d": 125
+ },
+ "per_rung_kept_before_dedupe": {
+  "2e": 19923,
+  "2a": 3723,
+  "2c": 3035,
+  "2b": 1849,
+  "2d": 134
+ },
+ "rejections": {
+  "2e_single_variant": 19987,
+  "2b_no_candidate": 15570,
+  "2b_token_too_short": 7764,
+  "2e_no_canonical_match": 6418,
+  "2a_tie_resolved_by_label_agreement": 2771,
+  "2b_ambiguous_record": 1667,
+  "2d_interior_unmatched": 1190,
+  "prefix_unit_or_box": 1067,
+  "2a_row_ends_in_suffix_word": 296,
+  "2d_too_short": 228,
+  "2b_token_is_street": 192,
+  "2e_slot_role_mismatch": 186,
+  "prefix_has_digit": 167,
+  "2e_multi_variant_agreed": 122,
+  "prefix_too_short": 116,
+  "prefix_is_street": 104,
+  "2d_has_prefix": 63,
+  "2d_interior_punct": 48,
+  "2b_suffix_split_disagrees": 11,
+  "prefix_too_long": 4
+ },
+ "drop_pool_sizes": {
+  "pool_interior_unmatched": 50995,
+  "pool_no_line_start": 3471
+ },
+ "dedupe_removals": {
+  "internal_dup": 5002,
+  "gold2": 1106,
+  "realtext": 8,
+  "gold2b": 1
+ },
+ "dedupe_lists": {
+  "gold1": 1497,
+  "gold2": 1394,
+  "gold2b": 3569,
+  "clean": 148,
+  "realtext": 162879,
+  "realtext_dev": 2000
+ },
+ "n_states": 30,
+ "per_state": {
+  "AK": 185,
+  "AL": 678,
+  "AZ": 59,
+  "CO": 121,
+  "CT": 2167,
+  "FL": 1053,
+  "IA": 414,
+  "IL": 1561,
+  "IN": 144,
+  "KS": 194,
+  "MA": 2757,
+  "ME": 523,
+  "MI": 1487,
+  "MO": 377,
+  "MT": 317,
+  "NC": 1688,
+  "ND": 31,
+  "NE": 72,
+  "NJ": 1426,
+  "NM": 768,
+  "OH": 279,
+  "OK": 683,
+  "OR": 295,
+  "SC": 1031,
+  "SD": 197,
+  "TN": 223,
+  "TX": 261,
+  "VA": 700,
+  "VT": 2167,
+  "WA": 689
+ },
+ "per_state_rung": {
+  "AK": {
+   "2c": 96,
+   "2b": 67,
+   "2a": 14,
+   "2e": 8
+  },
+  "AL": {
+   "2e": 631,
+   "2b": 44,
+   "2a": 3
+  },
+  "AZ": {
+   "2b": 24,
+   "2e": 16,
+   "2a": 19
+  },
+  "CO": {
+   "2a": 4,
+   "2e": 54,
+   "2c": 61,
+   "2b": 2
+  },
+  "CT": {
+   "2e": 2091,
+   "2b": 64,
+   "2a": 8,
+   "2d": 4
+  },
+  "FL": {
+   "2e": 370,
+   "2c": 551,
+   "2a": 27,
+   "2b": 104,
+   "2d": 1
+  },
+  "IA": {
+   "2c": 355,
+   "2e": 25,
+   "2b": 30,
+   "2a": 4
+  },
+  "IL": {
+   "2e": 1377,
+   "2a": 99,
+   "2b": 51,
+   "2c": 34
+  },
+  "IN": {
+   "2b": 113,
+   "2e": 21,
+   "2a": 10
+  },
+  "KS": {
+   "2e": 9,
+   "2a": 133,
+   "2b": 52
+  },
+  "MA": {
+   "2e": 2630,
+   "2b": 39,
+   "2a": 48,
+   "2d": 26,
+   "2c": 14
+  },
+  "ME": {
+   "2e": 418,
+   "2c": 64,
+   "2a": 22,
+   "2d": 4,
+   "2b": 15
+  },
+  "MI": {
+   "2a": 1266,
+   "2e": 201,
+   "2b": 20
+  },
+  "MO": {
+   "2a": 287,
+   "2b": 30,
+   "2e": 57,
+   "2d": 3
+  },
+  "MT": {
+   "2e": 189,
+   "2c": 105,
+   "2a": 9,
+   "2b": 14
+  },
+  "NC": {
+   "2e": 1105,
+   "2c": 442,
+   "2b": 112,
+   "2a": 28,
+   "2d": 1
+  },
+  "ND": {
+   "2b": 17,
+   "2a": 5,
+   "2e": 7,
+   "2c": 2
+  },
+  "NE": {
+   "2e": 42,
+   "2b": 19,
+   "2a": 11
+  },
+  "NJ": {
+   "2e": 1341,
+   "2a": 44,
+   "2b": 35,
+   "2c": 5,
+   "2d": 1
+  },
+  "NM": {
+   "2e": 316,
+   "2a": 208,
+   "2c": 161,
+   "2b": 83
+  },
+  "OH": {
+   "2d": 80,
+   "2e": 77,
+   "2b": 66,
+   "2a": 56
+  },
+  "OK": {
+   "2b": 44,
+   "2a": 460,
+   "2e": 179
+  },
+  "OR": {
+   "2e": 127,
+   "2b": 95,
+   "2a": 73
+  },
+  "SC": {
+   "2e": 779,
+   "2c": 150,
+   "2b": 81,
+   "2a": 20,
+   "2d": 1
+  },
+  "SD": {
+   "2e": 142,
+   "2a": 9,
+   "2b": 46
+  },
+  "TN": {
+   "2b": 79,
+   "2e": 130,
+   "2a": 10,
+   "2d": 4
+  },
+  "TX": {
+   "2e": 55,
+   "2b": 84,
+   "2c": 72,
+   "2a": 50
+  },
+  "VA": {
+   "2b": 45,
+   "2e": 651,
+   "2a": 4
+  },
+  "VT": {
+   "2e": 1950,
+   "2b": 129,
+   "2a": 21,
+   "2c": 67
+  },
+  "WA": {
+   "2e": 528,
+   "2a": 146,
+   "2b": 15
+  }
+ },
+ "label_counts": {
+  "PlaceName": 27226,
+  "StreetName": 26478,
+  "StateName": 22547,
+  "ZipCode": 22547,
+  "AddressNumber": 22056,
+  "StreetNamePostType": 18207,
+  "Recipient": 7067,
+  "StreetNamePreDirectional": 4021,
+  "OccupancyIdentifier": 1253,
+  "StreetNamePostDirectional": 996,
+  "StreetNamePreType": 850,
+  "USPSBoxType": 723,
+  "OccupancyType": 687,
+  "USPSBoxID": 366,
+  "StreetNamePreModifier": 22,
+  "USPSBoxGroupType": 1,
+  "USPSBoxGroupID": 1
+ },
+ "samples": {
+  "2a": [
+   {
+    "state": "MI",
+    "raw": "3213 VICKSBURG DETROIT MI 48202",
+    "pairs": [
+     [
+      "3213",
+      "AddressNumber"
+     ],
+     [
+      "VICKSBURG",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48202",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "vicksburg cir"
+    }
+   },
+   {
+    "state": "MO",
+    "raw": "1716 S OSAGE INDEPENDENCE MO 64055",
+    "pairs": [
+     [
+      "1716",
+      "AddressNumber"
+     ],
+     [
+      "S",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "OSAGE",
+      "StreetName"
+     ],
+     [
+      "INDEPENDENCE",
+      "PlaceName"
+     ],
+     [
+      "MO",
+      "StateName"
+     ],
+     [
+      "64055",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "s osage ave"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "27720 SOUTHBRIDGE WESTLAKE OH 44145",
+    "pairs": [
+     [
+      "27720",
+      "AddressNumber"
+     ],
+     [
+      "SOUTHBRIDGE",
+      "StreetName"
+     ],
+     [
+      "WESTLAKE",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44145",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "southbridge blvd"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "12497 MENDOTA DETROIT MI 48238",
+    "pairs": [
+     [
+      "12497",
+      "AddressNumber"
+     ],
+     [
+      "MENDOTA",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48238",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "mendota ave"
+    }
+   },
+   {
+    "state": "OK",
+    "raw": "1208 E WATTS EL RENO OK 73036",
+    "pairs": [
+     [
+      "1208",
+      "AddressNumber"
+     ],
+     [
+      "E",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "WATTS",
+      "StreetName"
+     ],
+     [
+      "EL",
+      "PlaceName"
+     ],
+     [
+      "RENO",
+      "PlaceName"
+     ],
+     [
+      "OK",
+      "StateName"
+     ],
+     [
+      "73036",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "e watts ave"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "15476 STEEL DETROIT MI 48227",
+    "pairs": [
+     [
+      "15476",
+      "AddressNumber"
+     ],
+     [
+      "STEEL",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48227",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "steel ave"
+    }
+   },
+   {
+    "state": "MO",
+    "raw": "2017 N YORK INDEPENDENCE MO 64058",
+    "pairs": [
+     [
+      "2017",
+      "AddressNumber"
+     ],
+     [
+      "N",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "YORK",
+      "StreetName"
+     ],
+     [
+      "INDEPENDENCE",
+      "PlaceName"
+     ],
+     [
+      "MO",
+      "StateName"
+     ],
+     [
+      "64058",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "n york ave"
+    }
+   },
+   {
+    "state": "NM",
+    "raw": "1405 VEGAS VERDES # 13237 SANTA FE NM 87507-2901",
+    "pairs": [
+     [
+      "1405",
+      "AddressNumber"
+     ],
+     [
+      "VEGAS",
+      "StreetName"
+     ],
+     [
+      "VERDES",
+      "StreetName"
+     ],
+     [
+      "#",
+      "OccupancyIdentifier"
+     ],
+     [
+      "13237",
+      "OccupancyIdentifier"
+     ],
+     [
+      "SANTA",
+      "PlaceName"
+     ],
+     [
+      "FE",
+      "PlaceName"
+     ],
+     [
+      "NM",
+      "StateName"
+     ],
+     [
+      "87507-2901",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "vegas verdes dr"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "20090 GREYDALE DETROIT MI 48219",
+    "pairs": [
+     [
+      "20090",
+      "AddressNumber"
+     ],
+     [
+      "GREYDALE",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48219",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "greydale ave"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "7332 DESOTO DETROIT MI 48238",
+    "pairs": [
+     [
+      "7332",
+      "AddressNumber"
+     ],
+     [
+      "DESOTO",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48238",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "desoto ave"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "17227 W SEVEN MILE DETROIT MI 48235",
+    "pairs": [
+     [
+      "17227",
+      "AddressNumber"
+     ],
+     [
+      "W",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "SEVEN",
+      "StreetName"
+     ],
+     [
+      "MILE",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48235",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "w seven mile rd"
+    }
+   },
+   {
+    "state": "MO",
+    "raw": "900 ARROWHEAD INDEPENDENCE MO 64056",
+    "pairs": [
+     [
+      "900",
+      "AddressNumber"
+     ],
+     [
+      "ARROWHEAD",
+      "StreetName"
+     ],
+     [
+      "INDEPENDENCE",
+      "PlaceName"
+     ],
+     [
+      "MO",
+      "StateName"
+     ],
+     [
+      "64056",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "arrowhead ave"
+    }
+   },
+   {
+    "state": "WA",
+    "raw": "84 HYLEBOS MILTON WA 98354",
+    "pairs": [
+     [
+      "84",
+      "AddressNumber"
+     ],
+     [
+      "HYLEBOS",
+      "StreetName"
+     ],
+     [
+      "MILTON",
+      "PlaceName"
+     ],
+     [
+      "WA",
+      "StateName"
+     ],
+     [
+      "98354",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "hylebos ave"
+    }
+   },
+   {
+    "state": "ME",
+    "raw": "5 Pumping Station Stonington ME 04681",
+    "pairs": [
+     [
+      "5",
+      "AddressNumber"
+     ],
+     [
+      "Pumping",
+      "StreetName"
+     ],
+     [
+      "Station",
+      "StreetName"
+     ],
+     [
+      "Stonington",
+      "PlaceName"
+     ],
+     [
+      "ME",
+      "StateName"
+     ],
+     [
+      "04681",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "pumping station ln"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "18701 PREST DETROIT MI 48235",
+    "pairs": [
+     [
+      "18701",
+      "AddressNumber"
+     ],
+     [
+      "PREST",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48235",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "prest ave"
+    }
+   },
+   {
+    "state": "OK",
+    "raw": "919 W WOODSON EL RENO OK 73036-0000",
+    "pairs": [
+     [
+      "919",
+      "AddressNumber"
+     ],
+     [
+      "W",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "WOODSON",
+      "StreetName"
+     ],
+     [
+      "EL",
+      "PlaceName"
+     ],
+     [
+      "RENO",
+      "PlaceName"
+     ],
+     [
+      "OK",
+      "StateName"
+     ],
+     [
+      "73036-0000",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "w woodson ave"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "6438 PITTSBURG DETROIT MI 48210",
+    "pairs": [
+     [
+      "6438",
+      "AddressNumber"
+     ],
+     [
+      "PITTSBURG",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48210",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "pittsburg ave"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "3800 CABOT DETROIT MI 48210",
+    "pairs": [
+     [
+      "3800",
+      "AddressNumber"
+     ],
+     [
+      "CABOT",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48210",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "cabot cir"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "3009 VICKSBURG DETROIT MI 48206",
+    "pairs": [
+     [
+      "3009",
+      "AddressNumber"
+     ],
+     [
+      "VICKSBURG",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48206",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "vicksburg cir"
+    }
+   },
+   {
+    "state": "OK",
+    "raw": "2405 W CLARK EL RENO OK 73036-0000",
+    "pairs": [
+     [
+      "2405",
+      "AddressNumber"
+     ],
+     [
+      "W",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "CLARK",
+      "StreetName"
+     ],
+     [
+      "EL",
+      "PlaceName"
+     ],
+     [
+      "RENO",
+      "PlaceName"
+     ],
+     [
+      "OK",
+      "StateName"
+     ],
+     [
+      "73036-0000",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "w clark ave"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "4893 N SEDGEWICK LYNDHURST OH 44124",
+    "pairs": [
+     [
+      "4893",
+      "AddressNumber"
+     ],
+     [
+      "N",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "SEDGEWICK",
+      "StreetName"
+     ],
+     [
+      "LYNDHURST",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44124",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "n sedgewick rd"
+    }
+   },
+   {
+    "state": "MO",
+    "raw": "36 N ST LAKE LATAWANA MO 64086",
+    "pairs": [
+     [
+      "36",
+      "AddressNumber"
+     ],
+     [
+      "N",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "PlaceName"
+     ],
+     [
+      "LAKE",
+      "PlaceName"
+     ],
+     [
+      "LATAWANA",
+      "PlaceName"
+     ],
+     [
+      "MO",
+      "StateName"
+     ],
+     [
+      "64086",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "n ave"
+    }
+   },
+   {
+    "state": "MI",
+    "raw": "8300 LONGWORTH DETROIT MI 48209",
+    "pairs": [
+     [
+      "8300",
+      "AddressNumber"
+     ],
+     [
+      "LONGWORTH",
+      "StreetName"
+     ],
+     [
+      "DETROIT",
+      "PlaceName"
+     ],
+     [
+      "MI",
+      "StateName"
+     ],
+     [
+      "48209",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "longworth dr"
+    }
+   },
+   {
+    "state": "TX",
+    "raw": "3017 SETTLEMENT UNIT 21 ROUND ROCK TX 78665",
+    "pairs": [
+     [
+      "3017",
+      "AddressNumber"
+     ],
+     [
+      "SETTLEMENT",
+      "StreetName"
+     ],
+     [
+      "UNIT",
+      "OccupancyType"
+     ],
+     [
+      "21",
+      "OccupancyIdentifier"
+     ],
+     [
+      "ROUND",
+      "PlaceName"
+     ],
+     [
+      "ROCK",
+      "PlaceName"
+     ],
+     [
+      "TX",
+      "StateName"
+     ],
+     [
+      "78665",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "settlement br"
+    }
+   },
+   {
+    "state": "OK",
+    "raw": "107 N HOFF EL RENO OK 73036-0000",
+    "pairs": [
+     [
+      "107",
+      "AddressNumber"
+     ],
+     [
+      "N",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "HOFF",
+      "StreetName"
+     ],
+     [
+      "EL",
+      "PlaceName"
+     ],
+     [
+      "RENO",
+      "PlaceName"
+     ],
+     [
+      "OK",
+      "StateName"
+     ],
+     [
+      "73036-0000",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "n hoff ave"
+    }
+   }
+  ],
+  "2b": [
+   {
+    "state": "VT",
+    "raw": "25 WINDY WOOD RD BARRE VT 05641-8300",
+    "pairs": [
+     [
+      "25",
+      "AddressNumber"
+     ],
+     [
+      "WINDY",
+      "StreetName"
+     ],
+     [
+      "WOOD",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "BARRE",
+      "PlaceName"
+     ],
+     [
+      "VT",
+      "StateName"
+     ],
+     [
+      "05641-8300",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "wood",
+     "record": "windy woods rd",
+     "dist": 1
+    }
+   },
+   {
+    "state": "NC",
+    "raw": "7058 VOLUNTEER RESUE RD DENTON NC 27239",
+    "pairs": [
+     [
+      "7058",
+      "AddressNumber"
+     ],
+     [
+      "VOLUNTEER",
+      "StreetName"
+     ],
+     [
+      "RESUE",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "DENTON",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "27239",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "resue",
+     "record": "volunteer rescue rd",
+     "dist": 1
+    }
+   },
+   {
+    "state": "OR",
+    "raw": "3643 SW BADGER CT REDMOND, OR 97756",
+    "pairs": [
+     [
+      "3643",
+      "AddressNumber"
+     ],
+     [
+      "SW",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "BADGER",
+      "StreetName"
+     ],
+     [
+      "CT",
+      "StreetNamePostType"
+     ],
+     [
+      "REDMOND,",
+      "PlaceName"
+     ],
+     [
+      "OR",
+      "StateName"
+     ],
+     [
+      "97756",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "badger",
+     "record": "sw berger ct",
+     "dist": 2
+    }
+   },
+   {
+    "state": "OR",
+    "raw": "60312 ADDIE TRIPPLET LOOP BEND, OR 97702",
+    "pairs": [
+     [
+      "60312",
+      "AddressNumber"
+     ],
+     [
+      "ADDIE",
+      "StreetName"
+     ],
+     [
+      "TRIPPLET",
+      "StreetName"
+     ],
+     [
+      "LOOP",
+      "StreetNamePostType"
+     ],
+     [
+      "BEND,",
+      "PlaceName"
+     ],
+     [
+      "OR",
+      "StateName"
+     ],
+     [
+      "97702",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "tripplet",
+     "record": "addie triplett loop",
+     "dist": 2
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "389 E RIDEGWOOD DR SEVEN HILLS OH 44131",
+    "pairs": [
+     [
+      "389",
+      "AddressNumber"
+     ],
+     [
+      "E",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "RIDEGWOOD",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "SEVEN",
+      "PlaceName"
+     ],
+     [
+      "HILLS",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44131",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "ridegwood",
+     "record": "e ridgewood dr",
+     "dist": 2
+    }
+   },
+   {
+    "state": "SC",
+    "raw": "1721 BROASMORE CT ROCK HILL SC 29730",
+    "pairs": [
+     [
+      "1721",
+      "AddressNumber"
+     ],
+     [
+      "BROASMORE",
+      "StreetName"
+     ],
+     [
+      "CT",
+      "StreetNamePostType"
+     ],
+     [
+      "ROCK",
+      "PlaceName"
+     ],
+     [
+      "HILL",
+      "PlaceName"
+     ],
+     [
+      "SC",
+      "StateName"
+     ],
+     [
+      "29730",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "broasmore",
+     "record": "broadmore ct",
+     "dist": 1
+    }
+   },
+   {
+    "state": "VT",
+    "raw": "18 WOODCREST RD MONTPELIER VT 05602",
+    "pairs": [
+     [
+      "18",
+      "AddressNumber"
+     ],
+     [
+      "WOODCREST",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "MONTPELIER",
+      "PlaceName"
+     ],
+     [
+      "VT",
+      "StateName"
+     ],
+     [
+      "05602",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "woodcrest",
+     "record": "windcrest rd",
+     "dist": 2
+    }
+   },
+   {
+    "state": "ND",
+    "raw": "103 BRIDGE ST ARTHUR ND 58006",
+    "pairs": [
+     [
+      "103",
+      "AddressNumber"
+     ],
+     [
+      "BRIDGE",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "ARTHUR",
+      "PlaceName"
+     ],
+     [
+      "ND",
+      "StateName"
+     ],
+     [
+      "58006",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "bridge",
+     "record": "brodie st",
+     "dist": 2
+    }
+   },
+   {
+    "state": "NC",
+    "raw": "1101 CONARD RIDGE RD BOONVILLE NC 27011",
+    "pairs": [
+     [
+      "1101",
+      "AddressNumber"
+     ],
+     [
+      "CONARD",
+      "StreetName"
+     ],
+     [
+      "RIDGE",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "BOONVILLE",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "27011",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "conard",
+     "record": "renard ridge rd",
+     "dist": 2
+    }
+   },
+   {
+    "state": "IN",
+    "raw": "8056 EBAUGH DR CAMBY IN 46113",
+    "pairs": [
+     [
+      "8056",
+      "AddressNumber"
+     ],
+     [
+      "EBAUGH",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "CAMBY",
+      "PlaceName"
+     ],
+     [
+      "IN",
+      "StateName"
+     ],
+     [
+      "46113",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "ebaugh",
+     "record": "baughs dr",
+     "dist": 2
+    }
+   },
+   {
+    "state": "VT",
+    "raw": "232 WINDY WOOD RD BARRE VT 05641",
+    "pairs": [
+     [
+      "232",
+      "AddressNumber"
+     ],
+     [
+      "WINDY",
+      "StreetName"
+     ],
+     [
+      "WOOD",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "BARRE",
+      "PlaceName"
+     ],
+     [
+      "VT",
+      "StateName"
+     ],
+     [
+      "05641",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "wood",
+     "record": "windy woods rd",
+     "dist": 1
+    }
+   },
+   {
+    "state": "OR",
+    "raw": "4073 SW BADGER CT REDMOND, OR 97756",
+    "pairs": [
+     [
+      "4073",
+      "AddressNumber"
+     ],
+     [
+      "SW",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "BADGER",
+      "StreetName"
+     ],
+     [
+      "CT",
+      "StreetNamePostType"
+     ],
+     [
+      "REDMOND,",
+      "PlaceName"
+     ],
+     [
+      "OR",
+      "StateName"
+     ],
+     [
+      "97756",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "badger",
+     "record": "sw berger ct",
+     "dist": 2
+    }
+   },
+   {
+    "state": "IN",
+    "raw": "7934 NICOSON LN INDIANAPOLIS IN 46259-0012",
+    "pairs": [
+     [
+      "7934",
+      "AddressNumber"
+     ],
+     [
+      "NICOSON",
+      "StreetName"
+     ],
+     [
+      "LN",
+      "StreetNamePostType"
+     ],
+     [
+      "INDIANAPOLIS",
+      "PlaceName"
+     ],
+     [
+      "IN",
+      "StateName"
+     ],
+     [
+      "46259-0012",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "nicoson",
+     "record": "dickson ln",
+     "dist": 2
+    }
+   },
+   {
+    "state": "VT",
+    "raw": "12 WINDY WOOD RD BARRE VT 05641-8333",
+    "pairs": [
+     [
+      "12",
+      "AddressNumber"
+     ],
+     [
+      "WINDY",
+      "StreetName"
+     ],
+     [
+      "WOOD",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "BARRE",
+      "PlaceName"
+     ],
+     [
+      "VT",
+      "StateName"
+     ],
+     [
+      "05641-8333",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "wood",
+     "record": "windy woods rd",
+     "dist": 1
+    }
+   },
+   {
+    "state": "NC",
+    "raw": "996 E WHENLING RIDGE RD LANSING NC 28643",
+    "pairs": [
+     [
+      "996",
+      "AddressNumber"
+     ],
+     [
+      "E",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "WHENLING",
+      "StreetName"
+     ],
+     [
+      "RIDGE",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "LANSING",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "28643",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "whenling",
+     "record": "e whenlin ridge rd",
+     "dist": 1
+    }
+   },
+   {
+    "state": "AK",
+    "raw": "2255 N LAUREL DR PALMER AK 99645",
+    "pairs": [
+     [
+      "2255",
+      "AddressNumber"
+     ],
+     [
+      "N",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "LAUREL",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "PALMER",
+      "PlaceName"
+     ],
+     [
+      "AK",
+      "StateName"
+     ],
+     [
+      "99645",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "laurel",
+     "record": "n darrel dr",
+     "dist": 2
+    }
+   },
+   {
+    "state": "AK",
+    "raw": "7575 E SAPHIRE RD PALMER AK 99645-8103",
+    "pairs": [
+     [
+      "7575",
+      "AddressNumber"
+     ],
+     [
+      "E",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "SAPHIRE",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "PALMER",
+      "PlaceName"
+     ],
+     [
+      "AK",
+      "StateName"
+     ],
+     [
+      "99645-8103",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "saphire",
+     "record": "e sapphire rd",
+     "dist": 1
+    }
+   },
+   {
+    "state": "AL",
+    "raw": "102 VON DALE DR BIRMINGHAM AL 35215-7130",
+    "pairs": [
+     [
+      "102",
+      "AddressNumber"
+     ],
+     [
+      "VON",
+      "StreetName"
+     ],
+     [
+      "DALE",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "BIRMINGHAM",
+      "PlaceName"
+     ],
+     [
+      "AL",
+      "StateName"
+     ],
+     [
+      "35215-7130",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "dale",
+     "record": "von dales dr",
+     "dist": 1
+    }
+   },
+   {
+    "state": "CT",
+    "raw": "15 HENNEQUIN RD COLUMBIA CT 06237",
+    "pairs": [
+     [
+      "15",
+      "AddressNumber"
+     ],
+     [
+      "HENNEQUIN",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "COLUMBIA",
+      "PlaceName"
+     ],
+     [
+      "CT",
+      "StateName"
+     ],
+     [
+      "06237",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "hennequin",
+     "record": "henniquin rd",
+     "dist": 1
+    }
+   },
+   {
+    "state": "AL",
+    "raw": "212 VON DALE DR BIRMINGHAM AL 35215-7132",
+    "pairs": [
+     [
+      "212",
+      "AddressNumber"
+     ],
+     [
+      "VON",
+      "StreetName"
+     ],
+     [
+      "DALE",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "BIRMINGHAM",
+      "PlaceName"
+     ],
+     [
+      "AL",
+      "StateName"
+     ],
+     [
+      "35215-7132",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 1,
+     "row": "dale",
+     "record": "von dales dr",
+     "dist": 1
+    }
+   },
+   {
+    "state": "VT",
+    "raw": "313 NUISSL RD BARRE VT 05641",
+    "pairs": [
+     [
+      "313",
+      "AddressNumber"
+     ],
+     [
+      "NUISSL",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "BARRE",
+      "PlaceName"
+     ],
+     [
+      "VT",
+      "StateName"
+     ],
+     [
+      "05641",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "nuissl",
+     "record": "nuissie rd",
+     "dist": 2
+    }
+   },
+   {
+    "state": "TN",
+    "raw": "715 WALLEYE WAY ANTIOCH TN 37013",
+    "pairs": [
+     [
+      "715",
+      "AddressNumber"
+     ],
+     [
+      "WALLEYE",
+      "StreetName"
+     ],
+     [
+      "WAY",
+      "StreetNamePostType"
+     ],
+     [
+      "ANTIOCH",
+      "PlaceName"
+     ],
+     [
+      "TN",
+      "StateName"
+     ],
+     [
+      "37013",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "walleye",
+     "record": "wallace way",
+     "dist": 2
+    }
+   },
+   {
+    "state": "IN",
+    "raw": "6310 NICOSON LN INDIANAPOLIS IN 46259",
+    "pairs": [
+     [
+      "6310",
+      "AddressNumber"
+     ],
+     [
+      "NICOSON",
+      "StreetName"
+     ],
+     [
+      "LN",
+      "StreetNamePostType"
+     ],
+     [
+      "INDIANAPOLIS",
+      "PlaceName"
+     ],
+     [
+      "IN",
+      "StateName"
+     ],
+     [
+      "46259",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "nicoson",
+     "record": "dickson ln",
+     "dist": 2
+    }
+   },
+   {
+    "state": "TN",
+    "raw": "3 PORTUSH CT BRENTWOOD TN 37027",
+    "pairs": [
+     [
+      "3",
+      "AddressNumber"
+     ],
+     [
+      "PORTUSH",
+      "StreetName"
+     ],
+     [
+      "CT",
+      "StreetNamePostType"
+     ],
+     [
+      "BRENTWOOD",
+      "PlaceName"
+     ],
+     [
+      "TN",
+      "StateName"
+     ],
+     [
+      "37027",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "portush",
+     "record": "portrush ct",
+     "dist": 1
+    }
+   },
+   {
+    "state": "SD",
+    "raw": "16048 ENGELHART LN NEW UNDERWOOD SD 57761-2039",
+    "pairs": [
+     [
+      "16048",
+      "AddressNumber"
+     ],
+     [
+      "ENGELHART",
+      "StreetName"
+     ],
+     [
+      "LN",
+      "StreetNamePostType"
+     ],
+     [
+      "NEW",
+      "PlaceName"
+     ],
+     [
+      "UNDERWOOD",
+      "PlaceName"
+     ],
+     [
+      "SD",
+      "StateName"
+     ],
+     [
+      "57761-2039",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "pos": 0,
+     "row": "engelhart",
+     "record": "englehart ln",
+     "dist": 2
+    }
+   }
+  ],
+  "2c": [
+   {
+    "state": "IA",
+    "raw": "C/O ANDY VOLZ 7101 PRAIRIE HEIGHTS DR SW CEDAR RAPIDS IA 52404",
+    "pairs": [
+     [
+      "C/O",
+      "Recipient"
+     ],
+     [
+      "ANDY",
+      "Recipient"
+     ],
+     [
+      "VOLZ",
+      "Recipient"
+     ],
+     [
+      "7101",
+      "AddressNumber"
+     ],
+     [
+      "PRAIRIE",
+      "StreetName"
+     ],
+     [
+      "HEIGHTS",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "SW",
+      "StreetNamePostDirectional"
+     ],
+     [
+      "CEDAR",
+      "PlaceName"
+     ],
+     [
+      "RAPIDS",
+      "PlaceName"
+     ],
+     [
+      "IA",
+      "StateName"
+     ],
+     [
+      "52404",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "C/O ANDY VOLZ"
+    }
+   },
+   {
+    "state": "NC",
+    "raw": "STAMEY, JASON 55 JACKSON LN NEWLAND NC 28657",
+    "pairs": [
+     [
+      "STAMEY,",
+      "Recipient"
+     ],
+     [
+      "JASON",
+      "Recipient"
+     ],
+     [
+      "55",
+      "AddressNumber"
+     ],
+     [
+      "JACKSON",
+      "StreetName"
+     ],
+     [
+      "LN",
+      "StreetNamePostType"
+     ],
+     [
+      "NEWLAND",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "28657",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-ii",
+     "recipient": "STAMEY, JASON"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "WILSON KIMBERLY ANN 8390 CHUMUCKLA HWY PACE FL 32571",
+    "pairs": [
+     [
+      "WILSON",
+      "Recipient"
+     ],
+     [
+      "KIMBERLY",
+      "Recipient"
+     ],
+     [
+      "ANN",
+      "Recipient"
+     ],
+     [
+      "8390",
+      "AddressNumber"
+     ],
+     [
+      "CHUMUCKLA",
+      "StreetName"
+     ],
+     [
+      "HWY",
+      "StreetNamePostType"
+     ],
+     [
+      "PACE",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "32571",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "WILSON KIMBERLY ANN"
+    }
+   },
+   {
+    "state": "MT",
+    "raw": "MAIL TO: DELAYNA THERSULT PO BOX 1281 TOWNSEND MT 59644-1281",
+    "pairs": [
+     [
+      "MAIL",
+      "Recipient"
+     ],
+     [
+      "TO:",
+      "Recipient"
+     ],
+     [
+      "DELAYNA",
+      "Recipient"
+     ],
+     [
+      "THERSULT",
+      "Recipient"
+     ],
+     [
+      "PO",
+      "USPSBoxType"
+     ],
+     [
+      "BOX",
+      "USPSBoxType"
+     ],
+     [
+      "1281",
+      "USPSBoxID"
+     ],
+     [
+      "TOWNSEND",
+      "PlaceName"
+     ],
+     [
+      "MT",
+      "StateName"
+     ],
+     [
+      "59644-1281",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "MAIL TO: DELAYNA THERSULT"
+    }
+   },
+   {
+    "state": "IA",
+    "raw": "MIDAMERICAN ENERGY PO BOX 657 DES MOINES IA 50303",
+    "pairs": [
+     [
+      "MIDAMERICAN",
+      "Recipient"
+     ],
+     [
+      "ENERGY",
+      "Recipient"
+     ],
+     [
+      "PO",
+      "USPSBoxType"
+     ],
+     [
+      "BOX",
+      "USPSBoxType"
+     ],
+     [
+      "657",
+      "USPSBoxID"
+     ],
+     [
+      "DES",
+      "PlaceName"
+     ],
+     [
+      "MOINES",
+      "PlaceName"
+     ],
+     [
+      "IA",
+      "StateName"
+     ],
+     [
+      "50303",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "MIDAMERICAN ENERGY"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "MISKIMEN JULIAN C 6842 WALLACE DR PACE FL 32571",
+    "pairs": [
+     [
+      "MISKIMEN",
+      "Recipient"
+     ],
+     [
+      "JULIAN",
+      "Recipient"
+     ],
+     [
+      "C",
+      "Recipient"
+     ],
+     [
+      "6842",
+      "AddressNumber"
+     ],
+     [
+      "WALLACE",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "PACE",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "32571",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "MISKIMEN JULIAN C"
+    }
+   },
+   {
+    "state": "VT",
+    "raw": "THERRIEN ILEENE 215 SHERWOOD DR MONTPELIER VT 05602",
+    "pairs": [
+     [
+      "THERRIEN",
+      "Recipient"
+     ],
+     [
+      "ILEENE",
+      "Recipient"
+     ],
+     [
+      "215",
+      "AddressNumber"
+     ],
+     [
+      "SHERWOOD",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "MONTPELIER",
+      "PlaceName"
+     ],
+     [
+      "VT",
+      "StateName"
+     ],
+     [
+      "05602",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "THERRIEN ILEENE"
+    }
+   },
+   {
+    "state": "AK",
+    "raw": "MARY SPAULDING PO BOX 1129 CHICKALOON AK 99678",
+    "pairs": [
+     [
+      "MARY",
+      "Recipient"
+     ],
+     [
+      "SPAULDING",
+      "Recipient"
+     ],
+     [
+      "PO",
+      "USPSBoxType"
+     ],
+     [
+      "BOX",
+      "USPSBoxType"
+     ],
+     [
+      "1129",
+      "USPSBoxID"
+     ],
+     [
+      "CHICKALOON",
+      "PlaceName"
+     ],
+     [
+      "AK",
+      "StateName"
+     ],
+     [
+      "99678",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "MARY SPAULDING"
+    }
+   },
+   {
+    "state": "ME",
+    "raw": "ROUTE ONE BOX 38 WAITE ME 04492",
+    "pairs": [
+     [
+      "ROUTE",
+      "Recipient"
+     ],
+     [
+      "ONE",
+      "Recipient"
+     ],
+     [
+      "BOX",
+      "USPSBoxType"
+     ],
+     [
+      "38",
+      "USPSBoxID"
+     ],
+     [
+      "WAITE",
+      "PlaceName"
+     ],
+     [
+      "ME",
+      "StateName"
+     ],
+     [
+      "04492",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-ii",
+     "recipient": "ROUTE ONE"
+    }
+   },
+   {
+    "state": "IA",
+    "raw": "CHURCH OF ST JUDE 50 EDGEWOOD RD NW CEDAR RAPIDS IA 52405",
+    "pairs": [
+     [
+      "CHURCH",
+      "Recipient"
+     ],
+     [
+      "OF",
+      "Recipient"
+     ],
+     [
+      "ST",
+      "Recipient"
+     ],
+     [
+      "JUDE",
+      "Recipient"
+     ],
+     [
+      "50",
+      "AddressNumber"
+     ],
+     [
+      "EDGEWOOD",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "NW",
+      "StreetNamePostDirectional"
+     ],
+     [
+      "CEDAR",
+      "PlaceName"
+     ],
+     [
+      "RAPIDS",
+      "PlaceName"
+     ],
+     [
+      "IA",
+      "StateName"
+     ],
+     [
+      "52405",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "CHURCH OF ST JUDE"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "RABINOWITZ MATTHEW SHAWN 5208 CRYSTAL CREEK DR PACE FL 32571",
+    "pairs": [
+     [
+      "RABINOWITZ",
+      "Recipient"
+     ],
+     [
+      "MATTHEW",
+      "Recipient"
+     ],
+     [
+      "SHAWN",
+      "Recipient"
+     ],
+     [
+      "5208",
+      "AddressNumber"
+     ],
+     [
+      "CRYSTAL",
+      "StreetName"
+     ],
+     [
+      "CREEK",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "PACE",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "32571",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "RABINOWITZ MATTHEW SHAWN"
+    }
+   },
+   {
+    "state": "AK",
+    "raw": "PEGGY HALSEY 2405 S KNIK GOOSE BAY RD WASILLA AK 99654",
+    "pairs": [
+     [
+      "PEGGY",
+      "Recipient"
+     ],
+     [
+      "HALSEY",
+      "Recipient"
+     ],
+     [
+      "2405",
+      "AddressNumber"
+     ],
+     [
+      "S",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "KNIK",
+      "StreetName"
+     ],
+     [
+      "GOOSE",
+      "StreetName"
+     ],
+     [
+      "BAY",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "WASILLA",
+      "PlaceName"
+     ],
+     [
+      "AK",
+      "StateName"
+     ],
+     [
+      "99654",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "PEGGY HALSEY"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "C/O MARIANNE JACKSON 16993 NE STATE RD 121 WILLISTON FL 32696",
+    "pairs": [
+     [
+      "C/O",
+      "Recipient"
+     ],
+     [
+      "MARIANNE",
+      "Recipient"
+     ],
+     [
+      "JACKSON",
+      "Recipient"
+     ],
+     [
+      "16993",
+      "AddressNumber"
+     ],
+     [
+      "NE",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "STATE",
+      "StreetNamePreType"
+     ],
+     [
+      "RD",
+      "StreetNamePreType"
+     ],
+     [
+      "121",
+      "StreetName"
+     ],
+     [
+      "WILLISTON",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "32696",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "C/O MARIANNE JACKSON"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "AS TRUSTEE 613 ROSEMARY CIR BRADENTON FL 34212",
+    "pairs": [
+     [
+      "AS",
+      "Recipient"
+     ],
+     [
+      "TRUSTEE",
+      "Recipient"
+     ],
+     [
+      "613",
+      "AddressNumber"
+     ],
+     [
+      "ROSEMARY",
+      "StreetName"
+     ],
+     [
+      "CIR",
+      "StreetNamePostType"
+     ],
+     [
+      "BRADENTON",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "34212",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "AS TRUSTEE"
+    }
+   },
+   {
+    "state": "SC",
+    "raw": "C/O WILLIAM DOUGLAS MANAGEMENT PO BOX 37109 CHARLOTTE NC 28237",
+    "pairs": [
+     [
+      "C/O",
+      "Recipient"
+     ],
+     [
+      "WILLIAM",
+      "Recipient"
+     ],
+     [
+      "DOUGLAS",
+      "Recipient"
+     ],
+     [
+      "MANAGEMENT",
+      "Recipient"
+     ],
+     [
+      "PO",
+      "USPSBoxType"
+     ],
+     [
+      "BOX",
+      "USPSBoxType"
+     ],
+     [
+      "37109",
+      "USPSBoxID"
+     ],
+     [
+      "CHARLOTTE",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "28237",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "C/O WILLIAM DOUGLAS MANAGEMENT"
+    }
+   },
+   {
+    "state": "NC",
+    "raw": "C/O WILLIAM BEUTELL SR 1616 CHESTNUT DALE RD NEWLAND NC 28657",
+    "pairs": [
+     [
+      "C/O",
+      "Recipient"
+     ],
+     [
+      "WILLIAM",
+      "Recipient"
+     ],
+     [
+      "BEUTELL",
+      "Recipient"
+     ],
+     [
+      "SR",
+      "Recipient"
+     ],
+     [
+      "1616",
+      "AddressNumber"
+     ],
+     [
+      "CHESTNUT",
+      "StreetName"
+     ],
+     [
+      "DALE",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "NEWLAND",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "28657",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-ii",
+     "recipient": "C/O WILLIAM BEUTELL SR"
+    }
+   },
+   {
+    "state": "IA",
+    "raw": "NANETTE B RAMBO 106B 1ST ST SW MOUNT VERNON IA 52314",
+    "pairs": [
+     [
+      "NANETTE",
+      "Recipient"
+     ],
+     [
+      "B",
+      "Recipient"
+     ],
+     [
+      "RAMBO",
+      "Recipient"
+     ],
+     [
+      "106B",
+      "AddressNumber"
+     ],
+     [
+      "1ST",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "SW",
+      "StreetNamePostDirectional"
+     ],
+     [
+      "MOUNT",
+      "PlaceName"
+     ],
+     [
+      "VERNON",
+      "PlaceName"
+     ],
+     [
+      "IA",
+      "StateName"
+     ],
+     [
+      "52314",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "NANETTE B RAMBO"
+    }
+   },
+   {
+    "state": "TX",
+    "raw": "Attn: ROSANNA GUERRERO 301 FOREST ST LIBERTY HILL TX 78642",
+    "pairs": [
+     [
+      "Attn:",
+      "Recipient"
+     ],
+     [
+      "ROSANNA",
+      "Recipient"
+     ],
+     [
+      "GUERRERO",
+      "Recipient"
+     ],
+     [
+      "301",
+      "AddressNumber"
+     ],
+     [
+      "FOREST",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "LIBERTY",
+      "PlaceName"
+     ],
+     [
+      "HILL",
+      "PlaceName"
+     ],
+     [
+      "TX",
+      "StateName"
+     ],
+     [
+      "78642",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-ii",
+     "recipient": "Attn: ROSANNA GUERRERO"
+    }
+   },
+   {
+    "state": "NM",
+    "raw": "HORTON, SUE HORTON TRUSTEE 1700 SAVANNAH DR NE RIO RANCHO NM 87144",
+    "pairs": [
+     [
+      "HORTON,",
+      "Recipient"
+     ],
+     [
+      "SUE",
+      "Recipient"
+     ],
+     [
+      "HORTON",
+      "Recipient"
+     ],
+     [
+      "TRUSTEE",
+      "Recipient"
+     ],
+     [
+      "1700",
+      "AddressNumber"
+     ],
+     [
+      "SAVANNAH",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "NE",
+      "StreetNamePostDirectional"
+     ],
+     [
+      "RIO",
+      "PlaceName"
+     ],
+     [
+      "RANCHO",
+      "PlaceName"
+     ],
+     [
+      "NM",
+      "StateName"
+     ],
+     [
+      "87144",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "HORTON, SUE HORTON TRUSTEE"
+    }
+   },
+   {
+    "state": "CO",
+    "raw": "C/O SPOR FRANCES JANET GLOCKSON AND SPOR JOSEPH D PO BOX 265 NORWOOD CO 814230265",
+    "pairs": [
+     [
+      "C/O",
+      "Recipient"
+     ],
+     [
+      "SPOR",
+      "Recipient"
+     ],
+     [
+      "FRANCES",
+      "Recipient"
+     ],
+     [
+      "JANET",
+      "Recipient"
+     ],
+     [
+      "GLOCKSON",
+      "Recipient"
+     ],
+     [
+      "AND",
+      "Recipient"
+     ],
+     [
+      "SPOR",
+      "Recipient"
+     ],
+     [
+      "JOSEPH",
+      "Recipient"
+     ],
+     [
+      "D",
+      "Recipient"
+     ],
+     [
+      "PO",
+      "USPSBoxType"
+     ],
+     [
+      "BOX",
+      "USPSBoxType"
+     ],
+     [
+      "265",
+      "USPSBoxID"
+     ],
+     [
+      "NORWOOD",
+      "PlaceName"
+     ],
+     [
+      "CO",
+      "StateName"
+     ],
+     [
+      "814230265",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "C/O SPOR FRANCES JANET GLOCKSON AND SPOR JOSEPH D"
+    }
+   },
+   {
+    "state": "NC",
+    "raw": "BUCHANAN, LISA 170 JERRYS CREEK RD NEWLAND NC 28657",
+    "pairs": [
+     [
+      "BUCHANAN,",
+      "Recipient"
+     ],
+     [
+      "LISA",
+      "Recipient"
+     ],
+     [
+      "170",
+      "AddressNumber"
+     ],
+     [
+      "JERRYS",
+      "StreetName"
+     ],
+     [
+      "CREEK",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "NEWLAND",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "28657",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-ii",
+     "recipient": "BUCHANAN, LISA"
+    }
+   },
+   {
+    "state": "ME",
+    "raw": "George Hall & Son Inc. PO Box 506 Rockland ME 04841-0506",
+    "pairs": [
+     [
+      "George",
+      "Recipient"
+     ],
+     [
+      "Hall",
+      "Recipient"
+     ],
+     [
+      "&",
+      "Recipient"
+     ],
+     [
+      "Son",
+      "Recipient"
+     ],
+     [
+      "Inc.",
+      "Recipient"
+     ],
+     [
+      "PO",
+      "USPSBoxType"
+     ],
+     [
+      "Box",
+      "USPSBoxType"
+     ],
+     [
+      "506",
+      "USPSBoxID"
+     ],
+     [
+      "Rockland",
+      "PlaceName"
+     ],
+     [
+      "ME",
+      "StateName"
+     ],
+     [
+      "04841-0506",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "George Hall & Son Inc."
+    }
+   },
+   {
+    "state": "NC",
+    "raw": "WAKEFIELD, JOEL Z 7074 STREAM SIDE LN MORGANTON NC 286559862",
+    "pairs": [
+     [
+      "WAKEFIELD,",
+      "Recipient"
+     ],
+     [
+      "JOEL",
+      "Recipient"
+     ],
+     [
+      "Z",
+      "Recipient"
+     ],
+     [
+      "7074",
+      "AddressNumber"
+     ],
+     [
+      "STREAM",
+      "StreetName"
+     ],
+     [
+      "SIDE",
+      "StreetName"
+     ],
+     [
+      "LN",
+      "StreetNamePostType"
+     ],
+     [
+      "MORGANTON",
+      "PlaceName"
+     ],
+     [
+      "NC",
+      "StateName"
+     ],
+     [
+      "286559862",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-ii",
+     "recipient": "WAKEFIELD, JOEL Z"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "BEVERS REVOCABLE TRUST 8631 BRISTOLWOOD CIR NAVARRE FL 32566",
+    "pairs": [
+     [
+      "BEVERS",
+      "Recipient"
+     ],
+     [
+      "REVOCABLE",
+      "Recipient"
+     ],
+     [
+      "TRUST",
+      "Recipient"
+     ],
+     [
+      "8631",
+      "AddressNumber"
+     ],
+     [
+      "BRISTOLWOOD",
+      "StreetName"
+     ],
+     [
+      "CIR",
+      "StreetNamePostType"
+     ],
+     [
+      "NAVARRE",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "32566",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "BEVERS REVOCABLE TRUST"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "HILDA GAIL 7555 LOOP ST NAVARRE FL 32566",
+    "pairs": [
+     [
+      "HILDA",
+      "Recipient"
+     ],
+     [
+      "GAIL",
+      "Recipient"
+     ],
+     [
+      "7555",
+      "AddressNumber"
+     ],
+     [
+      "LOOP",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "NAVARRE",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "32566",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "sub": "2c-i",
+     "recipient": "HILDA GAIL"
+    }
+   }
+  ],
+  "2d": [
+   {
+    "state": "MA",
+    "raw": "DEDHAM BLVD DEDHAM MA 02026",
+    "pairs": [
+     [
+      "DEDHAM",
+      "StreetName"
+     ],
+     [
+      "BLVD",
+      "StreetNamePostType"
+     ],
+     [
+      "DEDHAM",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "02026",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "dedham blvd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "LINN DR Cleveland OH 44108",
+    "pairs": [
+     [
+      "LINN",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44108",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "linn dr"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "CEDAR AVE Cleveland OH 44103",
+    "pairs": [
+     [
+      "CEDAR",
+      "StreetName"
+     ],
+     [
+      "AVE",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44103",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "cedar ave"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "WEST WAY LYNNFIELD MA 01940",
+    "pairs": [
+     [
+      "WEST",
+      "StreetName"
+     ],
+     [
+      "WAY",
+      "StreetNamePostType"
+     ],
+     [
+      "LYNNFIELD",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "01940",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "west way"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "MONTICELLO BLVD South Euclid OH 44120",
+    "pairs": [
+     [
+      "MONTICELLO",
+      "StreetName"
+     ],
+     [
+      "BLVD",
+      "StreetNamePostType"
+     ],
+     [
+      "South",
+      "PlaceName"
+     ],
+     [
+      "Euclid",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44120",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "monticello blvd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "PURITAS AVE Cleveland OH 44135",
+    "pairs": [
+     [
+      "PURITAS",
+      "StreetName"
+     ],
+     [
+      "AVE",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44135",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "puritas ave"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "SPENCER AVE SAUGUS MA 01906",
+    "pairs": [
+     [
+      "SPENCER",
+      "StreetName"
+     ],
+     [
+      "AVE",
+      "StreetNamePostType"
+     ],
+     [
+      "SAUGUS",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "01906",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "spencer ave"
+    }
+   },
+   {
+    "state": "TN",
+    "raw": "OLD HICKORY BLVD NASHVILLE TN 37215",
+    "pairs": [
+     [
+      "OLD",
+      "StreetName"
+     ],
+     [
+      "HICKORY",
+      "StreetName"
+     ],
+     [
+      "BLVD",
+      "StreetNamePostType"
+     ],
+     [
+      "NASHVILLE",
+      "PlaceName"
+     ],
+     [
+      "TN",
+      "StateName"
+     ],
+     [
+      "37215",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "old hickory blvd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "TINKERS CREEK RD Valley View OH 44125",
+    "pairs": [
+     [
+      "TINKERS",
+      "StreetName"
+     ],
+     [
+      "CREEK",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "Valley",
+      "PlaceName"
+     ],
+     [
+      "View",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44125",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "tinkers creek rd"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "MILK ST BOSTON MA 02109",
+    "pairs": [
+     [
+      "MILK",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "BOSTON",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "02109",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "milk st"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "MARION AVE MAPLE HEIGHTS OH 44137",
+    "pairs": [
+     [
+      "MARION",
+      "StreetName"
+     ],
+     [
+      "AVE",
+      "StreetNamePostType"
+     ],
+     [
+      "MAPLE",
+      "PlaceName"
+     ],
+     [
+      "HEIGHTS",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44137",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "marion ave"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "CANAL RD Cleveland OH 44113",
+    "pairs": [
+     [
+      "CANAL",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44113",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "canal rd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "BROOKSIDE DR Cleveland OH 44144",
+    "pairs": [
+     [
+      "BROOKSIDE",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44144",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "brookside dr"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "MILES RD BEDFORD HEIGHTS OH 44128",
+    "pairs": [
+     [
+      "MILES",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "BEDFORD",
+      "PlaceName"
+     ],
+     [
+      "HEIGHTS",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44128",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "miles rd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "SOLON RD Bedford City OH 44146",
+    "pairs": [
+     [
+      "SOLON",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "Bedford",
+      "PlaceName"
+     ],
+     [
+      "City",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44146",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "solon rd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "GRAYLAND DR Brookpark OH 44142",
+    "pairs": [
+     [
+      "GRAYLAND",
+      "StreetName"
+     ],
+     [
+      "DR",
+      "StreetNamePostType"
+     ],
+     [
+      "Brookpark",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44142",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "grayland dr"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "BUNGALOW RD WEST ROXBURY MA 02132",
+    "pairs": [
+     [
+      "BUNGALOW",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "WEST",
+      "PlaceName"
+     ],
+     [
+      "ROXBURY",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "02132",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "bungalow rd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "FULTON CT Cleveland OH 44113",
+    "pairs": [
+     [
+      "FULTON",
+      "StreetName"
+     ],
+     [
+      "CT",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44113",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "fulton ct"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "KINSMAN RD Cleveland OH 44104",
+    "pairs": [
+     [
+      "KINSMAN",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44104",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "kinsman rd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "EASTLAND RD Middleburg Hts OH 44130",
+    "pairs": [
+     [
+      "EASTLAND",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "Middleburg",
+      "PlaceName"
+     ],
+     [
+      "Hts",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44130",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "eastland rd"
+    }
+   },
+   {
+    "state": "TN",
+    "raw": "POWELL AVE NASHVILLE TN 37204",
+    "pairs": [
+     [
+      "POWELL",
+      "StreetName"
+     ],
+     [
+      "AVE",
+      "StreetNamePostType"
+     ],
+     [
+      "NASHVILLE",
+      "PlaceName"
+     ],
+     [
+      "TN",
+      "StateName"
+     ],
+     [
+      "37204",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "powell ave"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "PALERMO CIR FORT MYERS BEACH FL 33931",
+    "pairs": [
+     [
+      "PALERMO",
+      "StreetName"
+     ],
+     [
+      "CIR",
+      "StreetNamePostType"
+     ],
+     [
+      "FORT",
+      "PlaceName"
+     ],
+     [
+      "MYERS",
+      "PlaceName"
+     ],
+     [
+      "BEACH",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "33931",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "palermo cir"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "BRIGGS RD Cleveland OH 44111",
+    "pairs": [
+     [
+      "BRIGGS",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "Cleveland",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44111",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "briggs rd"
+    }
+   },
+   {
+    "state": "OH",
+    "raw": "REGENT RD CLEVELAND OH 44127",
+    "pairs": [
+     [
+      "REGENT",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "CLEVELAND",
+      "PlaceName"
+     ],
+     [
+      "OH",
+      "StateName"
+     ],
+     [
+      "44127",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "regent rd"
+    }
+   },
+   {
+    "state": "CT",
+    "raw": "ENGLEWOOD AVE WATERBURY CT 067051805",
+    "pairs": [
+     [
+      "ENGLEWOOD",
+      "StreetName"
+     ],
+     [
+      "AVE",
+      "StreetNamePostType"
+     ],
+     [
+      "WATERBURY",
+      "PlaceName"
+     ],
+     [
+      "CT",
+      "StateName"
+     ],
+     [
+      "067051805",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "record": "englewood ave"
+    }
+   }
+  ],
+  "2e": [
+   {
+    "state": "NJ",
+    "raw": "731 TOTOWA ROAD TOTOWA, NJ 07512",
+    "pairs": [
+     [
+      "731",
+      "AddressNumber"
+     ],
+     [
+      "TOTOWA",
+      "StreetName"
+     ],
+     [
+      "ROAD",
+      "StreetNamePostType"
+     ],
+     [
+      "TOTOWA,",
+      "PlaceName"
+     ],
+     [
+      "NJ",
+      "StateName"
+     ],
+     [
+      "07512",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "road",
+       "record": "rd",
+       "kind": "suffix"
+      }
+     ],
+     "record": "totowa rd"
+    }
+   },
+   {
+    "state": "NM",
+    "raw": "3404 TODOS SANTOS STREET SANTA FE NM 87507",
+    "pairs": [
+     [
+      "3404",
+      "AddressNumber"
+     ],
+     [
+      "TODOS",
+      "StreetName"
+     ],
+     [
+      "SANTOS",
+      "StreetName"
+     ],
+     [
+      "STREET",
+      "StreetNamePostType"
+     ],
+     [
+      "SANTA",
+      "PlaceName"
+     ],
+     [
+      "FE",
+      "PlaceName"
+     ],
+     [
+      "NM",
+      "StateName"
+     ],
+     [
+      "87507",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 2,
+       "row": "street",
+       "record": "st",
+       "kind": "suffix"
+      }
+     ],
+     "record": "todos santos st"
+    }
+   },
+   {
+    "state": "AL",
+    "raw": "1801 MORRIS AVENUE BIRIMINGHAM AL 35203",
+    "pairs": [
+     [
+      "1801",
+      "AddressNumber"
+     ],
+     [
+      "MORRIS",
+      "StreetName"
+     ],
+     [
+      "AVENUE",
+      "StreetNamePostType"
+     ],
+     [
+      "BIRIMINGHAM",
+      "PlaceName"
+     ],
+     [
+      "AL",
+      "StateName"
+     ],
+     [
+      "35203",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "avenue",
+       "record": "ave",
+       "kind": "suffix"
+      }
+     ],
+     "record": "morris ave"
+    }
+   },
+   {
+    "state": "IL",
+    "raw": "5032 PARLIAMENT PLACE ROCKFORD IL 61107",
+    "pairs": [
+     [
+      "5032",
+      "AddressNumber"
+     ],
+     [
+      "PARLIAMENT",
+      "StreetName"
+     ],
+     [
+      "PLACE",
+      "StreetNamePostType"
+     ],
+     [
+      "ROCKFORD",
+      "PlaceName"
+     ],
+     [
+      "IL",
+      "StateName"
+     ],
+     [
+      "61107",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "place",
+       "record": "pl",
+       "kind": "suffix"
+      }
+     ],
+     "record": "parliament pl"
+    }
+   },
+   {
+    "state": "TN",
+    "raw": "9131 SOUTH HARPETH RD NASHVILLE TN 37221",
+    "pairs": [
+     [
+      "9131",
+      "AddressNumber"
+     ],
+     [
+      "SOUTH",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "HARPETH",
+      "StreetName"
+     ],
+     [
+      "RD",
+      "StreetNamePostType"
+     ],
+     [
+      "NASHVILLE",
+      "PlaceName"
+     ],
+     [
+      "TN",
+      "StateName"
+     ],
+     [
+      "37221",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 0,
+       "row": "south",
+       "record": "s",
+       "kind": "dir"
+      }
+     ],
+     "record": "s harpeth rd"
+    }
+   },
+   {
+    "state": "NJ",
+    "raw": "308 ROYDEN STREET CAMDEN, NJ 081031843",
+    "pairs": [
+     [
+      "308",
+      "AddressNumber"
+     ],
+     [
+      "ROYDEN",
+      "StreetName"
+     ],
+     [
+      "STREET",
+      "StreetNamePostType"
+     ],
+     [
+      "CAMDEN,",
+      "PlaceName"
+     ],
+     [
+      "NJ",
+      "StateName"
+     ],
+     [
+      "081031843",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "street",
+       "record": "st",
+       "kind": "suffix"
+      }
+     ],
+     "record": "royden st"
+    }
+   },
+   {
+    "state": "AL",
+    "raw": "7429 ASHLAND LANE VESTAVIA AL 35242",
+    "pairs": [
+     [
+      "7429",
+      "AddressNumber"
+     ],
+     [
+      "ASHLAND",
+      "StreetName"
+     ],
+     [
+      "LANE",
+      "StreetNamePostType"
+     ],
+     [
+      "VESTAVIA",
+      "PlaceName"
+     ],
+     [
+      "AL",
+      "StateName"
+     ],
+     [
+      "35242",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "lane",
+       "record": "ln",
+       "kind": "suffix"
+      }
+     ],
+     "record": "ashland ln"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "1226 STATE ROAD RICHMOND MA 01254",
+    "pairs": [
+     [
+      "1226",
+      "AddressNumber"
+     ],
+     [
+      "STATE",
+      "StreetName"
+     ],
+     [
+      "ROAD",
+      "StreetNamePostType"
+     ],
+     [
+      "RICHMOND",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "01254",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "road",
+       "record": "rd",
+       "kind": "suffix"
+      }
+     ],
+     "record": "state rd"
+    }
+   },
+   {
+    "state": "VA",
+    "raw": "1222 Whitby Road Richmond VA 23227",
+    "pairs": [
+     [
+      "1222",
+      "AddressNumber"
+     ],
+     [
+      "Whitby",
+      "StreetName"
+     ],
+     [
+      "Road",
+      "StreetNamePostType"
+     ],
+     [
+      "Richmond",
+      "PlaceName"
+     ],
+     [
+      "VA",
+      "StateName"
+     ],
+     [
+      "23227",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "road",
+       "record": "rd",
+       "kind": "suffix"
+      }
+     ],
+     "record": "whitby rd"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "13 EAST CENTRAL ST NATICK MA 01760",
+    "pairs": [
+     [
+      "13",
+      "AddressNumber"
+     ],
+     [
+      "EAST",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "CENTRAL",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "NATICK",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "01760",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 0,
+       "row": "east",
+       "record": "e",
+       "kind": "dir"
+      }
+     ],
+     "record": "e central st"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "79 BAKER ROAD SALISBURY MA 01952",
+    "pairs": [
+     [
+      "79",
+      "AddressNumber"
+     ],
+     [
+      "BAKER",
+      "StreetName"
+     ],
+     [
+      "ROAD",
+      "StreetNamePostType"
+     ],
+     [
+      "SALISBURY",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "01952",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "road",
+       "record": "rd",
+       "kind": "suffix"
+      }
+     ],
+     "record": "baker rd"
+    }
+   },
+   {
+    "state": "NJ",
+    "raw": "2320 FEDERAL STREET CAMDEN, NJ 08105",
+    "pairs": [
+     [
+      "2320",
+      "AddressNumber"
+     ],
+     [
+      "FEDERAL",
+      "StreetName"
+     ],
+     [
+      "STREET",
+      "StreetNamePostType"
+     ],
+     [
+      "CAMDEN,",
+      "PlaceName"
+     ],
+     [
+      "NJ",
+      "StateName"
+     ],
+     [
+      "08105",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "street",
+       "record": "st",
+       "kind": "suffix"
+      }
+     ],
+     "record": "federal st"
+    }
+   },
+   {
+    "state": "CT",
+    "raw": "5 HICKORY COURT COLUMBIA CT 06237",
+    "pairs": [
+     [
+      "5",
+      "AddressNumber"
+     ],
+     [
+      "HICKORY",
+      "StreetName"
+     ],
+     [
+      "COURT",
+      "StreetNamePostType"
+     ],
+     [
+      "COLUMBIA",
+      "PlaceName"
+     ],
+     [
+      "CT",
+      "StateName"
+     ],
+     [
+      "06237",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "court",
+       "record": "ct",
+       "kind": "suffix"
+      }
+     ],
+     "record": "hickory ct"
+    }
+   },
+   {
+    "state": "FL",
+    "raw": "1057 BLACK WALNUT TRAIL PENSACOLA FL 32514",
+    "pairs": [
+     [
+      "1057",
+      "AddressNumber"
+     ],
+     [
+      "BLACK",
+      "StreetName"
+     ],
+     [
+      "WALNUT",
+      "StreetName"
+     ],
+     [
+      "TRAIL",
+      "StreetNamePostType"
+     ],
+     [
+      "PENSACOLA",
+      "PlaceName"
+     ],
+     [
+      "FL",
+      "StateName"
+     ],
+     [
+      "32514",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 2,
+       "row": "trail",
+       "record": "trl",
+       "kind": "suffix"
+      }
+     ],
+     "record": "black walnut trl"
+    }
+   },
+   {
+    "state": "CT",
+    "raw": "2919 EAST MAIN ST WATERBURY CT 06705",
+    "pairs": [
+     [
+      "2919",
+      "AddressNumber"
+     ],
+     [
+      "EAST",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "MAIN",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "WATERBURY",
+      "PlaceName"
+     ],
+     [
+      "CT",
+      "StateName"
+     ],
+     [
+      "06705",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 0,
+       "row": "east",
+       "record": "e",
+       "kind": "dir"
+      }
+     ],
+     "record": "e main st"
+    }
+   },
+   {
+    "state": "CT",
+    "raw": "60 BROOKDALE LANE WATERBURY CT 06705",
+    "pairs": [
+     [
+      "60",
+      "AddressNumber"
+     ],
+     [
+      "BROOKDALE",
+      "StreetName"
+     ],
+     [
+      "LANE",
+      "StreetNamePostType"
+     ],
+     [
+      "WATERBURY",
+      "PlaceName"
+     ],
+     [
+      "CT",
+      "StateName"
+     ],
+     [
+      "06705",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "lane",
+       "record": "ln",
+       "kind": "suffix"
+      }
+     ],
+     "record": "brookdale ln"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "99 BROOKLAWN STREET NEW BEDFORD MA 02745",
+    "pairs": [
+     [
+      "99",
+      "AddressNumber"
+     ],
+     [
+      "BROOKLAWN",
+      "StreetName"
+     ],
+     [
+      "STREET",
+      "StreetNamePostType"
+     ],
+     [
+      "NEW",
+      "PlaceName"
+     ],
+     [
+      "BEDFORD",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "02745",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "street",
+       "record": "st",
+       "kind": "suffix"
+      }
+     ],
+     "record": "brooklawn st"
+    }
+   },
+   {
+    "state": "SC",
+    "raw": "117 WEST LEROY ST FORT MILL SC 29715",
+    "pairs": [
+     [
+      "117",
+      "AddressNumber"
+     ],
+     [
+      "WEST",
+      "StreetNamePreDirectional"
+     ],
+     [
+      "LEROY",
+      "StreetName"
+     ],
+     [
+      "ST",
+      "StreetNamePostType"
+     ],
+     [
+      "FORT",
+      "PlaceName"
+     ],
+     [
+      "MILL",
+      "PlaceName"
+     ],
+     [
+      "SC",
+      "StateName"
+     ],
+     [
+      "29715",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 0,
+       "row": "west",
+       "record": "w",
+       "kind": "dir"
+      }
+     ],
+     "record": "w leroy st"
+    }
+   },
+   {
+    "state": "CT",
+    "raw": "3 LIVINGSTON ROAD CANTON CT 06019",
+    "pairs": [
+     [
+      "3",
+      "AddressNumber"
+     ],
+     [
+      "LIVINGSTON",
+      "StreetName"
+     ],
+     [
+      "ROAD",
+      "StreetNamePostType"
+     ],
+     [
+      "CANTON",
+      "PlaceName"
+     ],
+     [
+      "CT",
+      "StateName"
+     ],
+     [
+      "06019",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "road",
+       "record": "rd",
+       "kind": "suffix"
+      }
+     ],
+     "record": "livingston rd"
+    }
+   },
+   {
+    "state": "NJ",
+    "raw": "349 LIBERTY STREET CAMDEN, NJ 08104",
+    "pairs": [
+     [
+      "349",
+      "AddressNumber"
+     ],
+     [
+      "LIBERTY",
+      "StreetName"
+     ],
+     [
+      "STREET",
+      "StreetNamePostType"
+     ],
+     [
+      "CAMDEN,",
+      "PlaceName"
+     ],
+     [
+      "NJ",
+      "StateName"
+     ],
+     [
+      "08104",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "street",
+       "record": "st",
+       "kind": "suffix"
+      }
+     ],
+     "record": "liberty st"
+    }
+   },
+   {
+    "state": "CT",
+    "raw": "130 MAIN STREET UNIT 2C COLLINSVILLE CT 06019",
+    "pairs": [
+     [
+      "130",
+      "AddressNumber"
+     ],
+     [
+      "MAIN",
+      "StreetName"
+     ],
+     [
+      "STREET",
+      "StreetNamePostType"
+     ],
+     [
+      "UNIT",
+      "OccupancyType"
+     ],
+     [
+      "2C",
+      "OccupancyIdentifier"
+     ],
+     [
+      "COLLINSVILLE",
+      "PlaceName"
+     ],
+     [
+      "CT",
+      "StateName"
+     ],
+     [
+      "06019",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "street",
+       "record": "st",
+       "kind": "suffix"
+      }
+     ],
+     "record": "main st"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "1 MORSE TERRACE WAREHAM MA 02571",
+    "pairs": [
+     [
+      "1",
+      "AddressNumber"
+     ],
+     [
+      "MORSE",
+      "StreetName"
+     ],
+     [
+      "TERRACE",
+      "StreetNamePostType"
+     ],
+     [
+      "WAREHAM",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "02571",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "terrace",
+       "record": "ter",
+       "kind": "suffix"
+      }
+     ],
+     "record": "morse ter"
+    }
+   },
+   {
+    "state": "SC",
+    "raw": "6013 FEATHERSTONE COURT ROCK HILL SC 29732",
+    "pairs": [
+     [
+      "6013",
+      "AddressNumber"
+     ],
+     [
+      "FEATHERSTONE",
+      "StreetName"
+     ],
+     [
+      "COURT",
+      "StreetNamePostType"
+     ],
+     [
+      "ROCK",
+      "PlaceName"
+     ],
+     [
+      "HILL",
+      "PlaceName"
+     ],
+     [
+      "SC",
+      "StateName"
+     ],
+     [
+      "29732",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "court",
+       "record": "ct",
+       "kind": "suffix"
+      }
+     ],
+     "record": "featherstone ct"
+    }
+   },
+   {
+    "state": "IL",
+    "raw": "6959 VESTA DRIVE ROCKFORD IL 61109",
+    "pairs": [
+     [
+      "6959",
+      "AddressNumber"
+     ],
+     [
+      "VESTA",
+      "StreetName"
+     ],
+     [
+      "DRIVE",
+      "StreetNamePostType"
+     ],
+     [
+      "ROCKFORD",
+      "PlaceName"
+     ],
+     [
+      "IL",
+      "StateName"
+     ],
+     [
+      "61109",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "drive",
+       "record": "dr",
+       "kind": "suffix"
+      }
+     ],
+     "record": "vesta dr"
+    }
+   },
+   {
+    "state": "MA",
+    "raw": "80 CEDARWOOD ROAD HANOVER MA 02339",
+    "pairs": [
+     [
+      "80",
+      "AddressNumber"
+     ],
+     [
+      "CEDARWOOD",
+      "StreetName"
+     ],
+     [
+      "ROAD",
+      "StreetNamePostType"
+     ],
+     [
+      "HANOVER",
+      "PlaceName"
+     ],
+     [
+      "MA",
+      "StateName"
+     ],
+     [
+      "02339",
+      "ZipCode"
+     ]
+    ],
+    "evidence": {
+     "substituted": [
+      {
+       "pos": 1,
+       "row": "road",
+       "record": "rd",
+       "kind": "suffix"
+      }
+     ],
+     "record": "cedarwood rd"
+    }
+   }
+  ]
+ }
+}
