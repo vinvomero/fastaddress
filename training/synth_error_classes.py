@@ -283,8 +283,13 @@ def gen_milepost_route(rng, n):
 def gen_truncated_type(rng, n):
     """810 BARRINGTON POINT R BARRINGTON IL  ->  R is a truncated street type.
 
-    From the adjudicated both-wrong record; the mail file clips 'RD' to 'R'."""
-    trunc = ["R", "D", "L", "C", "A", "S", "B", "T"]
+    From the adjudicated both-wrong record; the mail file clips 'RD' to 'R'.
+    Two-letter clips added for the G2B generation: the clean-set record
+    '4 Cypress Ci, Fairport, NY' broke when rung 2a taught 21k rows whose
+    final name token has no suffix after it, so a rare two-letter type stopped
+    reading as a type at all."""
+    trunc = ["R", "D", "L", "C", "A", "S", "B", "T",
+             "Ci", "Cr", "Bl", "Pk", "Tr", "Pt", "Sq", "Ln", "Dv", "Ct"]
     out = []
     for _ in range(n):
         city, st, zc = rng.choice(PLAIN_CITIES)
@@ -808,7 +813,8 @@ GENERATORS = [
     ("grid_predirectional", gen_grid_predirectional, 1.5),
     ("directional_multiword_street", gen_directional_multiword_street, 1.0),
     ("milepost_route", gen_milepost_route, 0.6),
-    ("truncated_type", gen_truncated_type, 0.8),
+    # 0.8 -> 2.5: rung 2a's no-suffix rows swamped this class (v44 clean break).
+    ("truncated_type", gen_truncated_type, 2.5),
     ("spelled_state", gen_spelled_state, 1.5),
     ("postdir_then_building", gen_postdir_then_building, 1.0),
     ("street_then_building", gen_street_then_building, 0.8),
@@ -823,7 +829,10 @@ GENERATORS = [
     ("wisconsin_grid_number", gen_wisconsin_grid_number, 0.4),
     ("person_named_street", gen_person_named_street, 0.8),
     ("the_building", gen_the_building, 0.6),
-    ("county_letter_road", gen_county_letter_road, 0.8),
+    # 0.8 -> 2.5: rung 2e's spelled-out post-types swamped the pre-type
+    # reading of "COUNTY ROAD ABC" (v44 clean break; frame was already
+    # flagged fragile in its own docstring).
+    ("county_letter_road", gen_county_letter_road, 2.5),
     ("letter_avenue_grid", gen_letter_avenue_grid, 0.3),
     ("bare_route", gen_bare_route, 0.5),
     ("inner_directional_street", gen_inner_directional_street, 0.4),
