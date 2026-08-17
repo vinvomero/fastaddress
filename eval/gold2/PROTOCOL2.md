@@ -247,3 +247,31 @@ sampling entirely.
   One scoring attempt remains against gold-2b. It stays unspent until there is a candidate
   whose evidence does not rest on a holdout sharing a generative process with its training
   data. No claim of any kind may cite this result as support for the retrained model.
+- 2026-08-17: **Gold-2c pre-registered, before any record is fetched. It is a DEV surface, not
+  an exam.** The gold-2b failure showed this project has no validated predictor of exam
+  performance: two instruments were tried and both failed calibration (the hard-class tier
+  reported +5.333 pp for a candidate that scored negative; the gold-2 dev surface ranks that
+  same candidate above its predecessor with CIs too wide to separate anything). Gold-2c exists
+  to fill that hole, and its status is fixed now so it can never be quietly promoted:
+  * **Role: dev tier. Iterate against it freely. It may never be cited in a public claim**,
+    and no claim-tier language may reference it. Gold-2b's remaining attempt is the only
+    claim path, and gold-2c's purpose is to stop that attempt being spent on a guess.
+  * **Absolute labels, not A/B verdicts.** Each record carries an approved label sequence, so
+    any future candidate scores against it without new human review. The gold-2/gold-2b design
+    (adjudicating one pair's disagreements) produces verdicts that expire with the pair.
+  * **Source disjointness:** every dataset must be disjoint from gold-2's fetched sources,
+    gold-2b's sources (both cohorts), and every training-consumed dataset (Cook IL, Allegheny
+    PA, the 30 realtext sources). Asserted in the builder, verified by identity dedupe.
+  * **Deliberately enriched, and that is legitimate here**: because it is a dev surface and
+    not a representative exam, it over-samples the classes that decided gold-2b -- suffix
+    present vs. omitted, recipient prefixes, route boxes, spelled-out types -- so the signal
+    on those classes is measurable rather than swamped. A claim surface could not do this;
+    a dev surface must.
+  * **Labeling:** machine prelabel, then human approval of a stratified review set capped at
+    the usual 150 records. Only human-approved sequences are scoreable. Records where the
+    reviewer declines to rule are stored unscoreable rather than guessed.
+  * **Calibration requirement, fixed now:** gold-2c must be shown to rank the candidates whose
+    true gold-2b outcome is already known (v43 and v50) in the correct order before it may be
+    used to steer anything. An instrument that cannot reproduce a known result is not
+    evidence. If it fails calibration it is reported as failed, exactly as its two
+    predecessors were.
