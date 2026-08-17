@@ -27,6 +27,7 @@ NATIONAL = Path(__file__).parent / "corpus" / "national.jsonl"
 REALTEXT = Path(__file__).parent / "corpus" / "realtext.jsonl"
 REALTEXT2 = Path(__file__).parent / "corpus" / "realtext2.jsonl"
 REALTEXT2_NO2A = Path(__file__).parent / "corpus" / "realtext2_no2a.jsonl"
+MINIMAL = Path(__file__).parent / "corpus" / "minimal_abbrev.jsonl"
 
 
 def main():
@@ -104,6 +105,13 @@ def main():
         help="use the realtext2 variant without rung 2a (omitted-suffix rows): gold-2b "
              "attempt 1 attributed 19 of 47 losses to StreetNamePostType -> StreetName",
     )
+    ap.add_argument(
+        "--minimal-abbrev",
+        type=int,
+        default=0,
+        help="include training/corpus/minimal_abbrev.jsonl N times (V19-U3: the abbreviated-city "
+             "frame alone, without the rest of the national corpus)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -152,6 +160,9 @@ def main():
     if args.realtext and REALTEXT.exists():
         for _ in range(args.realtext):
             feed(REALTEXT)
+    if args.minimal_abbrev and MINIMAL.exists():
+        for _ in range(args.minimal_abbrev):
+            feed(MINIMAL)
     if args.realtext2 and REALTEXT2.exists():
         src = REALTEXT2_NO2A if args.drop_rung_2a and REALTEXT2_NO2A.exists() else REALTEXT2
         for _ in range(args.realtext2):
@@ -188,6 +199,7 @@ def main():
         "national_repeats": args.national,
         "realtext_repeats": args.realtext,
         "realtext2_repeats": args.realtext2,
+        "minimal_abbrev_repeats": args.minimal_abbrev,
         "drop_rung_2a": args.drop_rung_2a,
         "params": {
             "algorithm": "lbfgs",
