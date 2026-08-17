@@ -5213,5 +5213,20 @@
     }
    }
   ]
+ },
+ "hard_dev_holdout": {
+  "file": "eval/realtext_hard_dev.jsonl",
+  "rows": 1500,
+  "seed": 20260817,
+  "carved": "2026-08-16",
+  "training_rows_after_carve": 21047,
+  "stratification": "proportional by rung with a 40-row floor, random within rung",
+  "per_rung": {
+   "2a": 206,
+   "2b": 107,
+   "2c": 144,
+   "2d": 40,
+   "2e": 1003
+  }
  }
 }

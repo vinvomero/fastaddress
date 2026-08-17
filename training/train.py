@@ -25,6 +25,7 @@ TIGER = Path(__file__).parent / "corpus" / "tiger.jsonl"
 ERRCLASS = Path(__file__).parent / "corpus" / "errclass.jsonl"
 NATIONAL = Path(__file__).parent / "corpus" / "national.jsonl"
 REALTEXT = Path(__file__).parent / "corpus" / "realtext.jsonl"
+REALTEXT2 = Path(__file__).parent / "corpus" / "realtext2.jsonl"
 
 
 def main():
@@ -90,6 +91,12 @@ def main():
         default=0,
         help="include training/corpus/realtext.jsonl N times (RT-U1 aligned real owner-mail text; dev holdout already carved out)",
     )
+    ap.add_argument(
+        "--realtext2",
+        type=int,
+        default=0,
+        help="include training/corpus/realtext2.jsonl N times (G2B-U2 extended-ladder hard classes; hard dev holdout already carved out)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -138,6 +145,9 @@ def main():
     if args.realtext and REALTEXT.exists():
         for _ in range(args.realtext):
             feed(REALTEXT)
+    if args.realtext2 and REALTEXT2.exists():
+        for _ in range(args.realtext2):
+            feed(REALTEXT2)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
@@ -169,6 +179,7 @@ def main():
         "errclass_repeats": args.errclass,
         "national_repeats": args.national,
         "realtext_repeats": args.realtext,
+        "realtext2_repeats": args.realtext2,
         "params": {
             "algorithm": "lbfgs",
             "c1": args.c1,
