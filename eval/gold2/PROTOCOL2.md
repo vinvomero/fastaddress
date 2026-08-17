@@ -200,3 +200,26 @@ sampling entirely.
   Cohort membership machine-readable in eval/gold2b/COHORTS.json. Independently verified:
   zero internal duplicates, zero overlap with all exclusion sets. Gold-2b is locked
   pending nothing — it waits for a candidate. Scoring attempts used: 0 of 2.
+- 2026-08-17: **Gold-2b spend decision: attempt 1 of 2 will be spent on candidate v50.**
+  Eligibility verified before this entry and before any gold-2b record was tagged:
+  gauntlet **ALL GREEN** (clean 159/159; all 115 adjudicated records matched, verdict
+  STRICTLY BETTER OR EQUAL; gold-1 margin passes at the floor with 17 divergences still
+  unadjudicated; both national scans; the spent 20-county split; real-text dev holdout
+  +2.400 pp, CI [+1.750, +3.100] -- above the v36 anchor guard of +0.900). New this
+  generation: a hard-class dev tier (`eval/realtext_hard_dev.jsonl`, 1,500 rows drawn
+  from the extended alignment ladder) on which v50 scores **+5.333 pp, CI [+4.067,
+  +6.600]** against v43's +2.000 -- the classes gold-2 punished (recipients, spelled-out
+  variants) moved from negative or flat to clearly positive.
+  **Gate integrity note, disclosed:** the gauntlet's check 1 was found non-binding
+  (full_check exits 0 regardless of verdict, and the check had no expected marker), so
+  candidate v48 briefly earned a false ALL GREEN while failing an adjudicated record.
+  Fixed before any candidate advanced; v50's green is from the repaired driver. No
+  attempt was spent under the buggy gate.
+  Candidates this generation: v44, v45, v47, v48, v49, v50 trained; v46 (weight 6)
+  dropped after weight 4 showed clean-set damage with no added gain.
+  **Analysis structure per the owner's rulings, fixed before scoring:** PRIMARY is the
+  strict-disjoint cohort (32 states, 2,912 records) with enumerated-coverage phrasing
+  since it sits below the 40-state floor; SENSITIVITY-A adds the six same-lineage
+  states; SENSITIVITY-B adds the WI/WV/MN aggregates; ROBUSTNESS repeats the primary
+  without WY. Human verdicts only; 150-record adjudication tripwire in force.
+  Scoring attempts used after this run: 1 of 2.
