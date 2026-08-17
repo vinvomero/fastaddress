@@ -26,6 +26,7 @@ ERRCLASS = Path(__file__).parent / "corpus" / "errclass.jsonl"
 NATIONAL = Path(__file__).parent / "corpus" / "national.jsonl"
 REALTEXT = Path(__file__).parent / "corpus" / "realtext.jsonl"
 REALTEXT2 = Path(__file__).parent / "corpus" / "realtext2.jsonl"
+REALTEXT2_NO2A = Path(__file__).parent / "corpus" / "realtext2_no2a.jsonl"
 
 
 def main():
@@ -97,6 +98,12 @@ def main():
         default=0,
         help="include training/corpus/realtext2.jsonl N times (G2B-U2 extended-ladder hard classes; hard dev holdout already carved out)",
     )
+    ap.add_argument(
+        "--drop-rung-2a",
+        action="store_true",
+        help="use the realtext2 variant without rung 2a (omitted-suffix rows): gold-2b "
+             "attempt 1 attributed 19 of 47 losses to StreetNamePostType -> StreetName",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -146,8 +153,9 @@ def main():
         for _ in range(args.realtext):
             feed(REALTEXT)
     if args.realtext2 and REALTEXT2.exists():
+        src = REALTEXT2_NO2A if args.drop_rung_2a and REALTEXT2_NO2A.exists() else REALTEXT2
         for _ in range(args.realtext2):
-            feed(REALTEXT2)
+            feed(src)
     feat_secs = time.perf_counter() - t0
     print(f"appended {n} sequences in {feat_secs:.0f}s")
 
@@ -180,6 +188,7 @@ def main():
         "national_repeats": args.national,
         "realtext_repeats": args.realtext,
         "realtext2_repeats": args.realtext2,
+        "drop_rung_2a": args.drop_rung_2a,
         "params": {
             "algorithm": "lbfgs",
             "c1": args.c1,
