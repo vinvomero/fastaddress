@@ -148,3 +148,40 @@ compat default stays bit-identical, unconditionally); new source fetching.
   attempt remains after that, and it stays unspent until something new justifies it.
 - **Yield falls short of 25k.** Report the shortfall and train on what exists; do not relax
   matching to hit a number.
+
+## Amendment 1 (2026-08-16, after U2's first build, before any retraining)
+
+U2 built the four specified rungs and returned 4,970 rows against a 25,000 target, with the
+shortfall measured rather than tuned around. Three rulings, recorded before the rebuild runs:
+
+**Rung 2e is added: canonicalized lexical variants.** 17,264 of the 50,995 unmatched rows
+(34%) match a TIGER record *exactly*, position for position, once spelled-out suffixes and
+directionals are canonicalized to TIGER's abbreviations ("180 WEST VALLEY AVENUE" against
+TIGER's "W Valley Ave"). This relaxes nothing about matching: same arity, same slots, labels
+from the same record, only the surface spelling of a token differs. It is strictly safer than
+rung 2b, which is already accepted. It is also a real-text class the exact-match corpus
+systematically lacks, since assessors write "AVENUE" and TIGER stores "Ave". Approved.
+
+**Rung 2a's uniqueness rule is replaced by label agreement.** As written, the rule drops a row
+when several TIGER records match its name — but all 2,708 such ties are between records that
+assign *identical label sequences* ("Whispering Birch Cir" and "Whispering Birch Ln" both
+reduce to StreetName StreetName). The rule exists to prevent mislabeling, and where every
+candidate agrees on the labels there is no mislabeling to prevent. Requiring label agreement
+rather than record uniqueness is the rule the original intent implies. Approved.
+
+**Rung 2c keeps its rows on substitute evidence, documented.** The plan asked the recipient
+prefix to be confirmed against the source's own owner-name field. That field was never
+fetched, and R-C forbids fetching it now, so the requirement cannot be met as written. The
+substitute: the text sits in an owner-*mailing* field (whose semantics are "who to mail to"),
+it is name-like by explicit test (no digits, no unit or box token, not a street name in that
+geography), and the remainder of the row aligns authoritatively. A leading name-like phrase in
+a mailing field is a recipient; the competing reading (BuildingName) is rare there and was
+absent from all 25 samples, which carried C/O, %, TRS, LIFE ESTATE, and TRUSTEES markers.
+Accepted with the evidence substitution stated in the builder's docstring and the manifest,
+and with 2c rows tagged by origin so they can be ablated if a candidate regresses on the
+adjudicated Recipient records.
+
+Also recorded: 2a's first build had a systematic mislabel (rows whose own suffix was present
+matching records carrying an extra suffix, e.g. "820 WASHINGTON STREET" against "Washington
+Street Pl"), caught in sample review and fixed with a suffix-word guard at a cost of 869 rows.
+This is why per-rung samples are reviewed before training uses them.
