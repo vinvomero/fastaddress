@@ -223,3 +223,27 @@ sampling entirely.
   states; SENSITIVITY-B adds the WI/WV/MN aggregates; ROBUSTNESS repeats the primary
   without WY. Human verdicts only; 150-record adjudication tripwire in force.
   Scoring attempts used after this run: 1 of 2.
+- 2026-08-17: **Gold-2b scoring attempt 1 of 2: FAIL, and net negative.** Candidate v50 vs v1,
+  136 disagreements human-adjudicated in full (under the 150 tripwire, so no sampling).
+  PRIMARY (strict-disjoint cohort, 32 states, 2,912 records): 39 candidate / 47 incumbent /
+  28 neither, **net -8 records = -0.275 pp, 95% CI [-0.927, +0.343]** — Gate 1 FAIL on sign,
+  not merely on significance. Gate 2 also FAIL: four binding divisions net-negative
+  (Mountain -5 on 25, Pacific -1 on 17, WNCentral -5 on 16, plus SouthAtlantic -6 below the
+  binding threshold). Sensitivity-A -0.269 pp, Sensitivity-B -0.224 pp, robustness without WY
+  -0.284 pp: every cohort agrees, so the result is not a cohort artifact.
+  **The central finding, and it invalidates a tool rather than just a candidate:** v50 scored
+  **+5.333 pp on the hard-class dev tier** built specifically to predict this exam, and came
+  out **negative** on the exam itself. The dev tier did not merely fail to predict gold-2b, it
+  pointed the wrong way. Root cause visible in the loss taxonomy: 19 of v50's 47 losses are
+  `StreetNamePostType -> StreetName`, which is precisely what rung 2a (omitted-suffix rows,
+  where the final name token legitimately has no type) over-taught. The extended ladder made
+  the model reluctant to see any terminal token as a suffix — a bias the hard-class holdout
+  could not detect, because it is drawn from the same rungs that created it. Holdout and
+  training corpus shared a generative process, so the holdout measured fit to that process
+  rather than transfer.
+  Also recorded: the human review flagged 15 Canadian postal-code records (strict cohort) that
+  neither parser labels correctly, a systematic gap in both models rather than a difference
+  between them; they contribute zero and are documented for future work.
+  One scoring attempt remains against gold-2b. It stays unspent until there is a candidate
+  whose evidence does not rest on a holdout sharing a generative process with its training
+  data. No claim of any kind may cite this result as support for the retrained model.

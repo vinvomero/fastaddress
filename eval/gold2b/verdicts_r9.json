@@ -1,0 +1,1920 @@
+{
+ "8233 GRAYSON GROVE MONTGOMERY AL 36117": {
+  "verdict": "v2",
+  "state": "AL",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Grayson Grove Dr in public records; source omitted Dr, so GROVE stays StreetName"
+ },
+ "8316 GRAYSON GROVE MONTGOMERY AL 36117": {
+  "verdict": "v2",
+  "state": "AL",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "8281 GRAYSON GROVE MONTGOMERY AL 36117": {
+  "verdict": "v2",
+  "state": "AL",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "8275 GRAYSON GROVE MONTGOMERY AL 36117": {
+  "verdict": "v2",
+  "state": "AL",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "440 MERRY WAY PIKE ROAD AL 36064-2282": {
+  "verdict": "v2",
+  "state": "AL",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "440 Merry Way, Pike Road AL: WAY is the suffix, PIKE ROAD the locality"
+ },
+ "221 HEMPSTEAD 22 P.O. BOX 46 OZAN AR 71855": {
+  "verdict": "v1",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "255 HEMPSTEAD 314 OZAN AR 71855": {
+  "verdict": "v1",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Arkansas roads such as Hempstead 314: the number is roadway name, not a unit"
+ },
+ "348 HEMPSTEAD 104 HOPE AR 71801": {
+  "verdict": "v1",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "PO BOX 83 308 NE CONWAY ST, WASHINGTON AR HOPE AR 71802": {
+  "verdict": "v1",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "698 HEMPSTEAD 28 MCCASKILL AR 71847": {
+  "verdict": "v1",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "12 BECKY'S COVE LANE CAPE ELIZABETH ME 04107": {
+  "verdict": "v2",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "350 HEMPSTEAD 269 MC CASKILL AR 71847": {
+  "verdict": "neither",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "ONE CAPITOL MALL LITTLE ROCK AR 72201": {
+  "verdict": "v1",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "One Capitol Mall is conventional; ONE is the address number"
+ },
+ "11995 EL CAMINO REAL SAN DIEGO CA 92130": {
+  "verdict": "v2",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "#1 CAPITOL MALL LITTLE ROCK AR 72201": {
+  "verdict": "v2",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumberPrefix",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "#1 Capitol Mall is the same structure rendered differently"
+ },
+ "805 E 7TH ST 1406 ALLEN ST HOPE AR 71801": {
+  "verdict": "neither",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "323 HEMPSTEAD 10 FULTON AR 71838-9013": {
+  "verdict": "neither",
+  "state": "AR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "2150 CENTRE AVE UNIT E FORT COLLINS CO 805268116": {
+  "verdict": "v1",
+  "state": "CO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "702 W DRAKE RD BLDG F STE B FORT COLLINS CO 805265528": {
+  "verdict": "v1",
+  "state": "CO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1610 LOWER BROADVIEW ESTES PARK CO 805178219": {
+  "verdict": "v1",
+  "state": "CO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Lower Broadview Rd; record dropped Rd, BROADVIEW stays StreetName"
+ },
+ "144 TIDBURY CROSSING CAMDEN WYOMING DE 19934": {
+  "verdict": "v1",
+  "state": "DE",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "27 S MARKET ST PLZ SMYRNA DE 19977": {
+  "verdict": "v1",
+  "state": "DE",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Smyrna records 27 S Market Street Plz: ST is name material, PLZ the terminal type"
+ },
+ "31263 SATINLEAF RUN BROOKSVILLE FL 34602-7719": {
+  "verdict": "v1",
+  "state": "FL",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3290 CANTERBURY DR SURREY, BC V3S 0J4": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "201-1461 ST PAUL ST KELOWNA, BRITISH COLUMBIA V1Y2E4": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "216 MACEWAN VALLEY MEWS NW CALGARY, ALBERTA T3K 3T3": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "#330, 4392 WEST SAANICH RD VICTORIA, BC V8Z 3E9": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "C/O LAW OFFICE OF HOWARD GREEN P O BOX 3467 HONOLULU HI 96801": {
+  "verdict": "v1",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "3162 W 15TH AVE VANCOUVER, BC V6K 3A6": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "254 POPLAR POINT DR KELOWNA, BC V1Y 1Y1": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "14014 BAYVIEW AVE AURORA,ONTARIO L4G 0L1": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "C/O YVONNE M KEKONA P O BOX 924 AIEA HI 96701": {
+  "verdict": "v1",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "C/O KOZMA,ANDREW/MARIA 130 KAI MALINA PKWY UNIT SR 347 LAHAINA HI 96761": {
+  "verdict": "v2",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "C/O KOZMA,ANDREW/MARIA 504-3500 LAKESHORE RD W OAKVILLE ONTARIO L6L 0B4": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "PO BOX 12222 LLOYDMINSTER, ALBERTA T9V 3C4": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "1515 SPRING RD MISSISSAUGA, ON L5J 1M8": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "2902-1455 HOWE ST VANCOUVER BC V6Z 1C2": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "5-2142 ARGYLE AVE WEST VANCOUVER, BC V7V 1A4": {
+  "verdict": "neither",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Canadian postal-code string; neither parser labels the components correctly"
+ },
+ "LOYL & LYNELLE WILLIAMS TTEES 649 CYPRESS RUN WOODBRIDGE CA 95258": {
+  "verdict": "v1",
+  "state": "HI",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5828 PINTO PLACE RANCH GUCAMONGA, CA 91739": {
+  "verdict": "v2",
+  "state": "IA",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "5828 Pinto Place, Rancho Cucamonga: PLACE is the type, RANCH begins the locality"
+ },
+ "#1908 DEPT 8088 PO BOX 2198 MEMPHIS, TN 38101-2198": {
+  "verdict": "v1",
+  "state": "IA",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "SubaddressIdentifier",
+   "SubaddressIdentifier",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "UTD 2-12-2020 549 AUDUBON PL HIGHLAND PARK IL 60035-1203": {
+  "verdict": "v2",
+  "state": "IL",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4109 QUAIL HOLLOW EVANSVILLE IN 47715-1536": {
+  "verdict": "v2",
+  "state": "IN",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "4109 Quail Hollow St, Evansville: HOLLOW is name, missing St is the suffix"
+ },
+ "1252 ST SCHOLASTICA SLIDELL LA 70458": {
+  "verdict": "v2",
+  "state": "LA",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "219 SOUTHERN STAR SLIDELL LA 70458": {
+  "verdict": "v2",
+  "state": "LA",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Southern Star is the street name (fuller Southern Star St exists)"
+ },
+ "124 RUE D'AZUR SLIDELL LA 70461": {
+  "verdict": "v2",
+  "state": "LA",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Rue/Camino functioning as a street-name pretype"
+ },
+ "1 WESTINGHOUSE PZ, Unit C:303 HYDE PARK MA 02136": {
+  "verdict": "v1",
+  "state": "MA",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "CENTRE DORCHESTER MA 02124": {
+  "verdict": "v2",
+  "state": "MA",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "770 CUMMINS HW, Unit 21 MATTAPAN MA 02126": {
+  "verdict": "v1",
+  "state": "MA",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1 WESTINGHOUSE PZ, Unit C:217 HYDE PARK MA 02136": {
+  "verdict": "v1",
+  "state": "MA",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1 WESTINGHOUSE PZ, Unit C:220 HYDE PARK MA 02136": {
+  "verdict": "v1",
+  "state": "MA",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "973 A RUSSELL AVE 4202 GAITHERSBURG MD 20879": {
+  "verdict": "v1",
+  "state": "MD",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "AddressNumberSuffix",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "C/O JEM HOLDINGS LLC MIKAEL J 10 EAST 53RD ST 18TH FL NEW YORK NY 10022": {
+  "verdict": "v1",
+  "state": "MD",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "OccupancyType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "Cotrustees, Moore Fam Rev Tr 409 East Patton St Sturgeon, MO 65284": {
+  "verdict": "v2",
+  "state": "MN",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "C/O Land & Minerals Dept 320 W 2nd St Ste 302 Duluth, MN 55802": {
+  "verdict": "v1",
+  "state": "MN",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1544 RIDGEPOINTE PLACE DR, LAKE ST LOUIS MO, 63367": {
+  "verdict": "v1",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "93 RUE GRAND DR, LAKE ST LOUIS MO, 63367": {
+  "verdict": "neither",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "RUE is the pretype and ST begins St Louis; the models split the two facts"
+ },
+ "3333 RUE ROYALE APT 4, ST CHARLES MO, 63301-8237": {
+  "verdict": "v2",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "213 SILENT MEADOW DR, LAKE ST LOUIS MO, 63367": {
+  "verdict": "v1",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "225 ARPENT ALLEY, ST CHARLES MO, 63301": {
+  "verdict": "v1",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1 ST PETERS CENTRE BLVD, ST PETERS MO, 63376": {
+  "verdict": "v1",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "425 FILIPP LN, LAKE ST LOUIS MO, 63367": {
+  "verdict": "v1",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2130 HAWKS LANDING DR, LAKE ST LOUIS MO, 63367": {
+  "verdict": "v1",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1524 RIDGEPOINTE PLACE DR, LAKE ST LOUIS MO, 63367": {
+  "verdict": "v1",
+  "state": "MO",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "C/O RIGHT OF WAY DIV P O BO JACKSON MS 392151850": {
+  "verdict": "v1",
+  "state": "MS",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "23499 STABLEWOOD CIRCLE PASS CHRISTIA MS 39571": {
+  "verdict": "v2",
+  "state": "MS",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Stablewood Circle, Pass Christian: CIRCLE the suffix, PASS CHRISTIA[N] the locality"
+ },
+ "C/O P O BOX 211 BILOXI MS 39533": {
+  "verdict": "neither",
+  "state": "MS",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "2178 HARMANSON VUE BILOXI MS 39531": {
+  "verdict": "v2",
+  "state": "MS",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "OLSEN TERRY R TRUSTEE 24680 CRYSTAL BAY SWAN LAKE MT 59911-7857": {
+  "verdict": "v2",
+  "state": "MT",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "MYERS LOUIS 23148 MT HIGHWAY 35 BIGFORK MT 59911-8249": {
+  "verdict": "neither",
+  "state": "MT",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": null
+ },
+ "8041 BELEWS CREEK STOKESDALE NC 27357": {
+  "verdict": "v2",
+  "state": "NC",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Belews Creek Rd; source omitted Rd, leaving CREEK as StreetName"
+ },
+ "%KP HAVENS LLC 2705 E AVE F BISMARCK ND 58501-3170": {
+  "verdict": "v2",
+  "state": "ND",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "2705 E Ave F is the Bismarck form: E directional, Ave pretype, F street name"
+ },
+ "1910 ROAD M GUIDE ROCK NE 68942": {
+  "verdict": "v2",
+  "state": "NE",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2854 COUNTY ROAD A VALPARAISO NE 68065-0000": {
+  "verdict": "v1",
+  "state": "NE",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "2946 COUNTY ROAD B VALPARAISO NE 68065-8675": {
+  "verdict": "v1",
+  "state": "NE",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "132 CASE DRIVE SOUTH PLAINFIELD, NJ 07080": {
+  "verdict": "v2",
+  "state": "NJ",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "162-64 IRVINE TURNER NEWARK, NJ 07103": {
+  "verdict": "v2",
+  "state": "NJ",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "260CHESTNUT ST. 2ND FLOOR NEWARK, NJ 07105": {
+  "verdict": "neither",
+  "state": "NJ",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": null
+ },
+ "58 VOSE AVENUE SOUTH ORANGE, NJ 07079": {
+  "verdict": "v1",
+  "state": "NJ",
+  "cohort": "lineage-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4895 CAMINO DOS VIDAS LAS CRUCES NM 88012": {
+  "verdict": "neither",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Camino pretype + Dos Vidas street name + Las Cruces locality; no offered parse captures all three boundaries"
+ },
+ "2962 VALLE VISTA LAS CRUCES NM 88011": {
+  "verdict": "v2",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5424 HORSE RIDGE WAY BONITA CA 91902": {
+  "verdict": "v2",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5800 STERN DRIVE H 5 LAS CRUCES NM 88001": {
+  "verdict": "v2",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3250 CALLE RANCHO CABALLO LAS CRUCES NM 88012": {
+  "verdict": "v1",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "7 CAM MONTUOSO SANTA FE NM 87506": {
+  "verdict": "v2",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4871 CAMINO DOS VIDAS LAS CRUCES NM 88012": {
+  "verdict": "neither",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Camino pretype + Dos Vidas street name + Las Cruces locality; no offered parse captures all three boundaries"
+ },
+ "RT 2 1600 W OHARA RD ANTHONY NM 88021": {
+  "verdict": "neither",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "4883 CAMINO DOS VIDAS LAS CRUCES NM 88012": {
+  "verdict": "neither",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Camino pretype + Dos Vidas street name + Las Cruces locality; no offered parse captures all three boundaries"
+ },
+ "1704 CALLE DE SUENOS LAS CRUCES NM 88001": {
+  "verdict": "v1",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "3220 CALLE RANCHO CABALLO LAS CRUCES NM 88012": {
+  "verdict": "v1",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "210 E IDAHO LAS CRUCES NM 88005": {
+  "verdict": "v2",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1575 NORTH GREEN MOUNATIN ROAD SUITE 300 O FALLON IL 62269": {
+  "verdict": "v1",
+  "state": "NM",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "PO BOX 18451 SERIES S LLC RENO NV 89511": {
+  "verdict": "neither",
+  "state": "NV",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "NOT SUPPLIED NV 00000": {
+  "verdict": "neither",
+  "state": "NV",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "PO BOX 1900 C/O PROPERTY MANAGEMENT RENO NV 89505": {
+  "verdict": "v2",
+  "state": "NV",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "4232 DESERT HIGHLANDS DR C/O MICHAEL MCTIGUE SPARKS NV 89436": {
+  "verdict": "v1",
+  "state": "NV",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1001 E 9TH ST BLDG A ATTN COMMUNITY SERVICES DEPT RENO NV 89512": {
+  "verdict": "v1",
+  "state": "NV",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "11661 SAN VICENTE BLVD STE 301 C/O HOROWITZ GROUP LOS ANGELES CA 90049": {
+  "verdict": "neither",
+  "state": "NV",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "843 County Route 16 Beaver Dams NY 14812": {
+  "verdict": "v2",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "38 Reeves Ave East Farmingdale NY 11735": {
+  "verdict": "v2",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "877 A Riverview Rd Rexford NY 12148": {
+  "verdict": "v1",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "AddressNumberSuffix",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "30 LEDGEWOOD COMMONS MILLWOOD NY 10546": {
+  "verdict": "v1",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Ledgewood Commons is the recorded form; Commons/Cmns is the terminal type"
+ },
+ "422 Druid Rd W Clearwater FL 33756": {
+  "verdict": "v2",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "876 HERITAGE HILLS - UNIT SOMERS NY 10589": {
+  "verdict": "neither",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "870 Heritage Hills is the address name, but UNIT is also an occupancy marker"
+ },
+ "6116 Wilkins Trak Livonia NY 14487": {
+  "verdict": "v1",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "52 East St 324 Nunda NY 14517": {
+  "verdict": "v2",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "52 East St, Nunda: East is StreetName, St the suffix"
+ },
+ "870 HERITAGE HILLS SOMERS NY 10589": {
+  "verdict": "v2",
+  "state": "NY",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6517 CLAY CT W CANAL WINCHESTER OH 43110-8519": {
+  "verdict": "v1",
+  "state": "OH",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "6517 Clay Ct W, Canal Winchester: W is a street post-directional"
+ },
+ "5256 BETHEL REED PARK COLUMBUS OH 43220-1811": {
+  "verdict": "v1",
+  "state": "OH",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "15141 COUNTY STREET 2720 MINCO OK 73059-9702": {
+  "verdict": "neither",
+  "state": "OK",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "3355 N Delta Hwy Space 99 Eugene OR 97408": {
+  "verdict": "v2",
+  "state": "OR",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1515 A DOWEY CR LUGOFF SC 29078": {
+  "verdict": "v1",
+  "state": "SC",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "AddressNumberSuffix",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "104 INWOOD ST - W BETHUNE SC 29009": {
+  "verdict": "v1",
+  "state": "SC",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "6500 E DAN RIDGE SIOUX FALLS SD 57110": {
+  "verdict": "v2",
+  "state": "SD",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "372 PARK CT N LA VERGNE TN 37086": {
+  "verdict": "v1",
+  "state": "TN",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "372 Park Ct N, La Vergne: N is on the street, not the locality"
+ },
+ "5001 PLAZA ON THE LAKE, STE 200 AUSTIN TX 78746": {
+  "verdict": "neither",
+  "state": "TN",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Plaza on the Lake belongs together as street-name material"
+ },
+ "5103 VILLAGE CREST SAN ANTONIO TX 78218": {
+  "verdict": "v2",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "5103 Village Crest Dr; CREST is name material, source dropped Dr"
+ },
+ "3402 HEATHER BLF SAN ANTONIO TX 78259": {
+  "verdict": "v1",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "19547 AZURE OAK SAN ANTONIO TX 78258": {
+  "verdict": "v2",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Azure Oak is a complete street name; terminal nouns are not automatically suffixes"
+ },
+ "3803 SPANISH BRANCH SAN ANTONIO TX 78222": {
+  "verdict": "v1",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "7526 MONTE CRISTO SAN ANTONIO TX 78239": {
+  "verdict": "v1",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "24903 SHINING ARROW SAN ANTONIO TX 78258": {
+  "verdict": "v2",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "24930 FLYING ARROW SAN ANTONIO TX 78258": {
+  "verdict": "v2",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "7030 GLEN PARK SAN ANTONIO TX 78239": {
+  "verdict": "v2",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "15744 VIA SANTA PRADERA SAN DIEGO CA 92131": {
+  "verdict": "v2",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "7313 LAZY CANYON SAN ANTONIO TX 78252": {
+  "verdict": "v1",
+  "state": "TX",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5012 S TIMBER WY 413 MILLCREEK UT 84117": {
+  "verdict": "v1",
+  "state": "UT",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "5012 S TIMBER WY 309 MILLCREEK UT 84117": {
+  "verdict": "v1",
+  "state": "UT",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "REAL ESTATE DEPT # S3200 PO BOX 144575 SALT LAKE CITY UT 84114": {
+  "verdict": "neither",
+  "state": "UT",
+  "cohort": "strict",
+  "round": 9,
+  "judged_labels": null
+ },
+ "23438 CTY HWY AA 8 RICHLAND CENTER WI 53581": {
+  "verdict": "neither",
+  "state": "WI",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": null
+ },
+ "19731 COUNTY HWY Z RICHLAND CENTER WI 53581": {
+  "verdict": "v2",
+  "state": "WI",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "19731 County Hwy Z, Richland Center: RICHLAND begins the locality"
+ },
+ "177 OAK DRIVE ADN, SPENCER, WV 25276": {
+  "verdict": "neither",
+  "state": "WV",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": null,
+  "note": "Oak Drive Addition: ADN means Addition, neither directional nor a separate PlaceName"
+ },
+ "201 OAK DRIVE ADN, SPENCER, WV 25276": {
+  "verdict": "neither",
+  "state": "WV",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": null
+ },
+ "306 KEFFER HILL, SPENCER, WV 25276": {
+  "verdict": "v1",
+  "state": "WV",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ]
+ },
+ "1244 COAL RIVER MTN RD, MT HOPE, WV 25880": {
+  "verdict": "v2",
+  "state": "WV",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "note": "Coal River Mountain Rd: MTN is name material, RD the suffix"
+ },
+ "205 OAK DRIVE ADN, SPENCER, WV 25276": {
+  "verdict": "neither",
+  "state": "WV",
+  "cohort": "aggregate-sensitivity",
+  "round": 9,
+  "judged_labels": null
+ }
+}
