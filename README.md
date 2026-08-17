@@ -1,7 +1,7 @@
 # fastaddress
 
-A drop-in replacement for [usaddress](https://github.com/datamade/usaddress), the standard US
-address parser. Same trained model, new Rust engine.
+A drop-in replacement for [usaddress](https://github.com/datamade/usaddress). Same trained
+model, new Rust engine.
 
 ```python
 import fastaddress  # instead of: import usaddress
@@ -10,241 +10,244 @@ fastaddress.tag("123 N Main St Apt 4B Springfield IL 62704")
 # ({'AddressNumber': '123', 'StreetNamePreDirectional': 'N', ...}, 'Street Address')
 ```
 
+11.3x faster on one core. Same answers.
+
 ## Why this exists
 
-usaddress is quietly enormous infrastructure:
-[5.2M monthly downloads](https://pepy.tech/project/usaddress) (pepy.tech, Aug 2026) and
-[1,145 dependent repos](https://github.com/datamade/usaddress/network/dependents), including
-government and open-data projects. It is also built on a Python CRF implementation that tops
-out around eight thousand addresses a second, while county tax rolls and national datasets run
-to millions of rows. People work around that with sampling, overnight jobs, and multiprocessing
-pools.
+usaddress is quietly enormous infrastructure: about
+[5.2M monthly downloads](https://pepy.tech/project/usaddress) as of August 2026 and
+[1,145 dependent repositories](https://github.com/datamade/usaddress/network/dependents),
+including government and open-data projects.
 
-There's no accuracy tradeoff on offer here. The model is good. The runtime is the bottleneck.
-So: DataMade's model, redistributed unmodified, running in a compiled engine.
+The model is good. The runtime is the bottleneck.
+
+On our benchmark machine, usaddress parses about 8,000 addresses/sec. That's fine for small
+files. County tax rolls and national property datasets run into millions of rows, so people
+compensate with multiprocessing, sampling, and overnight jobs.
+
+fastaddress keeps DataMade's trained model unchanged and runs it in a compiled Rust CRF engine.
+
+No accuracy tradeoff. No new model hiding behind a compatible API. Just faster inference.
+
+## What you get
+
+- **11.3x faster single-core.** 89,653 addresses/sec vs. 7,941 for usaddress, same machine and
+  same run. Native Rust reaches 360,035/sec on 8 threads.
+  [Speed report](benchmark/results/speed_report.md).
+- **The same answers.** We compare tokens, features, serialized CRF attributes, and final tagged
+  output across 20,738 real county addresses. Zero divergences.
+  [Parity report](benchmark/results/parity_report.md).
+- **Native mode without `RepeatedLabelError`.** Addresses such as `ST JAMES PLACE` parse normally
+  through `tag_native()`. Compatibility mode reproduces the original exception exactly.
+- **A ~0.8 MB wheel with the model inside.** No C toolchain, model download, or external service.
+  Works on Lambda and imports in roughly a quarter second.
+- **Confidence scores.** Token-level and full-parse CRF probabilities, addressing the
+  long-standing [usaddress#337](https://github.com/datamade/usaddress/issues/337) request.
+- **An experimental model we refused to ship.** Our best retrained candidate wins 74-0 on
+  adjudicated hard cases and improves held-out real-mail text by +2.4 points. It still failed our
+  preregistered national significance gate, so the original model remains the default.
+  [Full accuracy record](#about-the-experimental-model).
 
 ## Install
 
-Not on PyPI yet -- until it is, this repo and its release page are the only official
-sources. Two ways in:
+Not on PyPI yet. Until it is, this repository and its releases are the only official sources.
+
+**Prebuilt wheel.** Download the wheel matching your OS and Python version from
+[Releases](https://github.com/vinvomero/fastaddress/releases):
 
 ```bash
-# Prebuilt wheel, no Rust needed: grab the one matching your OS/Python from
-# https://github.com/vinvomero/fastaddress/releases  then
 pip install <downloaded-wheel>.whl
+```
 
-# Or build from source (needs a Rust toolchain from https://rustup.rs; takes a few minutes)
+No Rust required.
+
+**From source.** Requires a Rust toolchain from [rustup.rs](https://rustup.rs):
+
+```bash
 pip install git+https://github.com/vinvomero/fastaddress
 ```
 
-Verify: `python -c "import fastaddress; print(fastaddress.tag('123 N Main St Springfield IL 62704'))"`.
-Agents get their own runbook in [AGENTS.md](AGENTS.md).
+Verify:
 
-What you get:
+```bash
+python -c "import fastaddress; print(fastaddress.tag('123 N Main St Springfield IL 62704'))"
+```
 
-- **11.3x faster single-core**, like for like: 89,653 addresses/sec against usaddress's 7,941,
-  same machine, same run. The native Rust engine hits 360,035/sec on 8 threads. A million-row
-  tax roll in seconds. ([speed report](benchmark/results/speed_report.md), rerun it with
-  `python benchmark/run_speed.py`)
-- **The same answers.** Not similar -- identical, checked at four layers (tokens, features,
-  serialized attributes, tagged output) across 20,738 real county addresses, zero divergences
-  ([parity report](benchmark/results/parity_report.md)).
-- **No crashes in native mode.** Saint-name streets like "ST JAMES PLACE" have raised
-  `RepeatedLabelError` in usaddress since 2017; they parse fine through `tag_native()`. Compat
-  mode still reproduces the error exactly, because drop-in means drop-in.
-- **A 0.8MB wheel with the model inside.** No C toolchain, no model download, works on Lambda,
-  imports in about a quarter second.
-- **Confidence scores** per token and per parse -- the long-standing
-  [usaddress#337](https://github.com/datamade/usaddress/issues/337) request.
-- **A retrained model that doesn't ship, and the full reason why.** Our best candidate wins 74-0
-  on human-adjudicated hard cases and beats the original by +2.4 points on held-out real mail
-  text -- but on the national free-text exam its edge (+0.789 points) has a confidence interval
-  that includes zero. Under rules set before any results existed, it stays out. Both scoring
-  attempts are spent. The chain, failures included, is in
-  [the accuracy record](#the-accuracy-record).
+AI coding agents: see [AGENTS.md](AGENTS.md).
 
-`parse()`, `tag()` (with `tag_mapping` and usaddress's parameter names), and
-`RepeatedLabelError` (same attributes, same message) behave identically to usaddress 0.5.16 on
-the ASCII-dominant inputs property data consists of. Two documented differences: `tag()` returns
-a plain insertion-ordered dict rather than an OrderedDict (equal by `==`, distinguishable by
-`isinstance`), and Unicode casing/digit classification can diverge on non-ASCII digits.
+## Compatibility
+
+`parse()`, `tag()`, `tag_mapping`, parameter names, and `RepeatedLabelError` match usaddress
+0.5.16 on the ASCII-dominant inputs typical of U.S. property data.
+
+Two known differences:
+
+1. `tag()` returns a normal insertion-ordered dict, not an `OrderedDict`. They're equal with
+   `==`, but distinguishable with `isinstance()`.
+2. Unicode casing and digit classification can differ on some non-ASCII characters.
+
+For strict compatibility, use the normal API. For the faster native behavior around cases such
+as repeated labels, use `tag_native()`.
 
 ## Confidence scores
 
-Every parse can report how sure the model is, per token and for the whole sequence -- the CRF's
-marginal probabilities, computed by forward-backward over the same weights Viterbi already uses.
-Opt-in; the plain functions never pay for it. This is [usaddress#337](https://github.com/datamade/usaddress/issues/337).
+Confidence is opt-in, so normal `parse()` and `tag()` calls don't pay for it.
 
 ```python
-fastaddress.parse_with_confidence("123 N Main St Springfield IL 62704")
-# [('123', 'AddressNumber', 0.99995), ('N', 'StreetNamePreDirectional', 0.99452), ...]
-
-tagged, address_type, confidence, sequence_confidence = fastaddress.tag_with_confidence(addr)
-# tagged/address_type are byte-identical to tag(); confidence is keyed the same way
+fastaddress.parse_with_confidence(
+    "123 N Main St Springfield IL 62704"
+)
+# [
+#   ('123', 'AddressNumber', 0.99995),
+#   ('N', 'StreetNamePreDirectional', 0.99452),
+#   ...
+# ]
 ```
 
-A multi-token component reports the minimum across its tokens -- the weakest link.
+Or:
 
-The numbers are correct: verified against `pycrfsuite.Tagger.marginal()` on the same model and
-addresses, max absolute difference 1.665e-15 across 34,028 token positions, zero Viterbi
-disagreements (`python benchmark/compare_marginals.py --rows 5000`).
+```python
+tagged, address_type, confidence, sequence_confidence = (
+    fastaddress.tag_with_confidence(addr)
+)
+```
 
-How well they predict errors is a smaller claim. On our 40 hardest adjudicated records,
-weakest-token confidence separates right from wrong parses with an AUC of 0.703 (means 0.935 vs
-0.891) -- and only 5 of those 40 are judged-correct, so read it as directional. An earlier draft
-quoted stronger figures from an analysis we could no longer regenerate, so they were withdrawn.
-Regenerate today's with `python benchmark/confidence_error_auc.py`. On a general mix, easy
-addresses sit at 0.999+ and separate cleanly. Treat confidence as a filter for routing doubtful
-records to review, never as permission to skip it.
+Multi-token components use the minimum token confidence: the weakest link.
 
-## The accuracy record
+The probabilities were checked against `pycrfsuite.Tagger.marginal()` across 34,028 token
+positions:
 
-Every claim here links to the artifact that produced it, and this section gets updated whenever
-a model or evaluation changes. If you can't regenerate a number from this repo, that's a bug.
-File an issue.
+- maximum absolute difference: 1.665e-15
+- Viterbi disagreements: 0
 
-### The two models
+Reproduce it:
 
-| | Default (compat) | v2 (opt-in) |
+```bash
+python benchmark/compare_marginals.py --rows 5000
+```
+
+Confidence is useful for routing questionable parses to review. It is not a calibrated guarantee
+that a parse is correct. On our 40 hardest adjudicated records, weakest-token confidence
+separates right parses from wrong ones with an AUC of 0.703: a real signal, and a modest one
+(`python benchmark/confidence_error_auc.py`).
+
+## About the experimental model
+
+The shipping model is DataMade's original model, redistributed unmodified.
+
+This repository also contains a retrained candidate designed to fix specific, human-verified
+error classes. We set its release gates before training and don't move them after seeing results.
+
+It passed:
+
+- 74-0 on adjudicated Gold-1 disagreements
+- 159/159 on the upstream clean set
+- national 16-state and 32-state scans
+- a one-shot 20-county evaluation
+- +2.400pp on 2,000 held-out real mailing-address lines, CI [+1.750, +3.100]
+
+It failed the deciding independent national test:
+
+| Gold-2 attempt | Result | 95% CI |
 |---|---|---|
-| What it is | DataMade's trained model, [redistributed unmodified](model/PROVENANCE.md) | Retrained by this project (current candidate: [recipe manifest](training/MANIFEST-v43.json)) |
-| Output | Bit-identical to usaddress 0.5.16 | Differs on purpose, on documented error classes |
-| Status | Shipping | **Not in this release.** It wins everywhere we built the test ourselves and ties on real mail text. Ships when that changes, or never. |
+| v36 | +0.215pp | [-0.861, +1.291] |
+| v43 | +0.789pp | [-0.287, +1.865] |
 
-### How v2 was evaluated
+Both intervals include zero. Under the preregistered rules, that's a fail.
 
-Rules first, training second. [eval/PROTOCOL.md](eval/PROTOCOL.md) fixed the gates, the labeling
-method, who reviews, and what gets disclosed, all before a model existed. Gates don't move once
-results arrive. Candidates that missed them are published in the
-[findings report](benchmark/results/model-v2-findings.md) as loudly as the ones that passed.
+So v2 doesn't ship.
 
-| Gate | Bar | Current candidate (v43) |
-|---|---|---|
-| Gold-set margin (composed-era set) | at least +3.0pp, 95% CI excluding zero | 74 wins, 0 losses on adjudicated disagreements (14 new ones pending review); passes the bar at the floor. Pass. |
-| Clean set (upstream's own held-out files) | within 1.0pp of the original | 159/159, exactly equal. Pass. |
-| National scans (16-state, then a 32-state holdout) | net improvement; no state worse than 3:1 | Both pass. |
-| 20-county split (spent by v36's one-shot binding run: 70.5% right vs 17.3%) | same two rules | Pass. |
-| Real-text dev holdout (2,000 held-out real mail lines) | beat the original, CI excluding zero | +2.400pp, CI [+1.750, +3.100]. Pass. |
-| **Gold-2: real free-text, 40 states + DC (two attempts, both spent)** | net margin positive, CI excluding zero; no census division net-negative | Attempt 1 (v36): +0.215pp, CI [-0.861, +1.291] -- fail. **Attempt 2 (v43): +0.789pp, CI [-0.287, +1.865] -- fail.** |
+One disclosure travels with every number above, required by
+[eval/PROTOCOL.md](eval/PROTOCOL.md): the candidate's training data targets error classes we
+found by studying Gold-1 failures, which biases that set's margin upward. The honest claim is
+"better on identified, evidence-backed error classes," never a bare accuracy percentage. The
+clean set is the control nobody studied. Adjudication is human-only, and the LLM suggestion
+files in `eval/` were prelabeling triage that enters no margin.
 
-Every deciding record was judged by a human: seven blinded review rounds, Census evidence
-attached, verdicts and keys committed in [eval/gold/](eval/gold/) and [eval/gold2/](eval/gold2/).
-Only human verdicts count -- the LLM suggestion files in those folders were prelabeling triage,
-committed for transparency and excluded from every margin. The candidate's 14 newest gold-1
-divergences are unreviewed and count for nothing, which is why that row says "at the floor."
+The deeper evaluation history, including candidates that overfit earlier tests, is in the
+[model findings](benchmark/results/model-v2-findings.md) and
+[evaluation protocol](eval/gold2/PROTOCOL2.md).
 
-One disclosure travels with these numbers: v2's training targets error classes found by studying
-gold-set failures, which biases the gold margin upward. The honest claim is "measurably better on
-identified, evidence-backed error classes," never a bare accuracy percentage. The clean set is the
-control nobody studied, and it caught one candidate (v21) memorizing instead of generalizing.
+A fresh replacement holdout, Gold-2b, is already built and untouched. No model has been scored
+against it.
 
-### What the gold set is, and is not
+## Training data
 
-Gold-1 is 1,500 real free-text addresses, and three quarters of it is two states: 900 Cook
-County records, 225 from NYC. The margin inherits that skew, badly. Thirty-four of one
-candidate's 73 wins were a single Illinois pattern. So the set proves the identified classes got
-fixed and proves nothing about nationwide accuracy. We never claimed otherwise, and that gap is
-the whole reason gold-2 exists.
+The experimental model uses:
 
-### The checks that caught our own models
+| Source | Role |
+|---|---|
+| usaddress labeled data | Base corpus |
+| Cook County + Allegheny County parcel rolls | Distant supervision |
+| v1 distillation and shape-preserving augmentation | Stability |
+| Error-class synthetics | Targeted fixes |
+| Census PLACE | National city vocabulary |
+| Census TIGER / FEATNAMES | Alignment reference |
+| 162,879 aligned owner-mail lines from 30 states | Real-text training |
 
-Four surfaces, each added because the last one turned out to be too easy. Each caught something.
-Full blow-by-blow in the [findings report](benchmark/results/model-v2-findings.md).
+No Gold or clean-set evaluation address appears in a training corpus. Builders enforce this with
+normalized-identity deduplication.
 
-First, a 16-state scan over 108k Census TIGER addresses. It failed the first candidate that
-cleared the gold gates, and not narrowly: 54.9% of v23's changes were wrong nationally. It had
-started reading `New Orleans` as a state and `Box Elder` as a PO box. Five iterations fixed
-that, each against rules committed before the run.
+Full manifests live in [training/](training/).
 
-Then a 32-state holdout of places no decision had ever touched. It failed the candidate that had
-just passed everything it was iterated against: 41.1% right, 45.2% wrong. Three more iterations
-got it green. But those three rounds meant the holdout had steered the fixes, so it wasn't
-independent anymore either.
+Every address in this repository comes from public county and state assessor rolls. Owner names
+appear only where an assessor put them in a mailing-address field and the parser has to handle
+them. Nothing here goes beyond what the source already published. If your name is here and you'd
+rather it weren't, open an issue.
 
-Which is the trap this whole section is about. A test you iterate against stops being a test.
+## Reproduce the claims
 
-So the third surface was one-shot: fresh counties drawn by committed seed, a single run, outcome
-final. The first attempt failed on two counties and the model got pulled from the release. The
-second passed decisively, 70.5% of changes right against 17.3%, all 20 counties clean.
+The benchmark scripts are part of the repository:
 
-That earned the real exam. Gold-2 is 1,394 owner-mailing addresses from 40 states and DC, every
-census division, as assessors actually typed them, with two scoring attempts allowed for the
-lifetime of the set. Attempt 1 (v36): 30 wins, 27 losses, +0.215pp, interval includes zero.
-Attempt 2 (v43): 35 wins, 24 losses, +0.789pp, interval includes zero. Both fail.
+```text
+benchmark/run_parity.py
+benchmark/run_speed.py
+benchmark/compare_marginals.py
+benchmark/confidence_error_auc.py
+benchmark/fetch_data.py
+```
 
-Between those attempts we did the thing that should have been done first, which was train on
-real text. 299,832 owner-mail lines from 30 states, labeled by alignment against Census records,
-every line that didn't match exactly thrown away rather than guessed at. 55% survived. (The last
-corpus this project built with heuristics measured 9.11% wrong. Alignment or nothing.)
+Run them before you trust the README.
 
-It worked, mostly. v43 came out the first candidate ever green on every internal surface at
-once, and the free-text margin nearly quadrupled. It still didn't clear the bar, because a
-64-disagreement exam can't certify an effect under about 1.1 points. Right direction, not enough
-resolution to prove it.
-
-Gold-2 is spent now, both attempts disclosed. The replacement is already built and untouched:
-gold-2b, 2,912 records across 32 states, drawn only from datasets that neither gold-2 nor any
-training corpus ever saw, pre-registered before a single record was fetched. One source failed
-its provenance check mid-build and got dropped. Nothing has been scored against it.
-
-### Training data, all of it
-
-| Source | Role | License/status |
-|---|---|---|
-| usaddress `labeled.xml` + Iowa OpenAddresses XML | base corpus | MIT, upstream repo |
-| County parcel rolls (Cook IL, Allegheny PA) | distant supervision, capped | public open data |
-| v1 distillation + shape-preserving augmentation | stability | derived |
-| Error-class synthetics ([generator](training/synth_error_classes.py)) | targeted fixes; every generator cites the human ruling or Census evidence behind it | generated |
-| Census PLACE national city vocabulary | national counterweight | public domain |
-| Census TIGER/FEATNAMES street splits | alignment reference: proved the old heuristic corpus 9.11% wrong; now labels the real-text corpus | public domain |
-| Real owner-mail lines, aligned ([builder](training/build_realtext_corpus.py), [manifest](training/REALTEXT_MANIFEST.json)) | 164,879 rows, 30 states; feeds v37+ candidates only, no shipping model | public open data + public domain |
-
-No gold or clean evaluation address appears in any training corpus. The builders enforce this
-with normalized-identity dedupe.
-
-### The data and the people in it
-
-Every address here comes from public county and state assessor rolls -- records governments
-publish so property information can be checked. Owner names appear only where the assessor put
-them in the mailing-address field and the parser has to handle them (`Recipient` is a real
-parsing class). Nothing goes beyond what the source already made public: no SSNs, no non-public
-fields, nothing behind authentication. If your name is here and you'd rather it weren't, open an
-issue -- name tokens can be masked in place without disturbing any locked cohort.
-
-## Trust, not claims
-
-Every number above regenerates from this repo: `benchmark/run_parity.py` (four-layer differential
-suite), `run_speed.py` (three-way interleaved benchmark), `confidence_error_auc.py`,
-`compare_marginals.py`, and `fetch_data.py` for the public-data fetch. Run them before you
-believe any of it.
+If the artifacts and this page disagree, the README is wrong.
 
 ## Credit
 
-This project exists because of [DataMade's usaddress](https://github.com/datamade/usaddress).
-The default model is their trained model, redistributed unmodified under MIT (see
-[model/PROVENANCE.md](model/PROVENANCE.md)). Two earlier Rust ports,
-[usaddress-rs](https://github.com/boydjohnson/usaddress-rs) and
-[us-addrs](https://github.com/raphaellaude/us-addrs), proved the model-loading approach and
-supplied hard test cases; their work is gratefully acknowledged. This is stewardship of an
-ecosystem, not a replacement-by-attack. The benchmark suite is offered upstream to usaddress.
+fastaddress exists because [DataMade's usaddress](https://github.com/datamade/usaddress) exists.
 
-## Layout
+The default model is their trained model, redistributed unmodified under MIT. See
+[model/PROVENANCE.md](model/PROVENANCE.md).
 
-- `crates/core`: the Rust engine (tokenizer, feature extraction, CRF inference via a vendored
-  [crfs](https://github.com/messense/crfs-rs) fork, compat + native APIs)
-- `crates/python`: PyO3 bindings and the pip package
-- `benchmark/`: reproducible data fetch, parity suite, speed suite, national scan
-- `training/` and `eval/`: the v2 corpus builders, evaluation protocol, and adjudicated records
-- `model/`: both models plus provenance
+Earlier Rust ports, [usaddress-rs](https://github.com/boydjohnson/usaddress-rs) and
+[us-addrs](https://github.com/raphaellaude/us-addrs), demonstrated the model-loading approach and
+supplied useful hard cases.
+
+This project isn't an argument that usaddress is bad software. Its model was good enough to
+become infrastructure.
+
+fastaddress replaces the slow part.
 
 ## Development
 
 ```bash
 cargo test --workspace
 pip install -r benchmark/requirements.txt
-python benchmark/fetch_data.py && python benchmark/dump_oracle.py
-cargo build --release && python benchmark/run_parity.py
+python benchmark/fetch_data.py
+python benchmark/dump_oracle.py
+cargo build --release
+python benchmark/run_parity.py
 ```
 
-Issue triage is committed for at least 12 months post-launch, by the repo owner (@vinvomero).
-The engine is maintenance-light by design: no retraining pipeline, no external data dependency.
+Repository layout:
+
+```text
+crates/core      Rust engine
+crates/python    PyO3 bindings and Python package
+benchmark/       Parity, speed, confidence, and national tests
+training/        Experimental model training
+eval/            Evaluation protocols and adjudicated records
+model/           Models and provenance
+```
+
+Issue triage is committed for at least 12 months after launch by
+[@vinvomero](https://github.com/vinvomero).
