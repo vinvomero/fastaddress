@@ -53,8 +53,14 @@ def ledger_counties():
 
 def gauntlet(candidate, judged_parse):
     ok = True
+    # full_check prints its verdict and exits 0 either way, so the marker --
+    # not the exit code -- is what makes this check binding. Without it a
+    # candidate failing an adjudicated record sailed through as ALL GREEN
+    # (caught on v48, 2026-08-17); that is precisely the partial-blessing
+    # failure this driver exists to prevent.
     ok &= run("1. CLEAN GATE + ALL ADJUDICATED RECORDS",
-              ["benchmark/full_check.py", "--candidate", candidate])
+              ["benchmark/full_check.py", "--candidate", candidate],
+              expect=["VERDICT: STRICTLY BETTER OR EQUAL"])
     margin = ["benchmark/full_set_margin.py", "--candidate", candidate, "--human-only"]
     if judged_parse:
         margin += ["--judged-parse", judged_parse]
