@@ -676,6 +676,48 @@ def gen_inverted_floor(rng, n):
     return out
 
 
+def gen_route_box(rng, n):
+    """South Route Box South # 7, Bennington VT  ->  a route-group box, not a street.
+
+    The real-text corpus carries 670 plain "PO BOX n" rows and exactly one
+    route-group row, which collapsed the group reading: v44 started parsing
+    "Box" as a street name. Rural route and highway contract forms are a real
+    class with no synthetic anchor until now. Labels follow the adjudicated
+    reading of the clean/gold records: the designator is USPSBoxGroupType, its
+    number or word is USPSBoxGroupID, and everything after Box is USPSBoxID --
+    including the inverted order where the identifier precedes the designator."""
+    groups = [("RR", "RURAL ROUTE"), ("HC", "HIGHWAY CONTRACT"), ("RT", "ROUTE")]
+    words = ["South", "North", "East", "West", "Old", "Upper"]
+    cities = [("Bennington", "VT", "05201"), ("Brattleboro", "VT", "05301"),
+              ("Kearney", "NE", "68845"), ("Moultrie", "GA", "31768"),
+              ("Willow", "AK", "99688"), ("Pahoa", "HI", "96778")]
+    out = []
+    for _ in range(n):
+        city, st, zc = rng.choice(cities)
+        p = []
+        if rng.random() < 0.4:
+            # Inverted: "South Route Box ..." -- identifier word before designator.
+            p += [(rng.choice(words), "USPSBoxGroupID"),
+                  (rng.choice(["Route", "ROUTE", "Rte"]), "USPSBoxGroupType")]
+        else:
+            abbr, full = rng.choice(groups)
+            lead = abbr if rng.random() < 0.6 else full
+            p += [(w, "USPSBoxGroupType") for w in lead.split()]
+            p += [(str(rng.randint(1, 12)), "USPSBoxGroupID")]
+        p.append((rng.choice(["Box", "BOX", "BX"]), "USPSBoxType"))
+        tail = []
+        if rng.random() < 0.35:
+            tail.append(rng.choice(words))
+        if rng.random() < 0.3:
+            tail.append("#")
+        tail.append(str(rng.randint(1, 499)))
+        p += [(t, "USPSBoxID") for t in tail]
+        p += [(w, "PlaceName") for w in city.split()]
+        p += [(st, "StateName"), (zc, "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
 def gen_letter_avenue_grid(rng, n):
     """5025 N 13th E Ave Tulsa  ->  the E belongs to the street name.
 
@@ -850,6 +892,9 @@ GENERATORS = [
     # Clean-set "3rd Floor" (identifier before type) broke when the
     # hard-class corpus shifted the occupancy boundary.
     ("inverted_floor", gen_inverted_floor, 1.2),
+    # Route-group boxes: 670 plain PO BOX rows vs 1 group row in the
+    # hard-class corpus collapsed this reading (v44 Bennington break).
+    ("route_box", gen_route_box, 1.5),
     ("spelled_state", gen_spelled_state, 1.5),
     ("postdir_then_building", gen_postdir_then_building, 1.0),
     ("street_then_building", gen_street_then_building, 0.8),
@@ -864,12 +909,11 @@ GENERATORS = [
     ("wisconsin_grid_number", gen_wisconsin_grid_number, 0.4),
     ("person_named_street", gen_person_named_street, 0.8),
     ("the_building", gen_the_building, 0.6),
-    # 0.8 -> 1.2. The v44 clean break was a SHAPE gap (no unit between route
-    # name and city), not a weight gap; the 2.5 boost that preceded the shape
-    # fix over-taught "<word> ROUTE <name>" and made v48 read the route-box
-    # record "South Route Box South # 7" as a street. Shape fix kept, weight
-    # backed off to just above the original.
-    ("county_letter_road", gen_county_letter_road, 1.2),
+    # 0.8 -> 2.5 with the unit-shape fix. (A 1.2 variant was tried on the
+    # theory that this frame caused the Bennington route-box regression; it
+    # did not -- v44 broke that record before this frame was ever touched --
+    # and 1.2 cost a clean-set record, so 2.5 stands.)
+    ("county_letter_road", gen_county_letter_road, 2.5),
     ("letter_avenue_grid", gen_letter_avenue_grid, 0.3),
     ("bare_route", gen_bare_route, 0.5),
     ("inner_directional_street", gen_inner_directional_street, 0.4),
