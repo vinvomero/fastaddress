@@ -133,43 +133,63 @@ separates right parses from wrong ones with an AUC of 0.703: a real signal, and 
 
 ## About the experimental model
 
-The shipping model is DataMade's original model, redistributed unmodified.
+The shipping model is DataMade's original model, redistributed unmodified. The retrained
+candidate does not ship, and the reason is worse than "it didn't clear the bar."
 
-This repository also contains a retrained candidate designed to fix specific, human-verified
-error classes. We set its release gates before training and don't move them after seeing results.
+We built a retrained model to fix specific, human-verified error classes, with release gates
+set before training and never moved afterward. It passed a lot of them: 74-0 on adjudicated
+hard cases, 159/159 on the upstream clean set, both national scans, a one-shot 20-county
+evaluation, +2.400pp on held-out real mailing text. It then failed the deciding national test
+three times running.
 
-It passed:
+| Exam | Candidate | Result | 95% CI |
+|---|---|---|---|
+| Gold-2 attempt 1 | v36 | +0.215pp | [-0.861, +1.291] |
+| Gold-2 attempt 2 | v43 | +0.789pp | [-0.287, +1.865] |
+| Gold-2b attempt 1 | v50 | **-0.275pp** | [-0.927, +0.343] |
 
-- 74-0 on adjudicated Gold-1 disagreements
-- 159/159 on the upstream clean set
-- national 16-state and 32-state scans
-- a one-shot 20-county evaluation
-- +2.400pp on 2,000 held-out real mailing-address lines, CI [+1.750, +3.100]
+The third one is net negative. That prompted a question we should have asked earlier: were the
+surfaces saying "better" actually measuring anything independent?
 
-It failed the deciding independent national test:
+They weren't. Every validation surface we had shared a generative process with the training
+data. So we built one that didn't -- **gold-2c**: 600 addresses from 25 datasets disjoint from
+every exam and every training corpus, with 126 records carrying *absolute* human-approved label
+sequences rather than pairwise verdicts. Then we scored the whole historical line on it.
 
-| Gold-2 attempt | Result | 95% CI |
+| Model | vs. original | Streets with the suffix present |
 |---|---|---|
-| v36 | +0.215pp | [-0.861, +1.291] |
-| v43 | +0.789pp | [-0.287, +1.865] |
+| v19 (before the error-class work) | +2 | 42/47 |
+| v28 | -9 | 34/47 |
+| v36 | -3 | 36/47 |
+| v43 | -13 | 25/47 |
+| v50 | -13 | 25/47 |
 
-Both intervals include zero. Under the preregistered rules, that's a fail.
+Every candidate from v28 onward is **worse than the original** on independent human-labeled
+free text, and the gap widens as the campaign progressed. The damage concentrates in one place:
+ordinary streets that carry their suffix, the commonest shape in American mail. The original
+gets 38 of 47; our best recent candidates get 25.
 
-So v2 doesn't ship.
+What happened is a textbook result, and we published the textbook: the training data targeted
+error classes discovered by studying our own gold set's failures, so the model learned to
+distrust the patterns those failures came from. The gold set said we improved. The clean set,
+the scans, and the dev holdouts all agreed. They were wrong together, because they were built
+from the same material. The one model that beats the original here, v19, predates all of that
+targeted work -- though its +2 has a confidence interval including zero, so it isn't a win
+either, just an absence of self-inflicted damage.
+
+Gold-2b has one scoring attempt left. It stays unspent: no candidate from this line may be
+proposed for it, and any future one has to beat the original on suffix-present addresses first.
 
 One disclosure travels with every number above, required by
-[eval/PROTOCOL.md](eval/PROTOCOL.md): the candidate's training data targets error classes we
-found by studying Gold-1 failures, which biases that set's margin upward. The honest claim is
-"better on identified, evidence-backed error classes," never a bare accuracy percentage. The
-clean set is the control nobody studied. Adjudication is human-only, and the LLM suggestion
-files in `eval/` were prelabeling triage that enters no margin.
+[eval/PROTOCOL.md](eval/PROTOCOL.md): the candidate's training targeted error classes found by
+studying Gold-1 failures, which biases that set's margin upward. That disclosure has been in
+this README since the beginning. It turned out to be understating the problem rather than
+overstating it.
 
-The deeper evaluation history, including candidates that overfit earlier tests, is in the
-[model findings](benchmark/results/model-v2-findings.md) and
-[evaluation protocol](eval/gold2/PROTOCOL2.md).
-
-A fresh replacement holdout, Gold-2b, is already built and untouched. No model has been scored
-against it.
+Full chain: [model findings](benchmark/results/model-v2-findings.md),
+[evaluation protocol](eval/gold2/PROTOCOL2.md), and the gold-2c
+[approved labels](eval/gold2c/approved_labels.json) that produced the table above
+(`python benchmark/gold2c_dev.py --candidate <model>`).
 
 ## Training data
 
