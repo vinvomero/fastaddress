@@ -275,3 +275,49 @@ sampling entirely.
     used to steer anything. An instrument that cannot reproduce a known result is not
     evidence. If it fails calibration it is reported as failed, exactly as its two
     predecessors were.
+- 2026-08-17: **Gold-2c calibration result, and the finding that reframes the campaign.**
+  126 human-approved absolute label sequences (129 reviewed, 3 declined), sources disjoint
+  from every exam and every training corpus.
+  * **Strict calibration: FAILED, weakly.** Gold-2c ranks v50 (net -12) one record above v43
+    (net -13) where gold-2b established v50 as the worse model. The intervals overlap almost
+    entirely, so the honest reading is that it cannot separate two near-identical candidates,
+    not that it inverts them. Under its own pre-registered rule it therefore may not be used
+    to make fine rankings between similar models. Reported as failed, like its two
+    predecessors.
+  * **Diagnostic validity: strong, and independently confirmed.** It reproduces gold-2b's
+    loss taxonomy on disjoint data with absolute labels: v50's entire deficit is
+    suffix-present addresses (v1 38/47, v50 25/47), the same class as the 19 of 47
+    `StreetNamePostType -> StreetName` losses attempt 1 recorded. It also shows the
+    retrained line losing recipients, which no prior surface measured at all.
+  * **The archaeology, which is the real result.** Scoring the historical line on this
+    surface (enriched for hard classes, so relative comparison only, n=126, wide intervals):
+
+    | model | overall vs v1 | suffix-present | recipient |
+    |---|---|---|---|
+    | v19 (pre-error-class) | **+2** (87/126) | **42/47** | 18/27 |
+    | v28 | -9 | 34/47 | 17/27 |
+    | v31 | -7 | 36/47 | 14/27 |
+    | v36 | -3 | 36/47 | 14/27 |
+    | v43 | -13 | 25/47 | 16/27 |
+    | v50 | -12 | 25/47 | 18/27 |
+
+    Every candidate from v28 onward is worse than the unmodified original on independent
+    human-labeled free text, and the deficit grows as the campaign progressed. The only
+    model that beats v1 here is **v19** -- the candidate from before the adjudication-derived
+    error-class synthetics began (recipe: base corpus + synth 3 + distill 1 + augment 4, no
+    errclass, no national, no TIGER, no realtext). Its +2 has a CI including zero, so "v19
+    beats v1" is NOT established; what is established is that the later line does not.
+  * **Interpretation, stated plainly.** The +4.73 pp gold-1 margin and the 74-0 adjudicated
+    record were earned on error classes mined from gold-1 itself, and the protocol's standing
+    disclosure about that bias turns out to have been understating it: the targeted-fix
+    campaign did not merely inflate the gold-1 number, it appears to have traded away
+    real-world accuracy on the commonest class in American addresses (a street with its
+    suffix present). Every surface that reported otherwise shared a generative process with
+    the training data. This is the failure the evidence ladder was built to catch; it took
+    an uncontaminated instrument to see it, and the instrument had to be built after two
+    exams were already spent.
+  * **Consequences, effective now.** No v2x-v5x candidate may be proposed for gold-2b's
+    remaining attempt on the strength of any existing surface. The remaining attempt stays
+    unspent. Any future candidate must first beat v1 on gold-2c's suffix-present class,
+    which is the class that decides real free text. Publication of this finding accompanies
+    the release with the same prominence as any passing result.

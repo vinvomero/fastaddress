@@ -1,0 +1,3238 @@
+{
+ "207 DAPHNEMONT DR EXT DAPHNE AL 36526": {
+  "tokens": [
+   "207",
+   "DAPHNEMONT",
+   "DR",
+   "EXT",
+   "DAPHNE",
+   "AL",
+   "36526"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostModifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "22421 PHILLIPSVILLE ROAD EXT BAY MINETTE AL 36507": {
+  "tokens": [
+   "22421",
+   "PHILLIPSVILLE",
+   "ROAD",
+   "EXT",
+   "BAY",
+   "MINETTE",
+   "AL",
+   "36507"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostModifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "7258 CO RD B WINNECONNE WI 54986": {
+  "tokens": [
+   "7258",
+   "CO",
+   "RD",
+   "B",
+   "WINNECONNE",
+   "WI",
+   "54986"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AL",
+  "answer": "CO = StreetNamePreType; RD = StreetNamePreType; B = StreetName",
+  "corrected": true
+ },
+ "8401 TIMBER CREEK DRIVE PIKE ROAD AL 36064": {
+  "tokens": [
+   "8401",
+   "TIMBER",
+   "CREEK",
+   "DRIVE",
+   "PIKE",
+   "ROAD",
+   "AL",
+   "36064"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AL",
+  "answer": "DRIVE = StreetNamePostType; PIKE = PlaceName; ROAD = PlaceName; AL = StateName",
+  "corrected": true
+ },
+ "TIMES SQUARE TOWER NEW YORK NY 10036": {
+  "tokens": [
+   "TIMES",
+   "SQUARE",
+   "TOWER",
+   "NEW",
+   "YORK",
+   "NY",
+   "10036"
+  ],
+  "labels": [
+   "BuildingName",
+   "BuildingName",
+   "BuildingName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AL",
+  "answer": "NEW = PlaceName",
+  "corrected": true
+ },
+ "%Denise Deluca 10541 Edgerton Rd North Royalton, OH 441335546": {
+  "tokens": [
+   "Denise",
+   "Deluca",
+   "10541",
+   "Edgerton",
+   "Rd",
+   "North",
+   "Royalton,",
+   "OH",
+   "441335546"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "ok",
+  "corrected": false
+ },
+ "10206 Barbeque Bay Converse, TX 781094418": {
+  "tokens": [
+   "10206",
+   "Barbeque",
+   "Bay",
+   "Converse,",
+   "TX",
+   "781094418"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "Bay = StreetName",
+  "corrected": true
+ },
+ "1525 W Oakland Ave Spc 12 Hemet, CA 925432658": {
+  "tokens": [
+   "1525",
+   "W",
+   "Oakland",
+   "Ave",
+   "Spc",
+   "12",
+   "Hemet,",
+   "CA",
+   "925432658"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "Spc = OccupancyType; 12 = OccupancyIdentifier",
+  "corrected": true
+ },
+ "2645 E Southern Ave A239 Tempe, AZ 85282": {
+  "tokens": [
+   "2645",
+   "E",
+   "Southern",
+   "Ave",
+   "A239",
+   "Tempe,",
+   "AZ",
+   "85282"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "ok",
+  "corrected": false
+ },
+ "35108 Harvest Ridge Ln Alpharetta, GA 300228634": {
+  "tokens": [
+   "35108",
+   "Harvest",
+   "Ridge",
+   "Ln",
+   "Alpharetta,",
+   "GA",
+   "300228634"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "ok",
+  "corrected": false
+ },
+ "6011 E Calle Del Paisano Scottsdale, AZ 852514210": {
+  "tokens": [
+   "6011",
+   "E",
+   "Calle",
+   "Del",
+   "Paisano",
+   "Scottsdale,",
+   "AZ",
+   "852514210"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "Paisano = StreetName",
+  "corrected": true
+ },
+ "6840 N Camino De Fray Marcos Tucson, AZ 857181018": {
+  "tokens": [
+   "6840",
+   "N",
+   "Camino",
+   "De",
+   "Fray",
+   "Marcos",
+   "Tucson,",
+   "AZ",
+   "857181018"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetNamePreType",
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "Marcos = StreetName",
+  "corrected": true
+ },
+ "C/O Francine Van Der Poel 4035 Us Highway 60 Show Low, AZ 859019770": {
+  "tokens": [
+   "C/O",
+   "Francine",
+   "Van",
+   "Der",
+   "Poel",
+   "4035",
+   "Us",
+   "Highway",
+   "60",
+   "Show",
+   "Low,",
+   "AZ",
+   "859019770"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "ok",
+  "corrected": false
+ },
+ "C/O Jane Gissi 14228 59Th Ave W Edmonds, WA 980263710": {
+  "tokens": [
+   "C/O",
+   "Jane",
+   "Gissi",
+   "14228",
+   "59Th",
+   "Ave",
+   "W",
+   "Edmonds,",
+   "WA",
+   "980263710"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "AZ",
+  "answer": "W = StreetNamePostDirectional",
+  "corrected": true
+ },
+ "1337 GAY CR LONGMONT CO 80501-1876": {
+  "tokens": [
+   "1337",
+   "GAY",
+   "CR",
+   "LONGMONT",
+   "CO",
+   "80501-1876"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "CO",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1514 SIDON CR 144 LAFAYETTE CO 80026": {
+  "tokens": [
+   "1514",
+   "SIDON",
+   "CR",
+   "144",
+   "LAFAYETTE",
+   "CO",
+   "80026"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "CO",
+  "answer": "ok",
+  "corrected": false
+ },
+ "4800 N BROADWAY BOULDER CO 80304": {
+  "tokens": [
+   "4800",
+   "N",
+   "BROADWAY",
+   "BOULDER",
+   "CO",
+   "80304"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "CO",
+  "answer": "ok",
+  "corrected": false
+ },
+ "ADDRESS UNKNOWN ??": {
+  "tokens": [
+   "ADDRESS",
+   "UNKNOWN"
+  ],
+  "labels": [
+   "NotAddress",
+   "NotAddress"
+  ],
+  "state": "CO",
+  "answer": "ADDRESS = NotAddress; UNKNOWN = NotAddress",
+  "corrected": true
+ },
+ "C/O BOULDER COUNTY PARKS & OPEN SPACE 5201 ST VRAIN RD BLDG 1 LONGMONT CO 80503": {
+  "tokens": [
+   "C/O",
+   "BOULDER",
+   "COUNTY",
+   "PARKS",
+   "&",
+   "OPEN",
+   "SPACE",
+   "5201",
+   "ST",
+   "VRAIN",
+   "RD",
+   "BLDG",
+   "1",
+   "LONGMONT",
+   "CO",
+   "80503"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "CO",
+  "answer": "ok",
+  "corrected": false
+ },
+ "MANUEL GONZALEA 1806 COLLYER ST LONGMONT CO 80501": {
+  "tokens": [
+   "MANUEL",
+   "GONZALEA",
+   "1806",
+   "COLLYER",
+   "ST",
+   "LONGMONT",
+   "CO",
+   "80501"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "CO",
+  "answer": "ok",
+  "corrected": false
+ },
+ "% MCLANE & MCLANE ATTORNEYS 275 N CLEARWATER-LARGO RD LARGO FL 33770": {
+  "tokens": [
+   "MCLANE",
+   "&",
+   "MCLANE",
+   "ATTORNEYS",
+   "275",
+   "N",
+   "CLEARWATER-LARGO",
+   "RD",
+   "LARGO",
+   "FL",
+   "33770"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "FL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "206 MOORE AVE STE C PMB C DAYTONA BEACH SHORES FL 32118": {
+  "tokens": [
+   "206",
+   "MOORE",
+   "AVE",
+   "STE",
+   "C",
+   "PMB",
+   "C",
+   "DAYTONA",
+   "BEACH",
+   "SHORES",
+   "FL",
+   "32118"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "FL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "3780 MILANO LAKES UNIT 109 NAPLES FL 34114": {
+  "tokens": [
+   "3780",
+   "MILANO",
+   "LAKES",
+   "UNIT",
+   "109",
+   "NAPLES",
+   "FL",
+   "34114"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "FL",
+  "answer": "LAKES = StreetName",
+  "corrected": true
+ },
+ "606 N DUSS ST NEW SMYRNA BEACH FL 32168": {
+  "tokens": [
+   "606",
+   "N",
+   "DUSS",
+   "ST",
+   "NEW",
+   "SMYRNA",
+   "BEACH",
+   "FL",
+   "32168"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "FL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "770 CR 485 LAKE PANASOFFKEE FL 33538": {
+  "tokens": [
+   "770",
+   "CR",
+   "485",
+   "LAKE",
+   "PANASOFFKEE",
+   "FL",
+   "33538"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "FL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "825 S CR 3 PIERSON FL 32180": {
+  "tokens": [
+   "825",
+   "S",
+   "CR",
+   "3",
+   "PIERSON",
+   "FL",
+   "32180"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "FL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "4 CAIRNBRAE HILLS MASON CITY IA 50401": {
+  "tokens": [
+   "4",
+   "CAIRNBRAE",
+   "HILLS",
+   "MASON",
+   "CITY",
+   "IA",
+   "50401"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "C/O CUSTODIAN FBO PAUL C BEHR IRA 6993 SOUTH ANDES CIR CENTENNIAL CO 80016": {
+  "tokens": [
+   "C/O",
+   "CUSTODIAN",
+   "FBO",
+   "PAUL",
+   "C",
+   "BEHR",
+   "IRA",
+   "6993",
+   "SOUTH",
+   "ANDES",
+   "CIR",
+   "CENTENNIAL",
+   "CO",
+   "80016"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "C/O CUSTODIAN FBO PAUL C. BEHR IRA 100% 6993 SOUTH ANDES CIR CENTENNIAL CO 80016": {
+  "tokens": [
+   "C/O",
+   "CUSTODIAN",
+   "FBO",
+   "PAUL",
+   "C.",
+   "BEHR",
+   "IRA",
+   "100%",
+   "6993",
+   "SOUTH",
+   "ANDES",
+   "CIR",
+   "CENTENNIAL",
+   "CO",
+   "80016"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "NotAddress",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IA",
+  "answer": "100% = NotAddress",
+  "corrected": true
+ },
+ "C/O TRUSTEE OF THE KATHRYN A. SNYDER TRUST AGMT 2415 S LAKEVIEW CT CLEAR LAKE IA 50428": {
+  "tokens": [
+   "C/O",
+   "TRUSTEE",
+   "OF",
+   "THE",
+   "KATHRYN",
+   "A.",
+   "SNYDER",
+   "TRUST",
+   "AGMT",
+   "2415",
+   "S",
+   "LAKEVIEW",
+   "CT",
+   "CLEAR",
+   "LAKE",
+   "IA",
+   "50428"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "TRUSTEE OF THE RONALD J BEHR REVOCABLE TRUST CREATED AUGUST 11, 2005 PO BOX 670 ROCKWELL IA 50469": {
+  "tokens": [
+   "TRUSTEE",
+   "OF",
+   "THE",
+   "RONALD",
+   "J",
+   "BEHR",
+   "REVOCABLE",
+   "TRUST",
+   "CREATED",
+   "AUGUST",
+   "11,",
+   "2005",
+   "PO",
+   "BOX",
+   "670",
+   "ROCKWELL",
+   "IA",
+   "50469"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IA",
+  "answer": "11, = Recipient; 2005 = Recipient",
+  "corrected": true
+ },
+ "%MARY FISCHBACH 1304 FRANKLIN ST ROCK FALLS IL 61071": {
+  "tokens": [
+   "MARY",
+   "FISCHBACH",
+   "1304",
+   "FRANKLIN",
+   "ST",
+   "ROCK",
+   "FALLS",
+   "IL",
+   "61071"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "%ROD W COPELAND 106 LAFAYETTE ST, PO BOX 1 PROPHETSTOWN IL 61277": {
+  "tokens": [
+   "ROD",
+   "W",
+   "COPELAND",
+   "106",
+   "LAFAYETTE",
+   "ST,",
+   "PO",
+   "BOX",
+   "1",
+   "PROPHETSTOWN",
+   "IL",
+   "61277"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "%SANTIAGO & BERTA MARTINEZ 614 W 14TH ST ROCK FALLS IL 61071": {
+  "tokens": [
+   "SANTIAGO",
+   "&",
+   "BERTA",
+   "MARTINEZ",
+   "614",
+   "W",
+   "14TH",
+   "ST",
+   "ROCK",
+   "FALLS",
+   "IL",
+   "61071"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1004 AVE B ROCK FALLS IL 610710000": {
+  "tokens": [
+   "1004",
+   "AVE",
+   "B",
+   "ROCK",
+   "FALLS",
+   "IL",
+   "610710000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IL",
+  "answer": "AVE = StreetNamePreType; B = StreetName",
+  "corrected": true
+ },
+ "1113 AVE A ROCK FALLS IL 61071": {
+  "tokens": [
+   "1113",
+   "AVE",
+   "A",
+   "ROCK",
+   "FALLS",
+   "IL",
+   "61071"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IL",
+  "answer": "ROCK = PlaceName",
+  "corrected": true
+ },
+ "1215 W 19TH ST ROCK FALLS IL 61071": {
+  "tokens": [
+   "1215",
+   "W",
+   "19TH",
+   "ST",
+   "ROCK",
+   "FALLS",
+   "IL",
+   "61071"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IL",
+  "answer": "ok",
+  "corrected": false
+ },
+ "701 AVE A ROCK FALLS IL 61071": {
+  "tokens": [
+   "701",
+   "AVE",
+   "A",
+   "ROCK",
+   "FALLS",
+   "IL",
+   "61071"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IL",
+  "answer": "ROCK = PlaceName",
+  "corrected": true
+ },
+ "1022 E Victoria South Bend IN 46614": {
+  "tokens": [
+   "1022",
+   "E",
+   "Victoria",
+   "South",
+   "Bend",
+   "IN",
+   "46614"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1106 E Oakside South Bend IN 46614": {
+  "tokens": [
+   "1106",
+   "E",
+   "Oakside",
+   "South",
+   "Bend",
+   "IN",
+   "46614"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1112 E Eckman South Bend IN 46614": {
+  "tokens": [
+   "1112",
+   "E",
+   "Eckman",
+   "South",
+   "Bend",
+   "IN",
+   "46614"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1146 E DONALD South Bend IN 46613": {
+  "tokens": [
+   "1146",
+   "E",
+   "DONALD",
+   "South",
+   "Bend",
+   "IN",
+   "46613"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1157 E Donmoyer Av South Bend IN 46614": {
+  "tokens": [
+   "1157",
+   "E",
+   "Donmoyer",
+   "Av",
+   "South",
+   "Bend",
+   "IN",
+   "46614"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1701 Miami St c/o St Mattews Cathedral South Bend IN 46613": {
+  "tokens": [
+   "1701",
+   "Miami",
+   "St",
+   "c/o",
+   "St",
+   "Mattews",
+   "Cathedral",
+   "South",
+   "Bend",
+   "IN",
+   "46613"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "St [after Miami] = StreetNamePostType; c/o = Recipient; St [before Mattews] = Recipient; Mattews = Recipient; Cathedral = Recipient; South = PlaceName",
+  "corrected": true
+ },
+ "5308 Packard Avenue South Bend IN 46619": {
+  "tokens": [
+   "5308",
+   "Packard",
+   "Avenue",
+   "South",
+   "Bend",
+   "IN",
+   "46619"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "56031 Jefferson Knolls Osceola IN 46561": {
+  "tokens": [
+   "56031",
+   "Jefferson",
+   "Knolls",
+   "Osceola",
+   "IN",
+   "46561"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "Knolls = StreetName",
+  "corrected": true
+ },
+ "5776 N GRAPE RD SUITE 51 PMB 175 Mishawaka IN 46545": {
+  "tokens": [
+   "5776",
+   "N",
+   "GRAPE",
+   "RD",
+   "SUITE",
+   "51",
+   "PMB",
+   "175",
+   "Mishawaka",
+   "IN",
+   "46545"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO Box 510 Ashley IN 46705": {
+  "tokens": [
+   "PO",
+   "Box",
+   "510",
+   "Ashley",
+   "IN",
+   "46705"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "IN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1236 WILLOW GLEN DENHAM SPRINGS, LA 70726": {
+  "tokens": [
+   "1236",
+   "WILLOW",
+   "GLEN",
+   "DENHAM",
+   "SPRINGS,",
+   "LA",
+   "70726"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "LA",
+  "answer": "GLEN = StreetName",
+  "corrected": true
+ },
+ "346 CHATEAU JON DENHAM SPRINGS, LA 70726": {
+  "tokens": [
+   "346",
+   "CHATEAU",
+   "JON",
+   "DENHAM",
+   "SPRINGS,",
+   "LA",
+   "70726"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "LA",
+  "answer": "JON = StreetName",
+  "corrected": true
+ },
+ "20 W WASHINGTON ST STE 500 HAGERSTOWN MD 21740": {
+  "tokens": [
+   "20",
+   "W",
+   "WASHINGTON",
+   "ST",
+   "STE",
+   "500",
+   "HAGERSTOWN",
+   "MD",
+   "21740"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MD",
+  "answer": "ok",
+  "corrected": false
+ },
+ "5805 MT BRIAR RD KEEDYSVILLE MD 21756": {
+  "tokens": [
+   "5805",
+   "MT",
+   "BRIAR",
+   "RD",
+   "KEEDYSVILLE",
+   "MD",
+   "21756"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MD",
+  "answer": "ok",
+  "corrected": false
+ },
+ "ATTN: KENNETH WIREMAN 7310 ESQUIRE CT MAILBOX 14 ELKRIDGE MD 21075": {
+  "tokens": [
+   "ATTN:",
+   "KENNETH",
+   "WIREMAN",
+   "7310",
+   "ESQUIRE",
+   "CT",
+   "MAILBOX",
+   "14",
+   "ELKRIDGE",
+   "MD",
+   "21075"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MD",
+  "answer": "ok",
+  "corrected": false
+ },
+ "C/O SEAN GRIFFITH, EX DIR 35 W BALTIMORE ST HAGERSTOWN MD 21740": {
+  "tokens": [
+   "C/O",
+   "SEAN",
+   "GRIFFITH,",
+   "EX",
+   "DIR",
+   "35",
+   "W",
+   "BALTIMORE",
+   "ST",
+   "HAGERSTOWN",
+   "MD",
+   "21740"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MD",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 1510 CLARKSBURG MD 20871": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "1510",
+   "CLARKSBURG",
+   "MD",
+   "20871"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MD",
+  "answer": "ok",
+  "corrected": false
+ },
+ "TAWES STATE OFFICE BLDG 580 TAYLOR AVE ANNAPOLIS MD 21401": {
+  "tokens": [
+   "TAWES",
+   "STATE",
+   "OFFICE",
+   "BLDG",
+   "580",
+   "TAYLOR",
+   "AVE",
+   "ANNAPOLIS",
+   "MD",
+   "21401"
+  ],
+  "labels": [
+   "BuildingName",
+   "BuildingName",
+   "BuildingName",
+   "BuildingName",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MD",
+  "answer": "ok",
+  "corrected": false
+ },
+ "701 PENNSYLVANIA AVENUE NW CONDO #1211 WASHINGTON DC 20004": {
+  "tokens": [
+   "701",
+   "PENNSYLVANIA",
+   "AVENUE",
+   "NW",
+   "CONDO",
+   "#",
+   "1211",
+   "WASHINGTON",
+   "DC",
+   "20004"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ME",
+  "answer": "NW = StreetNamePostDirectional; CONDO = OccupancyType; # = OccupancyIdentifier; 1211 = OccupancyIdentifier",
+  "corrected": true
+ },
+ "97 STARBOARD REACH YARMOUTH ME 04096": {
+  "tokens": [
+   "97",
+   "STARBOARD",
+   "REACH",
+   "YARMOUTH",
+   "ME",
+   "04096"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ME",
+  "answer": "ok",
+  "corrected": false
+ },
+ "LESTER B ORCUTT BLVD BIDDEFORD ME 04005": {
+  "tokens": [
+   "LESTER",
+   "B",
+   "ORCUTT",
+   "BLVD",
+   "BIDDEFORD",
+   "ME",
+   "04005"
+  ],
+  "labels": [
+   "StreetName",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ME",
+  "answer": "LESTER = StreetName; B = StreetName",
+  "corrected": true
+ },
+ "ONE CITY CENTER 5TH FLOOR PORTLAND ME 04101": {
+  "tokens": [
+   "ONE",
+   "CITY",
+   "CENTER",
+   "5TH",
+   "FLOOR",
+   "PORTLAND",
+   "ME",
+   "04101"
+  ],
+  "labels": [
+   "BuildingName",
+   "BuildingName",
+   "BuildingName",
+   "OccupancyIdentifier",
+   "OccupancyType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ME",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 360 LIMERICK ME 04048": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "360",
+   "LIMERICK",
+   "ME",
+   "04048"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ME",
+  "answer": "ok",
+  "corrected": false
+ },
+ "STATION #16 D.E.P. AUGUSTA ME 04330": {
+  "tokens": [
+   "STATION",
+   "#",
+   "16",
+   "D.E.P.",
+   "AUGUSTA",
+   "ME",
+   "04330"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ME",
+  "answer": "ok",
+  "corrected": false
+ },
+ "11007 HORSESHOE BEND HERNANDO MS 386320000": {
+  "tokens": [
+   "11007",
+   "HORSESHOE",
+   "BEND",
+   "HERNANDO",
+   "MS",
+   "386320000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MS",
+  "answer": "ok",
+  "corrected": false
+ },
+ "11197 WOODLAND LAKE HERNANDO MS 386320000": {
+  "tokens": [
+   "11197",
+   "WOODLAND",
+   "LAKE",
+   "HERNANDO",
+   "MS",
+   "386320000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MS",
+  "answer": "LAKE = StreetName",
+  "corrected": true
+ },
+ "1719 HWY 301 SOUTH LAKE CORMORANT MS 386410000": {
+  "tokens": [
+   "1719",
+   "HWY",
+   "301",
+   "SOUTH",
+   "LAKE",
+   "CORMORANT",
+   "MS",
+   "386410000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MS",
+  "answer": "SOUTH = StreetNamePostDirectional",
+  "corrected": true
+ },
+ "3270 SNOWDOWNS RIDGE HERNANDO MS 386320000": {
+  "tokens": [
+   "3270",
+   "SNOWDOWNS",
+   "RIDGE",
+   "HERNANDO",
+   "MS",
+   "386320000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MS",
+  "answer": "ok",
+  "corrected": false
+ },
+ "3454 WOODLAND LAKE HERNANDO MS 386320000": {
+  "tokens": [
+   "3454",
+   "WOODLAND",
+   "LAKE",
+   "HERNANDO",
+   "MS",
+   "386320000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MS",
+  "answer": "LAKE = StreetName",
+  "corrected": true
+ },
+ "5740 GETWELL RD BLDG 8B SOUTHAVEN MS 38672": {
+  "tokens": [
+   "5740",
+   "GETWELL",
+   "RD",
+   "BLDG",
+   "8B",
+   "SOUTHAVEN",
+   "MS",
+   "38672"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MS",
+  "answer": "ok",
+  "corrected": false
+ },
+ "FOREST HILL PROPERTIES INC 5583 MURRAY AVE SUITE 100 MEMPHIS TN 381190000": {
+  "tokens": [
+   "FOREST",
+   "HILL",
+   "PROPERTIES",
+   "INC",
+   "5583",
+   "MURRAY",
+   "AVE",
+   "SUITE",
+   "100",
+   "MEMPHIS",
+   "TN",
+   "381190000"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MS",
+  "answer": "FOREST = Recipient; HILL = Recipient; PROPERTIES = Recipient; INC = Recipient",
+  "corrected": true
+ },
+ "13190 E CAMINO LA CEBADILLA": {
+  "tokens": [
+   "13190",
+   "E",
+   "CAMINO",
+   "LA",
+   "CEBADILLA"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetNamePreType",
+   "StreetName",
+   "StreetName"
+  ],
+  "state": "MT",
+  "answer": "LA = StreetName",
+  "corrected": true
+ },
+ "48901 US HIGHWAY 93 STE A PMB 246 HAMILTON, MT 59840": {
+  "tokens": [
+   "48901",
+   "US",
+   "HIGHWAY",
+   "93",
+   "STE",
+   "A",
+   "PMB",
+   "246",
+   "HAMILTON,",
+   "MT",
+   "59840"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "SubaddressType",
+   "SubaddressIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MT",
+  "answer": "ok",
+  "corrected": false
+ },
+ "612 N 1ST ST STE 2-246 CORVALLIS, MT 59828": {
+  "tokens": [
+   "612",
+   "N",
+   "1ST",
+   "ST",
+   "STE",
+   "2-246",
+   "CORVALLIS,",
+   "MT",
+   "59828"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MT",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 1002 HAMILTON, MT 59840": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "1002",
+   "HAMILTON,",
+   "MT",
+   "59840"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MT",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 37 SULA, MT 59871": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "37",
+   "SULA,",
+   "MT",
+   "59871"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "MT",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1204 CEDAR POINT BLVD LOT 48 CEDAR POINT NC 28584-7007": {
+  "tokens": [
+   "1204",
+   "CEDAR",
+   "POINT",
+   "BLVD",
+   "LOT",
+   "48",
+   "CEDAR",
+   "POINT",
+   "NC",
+   "28584-7007"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "27361 VISTA AZUL DANA POINT CA 92624-1818": {
+  "tokens": [
+   "27361",
+   "VISTA",
+   "AZUL",
+   "DANA",
+   "POINT",
+   "CA",
+   "92624-1818"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "2919 BREEZEWOOD AVE STE 100 FAYETTEVILLE NC 28303-5283": {
+  "tokens": [
+   "2919",
+   "BREEZEWOOD",
+   "AVE",
+   "STE",
+   "100",
+   "FAYETTEVILLE",
+   "NC",
+   "28303-5283"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "903 MAIN ST EXT SWANSBORO NC 28584-9111": {
+  "tokens": [
+   "903",
+   "MAIN",
+   "ST",
+   "EXT",
+   "SWANSBORO",
+   "NC",
+   "28584-9111"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostModifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "98 -1040 MOANALUA RD APT 1-203 AEIA HI 96701-4604": {
+  "tokens": [
+   "98",
+   "1040",
+   "MOANALUA",
+   "RD",
+   "APT",
+   "1-203",
+   "AEIA",
+   "HI",
+   "96701-4604"
+  ],
+  "labels": [
+   "AddressNumber",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "ERNST & YOUNG LLP PO BOX 30308 CHARLOTTE NC 28230": {
+  "tokens": [
+   "ERNST",
+   "&",
+   "YOUNG",
+   "LLP",
+   "PO",
+   "BOX",
+   "30308",
+   "CHARLOTTE",
+   "NC",
+   "28230"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ND",
+  "answer": "ok",
+  "corrected": false
+ },
+ "LIFE ESTATES 5895 FOUNTAIN VISTA DR GRAND FORKS ND 58201": {
+  "tokens": [
+   "LIFE",
+   "ESTATES",
+   "5895",
+   "FOUNTAIN",
+   "VISTA",
+   "DR",
+   "GRAND",
+   "FORKS",
+   "ND",
+   "58201"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ND",
+  "answer": "ok",
+  "corrected": false
+ },
+ "SCOTT GREGORY ZUKOWSKI AS TRUSTEE 3002 44TH AVE S GRAND FORKS ND 58201": {
+  "tokens": [
+   "SCOTT",
+   "GREGORY",
+   "ZUKOWSKI",
+   "AS",
+   "TRUSTEE",
+   "3002",
+   "44TH",
+   "AVE",
+   "S",
+   "GRAND",
+   "FORKS",
+   "ND",
+   "58201"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "ND",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1438 RT 17A WARWICK, NY 10990": {
+  "tokens": [
+   "1438",
+   "RT",
+   "17A",
+   "WARWICK,",
+   "NY",
+   "10990"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NJ",
+  "answer": "RT = StreetNamePreType; 17A = StreetName",
+  "corrected": true
+ },
+ "3621 RT 94 2ND FLOOR HAMBURG, NJ 07419": {
+  "tokens": [
+   "3621",
+   "RT",
+   "94",
+   "2ND",
+   "FLOOR",
+   "HAMBURG,",
+   "NJ",
+   "07419"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "OccupancyIdentifier",
+   "OccupancyType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NJ",
+  "answer": "ok",
+  "corrected": false
+ },
+ "ONE SPRING STREET NEWTON, NJ 07860": {
+  "tokens": [
+   "ONE",
+   "SPRING",
+   "STREET",
+   "NEWTON,",
+   "NJ",
+   "07860"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NJ",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 412 TRENTON, NJ 08625": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "412",
+   "TRENTON,",
+   "NJ",
+   "08625"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NJ",
+  "answer": "ok",
+  "corrected": false
+ },
+ "160 OAK VIEW CIRCLE LAKE MARY, FL 32746": {
+  "tokens": [
+   "160",
+   "OAK",
+   "VIEW",
+   "CIRCLE",
+   "LAKE",
+   "MARY,",
+   "FL",
+   "32746"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NM",
+  "answer": "ok",
+  "corrected": false
+ },
+ "536 LINDA VISTA ALAMOGORDO, NM 88310": {
+  "tokens": [
+   "536",
+   "LINDA",
+   "VISTA",
+   "ALAMOGORDO,",
+   "NM",
+   "88310"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NM",
+  "answer": "VISTA = StreetName",
+  "corrected": true
+ },
+ "MIKE HAYMES 1214 NEW YORK ALAMOGORDO, NM 88310": {
+  "tokens": [
+   "MIKE",
+   "HAYMES",
+   "1214",
+   "NEW",
+   "YORK",
+   "ALAMOGORDO,",
+   "NM",
+   "88310"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NM",
+  "answer": "YORK = StreetName",
+  "corrected": true
+ },
+ "TAX DEPT 3 WATERWAY SQUARE PL STE 110 THE WOODLANDS, TX 77380": {
+  "tokens": [
+   "TAX",
+   "DEPT",
+   "3",
+   "WATERWAY",
+   "SQUARE",
+   "PL",
+   "STE",
+   "110",
+   "THE",
+   "WOODLANDS,",
+   "TX",
+   "77380"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NM",
+  "answer": "ok",
+  "corrected": false
+ },
+ "104 Carr Drive Sandy Creek NY 13145": {
+  "tokens": [
+   "104",
+   "Carr",
+   "Drive",
+   "Sandy",
+   "Creek",
+   "NY",
+   "13145"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NY",
+  "answer": "ok",
+  "corrected": false
+ },
+ "162 Co Rt 23A Constantia NY 13044": {
+  "tokens": [
+   "162",
+   "Co",
+   "Rt",
+   "23A",
+   "Constantia",
+   "NY",
+   "13044"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NY",
+  "answer": "Co = StreetNamePreType; Rt = StreetNamePreType; 23A = StreetName",
+  "corrected": true
+ },
+ "394 Co Rt 41A Pulaski NY 13142": {
+  "tokens": [
+   "394",
+   "Co",
+   "Rt",
+   "41A",
+   "Pulaski",
+   "NY",
+   "13142"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NY",
+  "answer": "Co = StreetNamePreType; Rt = StreetNamePreType; 41A = StreetName",
+  "corrected": true
+ },
+ "54 Kilts Tract Sandy Creek NY 13145": {
+  "tokens": [
+   "54",
+   "Kilts",
+   "Tract",
+   "Sandy",
+   "Creek",
+   "NY",
+   "13145"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NY",
+  "answer": "ok",
+  "corrected": false
+ },
+ "7167 St Rt 104 Oswego NY 13126": {
+  "tokens": [
+   "7167",
+   "St",
+   "Rt",
+   "104",
+   "Oswego",
+   "NY",
+   "13126"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NY",
+  "answer": "ok",
+  "corrected": false
+ },
+ "986 St Rt 104-B Mexico NY 13114": {
+  "tokens": [
+   "986",
+   "St",
+   "Rt",
+   "104-B",
+   "Mexico",
+   "NY",
+   "13114"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "NY",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1010 PINE 9E L 01 ST LOUIS, MO 63101": {
+  "tokens": [
+   "1010",
+   "PINE",
+   "9E",
+   "L",
+   "01",
+   "ST",
+   "LOUIS,",
+   "MO",
+   "63101"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "OccupancyIdentifier",
+   "OccupancyIdentifier",
+   "OccupancyIdentifier",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "OH",
+  "answer": "PINE = StreetName; 9E = OccupancyIdentifier; L = OccupancyIdentifier; 01 = OccupancyIdentifier; ST = StreetNamePostType",
+  "corrected": true
+ },
+ "3262 LINCOLN WAY WEST MASSILLON, OH 44647": {
+  "tokens": [
+   "3262",
+   "LINCOLN",
+   "WAY",
+   "WEST",
+   "MASSILLON,",
+   "OH",
+   "44647"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "OH",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1180 LAKEMONT DRIVE MEADVILLE PA 163350000": {
+  "tokens": [
+   "1180",
+   "LAKEMONT",
+   "DRIVE",
+   "MEADVILLE",
+   "PA",
+   "163350000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "PA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1261 WASHINGTON STREET EXT CONNEAUTVILLE PA 16406": {
+  "tokens": [
+   "1261",
+   "WASHINGTON",
+   "STREET",
+   "EXT",
+   "CONNEAUTVILLE",
+   "PA",
+   "16406"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostModifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "PA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1265 WASHINGTON STREET EXT CONNEAUTVILLE PA 16406": {
+  "tokens": [
+   "1265",
+   "WASHINGTON",
+   "STREET",
+   "EXT",
+   "CONNEAUTVILLE",
+   "PA",
+   "16406"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostModifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "PA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "204 PARKWAY DRIVE PO BOX 405 CONNEAUTVILLE PA 16406": {
+  "tokens": [
+   "204",
+   "PARKWAY",
+   "DRIVE",
+   "PO",
+   "BOX",
+   "405",
+   "CONNEAUTVILLE",
+   "PA",
+   "16406"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "PA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "804 RAVINE STREET MEADVILLE PA 16335": {
+  "tokens": [
+   "804",
+   "RAVINE",
+   "STREET",
+   "MEADVILLE",
+   "PA",
+   "16335"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "PA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "894 DIAMOND PARK MEADVILLE PA 163350000": {
+  "tokens": [
+   "894",
+   "DIAMOND",
+   "PARK",
+   "MEADVILLE",
+   "PA",
+   "163350000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "PA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "903 DIAMOND PARK MEADVILLE PA 16335": {
+  "tokens": [
+   "903",
+   "DIAMOND",
+   "PARK",
+   "MEADVILLE",
+   "PA",
+   "16335"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "PA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "1350 CASSIDY CT, UNIT B MT PLEASANT SC 29464": {
+  "tokens": [
+   "1350",
+   "CASSIDY",
+   "CT,",
+   "UNIT",
+   "B",
+   "MT",
+   "PLEASANT",
+   "SC",
+   "29464"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "SC",
+  "answer": "MT = PlaceName",
+  "corrected": true
+ },
+ "5241 HWY 17 BUS MURRELLS INLET SC 29576": {
+  "tokens": [
+   "5241",
+   "HWY",
+   "17",
+   "BUS",
+   "MURRELLS",
+   "INLET",
+   "SC",
+   "29576"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "StreetNamePostModifier",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "SC",
+  "answer": "BUS = StreetNamePostModifier",
+  "corrected": true
+ },
+ "6324 FAIRVIEW ROAD, Unit 550 CHARLOTTE NC 28210": {
+  "tokens": [
+   "6324",
+   "FAIRVIEW",
+   "ROAD,",
+   "Unit",
+   "550",
+   "CHARLOTTE",
+   "NC",
+   "28210"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "SC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "C/O LITCHFIELD BEACH MANAGEMENT P O BOX 911 PAWLEYS ISLAND SC 29585": {
+  "tokens": [
+   "C/O",
+   "LITCHFIELD",
+   "BEACH",
+   "MANAGEMENT",
+   "P",
+   "O",
+   "BOX",
+   "911",
+   "PAWLEYS",
+   "ISLAND",
+   "SC",
+   "29585"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "SC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "C/O OYSTERCATCHER ASSOC PO DRAWER 320 PAWLEYS ISLAND SC 29585": {
+  "tokens": [
+   "C/O",
+   "OYSTERCATCHER",
+   "ASSOC",
+   "PO",
+   "DRAWER",
+   "320",
+   "PAWLEYS",
+   "ISLAND",
+   "SC",
+   "29585"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "SC",
+  "answer": "ok",
+  "corrected": false
+ },
+ "P O DRAWER E GEORGETOWN SC 29442": {
+  "tokens": [
+   "P",
+   "O",
+   "DRAWER",
+   "E",
+   "GEORGETOWN",
+   "SC",
+   "29442"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "SC",
+  "answer": "P = USPSBoxType; O = USPSBoxType; DRAWER = USPSBoxType; E = USPSBoxID",
+  "corrected": true
+ },
+ "3 LIMITED CENTRE JOHNSON CITY TN 37604": {
+  "tokens": [
+   "3",
+   "LIMITED",
+   "CENTRE",
+   "JOHNSON",
+   "CITY",
+   "TN",
+   "37604"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TN",
+  "answer": "CENTRE = StreetName",
+  "corrected": true
+ },
+ "79 WHISPER BEND JOHNSON CITY TN 37604": {
+  "tokens": [
+   "79",
+   "WHISPER",
+   "BEND",
+   "JOHNSON",
+   "CITY",
+   "TN",
+   "37604"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 9000 JOHNSON CITY TN 37615": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "9000",
+   "JOHNSON",
+   "CITY",
+   "TN",
+   "37615"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TN",
+  "answer": "ok",
+  "corrected": false
+ },
+ "11918 FM 2153 SANGER TX 76266": {
+  "tokens": [
+   "11918",
+   "FM",
+   "2153",
+   "SANGER",
+   "TX",
+   "76266"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreType",
+   "StreetName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TX",
+  "answer": "ok",
+  "corrected": false
+ },
+ "2500 N INTERSTATE 35 STE 6 DENTON TX 76201": {
+  "tokens": [
+   "2500",
+   "N",
+   "INTERSTATE",
+   "35",
+   "STE",
+   "6",
+   "DENTON",
+   "TX",
+   "76201"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetNamePreType",
+   "StreetName",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TX",
+  "answer": "INTERSTATE = StreetNamePreType",
+  "corrected": true
+ },
+ "C/O DIANA SEALE 15 20TH ST S APT 501 BIRMINGHAM AL 35233": {
+  "tokens": [
+   "C/O",
+   "DIANA",
+   "SEALE",
+   "15",
+   "20TH",
+   "ST",
+   "S",
+   "APT",
+   "501",
+   "BIRMINGHAM",
+   "AL",
+   "35233"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "StreetNamePostDirectional",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TX",
+  "answer": "ok",
+  "corrected": false
+ },
+ "DO NOT SENT TO SEALS RD OR MARILYN ARGYLE TX 76226": {
+  "tokens": [
+   "DO",
+   "NOT",
+   "SENT",
+   "TO",
+   "SEALS",
+   "RD",
+   "OR",
+   "MARILYN",
+   "ARGYLE",
+   "TX",
+   "76226"
+  ],
+  "labels": [
+   "NotAddress",
+   "NotAddress",
+   "NotAddress",
+   "NotAddress",
+   "NotAddress",
+   "NotAddress",
+   "NotAddress",
+   "NotAddress",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TX",
+  "answer": "DO = NotAddress; NOT = NotAddress; SENT = NotAddress; TO = NotAddress; SEALS = NotAddress; RD = NotAddress; OR = NotAddress; MARILYN = NotAddress",
+  "corrected": true
+ },
+ "SACCO, KAREN A TRT OF KAREN A SACCO REV TR 10910 RALEIGH ST WESTCHESTER IL 60154": {
+  "tokens": [
+   "SACCO,",
+   "KAREN",
+   "A",
+   "TRT",
+   "OF",
+   "KAREN",
+   "A",
+   "SACCO",
+   "REV",
+   "TR",
+   "10910",
+   "RALEIGH",
+   "ST",
+   "WESTCHESTER",
+   "IL",
+   "60154"
+  ],
+  "labels": [
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "Recipient",
+   "AddressNumber",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "TX",
+  "answer": "ok",
+  "corrected": false
+ },
+ "112 BIG MAPLE DR FOREST VA 24551": {
+  "tokens": [
+   "112",
+   "BIG",
+   "MAPLE",
+   "DR",
+   "FOREST",
+   "VA",
+   "24551"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetName",
+   "StreetName",
+   "StreetNamePostType",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "VA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 198 HURLEY VA 24620": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "198",
+   "HURLEY",
+   "VA",
+   "24620"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "VA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "PO BOX 62763 VIRGINIA BEACH VA 234662763": {
+  "tokens": [
+   "PO",
+   "BOX",
+   "62763",
+   "VIRGINIA",
+   "BEACH",
+   "VA",
+   "234662763"
+  ],
+  "labels": [
+   "USPSBoxType",
+   "USPSBoxType",
+   "USPSBoxID",
+   "PlaceName",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "VA",
+  "answer": "ok",
+  "corrected": false
+ },
+ "106 W SEEBOTH ST UN 306 MILWAUKEE, WI 532040000": {
+  "tokens": [
+   "106",
+   "W",
+   "SEEBOTH",
+   "ST",
+   "UN",
+   "306",
+   "MILWAUKEE,",
+   "WI",
+   "532040000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "WI",
+  "answer": "ST = StreetNamePostType; UN = OccupancyType; 306 = OccupancyIdentifier",
+  "corrected": true
+ },
+ "106 W SEEBOTH ST UN 701 MILWAUKEE, WI 532040000": {
+  "tokens": [
+   "106",
+   "W",
+   "SEEBOTH",
+   "ST",
+   "UN",
+   "701",
+   "MILWAUKEE,",
+   "WI",
+   "532040000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "WI",
+  "answer": "ST = StreetNamePostType; UN = OccupancyType; 701 = OccupancyIdentifier",
+  "corrected": true
+ },
+ "130 W WATER ST UN 410 MILWAUKEE, WI 532040000": {
+  "tokens": [
+   "130",
+   "W",
+   "WATER",
+   "ST",
+   "UN",
+   "410",
+   "MILWAUKEE,",
+   "WI",
+   "532040000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "WI",
+  "answer": "ok",
+  "corrected": false
+ },
+ "210 S WATER ST UN 419 MILWAUKEE, WI 532040000": {
+  "tokens": [
+   "210",
+   "S",
+   "WATER",
+   "ST",
+   "UN",
+   "419",
+   "MILWAUKEE,",
+   "WI",
+   "532040000"
+  ],
+  "labels": [
+   "AddressNumber",
+   "StreetNamePreDirectional",
+   "StreetName",
+   "StreetNamePostType",
+   "OccupancyType",
+   "OccupancyIdentifier",
+   "PlaceName",
+   "StateName",
+   "ZipCode"
+  ],
+  "state": "WI",
+  "answer": "UN = OccupancyType; 419 = OccupancyIdentifier",
+  "corrected": true
+ }
+}
