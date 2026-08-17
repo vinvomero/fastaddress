@@ -618,7 +618,7 @@ def gen_county_letter_road(rng, n):
     record destabilised by churn -- so the shape gets an explicit anchor.
     Convention per upstream labeled.xml: route designators are
     StreetNamePreType, the letters are the StreetName."""
-    letters = ["ZZZ", "KK", "J", "QQ", "XX", "M", "VV", "EE", "T"]
+    letters = ["ZZZ", "KK", "J", "QQ", "XX", "M", "VV", "EE", "T", "ABC", "BB", "DD"]
     pairs = [("MILWAUKEE", "WI"), ("WAUKESHA", "WI"), ("OSHKOSH", "WI"),
              ("GREENVILLE", "SC"), ("CHARLESTON", "WV"), ("LITTLE ROCK", "AR"),
              ("APPLETON", "WI"), ("MADISON", "WI"), ("NASHVILLE", "TN")]
@@ -638,8 +638,40 @@ def gen_county_letter_road(rng, n):
              (rng.choice(first), "StreetNamePreType"),
              (rng.choice(second), "StreetNamePreType"),
              (name, "StreetName")]
+        # A unit can sit between the route name and the city ("COUNTY ROAD ABC,
+        # APT 12, IOLA, WI"). Without this the frame taught the bare shape only,
+        # and the clean-set record with a unit broke anyway at 7,500 rows.
+        if rng.random() < 0.35:
+            p += [(rng.choice(["APT", "STE", "UNIT", "#"]), "OccupancyType"),
+                  (str(rng.randint(1, 400)), "OccupancyIdentifier")]
         p += [(w, "PlaceName") for w in city.split()]
         p += [(st, "StateName"), (f"{rng.randint(10000, 99999)}", "ZipCode")]
+        out.append(seq(p))
+    return out
+
+
+def gen_inverted_floor(rng, n):
+    """431 Marietta St NW 3rd Floor  ->  3rd is the identifier, Floor the type.
+
+    The clean set carries four orderings of the same address (Fl. 3, Floor 3,
+    Room 303, 3rd Floor) and only the inverted one broke when the hard-class
+    corpus shifted the occupancy boundary. Ordinal-first is a real US idiom and
+    needs its own anchor; upstream's own labels are the authority here."""
+    ords = ["1st", "2nd", "3rd", "4th", "5th", "6th", "10th", "12th", "21st"]
+    types = ["Floor", "FLOOR", "Fl", "Fl.", "FL"]
+    out = []
+    for _ in range(n):
+        city, st, zc = rng.choice(PLAIN_CITIES)
+        p = [(str(rng.randint(1, 4999)), "AddressNumber")]
+        p += [(w, "StreetName") for w in rng.choice(STREET_WORDS).split()]
+        p += [(rng.choice(TYPES), "StreetNamePostType")]
+        if rng.random() < 0.5:
+            p.append((rng.choice(["NW", "NE", "SW", "SE", "N", "S"]), "StreetNamePostDirectional"))
+        p += [(rng.choice(ords), "OccupancyIdentifier"),
+              (rng.choice(types), "OccupancyType")]
+        if rng.random() < 0.6:
+            p += [(w, "PlaceName") for w in city.split()]
+            p += [(st, "StateName"), (zc, "ZipCode")]
         out.append(seq(p))
     return out
 
@@ -815,6 +847,9 @@ GENERATORS = [
     ("milepost_route", gen_milepost_route, 0.6),
     # 0.8 -> 2.5: rung 2a's no-suffix rows swamped this class (v44 clean break).
     ("truncated_type", gen_truncated_type, 2.5),
+    # Clean-set "3rd Floor" (identifier before type) broke when the
+    # hard-class corpus shifted the occupancy boundary.
+    ("inverted_floor", gen_inverted_floor, 1.2),
     ("spelled_state", gen_spelled_state, 1.5),
     ("postdir_then_building", gen_postdir_then_building, 1.0),
     ("street_then_building", gen_street_then_building, 0.8),
