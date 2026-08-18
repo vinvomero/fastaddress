@@ -130,7 +130,7 @@ that the full address is correct.
 ## Experimental model
 
 The shipping model is unchanged. The repo also contains an experimental retrained model that
-targeted known parsing errors. It does not ship, and the reason is worth stating plainly.
+targeted known parsing errors. It does not ship because accuracy did not improve.
 
 The retraining passed every internal gate — 74 wins / 0 losses on adjudicated hard cases,
 +2.400pp on a held-out real-text set, both national scans — and then failed the deciding
@@ -152,9 +152,7 @@ original                    38 / 47 suffix-present correct
 best retrained candidate    25 / 47
 ```
 
-The internal gates all reported improvement. They were wrong together, because they were built
-from the same error classes the training targeted. The honest result is that the retraining
-traded real-world accuracy for wins on self-selected cases. The default model — DataMade's,
+The result is that the retraining traded real-world accuracy for wins on self-selected cases. The default model — DataMade's,
 redistributed unmodified — is what ships.
 
 The full protocol, training history, failed candidates, and adjudications are here:
