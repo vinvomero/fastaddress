@@ -28,6 +28,7 @@ REALTEXT = Path(__file__).parent / "corpus" / "realtext.jsonl"
 REALTEXT2 = Path(__file__).parent / "corpus" / "realtext2.jsonl"
 REALTEXT2_NO2A = Path(__file__).parent / "corpus" / "realtext2_no2a.jsonl"
 MINIMAL = Path(__file__).parent / "corpus" / "minimal_abbrev.jsonl"
+HUMANLABEL = Path(__file__).parent / "corpus" / "humanlabel.jsonl"
 
 
 def main():
@@ -112,6 +113,13 @@ def main():
         help="include training/corpus/minimal_abbrev.jsonl N times (V19-U3: the abbreviated-city "
              "frame alone, without the rest of the national corpus)",
     )
+    ap.add_argument(
+        "--humanlabel",
+        type=int,
+        default=0,
+        help="include training/corpus/humanlabel.jsonl N times (845 human-approved real "
+             "free-text records, disjoint from all gold sets)",
+    )
     args = ap.parse_args()
 
     trainer = pycrfsuite.Trainer(verbose=False)
@@ -160,6 +168,9 @@ def main():
     if args.realtext and REALTEXT.exists():
         for _ in range(args.realtext):
             feed(REALTEXT)
+    if args.humanlabel and HUMANLABEL.exists():
+        for _ in range(args.humanlabel):
+            feed(HUMANLABEL)
     if args.minimal_abbrev and MINIMAL.exists():
         for _ in range(args.minimal_abbrev):
             feed(MINIMAL)
@@ -200,6 +211,7 @@ def main():
         "realtext_repeats": args.realtext,
         "realtext2_repeats": args.realtext2,
         "minimal_abbrev_repeats": args.minimal_abbrev,
+        "humanlabel_repeats": args.humanlabel,
         "drop_rung_2a": args.drop_rung_2a,
         "params": {
             "algorithm": "lbfgs",
