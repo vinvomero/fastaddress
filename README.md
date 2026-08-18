@@ -34,18 +34,13 @@ attribute, and tagged-output levels. It found zero divergences.
 
 ## Install
 
-Not on PyPI yet.
-Download a prebuilt wheel from [Releases](https://github.com/vinvomero/fastaddress/releases):
-
 ```bash
-pip install <downloaded-wheel>.whl
+pip install fastaddress
 ```
 
-Or build from source with Rust installed:
-
-```bash
-pip install git+https://github.com/vinvomero/fastaddress
-```
+Prebuilt wheels are published for Linux, macOS, and Windows (Python 3.10+); no Rust toolchain
+needed. To build from source instead, install [Rust](https://rustup.rs) and run
+`pip install git+https://github.com/vinvomero/fastaddress`.
 
 Verify:
 
