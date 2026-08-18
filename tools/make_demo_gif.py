@@ -117,13 +117,13 @@ def main():
         ff = k / CLIMB
         sf = ff * (U_RATE / F_RATE)
         frames.append(frame(ff, sf, done=False, punch=False))
-        delays.append(55)
+        delays.append(85)
     # fastaddress done; usaddress keeps crawling a touch; punchline in
     peak_slow = U_RATE / F_RATE
     for k in range(8):
         sf = peak_slow + (0.02 * k / 7)
         frames.append(frame(1.0, sf, done=True, punch=(k >= 2)))
-        delays.append(90 if k < 7 else 1500)  # long hold on the last punchline frame
+        delays.append(140 if k < 7 else 2000)  # long hold on the last punchline frame
     OUT.parent.mkdir(parents=True, exist_ok=True)
     frames[0].save(OUT, save_all=True, append_images=frames[1:], duration=delays,
                    loop=0, disposal=2, optimize=True)
