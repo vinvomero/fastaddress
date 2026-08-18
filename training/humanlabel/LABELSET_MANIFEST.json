@@ -1,0 +1,57 @@
+{
+ "built": "2026-08-18",
+ "seed": 20260824,
+ "records": 5000,
+ "source": "realtext_cache raw pool (299,832 fetched owner-mail rows), no new fetch",
+ "disjoint_from": [
+  "gold-1",
+  "gold-2",
+  "gold-2b",
+  "gold-2c"
+ ],
+ "ordering": "ascending weakest-token confidence (most informative first)",
+ "class_mix": {
+  "suffix-present": 4313,
+  "box": 296,
+  "recipient": 99,
+  "other": 14,
+  "suffix-omitted": 278
+ },
+ "confidence_bands": {
+  "<0.90": 872,
+  "0.90-0.99": 1538,
+  ">=0.99": 2590
+ },
+ "states": [
+  "AK",
+  "AL",
+  "AZ",
+  "CO",
+  "CT",
+  "FL",
+  "IA",
+  "IL",
+  "IN",
+  "KS",
+  "MA",
+  "ME",
+  "MI",
+  "MO",
+  "MT",
+  "NC",
+  "ND",
+  "NE",
+  "NJ",
+  "NM",
+  "OH",
+  "OK",
+  "OR",
+  "SC",
+  "SD",
+  "TN",
+  "TX",
+  "VA",
+  "VT",
+  "WA"
+ ]
+}
