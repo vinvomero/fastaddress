@@ -1,0 +1,41 @@
+{
+ "built": "2026-08-18",
+ "seed": 20260825,
+ "records": 2380,
+ "source": "realtext_cache raw pool, no new fetch",
+ "disjoint_from": [
+  "gold-1",
+  "gold-2",
+  "gold-2b",
+  "gold-2c",
+  "humanlabel batch 1"
+ ],
+ "selection": "by target class (confidently-wrong bugs the model is sure about), not by confidence",
+ "class_mix": {
+  "recipient": 340,
+  "abbrev_city": 340,
+  "route": 340,
+  "stateish_city": 340,
+  "directional": 340,
+  "multiword_place": 340,
+  "suffix_present": 340
+ },
+ "class_available_in_pool": {
+  "suffix_present": 202175,
+  "directional": 64683,
+  "recipient": 7448,
+  "multiword_place": 53621,
+  "stateish_city": 20234,
+  "route": 3824,
+  "abbrev_city": 1456
+ },
+ "maps_to_issues": {
+  "multiword_place": "#406 #302 #330",
+  "stateish_city": "#358 #294 #301",
+  "route": "#315 #364",
+  "directional": "#295 #317",
+  "recipient": "#393",
+  "abbrev_city": "adjudicated S-BARRINGTON fails",
+  "suffix_present": "the decisive gold-2c class"
+ }
+}
