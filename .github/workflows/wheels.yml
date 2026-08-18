@@ -60,3 +60,43 @@ jobs:
         with:
           name: wheels-${{ matrix.os }}
           path: dist
+
+  sdist:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: PyO3/maturin-action@v1
+        with:
+          command: sdist
+          args: -m crates/python/Cargo.toml -o dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sdist
+          path: dist
+
+  # Publishes to PyPI on a v* tag via Trusted Publishing (OIDC): no API token
+  # stored anywhere. The pending publisher on PyPI is scoped to this workflow
+  # (wheels.yml) with no environment, so this job sets none.
+  publish:
+    name: Publish to PyPI
+    needs: [build-wheels, sdist]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - name: collect wheels
+        uses: actions/download-artifact@v4
+        with:
+          path: dist
+          pattern: wheels-*
+          merge-multiple: true
+      - name: collect sdist
+        uses: actions/download-artifact@v4
+        with:
+          name: sdist
+          path: dist
+      - run: ls -l dist
+      - name: publish
+        uses: pypa/gh-action-pypi-publish@release/v1
