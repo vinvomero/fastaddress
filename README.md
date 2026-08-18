@@ -3,6 +3,8 @@
 Fast US address parsing in Python, backed by Rust.
 Compatible with the `usaddress` API and its trained model.
 
+![usaddress vs fastaddress parsing a million-row tax roll: same model, byte-identical output, 11.3x faster on one core](assets/demo.gif)
+
 ```python
 import fastaddress
 
