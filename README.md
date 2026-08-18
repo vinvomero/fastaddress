@@ -12,7 +12,7 @@ fastaddress.tag("123 N Main St Apt 4B Springfield IL 62704")
 
 ## Why this exists
 
-`usaddress` is widely used, with about 5.2M monthly downloads as of August 2026 and 1,145 dependent GitHub repositories, including government and open-data projects, but its Python CRF runtime is slow on large datasets. On our
+`usaddress` is widely used, with about [5.2M monthly downloads](https://pepy.tech/project/usaddress) as of August 2026 and [1,145 dependent GitHub repositories](https://github.com/datamade/usaddress/network/dependents), including government and open-data projects, but its Python CRF runtime is slow on large datasets. On our
 benchmark machine it parses about 8,000 addresses per second, which becomes noticeable on county
 tax rolls and national property datasets.
 
